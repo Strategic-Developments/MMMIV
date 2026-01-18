@@ -17,6 +17,7 @@ namespace Scripts
             var Weapons = new WeaponDefinition[]
             {
                 // PD
+                mss_lg_t_flail,
 
                 // Cannons
                 mss_lg_t_horus,
