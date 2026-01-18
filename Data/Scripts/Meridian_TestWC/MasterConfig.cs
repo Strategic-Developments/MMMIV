@@ -10,7 +10,7 @@
             // PartDefinitions(Your1stDefinition, Your2ndDefinition, Your3rdDefinition);
             // PartDefinitions includes both weapons and phantoms
             PartDefinitions(
-                LG_HeavyAutocannonTurret,LG_SuperRailgunTurret,ApophisRailgun
+                LG_HeavyAutocannonTurret,LG_SuperRailgunTurret,ApophisRailgun,AnubisMissileLauncher
             );
             // ArmorDefinitions(Armor1, Armor2);
             // SupportDefinitions(ArmorEnhancer1A);
