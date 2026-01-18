@@ -92,77 +92,77 @@ namespace Scripts
             TrailColor: PROJECTILE_SMOKE_TRAIL_COLOR,
             TrailWidth: 0.5f,
             TrailLength: 25,
-            UseColorFade: true
+            UseColorFade: false
             );
 
 
         internal LineDef FX_MISSILE_SMALL => GenericTracer(
-            ShellColor: Color(red: 0.05f, green: 0.25f, blue: 1f, alpha: 0.04f) * 15f,
+            ShellColor: Color(red: 1f, green: 1f, blue: 1f, alpha: 0.04f) * 15f,
             ShellLength: 20f,
-            ShellWidth: 1f,
-            TrailColor: PROJECTILE_SMOKE_TRAIL_COLOR,
+            ShellWidth: 2f,
+            TrailColor: Color(red: 1f, green: 0.3f, blue: 0.2f, alpha: 0.04f) * 15f,
             TrailWidth: 2.0f,
-            TrailLength: 30,
-            UseColorFade: true
+            TrailLength: 13,
+            UseColorFade: false
             );
 
         internal LineDef FX_MISSILE_MEDIUM => GenericTracer(
-            ShellColor: Color(red: 0.4f, green: 0.5f, blue: 1f, alpha: 0.04f) * 15f,
+            ShellColor: Color(red: 1f, green: 1f, blue: 1f, alpha: 0.04f) * 15f,
             ShellLength: 20f,
-            ShellWidth: 1f,
-            TrailColor: PROJECTILE_SMOKE_TRAIL_COLOR,
+            ShellWidth: 2.5f,
+            TrailColor: Color(red: 1f, green: 0.6f, blue: 0.5f, alpha: 0.04f) * 15f,
             TrailWidth: 2.5f,
-            TrailLength: 40,
-            UseColorFade: true
+            TrailLength: 16,
+            UseColorFade: false
             );
 
         internal LineDef FX_MISSILE_LARGE => GenericTracer(
-            ShellColor: Color(red: 0.7f, green: 0.85f, blue: 1f, alpha: 0.04f) * 15f,
+            ShellColor: Color(red: 1f, green: 1f, blue: 1f, alpha: 0.04f) * 15f,
             ShellLength: 20f,
-            ShellWidth: 1.5f,
-            TrailColor: PROJECTILE_SMOKE_TRAIL_COLOR,
+            ShellWidth: 3f,
+            TrailColor: Color(red: 1f, green: 0.7f, blue: 0.5f, alpha: 0.04f) * 15f,
             TrailWidth: 3f,
-            TrailLength: 50,
-            UseColorFade: true
+            TrailLength: 19,
+            UseColorFade: false
             );
 
         #endregion
 
         #region CANNON TRACERS
         internal LineDef FX_CANNON_TINY => GenericTracer(
-            ShellColor: Color(red: 1f, green: 0.8f, blue: 0.44f, alpha: 0.04f) * 15f,
+            ShellColor: Color(red: 1f, green: 0.8f, blue: 0.44f, alpha: 0.04f) * 16f,
             ShellLength: 25f,
-            ShellWidth: 0.5f,
-            TrailColor: PROJECTILE_SMOKE_TRAIL_COLOR,
+            ShellWidth: 0.6f,
+            TrailColor: Color(red: 1f, green: 0.8f, blue: 0.44f, alpha: 0.04f) * 15f,
             TrailWidth: 0f,
-            TrailLength: 15
+            TrailLength: 1
             );
 
         internal LineDef FX_CANNON_SMALL => GenericTracer(
-            ShellColor: Color(1f, 0.8f, 0.5f, 0.04f) * 15f,
+            ShellColor: Color(1f, 0.8f, 0.5f, 0.04f) * 18f,
             ShellLength: 40f,
-            ShellWidth: 0.6f,
-            TrailColor: PROJECTILE_SMOKE_TRAIL_COLOR,
-            TrailWidth: 0.5f,
-            TrailLength: 30
+            ShellWidth: 0f,
+            TrailColor: Color(1f, 0.8f, 0.5f, 0.04f) * 16f,
+            TrailWidth: 0.8f,
+            TrailLength: 24
             );
 
         internal LineDef FX_CANNON_MEDIUM => GenericTracer(
-            ShellColor: Color(1f, 0.8f, 0.6f, 0.04f) * 15f,
-            ShellLength: 50f,
-            ShellWidth: 0.6f,
-            TrailColor: PROJECTILE_SMOKE_TRAIL_COLOR,
-            TrailWidth: 0.6f,
-            TrailLength: 36
+            ShellColor: Color(1f, 0.8f, 0.6f, 0.04f) * 20f,
+            ShellLength: 80f,
+            ShellWidth: 0f,
+            TrailColor: Color(1f, 0.8f, 0.6f, 0.04f) * 18f,
+            TrailWidth: 1f,
+            TrailLength: 26
             );
 
         internal LineDef FX_CANNON_LARGE => GenericTracer(
-            ShellColor: Color(1f, 0.92f, 0.7f, 0.04f) * 17f,
-            ShellLength: 60f,
-            ShellWidth: 0.8f,
-            TrailColor: PROJECTILE_SMOKE_TRAIL_COLOR,
-            TrailWidth: 0.8f,
-            TrailLength: 42
+            ShellColor: Color(1f, 0.92f, 0.7f, 0.04f) * 25f,
+            ShellLength: 100f,
+            ShellWidth: 0f,
+            TrailColor: Color(1f, 0.92f, 0.7f, 0.04f) * 20f,
+            TrailWidth: 1.2f,
+            TrailLength: 30
             );
         #endregion
         #region RAILGUN TRACERS
