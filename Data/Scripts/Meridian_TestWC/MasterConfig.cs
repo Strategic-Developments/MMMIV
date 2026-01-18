@@ -21,6 +21,7 @@ namespace Scripts
 
                 // Cannons
                 mss_lg_t_horus,
+                mss_lg_t_bastet,
 
                 // Railguns
                 mss_lg_t_apophis,

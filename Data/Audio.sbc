@@ -73,6 +73,23 @@
         <Sound>
             <Id>
                 <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>shell_out_med_far_01</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>1600</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <PitchVariation>50</PitchVariation>
+            <Volume>1</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\shell_out_med_far_01.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+        <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
                 <SubtypeId>shell_out_med_02</SubtypeId>
             </Id>
             <Category>SHOT</Category>
@@ -100,6 +117,23 @@
             <Waves>
                 <Wave Type="D3">
                     <Start>Audio\MERD_RailgunCharge.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+                <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>servo_01</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>300</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <PitchVariation>50</PitchVariation>
+            <Volume>1</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\servo_01.wav</Start>
                 </Wave>
             </Waves>
         </Sound>
