@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Sounds>
+        <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>MERD_Whistle</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>500</MaxDistance>
+            <Loopable>true</Loopable>
+            <Volume>1</Volume>
+            <SoundLimit>2</SoundLimit>
+            <Waves>
+                <Wave Type="D3">
+                    <Start></Start>
+                    <Loop>Audio\MERD_Whistle.wav</Loop>
+                    <End></End>
+                </Wave>
+            </Waves>
+        </Sound>
+        
+        <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>MERD_RailgunHit</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>2000</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <PitchVariation>50</PitchVariation>
+            <Volume>1</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\MERD_RailgunHit.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+        <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>MERD_RailgunShot</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>1600</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <PitchVariation>50</PitchVariation>
+            <Volume>1</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\MERD_RailgunShot.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+        <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>shell_out_med_02</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>1600</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <PitchVariation>50</PitchVariation>
+            <Volume>2</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\shell_out_med_02.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+        <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>MERD_RailgunCharge</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>500</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <PitchVariation>50</PitchVariation>
+            <Volume>1</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\MERD_RailgunCharge.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+
+        <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>shell_in_med_01</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>500</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <PitchVariation>50</PitchVariation>
+            <Volume>2</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\shell_in_med_01.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+
+    </Sounds>
+</Definitions>
+

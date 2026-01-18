@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Ammos>
+        <Ammo xsi:type="MyObjectBuilder_MissileAmmoDefinition">
+            <Id>
+                <TypeId>AmmoDefinition</TypeId>
+                <SubtypeId>BlankBlank</SubtypeId>
+            </Id>
+            <BasicProperties>
+                <DesiredSpeed>420</DesiredSpeed>
+                <SpeedVariance>0</SpeedVariance>
+                <MaxTrajectory>3100</MaxTrajectory>
+                <IsExplosive>true</IsExplosive>
+                <BackkickForce>10000</BackkickForce>
+                <PhysicalMaterial>ExplosionGradeStandard</PhysicalMaterial>
+                <ExplosiveDamageMultiplier>1</ExplosiveDamageMultiplier>
+                <DeathMessage>CauseOfDeath_HeavyWeapons</DeathMessage>
+            </BasicProperties>
+            <MissileProperties>
+                <MissileMass>1000</MissileMass>
+                <MissileExplosionRadius>7.5</MissileExplosionRadius>
+                <MissileModelName></MissileModelName>
+                <MissileAcceleration>0</MissileAcceleration>
+                <MissileInitialSpeed>420</MissileInitialSpeed>
+                <MissileSkipAcceleration>false</MissileSkipAcceleration>
+                <MissileExplosionDamage>2500</MissileExplosionDamage>
+                <MissileHealthPool>2500</MissileHealthPool>
+                <MissileTrailEffect></MissileTrailEffect>
+                <MissileGravityEnabled>true</MissileGravityEnabled>
+                <MissileMinRicochetAngle>50</MissileMinRicochetAngle>
+                <MissileMaxRicochetAngle>70</MissileMaxRicochetAngle>
+                <MissileMinRicochetProbability>0.25</MissileMinRicochetProbability>
+                <MissileMaxRicochetProbability>0.85</MissileMaxRicochetProbability>
+                <MissileRicochetDamage>500</MissileRicochetDamage>
+            </MissileProperties>
+        </Ammo>
+    </Ammos>
+</Definitions>
