@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<BlockVariantGroups>
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="mss_blockvariantgroup_missiles"/>
+			<Icon>Textures\GUI\Icons\Cubes\MissileTube.dds</Icon>
+			<DisplayName>mss_blockvariantgroup_missiles</DisplayName>
+			<Description>Awagga.</Description>
+			<Blocks>
+				<Block Type="MyObjectBuilder_ConveyorSorter" Subtype="mss_lg_f_anubis"/>
+			</Blocks>
+		</BlockVariantGroup>
+	</BlockVariantGroups>
+
+	<BlockPositions>
+        <BlockPosition>
+            <Name>mss_lg_f_anubis</Name>
+            <Position>
+                <X>3</X>
+                <Y>550</Y>
+            </Position>
+        </BlockPosition>
+	</BlockPositions>
+</Definitions>

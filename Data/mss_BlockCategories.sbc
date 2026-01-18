@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CategoryClasses>
+		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+			<Id>
+				<TypeId>GuiBlockCategoryDefinition</TypeId>
+				<SubtypeId/>
+			</Id>
+			<DisplayName>Meridian: Frontier Weapons</DisplayName>
+			<Name>Section1_0_meridian</Name>
+			<IsBlockCategory>true</IsBlockCategory>
+			<StrictSearch>true</StrictSearch>
+			<ItemIds>
+				<string>ConveyorSorter/mss_lg_t_horus_base</string>
+				<string>ConveyorSorter/mss_lg_t_amunra_base</string>
+				<string>ConveyorSorter/mss_lg_t_apophis_base</string>
+				<string>ConveyorSorter/mss_lg_f_anubis</string>
+			</ItemIds>
+		</Category>
+		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition"><!-- Weapons -->
+			<Id>
+				<TypeId>GuiBlockCategoryDefinition</TypeId>
+				<SubtypeId>Weapons</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Category_Weapons</DisplayName>
+			<Name>Section1_Position3_Weapons</Name>
+			<StrictSearch>true</StrictSearch>
+			<ItemIds>
+				<string>ConveyorSorter/mss_lg_t_horus_base</string>
+				<string>ConveyorSorter/mss_lg_t_amunra_base</string>
+				<string>ConveyorSorter/mss_lg_t_apophis_base</string>
+				<string>ConveyorSorter/mss_lg_f_anubis</string>
+			</ItemIds>
+		</Category>
+	</CategoryClasses>
+</Definitions>

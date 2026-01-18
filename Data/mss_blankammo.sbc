@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Ammos>
+        <Ammo xsi:type="MyObjectBuilder_MissileAmmoDefinition">
+            <Id>
+                <TypeId>AmmoDefinition</TypeId>
+                <SubtypeId>mss_blankammo</SubtypeId>
+            </Id>
+			<BasicProperties>
+				<DesiredSpeed>800</DesiredSpeed>
+				<SpeedVariance>0</SpeedVariance>
+				<MaxTrajectory>1200</MaxTrajectory>
+				<IsExplosive>true</IsExplosive>
+				<BackkickForce>0</BackkickForce>
+				<PhysicalMaterial>Missile</PhysicalMaterial>
+			</BasicProperties>
+			<MissileProperties>
+				<MissileMass>1</MissileMass>
+				<MissileExplosionRadius>4</MissileExplosionRadius>
+				<MissileModelName>Models\Weapons\Projectile_Missile.mwm</MissileModelName>
+				<MissileAcceleration>0</MissileAcceleration>
+				<MissileInitialSpeed>800</MissileInitialSpeed>
+				<MissileSkipAcceleration>false</MissileSkipAcceleration>
+				<MissileExplosionDamage>2000</MissileExplosionDamage>
+				<MissileGravityEnabled>false</MissileGravityEnabled>
+				<MissileTrailEffect>null</MissileTrailEffect>
+			</MissileProperties>
+        </Ammo>
+    </Ammos>
+</Definitions>

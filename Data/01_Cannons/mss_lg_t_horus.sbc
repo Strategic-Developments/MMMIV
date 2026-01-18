@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>mss_lg_t_horus_base</SubtypeId>
+			</Id>
+			<DisplayName>Horus-Pattern Artillery Battery</DisplayName>
+			<Description>DescriptionHere</Description>
+			<Icon>Textures\GUI\Icons\Cubes\MerDMK1Base.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="2" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\MerDMK1Base.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="300" />
+				<Component Subtype="Construction" Count="125" />
+				<Component Subtype="MetalGrid" Count="300" />
+				<Component Subtype="LargeTube" Count="100" />
+				<Component Subtype="Motor" Count="300" />
+				<Component Subtype="Computer" Count="300" />
+				<Component Subtype="Superconductor" Count="15" />
+				<Component Subtype="Construction" Count="125" />
+				<Component Subtype="SteelPlate" Count="500" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+			</MountPoints>
+			<BlockPairName>mss_lg_t_horus_base</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<BuildTimeSeconds>10</BuildTimeSeconds>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<ResourceSinkGroup>Conveyors</ResourceSinkGroup>
+			<PowerInput>0.00025</PowerInput>
+			<InventorySize>
+				<X>1</X>
+				<Y>1</Y>
+				<Z>1</Z>
+			</InventorySize>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>255</PCU>
+			<IsAirTight>true</IsAirTight>
+		</Definition>
+	</CubeBlocks>
+	<Weapons>
+		<!--•WEAPON DEFINITION-->
+
+	</Weapons>
+	<Ammos>
+		<!--•AMMO DEFINITION-->
+
+	</Ammos>
+	<AmmoMagazines>
+		<!--•AMMOMAGAZINE DEFINITION-->
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>mss_lg_t_horus_ammomagazine</SubtypeId>
+			</Id>
+			<DisplayName>Horus Cannon Shell</DisplayName>
+			<!--<Icon>Textures\GUI\Icons\Cubes\CustosAmmoSTG1.png</Icon>-->
+			<!--gun as the ammo icon makes it SO much easier to ID things-->
+			<Icon>Textures\GUI\Icons\Cubes\MerDMK1Base.dds</Icon>
+			<Size>
+				<X>0.2</X>
+				<Y>0.2</Y>
+				<Z>0.2</Z>
+			</Size>
+			<Mass>2000</Mass>
+			<Volume>1000</Volume>
+			<Model>Models\Cubes\Large\CustosAmmoSTG1.mwm</Model>
+			<PhysicalMaterial>Ammo</PhysicalMaterial>
+			<Capacity>1</Capacity>
+			<AmmoDefinitionId Subtype="mss_blankammo" />
+
+			<MinimumOfferAmount>100</MinimumOfferAmount>
+			<MaximumOfferAmount>1000</MaximumOfferAmount>
+			<MinimumOrderAmount>100</MinimumOrderAmount>
+			<MaximumOrderAmount>2000</MaximumOrderAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</AmmoMagazine>
+	</AmmoMagazines>
+	<Blueprints>
+			<!--BLUEPRINT DEFINITION-->
+			<Blueprint>
+				<Id>
+					<TypeId>BlueprintDefinition</TypeId>
+					<SubtypeId>mss_lg_t_horus_ammomagazine</SubtypeId>
+				</Id>
+				<DisplayName>Horus Cannon Shell</DisplayName>
+				<Prerequisites>
+					<Item Amount="250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+				</Prerequisites>
+				<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_horus_ammomagazine"/>
+				<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+				<Icon>Textures\GUI\Icons\Cubes\MerDMK1Base.dds</Icon>
+			</Blueprint>
+		</Blueprints>
+	<BlueprintClassEntries>
+		<!--BLUEPRINT CLASS ENTRY DEFINITION-->
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="mss_lg_t_horus_ammomagazine"/>
+		<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/mss_lg_t_horus_base"/>
+	</BlueprintClassEntries>
+</Definitions>
