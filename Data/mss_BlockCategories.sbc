@@ -16,6 +16,7 @@
 				<string>ConveyorSorter/mss_lg_t_apophis_base</string>
 				<string>ConveyorSorter/mss_lg_f_anubis</string>
 				<string>ConveyorSorter/mss_lg_t_flail_base</string>
+				<string>ConveyorSorter/mss_lg_t_bastet_base</string>
 			</ItemIds>
 		</Category>
 		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition"><!-- Weapons -->
@@ -32,6 +33,7 @@
 				<string>ConveyorSorter/mss_lg_t_apophis_base</string>
 				<string>ConveyorSorter/mss_lg_f_anubis</string>
 				<string>ConveyorSorter/mss_lg_t_flail_base</string>
+				<string>ConveyorSorter/mss_lg_t_bastet_base</string>
 			</ItemIds>
 		</Category>
 	</CategoryClasses>

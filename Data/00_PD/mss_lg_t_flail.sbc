@@ -7,7 +7,7 @@
 				<SubtypeId>mss_lg_t_flail_base</SubtypeId>
 			</Id>
 			<DisplayName>Flail-Pattern Point Defense Cannon</DisplayName>
-			<Description>Description here. What it does, range, ammo.</Description>
+			<Description>Close-in kinetic gatling cannon. Loads Flail Ammunition Box. 2.5KM range.</Description>
 			<Icon>Textures\GUI\Icons\Cubes\FlailBase.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>

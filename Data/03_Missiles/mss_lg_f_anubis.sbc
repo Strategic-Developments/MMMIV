@@ -6,8 +6,8 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>mss_lg_f_anubis</SubtypeId>
 			</Id>
-			<DisplayName>Anubis Medium Missile Tube</DisplayName>
-			<Description>DescriptionHere</Description>
+			<DisplayName>Anubis Heavy Missile Tube</DisplayName>
+			<Description>Single-tube heavy missile. Loads Anubis Missiles. 20KM range.</Description>
 			<Icon>Textures\GUI\Icons\Cubes\MissileTube.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>

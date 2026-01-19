@@ -7,7 +7,7 @@
 				<SubtypeId>mss_lg_t_amunra_base</SubtypeId>
 			</Id>
 			<DisplayName>Amun-Ra Heavy Railgun</DisplayName>
-			<Description>DescriptionHere</Description>
+			<Description>Superheavy railgun with a high fire rate. Loads Amun-Ra Railgun Sabots. 17.5KM range.</Description>
 			<Icon>Textures\GUI\Icons\Cubes\AmunRa.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>

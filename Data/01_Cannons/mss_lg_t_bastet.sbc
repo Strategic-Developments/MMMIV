@@ -7,7 +7,7 @@
 				<SubtypeId>mss_lg_t_bastet_base</SubtypeId>
 			</Id>
 			<DisplayName>Bastet-Pattern Heavy Artillery Cannon</DisplayName>
-			<Description>Ammo, range, usecase.</Description>
+			<Description>Double-barreled repeating artillery battery. Loads Bastet Cannon Shells. 10KM range. .</Description>
 			<Icon>Textures\GUI\Icons\Cubes\BastetBase.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>

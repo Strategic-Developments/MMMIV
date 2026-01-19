@@ -7,7 +7,7 @@
 				<SubtypeId>mss_lg_t_horus_base</SubtypeId>
 			</Id>
 			<DisplayName>Horus-Pattern Artillery Battery</DisplayName>
-			<Description>DescriptionHere</Description>
+			<Description>Single-barreled autoloading cannon. Loads Horus Cannon Shells. 7.5KM range.</Description>
 			<Icon>Textures\GUI\Icons\Cubes\MerDMK1Base.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
