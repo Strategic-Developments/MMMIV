@@ -4,7 +4,7 @@
 		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
 			<Id>
 				<TypeId>Thrust</TypeId>
-				<SubtypeId>mss_lg_thrust_concord</SubtypeId>
+				<SubtypeId>mss_lg_thrust_concord_3x3</SubtypeId>
 			</Id>
 			<DisplayName>Heavy Sublight Thruster</DisplayName>
 			<Description>Heavy fusion-powered engine for sublight propulsion.</Description>
@@ -33,7 +33,7 @@
 				<MountPoint Side="Top" StartX="0.00" StartY="0.02" EndX="3.00" EndY="2.84"/>
 				<MountPoint Side="Bottom" StartX="0.00" StartY="4.16" EndX="3.00" EndY="6.98"/>
 			</MountPoints>
-			<BlockPairName>mss_thrust_concord</BlockPairName>
+			<BlockPairName>mss_lg_thrust_concord_3x3</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<VoxelPlacement><!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
@@ -81,7 +81,7 @@
 			<PrimarySound>SmShipLrgJet</PrimarySound>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
 			<DamagedSound>ParticleWeapExpl</DamagedSound>
-			<Public>true</Public>0
+			<Public>true</Public>
             <DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
 			<DestroySound>WepSmallWarheadExpl</DestroySound>
 			<PCU>12</PCU>
@@ -97,7 +97,7 @@
 		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
 			<Id>
 				<TypeId>Thrust</TypeId>
-				<SubtypeId>mss_sg_thrust_concord</SubtypeId>
+				<SubtypeId>mss_lg_thrust_concord_1x1</SubtypeId>
 			</Id>
 			<DisplayName>Small Sublight Thruster</DisplayName>
 			<Description>A smaller variant of the fusion-powered thruster.</Description>
@@ -119,7 +119,7 @@
 				<Component Subtype="SteelPlate" Count="2000"/>
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0"/>
-			<BlockPairName>mss_thrust_concord</BlockPairName>
+			<BlockPairName>mss_lg_thrust_concord_1x1</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<BuildTimeSeconds>20</BuildTimeSeconds>

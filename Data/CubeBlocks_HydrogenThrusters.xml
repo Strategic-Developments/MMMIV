@@ -1,39 +1,30 @@
-﻿<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  
-  <!--Vanilla-->
-  <!-- LG -->
-
+﻿<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><!--Vanilla--><!-- LG -->
   <Definition xsi:type="MyObjectBuilder_ThrustDefinition"><!-- LargeBlockLargeHydrogenThrust -->
     <Id>
       <TypeId>Thrust</TypeId>
-      <SubtypeId>EVEThrust_ConcordThruster</SubtypeId>
-    </Id>
-    <!-- Normal Keen Properties 
+      <SubtypeId>mss_lg_thrust_concord</SubtypeId>
+    </Id><!-- Normal Keen Properties 
     ...
     -->
     <ModExtensions>
-                <ModComponents>
-                    <GameLogicComponent Name="MwiComponent" />
-                </ModComponents>
-                <Group Name="ThrusterCompData">
-                    
-                  <Text Name="ID" Value= "EVEThrust_ConcordThruster"/> <!--REQUIRED! No specific value required Debugging  -->
-                  <Boolean Name="hideVanillaFlame" Value="true" /><!-- Hide Vanilla Flame-->
-                  <Decimal Name="ThrustRateGain" Value="0.06" />
-                  <Decimal Name="ThrustRateLoss" Value="0.3" />
-                  <Boolean Name="UseEmissive" Value="false" /> <!-- Enable heatup/emissive material effect, off = more performant -->
-                  
-                  <Text Name="EmissiveMaterial" Value="heatup" /><!-- custom material for emissive that react to thrust -->
-                  <Decimal Name="EmissiveRateGain" Value="0.005" />
-                  <Decimal Name="EmissiveRateLoss" Value="0.01" />
-                  
-
-                  <Text Name="EmitterSetup" Value="
-                    You can add comments like this and that it ends with -> ;
+      <ModComponents>
+        <GameLogicComponent Name="MwiComponent"/>
+      </ModComponents>
+      <Group Name="ThrusterCompData">
+        <Text Name="ID" Value="mss_lg_thrust_concord"/><!--REQUIRED! No specific value required Debugging  -->
+        <Boolean Name="hideVanillaFlame" Value="true"/><!-- Hide Vanilla Flame-->
+        <Decimal Name="ThrustRateGain" Value="0.06"/>
+        <Decimal Name="ThrustRateLoss" Value="0.3"/>
+        <Boolean Name="UseEmissive" Value="false"/><!-- Enable heatup/emissive material effect, off = more performant -->
+        <Text Name="EmissiveMaterial" Value="heatup"/><!-- custom material for emissive that react to thrust -->
+        <Decimal Name="EmissiveRateGain" Value="0.005"/>
+        <Decimal Name="EmissiveRateLoss" Value="0.01"/>
+        <Text Name="EmitterSetup" Value="
+                    You can add comments like this and that it ends with -&gt; ;
                     
                     Particle : KWS2_ThrusterFlame_Large;
                     Type: SPRITE;
-                    AtmoOnly: FALSE ;
+                    AtmoOnly: FALSE;
                     ThrustMin : 0.01;
                     ThrustMax : 2;
                     Size: 2;
@@ -42,44 +33,32 @@
                     VelocityScalingFrom: 1;
                     VelocityScalingTo: 1;
                     Dummies : thruster_flame;
-                   
-                    
-                                       
                     "/>
-                    
-                    
-                </Group>
-            </ModExtensions>
+      </Group>
+    </ModExtensions>
   </Definition>
-
   <Definition xsi:type="MyObjectBuilder_ThrustDefinition"><!-- LargeBlockSmallHydrogenThrust -->
     <Id>
       <TypeId>Thrust</TypeId>
-      <SubtypeId>EVEThrust_ConcordThruster_Small</SubtypeId>
-    </Id>
-    <!-- Normal Keen Properties 
+      <SubtypeId>mss_sg_thrust_concord</SubtypeId>
+    </Id><!-- Normal Keen Properties 
     ...
     -->
     <ModExtensions>
-                <ModComponents>
-                    <GameLogicComponent Name="MwiComponent" />
-                </ModComponents>
-                <Group Name="ThrusterCompData">
-                    
-                  <Text Name="ID" Value= "LargeBlockSmallHydrogenThrust"/> <!--REQUIRED! No specific value required Debugging  -->
-                  <Boolean Name="hideVanillaFlame" Value="true" /><!-- Hide Vanilla Flame-->
-                  <Decimal Name="ThrustRateGain" Value="0.12" />
-                    <Decimal Name="ThrustRateLoss" Value="0.3" />
-                  <Boolean Name="UseEmissive" Value="true" /> <!-- Enable heatup/emissive material effect, off = more performant -->
-                  
-                  <Text Name="EmissiveMaterial" Value="heatup" /><!-- not implemented|custom material for heatup effect -->
-                    
-                    
-
-                    <Text Name="EmitterSetup" Value="
+      <ModComponents>
+        <GameLogicComponent Name="MwiComponent"/>
+      </ModComponents>
+      <Group Name="ThrusterCompData">
+        <Text Name="ID" Value="mss_sg_thrust_concord"/><!--REQUIRED! No specific value required Debugging  -->
+        <Boolean Name="hideVanillaFlame" Value="true"/><!-- Hide Vanilla Flame-->
+        <Decimal Name="ThrustRateGain" Value="0.12"/>
+        <Decimal Name="ThrustRateLoss" Value="0.3"/>
+        <Boolean Name="UseEmissive" Value="true"/><!-- Enable heatup/emissive material effect, off = more performant -->
+        <Text Name="EmissiveMaterial" Value="heatup"/><!-- not implemented|custom material for heatup effect -->
+        <Text Name="EmitterSetup" Value="
                     Particle : KWS2_ThrusterFlameNoGlitch;
                     Type: SPRITE;
-                    AtmoOnly: FALSE ;
+                    AtmoOnly: FALSE;
                     ThrustMin : 0.01;
                     ThrustMax : 1;
                     Size: 2;
@@ -88,18 +67,8 @@
                     VelocityScalingFrom: -1;
                     VelocityScalingTo: 2;
                     Dummies : none;
-                    
-                  
-                    
-                                       
                     "/>
-                    
-                    
-                    
-                    
-                </Group>
-            </ModExtensions>
+      </Group>
+    </ModExtensions>
   </Definition>
-
-
 </Definitions>

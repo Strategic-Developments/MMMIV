@@ -18,8 +18,8 @@
 				<string>ConveyorSorter/mss_lg_t_flail_base</string>
 				<string>ConveyorSorter/mss_lg_t_bastet_base</string>
 
-				<string>Thrust/mss_lg_thrust_concord</string>
-				<string>Thrust/mss_sg_concord_thrust</string>
+				<string>Thrust/mss_lg_thrust_concord_1x1</string>
+				<string>Thrust/mss_lg_thrust_concord_3x3</string>
 			</ItemIds>
 		</Category>
 		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
@@ -50,8 +50,8 @@
 			<IsBlockCategory>true</IsBlockCategory>
 			<StrictSearch>true</StrictSearch>
 			<ItemIds>
-				<string>Thrust/mss_lg_thrust_concord</string>
-				<string>Thrust/mss_sg_concord_thrust</string>
+				<string>Thrust/mss_lg_thrust_concord_1x1</string>
+				<string>Thrust/mss_lg_thrust_concord_3x3</string>
 			</ItemIds>
 		</Category>
 		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition"><!-- Weapons -->
