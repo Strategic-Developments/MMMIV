@@ -31,28 +31,28 @@ namespace NerdRadar.ExampleMod
             */
             LargeGridClasses = new List<ShipClass>() // list of large grid ship classes
             {
-                new ShipClass(250, "Tiny Signature"), // first number is the MAXIMUM blockcount, the second is the class name.
-                new ShipClass(1500, "Small Signature"), // first number is the MAXIMUM blockcount, the second is the class name.
-                new ShipClass(3000, "Medium Signature"), // first number is the MAXIMUM blockcount, the second is the class name.
-                new ShipClass(6000, "Large Signature"), // first number is the MAXIMUM blockcount, the second is the class name.
-                new ShipClass(12000, "Very Large Signature"), // first number is the MAXIMUM blockcount, the second is the class name.
-                new ShipClass(int.MaxValue, "Extreme Signature"), // first number is the MAXIMUM blockcount, the second is the class name.
+                new ShipClass(250, "Tiny Sig"), // first number is the MAXIMUM blockcount, the second is the class name.
+                new ShipClass(1500, "Small Sig"), // first number is the MAXIMUM blockcount, the second is the class name.
+                new ShipClass(3000, "Medium Sig"), // first number is the MAXIMUM blockcount, the second is the class name.
+                new ShipClass(6000, "Large Sig"), // first number is the MAXIMUM blockcount, the second is the class name.
+                new ShipClass(12000, "Very Large Sig"), // first number is the MAXIMUM blockcount, the second is the class name.
+                new ShipClass(int.MaxValue, "Extreme Sig"), // first number is the MAXIMUM blockcount, the second is the class name.
             },
             SmallGridClasses = new List<ShipClass>() // list of small grid ship classes
             {
-                new ShipClass(500, "Tiny Signature"), // first number is the MAXIMUM blockcount, the second is the class name.
-                new ShipClass(2500, "Small Signature"), // first number is the MAXIMUM blockcount, the second is the class name.
-                new ShipClass(4500, "Medium Signature"), // first number is the MAXIMUM blockcount, the second is the class name.
-                new ShipClass(int.MaxValue, "Large Signature"), // first number is the MAXIMUM blockcount, the second is the class name.
+                new ShipClass(500, "Tiny Sig"), // first number is the MAXIMUM blockcount, the second is the class name.
+                new ShipClass(2500, "Small Sig"), // first number is the MAXIMUM blockcount, the second is the class name.
+                new ShipClass(4500, "Medium Sig"), // first number is the MAXIMUM blockcount, the second is the class name.
+                new ShipClass(int.MaxValue, "Large Sig"), // first number is the MAXIMUM blockcount, the second is the class name.
             },
             StationClasses = new List<ShipClass>() // list of station classes, whether large or small grid (yes small grid stations are possible)
             {
-                new ShipClass(250, "Tiny Signature"), // first number is the MAXIMUM blockcount, the second is the class name.
-                new ShipClass(1500, "Small Signature"), // first number is the MAXIMUM blockcount, the second is the class name.
-                new ShipClass(3000, "Medium Signature"), // first number is the MAXIMUM blockcount, the second is the class name.
-                new ShipClass(6000, "Large Signature"), // first number is the MAXIMUM blockcount, the second is the class name.
-                new ShipClass(12000, "Very Large Signature"), // first number is the MAXIMUM blockcount, the second is the class name.
-                new ShipClass(int.MaxValue, "Extreme Signature"), // first number is the MAXIMUM blockcount, the second is the class name.
+                new ShipClass(250, "Tiny Sig"), // first number is the MAXIMUM blockcount, the second is the class name.
+                new ShipClass(1500, "Small Sig"), // first number is the MAXIMUM blockcount, the second is the class name.
+                new ShipClass(3000, "Medium Sig"), // first number is the MAXIMUM blockcount, the second is the class name.
+                new ShipClass(6000, "Large Sig"), // first number is the MAXIMUM blockcount, the second is the class name.
+                new ShipClass(12000, "Very Large Sig"), // first number is the MAXIMUM blockcount, the second is the class name.
+                new ShipClass(int.MaxValue, "Extreme Sig"), // first number is the MAXIMUM blockcount, the second is the class name.
             },
         };
         // Do not modify below this line
