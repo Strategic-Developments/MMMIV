@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+			<Id>
+				<TypeId>Thrust</TypeId>
+				<SubtypeId>EVEThrust_ConcordThruster</SubtypeId>
+			</Id>
+			<DisplayName>Heavy Sublight Thruster</DisplayName>
+			<Description>Heavy fusion-powered engine for sublight propulsion.</Description>
+			<Icon>Textures\GUI\Icons\Cubes\ConcordThruster.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="7"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\ConcordThruster.mwm</Model>
+			<Components>
+        <Component Subtype="SteelPlate" Count="500" />
+        <Component Subtype="Construction" Count="200" />
+        <Component Subtype="MetalGrid" Count="110" />
+        <Component Subtype="LargeTube" Count="48" />
+        <Component Subtype="SmallTube" Count="80" />	
+        <Component Subtype="Motor" Count="80" />
+        <Component Subtype="Computer" Count="100" />
+        <Component Subtype="MetalGrid" Count="100" />
+		 <Component Subtype="SteelPlate" Count="2000" />		
+        
+      </Components>
+			<CriticalComponent Subtype="Computer" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.05" StartY="0.05" EndX="2.95" EndY="2.95"/>
+				<MountPoint Side="Left" StartX="4.16" StartY="0.00" EndX="6.98" EndY="3.00"/>
+				<MountPoint Side="Right" StartX="0.04" StartY="0.00" EndX="2.86" EndY="3.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.02" EndX="3.00" EndY="2.84"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="4.16" EndX="3.00" EndY="6.98"/>
+			</MountPoints>
+			<BlockPairName>ConcordThruster</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			 <VoxelPlacement>
+        <!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+        	<StaticMode>
+        	  <PlacementMode>Volumetric</PlacementMode>
+        	  <MaxAllowed>0.2</MaxAllowed>
+        	  <MinAllowed>0</MinAllowed>
+      		  </StaticMode>
+       	 		<DynamicMode>
+        	  		<PlacementMode>Volumetric</PlacementMode>
+       	  		 <MaxAllowed>0.2</MaxAllowed>
+      	  		  <MinAllowed>0</MinAllowed>
+        		 </DynamicMode>
+      		</VoxelPlacement>
+	
+         
+            <BuildTimeSeconds>20</BuildTimeSeconds>
+            
+
+            <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+            <ForceMagnitude>28800000</ForceMagnitude>
+            <MaxPowerConsumption>5.2</MaxPowerConsumption>
+            <MinPowerConsumption>0.000002</MinPowerConsumption>
+            <SlowdownFactor>1</SlowdownFactor>
+
+            <MinPlanetaryInfluence>0</MinPlanetaryInfluence>
+            <MaxPlanetaryInfluence>1</MaxPlanetaryInfluence>
+            <EffectivenessAtMinInfluence>1</EffectivenessAtMinInfluence>
+            <EffectivenessAtMaxInfluence>0.2</EffectivenessAtMaxInfluence>
+
+            <FlameDamageLengthScale>0.6</FlameDamageLengthScale>
+            <FlameDamage>0.2</FlameDamage>
+            <FlameLengthScale>1.1</FlameLengthScale>
+
+
+            <FlameIdleColor>
+                <X>0.1</X>
+                <Y>0.5</Y>
+                <Z>0.8</Z>
+                <W>0.75</W>
+            </FlameIdleColor>
+            <FlameFullColor>
+                <X>0.1</X>
+                <Y>0.8</Y>
+                <Z>0.8</Z>
+                <W>0.75</W>
+            </FlameFullColor>
+
+
+            <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+            <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+            <FlameFlare>LargeGridLargeThruster</FlameFlare>
+            <FlameVisibilityDistance>700</FlameVisibilityDistance>
+            <FlameGlareQuerySize>1.5</FlameGlareQuerySize>
+            <PrimarySound>SmShipLrgJet</PrimarySound>
+            <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+            <DamagedSound>ParticleWeapExpl</DamagedSound>
+			<Public>true</Public>0
+            <DestroyEffect>BlockDestroyedExplosion_Small</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>12</PCU>
+			<TieredUpdateTimes>
+				<unsignedInt>100</unsignedInt>
+				<unsignedInt>3600</unsignedInt>
+				<unsignedInt>0</unsignedInt>
+			</TieredUpdateTimes>
+            
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+        </Definition>
+	</CubeBlocks>
+</Definitions>
