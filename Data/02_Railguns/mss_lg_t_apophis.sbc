@@ -7,7 +7,7 @@
 				<SubtypeId>mss_lg_t_apophis_base</SubtypeId>
 			</Id>
 			<DisplayName>Apophis Railgun Turret</DisplayName>
-			<Description>Rapid-firing heavy railgun. Loads Apophis Railgun Sabots. 15KM range.</Description>
+			<Description>Rapid-firing heavy railgun. Loads Apophis Railgun Sabots.</Description>
 			<Icon>Textures\GUI\Icons\Cubes\CustosBase.png</Icon>
 			<CubeSize>Large</CubeSize>
 			<GuiVisible>false</GuiVisible>

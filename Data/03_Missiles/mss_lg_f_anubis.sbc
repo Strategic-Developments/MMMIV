@@ -7,7 +7,7 @@
 				<SubtypeId>mss_lg_f_anubis</SubtypeId>
 			</Id>
 			<DisplayName>Anubis Heavy Missile Tube</DisplayName>
-			<Description>Single-tube heavy missile. Loads Anubis Missiles. 20KM range.</Description>
+			<Description>Single-tube heavy missile. Loads Anubis Missiles.</Description>
 			<Icon>Textures\GUI\Icons\Cubes\MissileTube.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>

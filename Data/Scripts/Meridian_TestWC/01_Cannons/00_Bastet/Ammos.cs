@@ -51,9 +51,9 @@ namespace Scripts
                                    // Optional penetration mechanic to apply damage to blocks beyond the first hit, without requiring the block to be destroyed.  
                                    // Overwrites normal damage behavior of requiring a block to be destroyed before damage can continue.  0 disables. 
                                    // To limit max # of blocks hit, set MaxObjectsHit to desired # and ensure CountBlocks = true in ObjectsHit, otherwise it will continue until BaseDamage depletes
-            Mass = 100f, // In kilograms; how much force the impact will apply to the target, multiplied by projectile speed at time of impact (beams only use the Mass value specified, no multiplier)
+            Mass = 75f, // In kilograms; how much force the impact will apply to the target, multiplied by projectile speed at time of impact (beams only use the Mass value specified, no multiplier)
             Health = 0, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
-            BackKickForce = 100f * CANNON_VELOCITY, // Recoil. This is applied to the Parent Grid.
+            BackKickForce = 75f * CANNON_VELOCITY, // Recoil. This is applied to the Parent Grid.
             DecayPerShot = 0f, // Damage to the firing weapon itself. 
                                //float.MaxValue will drop the weapon to the first build state and destroy all components used for construction
                                //If greater than cube integrity it will remove the cube upon firing, without causing deformation (makes it look like the whole "block" flew away)
@@ -334,7 +334,7 @@ namespace Scripts
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed. Be warned, you can make your projectile go backwards.
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
                 MaxTrajectoryTime = 0, // How long the weapon must fire before it reaches MaxTrajectory.
-                TotalAcceleration = 1234.5, // Limits how much acceleration (in m/s) can be applied (aka delta-v), and counts BOTH straight line acceleration and turning.
+                TotalAcceleration = 0, // Limits how much acceleration (in m/s) can be applied (aka delta-v), and counts BOTH straight line acceleration and turning.
                                             // Note that drag is not modelled, and projectiles do not constantly "thrust."
                                             // ONLY usable on Smart ammos, and 0 disables
                 DragPerSecond = 0f, // Amount of drag (m/s) deducted from the projectile's speed, multiplied by age.  Will not go below zero/negative.  Note that turrets will not be able to reliably account for this with non-smart ammo.
@@ -647,7 +647,7 @@ namespace Scripts
                         },
                     },
                 },
-                Lines = FX_CANNON_LARGE,
+                Lines = FX_CANNON_MEDIUM,
             },
             AmmoAudio = new AmmoAudioDef
             {

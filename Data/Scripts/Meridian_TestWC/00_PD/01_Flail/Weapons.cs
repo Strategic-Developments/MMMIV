@@ -161,16 +161,16 @@ namespace Scripts
                 },
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 900, // Set this to 3600 for beam weapons. This is how fast your gun fires per minute.
+                    RateOfFire = 3600, // Set this to 3600 for beam weapons. This is how fast your gun fires per minute.
                     BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
-                    TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
+                    TrajectilesPerBarrel = 2, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
-                    ReloadTime = 180, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = 3 * 60, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 1, // Number of physical magazines to consume on reload.
                     DelayUntilFire = 0, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    HeatPerShot = 1, // Heat generated per shot (BarrelsPerShot * HeatPerShot is the total heat per firing event).
-                    MaxHeat = 100000, // Max heat before weapon enters cooldown (70% of max heat).
-                    Cooldown = 0f, // Percentage of max heat to be under to start firing again after overheat; accepts 0 - 0.95
+                    HeatPerShot = (int)(500000f / (3600f / 60f)), // Heat generated per shot (BarrelsPerShot * HeatPerShot is the total heat per firing event).
+                    MaxHeat = 2000000, // Max heat before weapon enters cooldown (70% of max heat).
+                    Cooldown = 0.5f, // Percentage of max heat to be under to start firing again after overheat; accepts 0 - 0.95
                     HeatSinkRate = 100000, // Amount of heat lost per second.
                     HeatSinkRateOverheatMult = 1f, // Multiplier to LoadingDef.HeatSinkRate when the weapon is overheated. 0 disables, negative values are allowed.
                                                    // Beware that negative values makes a weapon unusable should it overheat if it doesn't also have negative LoadingDef.HeatSinkRate, which does not work properly at the moment (heat does not update unless it has heat).
@@ -184,10 +184,10 @@ namespace Scripts
                         RofAt100Heat = 0.25f, // ROF multiplier when DegradeRof is active, if heat was at 100%, NOT when it is at the end threshold; must be greater than 0 or it defaults to 0.25f
                     },
                     ProhibitCoolingWhenOff = false, // If true, prevents blocks that are turned off from cooling down over time
-                    ShotsInBurst = 10, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
-                    DelayAfterBurst = 120, // How long to spend "reloading" after each burst. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    FireFull = false, // Whether the weapon should fire the full magazine (or the full burst instead if ShotsInBurst > 0), even if the target is lost or the player stops firing prematurely.
-                    GiveUpAfter = false, // Whether the weapon should drop its current target and reacquire a new target after finishing its magazine or burst.
+                    ShotsInBurst = 4, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
+                    DelayAfterBurst = 3, // How long to spend "reloading" after each burst. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    FireFull = true, // Whether the weapon should fire the full magazine (or the full burst instead if ShotsInBurst > 0), even if the target is lost or the player stops firing prematurely.
+                    GiveUpAfter = true, // Whether the weapon should drop its current target and reacquire a new target after finishing its magazine or burst.
                     BarrelSpinRate = 0, // 0 disables and uses RateOfFire.  If slower than ROF, will increase time to spin up and start shooting.
                     DeterministicSpin = false, // Spin barrel position will always be relative to initial / starting positions (spin will not be as smooth).
                     SpinFree = true, // Spin barrel while not firing.
@@ -247,6 +247,7 @@ namespace Scripts
             },
             Ammos = new[] {
                 mss_lg_t_flail_ammo,
+                mss_lg_t_flail_ammo_tra
             },
             //Animations = mss_lg_t_amunra_anim,
             //Upgrades = UpgradeModules,

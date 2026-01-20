@@ -334,7 +334,7 @@ namespace Scripts
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed. Be warned, you can make your projectile go backwards.
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
                 MaxTrajectoryTime = 0, // How long the weapon must fire before it reaches MaxTrajectory.
-                TotalAcceleration = 1234.5, // Limits how much acceleration (in m/s) can be applied (aka delta-v), and counts BOTH straight line acceleration and turning.
+                TotalAcceleration = 0, // Limits how much acceleration (in m/s) can be applied (aka delta-v), and counts BOTH straight line acceleration and turning.
                                             // Note that drag is not modelled, and projectiles do not constantly "thrust."
                                             // ONLY usable on Smart ammos, and 0 disables
                 DragPerSecond = 0f, // Amount of drag (m/s) deducted from the projectile's speed, multiplied by age.  Will not go below zero/negative.  Note that turrets will not be able to reliably account for this with non-smart ammo.
