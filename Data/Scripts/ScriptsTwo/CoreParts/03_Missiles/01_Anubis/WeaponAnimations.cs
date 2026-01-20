@@ -46,7 +46,7 @@ namespace Scripts
                                new RelMove //This is an animation block, and moves a subpart named subpart_leftRail -0.2 on the X axis.
                                 {
                                     CenterEmpty = "",
-                                    TicksToMove = 2 * 60, //number of ticks to complete motion, 60 = 1 second
+                                    TicksToMove = 12 * 60, //number of ticks to complete motion, 60 = 1 second
                                     MovementType = Delay, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
                                     LinearPoints = new[]
                                     {
