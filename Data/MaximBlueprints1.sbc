@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Blueprints>
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>SOFL_AESA_TR_Comp_BP</SubtypeId>
+            </Id>
+            <DisplayName>AESA Antenna Module</DisplayName>
+			<Icon>Textures\Icons\000 Components\SOFL_AESA_TR_Comp.dds</Icon>
+            <Prerequisites>
+                <Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="12" TypeId="Ingot" SubtypeId="Cobalt" />		
+                <Item Amount="8" TypeId="Ingot" SubtypeId="Gold" />
+                <Item Amount="4" TypeId="Ingot" SubtypeId="Platinum" />		
+            </Prerequisites>
+            <Result Amount="1" TypeId="Component" SubtypeId="SOFL_AESA_TR_Comp" />
+            <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+            <IsPrimary>true</IsPrimary>
+        </Blueprint>
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>SOFL_EM_Horn_Assembly_BP</SubtypeId>
+            </Id>
+            <DisplayName>EM Horn Assembly</DisplayName>
+			<Icon>Textures\Icons\000 Components\SOFL_EM_Horn_Assembly.dds</Icon>
+            <Prerequisites>
+                <Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="12" TypeId="Ingot" SubtypeId="Cobalt" />		
+                <Item Amount="8" TypeId="Ingot" SubtypeId="Gold" />
+            </Prerequisites>
+            <Result Amount="1" TypeId="Component" SubtypeId="SOFL_EM_Horn_Assembly" />
+            <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+            <IsPrimary>true</IsPrimary>
+        </Blueprint>
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>SOFL_Beamformer_Chipset_BP</SubtypeId>
+            </Id>
+            <DisplayName>Digital Beamformer Chipset</DisplayName>
+			<Icon>Textures\Icons\000 Components\SOFL_Beamformer Chipset.dds</Icon>
+            <Prerequisites>
+                <Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+                <Item Amount="8" TypeId="Ingot" SubtypeId="Gold" />
+                <Item Amount="4" TypeId="Ingot" SubtypeId="Silver" />		
+            </Prerequisites>
+            <Result Amount="1" TypeId="Component" SubtypeId="SOFL_Beamformer_Chipset" />
+            <BaseProductionTimeInSeconds>20</BaseProductionTimeInSeconds>
+            <IsPrimary>true</IsPrimary>
+        </Blueprint>
+
+    </Blueprints>
+</Definitions>
