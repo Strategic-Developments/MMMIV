@@ -53,7 +53,7 @@ namespace Scripts
                                     // To limit max # of blocks hit, set MaxObjectsHit to desired # and ensure CountBlocks = true in ObjectsHit, otherwise it will continue until BaseDamage depletes
             Mass = 0f, // Disabled here. Too lazy to set this to 0 everywhere so MasterConfig does it
             Health = 0, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
-            BackKickForce = 0.01f * PD_VELOCITY, // Recoil. This is applied to the Parent Grid.
+            BackKickForce = 0.1f * PD_VELOCITY, // Recoil. This is applied to the Parent Grid.
             DecayPerShot = 0f, // Damage to the firing weapon itself. 
                                //float.MaxValue will drop the weapon to the first build state and destroy all components used for construction
                                //If greater than cube integrity it will remove the cube upon firing, without causing deformation (makes it look like the whole "block" flew away)
@@ -462,7 +462,7 @@ namespace Scripts
                                     // To limit max # of blocks hit, set MaxObjectsHit to desired # and ensure CountBlocks = true in ObjectsHit, otherwise it will continue until BaseDamage depletes
             Mass = 0f, // Disabled here. Too lazy to set this to 0 everywhere so MasterConfig does it
             Health = 0, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
-            BackKickForce = 0f, // Recoil. This is applied to the Parent Grid.
+            BackKickForce = 0.1f * PD_VELOCITY, // Recoil. This is applied to the Parent Grid.
             DecayPerShot = 0f, // Damage to the firing weapon itself. 
                                //float.MaxValue will drop the weapon to the first build state and destroy all components used for construction
                                //If greater than cube integrity it will remove the cube upon firing, without causing deformation (makes it look like the whole "block" flew away)
@@ -782,8 +782,8 @@ namespace Scripts
                     {
                         Enable = true,
                         Length = 0, //
-                        Width = 0.3f, //
-                        Color = Color(red: 5, green: 2, blue: 1, alpha: 0), // RBG 255 is Neon Glowing, 100 is Quite Bright.
+                        Width = 0.2f, //
+                        Color = Color(red: 5, green: 4, blue: 3, alpha: 0), // RBG 255 is Neon Glowing, 100 is Quite Bright.
                         FactionColor = DontUse, // DontUse, Foreground, Background.
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
@@ -818,7 +818,7 @@ namespace Scripts
                         },
                         TextureMode = Normal,
                         DecayTime = 2, // In Ticks. 1 = 1 Additional Tracer generated per motion, 33 is 33 lines drawn per projectile. Keep this number low.
-                        Color = Color(red: 5, green: 2f, blue: 1f, alpha: 1f),
+                        Color = Color(red: 5, green: 3.5f, blue: 2.8f, alpha: 1f),
                         Back = false,
                         CustomWidth = 0.2f,
                         UseWidthVariance = false,
