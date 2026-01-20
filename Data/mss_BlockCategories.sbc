@@ -6,7 +6,7 @@
 				<TypeId>GuiBlockCategoryDefinition</TypeId>
 				<SubtypeId/>
 			</Id>
-			<DisplayName>Meridian: Frontier Weapons</DisplayName>
+			<DisplayName>Meridian: Frontier</DisplayName>
 			<Name>Section1_0_meridian</Name>
 			<IsBlockCategory>true</IsBlockCategory>
 			<StrictSearch>true</StrictSearch>
@@ -17,6 +17,41 @@
 				<string>ConveyorSorter/mss_lg_f_anubis</string>
 				<string>ConveyorSorter/mss_lg_t_flail_base</string>
 				<string>ConveyorSorter/mss_lg_t_bastet_base</string>
+
+				<string>Thrust/mss_lg_thrust_concord</string>
+				<string>Thrust/mss_sg_concord_thrust</string>
+			</ItemIds>
+		</Category>
+		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+			<Id>
+				<TypeId>GuiBlockCategoryDefinition</TypeId>
+				<SubtypeId/>
+			</Id>
+			<DisplayName>   Weaponry</DisplayName>
+			<Name>Section1_1_weapons</Name>
+			<IsBlockCategory>true</IsBlockCategory>
+			<StrictSearch>true</StrictSearch>
+			<ItemIds>
+				<string>ConveyorSorter/mss_lg_t_horus_base</string>
+				<string>ConveyorSorter/mss_lg_t_amunra_base</string>
+				<string>ConveyorSorter/mss_lg_t_apophis_base</string>
+				<string>ConveyorSorter/mss_lg_f_anubis</string>
+				<string>ConveyorSorter/mss_lg_t_flail_base</string>
+				<string>ConveyorSorter/mss_lg_t_bastet_base</string>
+			</ItemIds>
+		</Category>
+		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+			<Id>
+				<TypeId>GuiBlockCategoryDefinition</TypeId>
+				<SubtypeId/>
+			</Id>
+			<DisplayName>   Propulsion</DisplayName>
+			<Name>Section1_2_thrusters</Name>
+			<IsBlockCategory>true</IsBlockCategory>
+			<StrictSearch>true</StrictSearch>
+			<ItemIds>
+				<string>Thrust/mss_lg_thrust_concord</string>
+				<string>Thrust/mss_sg_concord_thrust</string>
 			</ItemIds>
 		</Category>
 		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition"><!-- Weapons -->
