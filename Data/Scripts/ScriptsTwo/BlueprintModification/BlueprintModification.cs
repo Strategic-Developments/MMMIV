@@ -85,6 +85,110 @@ namespace BlueprintMod
 
                 definition.BaseProductionTimeInSeconds = 1 / 60f;
             }
+            
+            // KILL MAREK ROSA
+            foreach (var item in MyDefinitionManager.Static.GetAllDefinitions())
+            {
+                if (item is MyCubeBlockDefinition)
+                {
+                    var def = item as MyCubeBlockDefinition;
+                    switch (def.Id.ToString().Replace(MyObjectBuilderType.LEGACY_TYPE_PREFIX, ""))
+                    {
+                        case "Thrust/LargeBlockLargeHydrogenThrust":
+                        case "Thrust/LargeBlockSmallHydrogenThrust":
+                        case "Thrust/LargeBlockLargeHydrogenThrustIndustrial":
+                        case "Thrust/LargeBlockSmallHydrogenThrustIndustrial":
+                        case "Thrust/LargeBlockLargeHydrogenThrustReskin":
+                        case "Thrust/LargeBlockSmallHydrogenThrustReskin":
+
+                        case "Thrust/LargeBlockLargeThrust":
+                        case "Thrust/LargeBlockSmallThrust":
+                        case "Thrust/LargeBlockLargeThrustSciFi":
+                        case "Thrust/LargeBlockSmallThrustSciFi":
+                        case "Thrust/LargeBlockLargeModularThruster":
+                        case "Thrust/LargeBlockSmallModularThruster":
+
+                        case "Thrust/LargeBlockLargeAtmosphericThrust":
+                        case "Thrust/LargeBlockSmallAtmosphericThrust":
+                        case "Thrust/LargeBlockLargeFlatAtmosphericThrust":
+                        case "Thrust/LargeBlockLargeFlatAtmosphericThrustDShape":
+                        case "Thrust/LargeBlockSmallFlatAtmosphericThrust":
+                        case "Thrust/LargeBlockSmallFlatAtmosphericThrustDShape":
+                        case "Thrust/LargeBlockLargeAtmosphericThrustSciFi":
+                        case "Thrust/LargeBlockSmallAtmosphericThrustSciFi":
+
+                        case "Thrust/SmallBlockLargeThrust":
+                        case "Thrust/SmallBlockSmallThrust":
+                        case "Thrust/SmallBlockLargeThrustSciFi":
+                        case "Thrust/SmallBlockSmallThrustSciFi":
+                        case "Thrust/SmallBlockLargeModularThruster":
+                        case "Thrust/SmallBlockSmallModularThruster":
+
+                        case "Thrust/SmallBlockLargeHydrogenThrust":
+                        case "Thrust/SmallBlockSmallHydrogenThrust":
+                        case "Thrust/SmallBlockLargeHydrogenThrustIndustrial":
+                        case "Thrust/SmallBlockSmallHydrogenThrustIndustrial":
+                        case "Thrust/SmallBlockLargeHydrogenThrustReskin":
+                        case "Thrust/SmallBlockSmallHydrogenThrustReskin":
+
+                        case "Thrust/SmallBlockLargeAtmosphericThrust":
+                        case "Thrust/SmallBlockSmallAtmosphericThrust":
+                        case "Thrust/SmallBlockLargeFlatAtmosphericThrust":
+                        case "Thrust/SmallBlockLargeFlatAtmosphericThrustDShape":
+                        case "Thrust/SmallBlockSmallFlatAtmosphericThrust":
+                        case "Thrust/SmallBlockSmallFlatAtmosphericThrustDShape":
+                        case "Thrust/SmallBlockLargeAtmosphericThrustSciFi":
+                        case "Thrust/SmallBlockSmallAtmosphericThrustSciFi":
+
+                        case "Thrust/LargeBlockPrototechThruster":
+                        case "Thrust/SmallBlockPrototechThruster":
+                            var thrustDef = item as MyThrustDefinition;
+                            thrustDef.Enabled = false;
+                            thrustDef.Public = false;
+                            thrustDef.ForceMagnitude = 0.001f;
+                            break;
+
+                        case "LargeGatlingTurret/(null)":
+                        case "LargeGatlingTurret/LargeGatlingTurretReskin":
+                        case "LargeMissileTurret/(null)":
+                        case "LargeMissileTurret/LargeMissileTurretReskin":
+                        case "LargeMissileTurret/LargeCalibreTurret":
+                        case "LargeMissileTurret/LargeBlockMediumCalibreTurret":
+                        case "InteriorTurret/LargeInteriorTurret":
+
+                        case "LargeGatlingTurret/SmallGatlingTurret":
+                        case "LargeGatlingTurret/SmallGatlingTurretReskin":
+                        case "LargeMissileTurret/SmallMissileTurret":
+                        case "LargeMissileTurret/SmallMissileTurretReskin":
+                        case "LargeMissileTurret/SmallBlockMediumCalibreTurret":
+                        case "LargeMissileTurret/AutoCannonTurret":
+
+                        case "SmallMissileLauncher/LargeMissileLauncher":
+                        case "ConveyorSorter/LargeRailgun":
+                        case "SmallMissileLauncher/LargeBlockLargeCalibreGun":
+                        case "SmallMissileLauncher/LargeFlareLauncher":
+                        case "SmallMissileLauncher/(null)":
+                        case "SmallMissileLauncher/SmallMissileLauncherWarfare2":
+                        case "SmallMissileLauncherReload/SmallRocketLauncherReload":
+                        case "SmallGatlingGun/(null)":
+                        case "SmallGatlingGun/SmallGatlingGunWarfare2":
+                        case "SmallGatlingGun/SmallBlockAutocannon":
+                        case "ConveyorSorter/SmallRailgun":
+                        case "SmallMissileLauncherReload/SmallBlockMediumCalibreGun":
+                        case "SmallMissileLauncher/SmallFlareLauncher":
+
+                        case "JumpDrive/SmallPrototechJumpDrive":
+                        case "JumpDrive/LargePrototechJumpDrive":
+                        case "Refinery/SmallPrototechRefinery":
+                        case "Refinery/LargePrototechRefinery":
+                            def.Enabled = false;
+                            def.Public = false;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
         }
     }
 }
