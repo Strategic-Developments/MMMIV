@@ -162,6 +162,12 @@
 			<TargetingGroups>
 				<string>Propulsion</string>
 			</TargetingGroups>
+			<BlockVariants>
+				<BlockVariant>
+					<TypeId>Thrust</TypeId>
+					<SubtypeId>mss_lg_thrust_concord_3x3</SubtypeId>
+				</BlockVariant>
+			</BlockVariants>
 		</Definition>
 	</CubeBlocks>
 </Definitions>
