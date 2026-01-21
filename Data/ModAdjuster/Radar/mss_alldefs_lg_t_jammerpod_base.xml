@@ -7,14 +7,8 @@
 				<SubtypeId>Nerd_JammingBlock</SubtypeId>
 			</Id>
 			<DisplayName>Radar Jammer</DisplayName>
-			<Description>Large grid radar jammer, useful for concealing precise ship position and range.
-			
-Radiated Power: 3kW
-Gain: 20dB
-Max Range: 60km
-Area Effect Ratio: 0.4
-Cone Angle: 25 degrees
-Requires LOS: true</Description>
+			<Description>Large grid radar jammer, useful for concealing precise ship position and range. Max Jamming Range: 300km.</Description>
+			<RequiredPowerInput>50</RequiredPowerInput>
 		</Definition>
 	</CubeBlocks>
 </Definitions>

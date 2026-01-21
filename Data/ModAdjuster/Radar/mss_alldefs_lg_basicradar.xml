@@ -7,7 +7,18 @@
 				<SubtypeId>Nerd_Radar_Basic</SubtypeId>
 			</Id>
 			<DisplayName>Radar Station</DisplayName>
-			<Description>Radar</Description>
+			<Description>
+				Radar which detects grids based off of blockcount and current power use. Max Range: 300km
+
+0MW Used Detection Ranges:
+1000 blocks: 102km
+2000 blocks: 144km
+3000 blocks: 177km
+4000 blocks: 204km
+5000 blocks: 228km
+6000 blocks: 250km
+7000 blocks: 270km
+8000 blocks: 288km</Description>
 			<RequiredPowerInput>50</RequiredPowerInput>
 		</Definition>
 	</CubeBlocks>
