@@ -55,6 +55,8 @@ namespace SRRadarStats
                     Mod_Watermod_LOSCheck_Underwater = false, // Set to true to have the radar only detect targets if the LOS check starts and ends abovewater.
                     Mod_Watermod_LOSCheck_EntersWater = false, // Set to true to have the radar only detect targets if the LOS check starts abovewater and ends underwater.
                     Mod_Watermod_LOSCheck_ExitsWater = false, // Set to true to have the radar only detect targets if the LOS check starts underwater and ends abovewater.
+                
+                    PowerRequirementOverride = 50f,
                 },
                 ["Nerd_Radar_Basic"] = new RadarStat()
                 {
@@ -95,6 +97,8 @@ namespace SRRadarStats
                     Mod_Watermod_LOSCheck_Underwater = false, // Set to true to have the radar only detect targets if the LOS check starts and ends abovewater.
                     Mod_Watermod_LOSCheck_EntersWater = false, // Set to true to have the radar only detect targets if the LOS check starts abovewater and ends underwater.
                     Mod_Watermod_LOSCheck_ExitsWater = false, // Set to true to have the radar only detect targets if the LOS check starts underwater and ends abovewater.
+
+                    PowerRequirementOverride = 50f,
                 },
                 ["Nerd_Radar_SG"] = new RadarStat()
                 {
@@ -135,6 +139,8 @@ namespace SRRadarStats
                     Mod_Watermod_LOSCheck_Underwater = false, // Set to true to have the radar only detect targets if the LOS check starts and ends abovewater.
                     Mod_Watermod_LOSCheck_EntersWater = false, // Set to true to have the radar only detect targets if the LOS check starts abovewater and ends underwater.
                     Mod_Watermod_LOSCheck_ExitsWater = false, // Set to true to have the radar only detect targets if the LOS check starts underwater and ends abovewater.
+
+                    PowerRequirementOverride = 10f,
                 },
                 ["sr_sg_awacs_radar"] = new RadarStat()
                 {
@@ -175,6 +181,8 @@ namespace SRRadarStats
                     Mod_Watermod_LOSCheck_Underwater = false, // Set to true to have the radar only detect targets if the LOS check starts and ends abovewater.
                     Mod_Watermod_LOSCheck_EntersWater = false, // Set to true to have the radar only detect targets if the LOS check starts abovewater and ends underwater.
                     Mod_Watermod_LOSCheck_ExitsWater = false, // Set to true to have the radar only detect targets if the LOS check starts underwater and ends abovewater.
+
+                    PowerRequirementOverride = 50f,
                 },
                 ["EyeOfSauron"] = new RadarStat()
                 {
@@ -215,6 +223,8 @@ namespace SRRadarStats
                     Mod_Watermod_LOSCheck_Underwater = false, // Set to true to have the radar only detect targets if the LOS check starts and ends abovewater.
                     Mod_Watermod_LOSCheck_EntersWater = false, // Set to true to have the radar only detect targets if the LOS check starts abovewater and ends underwater.
                     Mod_Watermod_LOSCheck_ExitsWater = false, // Set to true to have the radar only detect targets if the LOS check starts underwater and ends abovewater.
+
+                    PowerRequirementOverride = 50f,
                 },
             },
             JammerStats = new Dictionary<string, JammerStat>()
@@ -258,6 +268,8 @@ namespace SRRadarStats
                     // -90 to 90 means it can rotate fully. Make sure min < max lmao
                     MinElevation = -45, // Angle in degrees from grid forward to allow the subpart to go to down. Not used if the jammer is an interior turret.
                     MaxElevation = 90, // Angle in degrees from grid forward to allow the subpart to go to up. Not used if the jammer is an interior turret.
+
+                    PowerRequirementOverride = 75f,
                 },
                 ["sr_sg_t_jammerpod_base"] = new JammerStat()
                 {
@@ -298,6 +310,8 @@ namespace SRRadarStats
                     // -90 to 90 means it can rotate fully. Make sure min < max lmao
                     MinElevation = -5, // Angle in degrees from grid forward to allow the subpart to go to down. Not used if the jammer is an interior turret.
                     MaxElevation = 5, // Angle in degrees from grid forward to allow the subpart to go to up. Not used if the jammer is an interior turret.
+
+                    PowerRequirementOverride = 50f,
                 }
             },
 

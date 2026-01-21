@@ -63,7 +63,7 @@ namespace NerdRadar.Definitions
     [ProtoInclude(601, typeof(BlockConfig))]
     public class EWARDefinition
     {
-        
+
         public EWARDefinition()
         {
         }
@@ -248,6 +248,17 @@ namespace NerdRadar.Definitions
         /// If true, <c>NameAddon</c> will be applied regardless of whether <c>ApplyOnlyWhenOn</c> or <c>ApplyOnlyWhenFiring</c> is true and conditions are meant.
         /// </summary>
         [ProtoMember(16)] public bool NameAddonIgnoresFunctional;
+
+        /// <summary>
+        /// If greater than zero, overrides the block's power requirement to this value in MW.
+        /// <para>
+        /// Units: MW
+        /// </para>
+        /// <para>
+        /// Requirements: <c>Value is greater than or equal to 0</c>
+        /// </para>
+        /// </summary>
+        [ProtoMember(17)] public float PowerRequirementOverride;
     }
     /// <summary>
     /// Class containing all the stats for radar. Most stats can be found here: http://nebfltcom.wikidot.com/mechanics:radar
@@ -552,6 +563,17 @@ namespace NerdRadar.Definitions
         /// </summary>
         [ProtoMember(17)] public int DefinitionPriority;
 
+        /// <summary>
+        /// If greater than zero, overrides the block's power requirement to this value in MW.
+        /// <para>
+        /// Units: MW
+        /// </para>
+        /// <para>
+        /// Requirements: <c>Value is greater than or equal to 0</c>
+        /// </para>
+        /// </summary>
+        [ProtoMember(18)] public float PowerRequirementOverride;
+
         public RadarStat()
         {
         }
@@ -750,6 +772,17 @@ namespace NerdRadar.Definitions
         /// </para>
         /// </summary>
         [ProtoMember(18)] public string MuzzleEmptyName;
+
+        /// <summary>
+        /// If greater than zero, overrides the block's power requirement to this value in MW.
+        /// <para>
+        /// Units: MW
+        /// </para>
+        /// <para>
+        /// Requirements: <c>Value is greater than or equal to 0</c>
+        /// </para>
+        /// </summary>
+        [ProtoMember(19)] public float PowerRequirementOverride;
 
         public JammerStat()
         {
