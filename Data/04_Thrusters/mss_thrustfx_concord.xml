@@ -2,7 +2,7 @@
   <Definition xsi:type="MyObjectBuilder_ThrustDefinition"><!-- LargeBlockLargeHydrogenThrust -->
     <Id>
       <TypeId>Thrust</TypeId>
-      <SubtypeId>mss_lg_thrust_concord</SubtypeId>
+      <SubtypeId>mss_lg_thrust_concord_3x3</SubtypeId>
     </Id><!-- Normal Keen Properties 
     ...
     -->
@@ -11,7 +11,7 @@
         <GameLogicComponent Name="MwiComponent"/>
       </ModComponents>
       <Group Name="ThrusterCompData">
-        <Text Name="ID" Value="mss_lg_thrust_concord"/><!--REQUIRED! No specific value required Debugging  -->
+        <Text Name="ID" Value="mss_lg_thrust_concord_3x3"/><!--REQUIRED! No specific value required Debugging  -->
         <Boolean Name="hideVanillaFlame" Value="true"/><!-- Hide Vanilla Flame-->
         <Decimal Name="ThrustRateGain" Value="0.06"/>
         <Decimal Name="ThrustRateLoss" Value="0.3"/>
@@ -27,7 +27,7 @@
                     AtmoOnly: FALSE;
                     ThrustMin : 0.01;
                     ThrustMax : 2;
-                    Size: 2;
+                    Size: 1;
                     Offset: 0;
                     OffsetScaling:0;
                     VelocityScalingFrom: 1;
@@ -40,7 +40,7 @@
   <Definition xsi:type="MyObjectBuilder_ThrustDefinition"><!-- LargeBlockSmallHydrogenThrust -->
     <Id>
       <TypeId>Thrust</TypeId>
-      <SubtypeId>mss_sg_thrust_concord</SubtypeId>
+      <SubtypeId>mss_lg_thrust_concord_1x1</SubtypeId>
     </Id><!-- Normal Keen Properties 
     ...
     -->
@@ -49,7 +49,7 @@
         <GameLogicComponent Name="MwiComponent"/>
       </ModComponents>
       <Group Name="ThrusterCompData">
-        <Text Name="ID" Value="mss_sg_thrust_concord"/><!--REQUIRED! No specific value required Debugging  -->
+        <Text Name="ID" Value="mss_lg_thrust_concord_1x1"/><!--REQUIRED! No specific value required Debugging  -->
         <Boolean Name="hideVanillaFlame" Value="true"/><!-- Hide Vanilla Flame-->
         <Decimal Name="ThrustRateGain" Value="0.12"/>
         <Decimal Name="ThrustRateLoss" Value="0.3"/>
@@ -61,7 +61,7 @@
                     AtmoOnly: FALSE;
                     ThrustMin : 0.01;
                     ThrustMax : 1;
-                    Size: 2;
+                    Size: 1.5;
                     Offset: -1;
                     OffsetScaling: 3;
                     VelocityScalingFrom: -1;

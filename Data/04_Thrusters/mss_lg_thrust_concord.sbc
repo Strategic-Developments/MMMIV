@@ -6,7 +6,7 @@
 				<TypeId>Thrust</TypeId>
 				<SubtypeId>mss_lg_thrust_concord_3x3</SubtypeId>
 			</Id>
-			<DisplayName>Heavy Sublight Thruster</DisplayName>
+			<DisplayName>Concord Sublight Thruster 3x3</DisplayName>
 			<Description>Heavy fusion-powered engine for sublight propulsion.</Description>
 			<Icon>Textures\GUI\Icons\Cubes\ConcordThruster.dds</Icon>
 			<CubeSize>Large</CubeSize>
@@ -99,7 +99,7 @@
 				<TypeId>Thrust</TypeId>
 				<SubtypeId>mss_lg_thrust_concord_1x1</SubtypeId>
 			</Id>
-			<DisplayName>Small Sublight Thruster</DisplayName>
+			<DisplayName>Concord Sublight Thruster 1x1</DisplayName>
 			<Description>A smaller variant of the fusion-powered thruster.</Description>
 			<Icon>Textures\GUI\Icons\Cubes\ConcordThruster_Small.dds</Icon>
 			<CubeSize>Large</CubeSize>
