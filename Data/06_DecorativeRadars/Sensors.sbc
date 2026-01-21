@@ -346,84 +346,8 @@
 			<MaxFov>1.04719755</MaxFov>
 		</Definition>
 
-		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
-			<Id>
-				<TypeId>CubeBlock</TypeId>
-				<SubtypeId>SOFL_CSys_IRO_DetBlock_MkX</SubtypeId>
-			</Id>
-			<DisplayName>C-Sys IR/Opt Detection Block MkX</DisplayName>
-			<Description>Combined visual sensor unit for passive detection of targets </Description>
-			<Icon>Textures\Icons\SOFL_CSys_IRO_DetBlock_MkX.dds</Icon>
-			<CubeSize>Large</CubeSize>
-			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="1" y="1" z="1"/>
-			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\Cubes\Sensors\C-Sys IRO DetBlock MkX\SOFL_CSys_IRO_DetBlock_MkX.mwm</Model>
-			<Components>
-  				<Component Subtype="SteelPlate" Count="15"/>
-  				<Component Subtype="Construction" Count="35"/>
-  				<Component Subtype="SmallTube" Count="15"/>
-  				<Component Subtype="LargeTube" Count="10"/>
-  				<Component Subtype="Motor" Count="10"/>
-  				<Component Subtype="MetalGrid" Count="20"/>
-  				<Component Subtype="Detector" Count="30"/>
-  				<Component Subtype="RadioCommunication" Count="30"/>
-  				
-  				<Component Subtype="SteelPlate" Count="50"/>
-			</Components>
-			<CriticalComponent Subtype="MetalGrid" Index="0"/>
-			<MountPoints>
-				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-			</MountPoints>
-			<BlockPairName>SOFL_CSys_IRO_DetBlock_MkX</BlockPairName>
-			<MirroringX>Y</MirroringX>
-			<MirroringY>X</MirroringY>
-			<IsAirTight>false</IsAirTight>
-			<OverlayTexture></OverlayTexture>
-			<MinFov>0.1</MinFov>
-			<MaxFov>1.04719755</MaxFov>
-		</Definition>
 		
-		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
-			<Id>
-				<TypeId>CubeBlock</TypeId>
-				<SubtypeId>SOFL_CSys_NS_RCG_62</SubtypeId>
-			</Id>
-			<DisplayName>C-Sys NS/RCG-62 FCR</DisplayName>
-			<Description>Older but high performance Fire Control Radar with origins in naval warfare
-			Tier 2 Fire Control Radar (1 Track Radar Sensor)</Description>
-			<Icon>Textures\Icons\SOFL_CSys_NS_RCG_62.dds</Icon>
-			<CubeSize>Large</CubeSize>
-			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="1" y="2" z="1"/>
-			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\Cubes\Sensors\CSys NS_RCG_62\SOFL_CSys_NS_RCG_62.mwm</Model>
-			<Components>
-  				<Component Subtype="SteelPlate" Count="15"/>
-  				<Component Subtype="Construction" Count="35"/>
-  				<Component Subtype="SmallTube" Count="15"/>
-  				<Component Subtype="LargeTube" Count="10"/>
-  				<Component Subtype="Girder" Count="10"/>
-  				<Component Subtype="Motor" Count="30"/>
- 			    <Component Subtype="PowerCell" Count="15"/>
-  				<Component Subtype="MetalGrid" Count="50"/>
-  				<Component Subtype="Superconductor" Count="100"/>
-  				<Component Subtype="Detector" Count="125"/>
-  				<Component Subtype="RadioCommunication" Count="125"/>
-  				
-  				<Component Subtype="SteelPlate" Count="100"/>
-  			</Components>
-			<CriticalComponent Subtype="MetalGrid" Index="0"/>
-			<MountPoints>
-				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-			</MountPoints>
-			<BlockPairName>SOFL_CSys_NS_RCG_62</BlockPairName>
-			<MirroringY>Z</MirroringY>
-			<MirroringZ>Y</MirroringZ>
-			<IsAirTight>false</IsAirTight>
-			<OverlayTexture></OverlayTexture>
-			<MinFov>0.1</MinFov>
-			<MaxFov>1.04719755</MaxFov>
-		</Definition>
+		
+		
 	</CubeBlocks>
 </Definitions>
