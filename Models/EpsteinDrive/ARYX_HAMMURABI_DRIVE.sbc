@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>ARYX_HAMMURABI_DRIVE</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_ARYX_HAMMURABI_DRIVE</DisplayName>
+			<Description>Description_ARYX_HAMMURABI_DRIVE</Description>
+			<Icon>Textures\GUI\Icons\AstronautBackpack.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="7" y="7" z="7"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\EpsteinDrive\ARYX_HAMMURABI_DRIVE.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="10"/>
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="2.00" StartY="6.00" EndX="5.00" EndY="7.00"/>
+				<MountPoint Side="Back" StartX="2.00" StartY="0.00" EndX="5.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="2.00" EndX="1.00" EndY="5.00"/>
+				<MountPoint Side="Back" StartX="1.00" StartY="1.00" EndX="6.00" EndY="6.00"/>
+				<MountPoint Side="Back" StartX="6.00" StartY="2.00" EndX="7.00" EndY="5.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\EpsteinDrive\ARYX_HAMMURABI_DRIVE_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\EpsteinDrive\ARYX_HAMMURABI_DRIVE_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\EpsteinDrive\ARYX_HAMMURABI_DRIVE_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>ARYX_HAMMURABI_DRIVE</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

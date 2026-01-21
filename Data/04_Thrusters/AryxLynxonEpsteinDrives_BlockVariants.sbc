@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <BlockVariantGroups>
+
+        <BlockVariantGroup>
+            <Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="ARYLYN_RCS_THRUSTERS" />
+			<Icon>Textures\GUI\Icons\ALDS_RCS_Block.dds</Icon>
+            <DisplayName>RCS Thrusters</DisplayName>
+            <Description>Arylyn Drive Systems-brand RCS thrusters.</Description>
+            <Blocks>
+				<Block Type="Thrust" Subtype="LynxRcsThruster1" />
+				<Block Type="Thrust" Subtype="AryxRCS" />
+				<Block Type="Thrust" Subtype="AryxRCSSlant" />				
+				<Block Type="Thrust" Subtype="AryxRCSHalfRamp" />				
+				<Block Type="Thrust" Subtype="AryxRCSRamp" />		
+				<Block Type="Thrust" Subtype="AryxRCSThruster" />
+				<Block Type="Thrust" Subtype="AryxRCS_S" />
+				<Block Type="Thrust" Subtype="AryxRCSSlant_S" />				
+				<Block Type="Thrust" Subtype="AryxRCSHalfRamp_S" />				
+				<Block Type="Thrust" Subtype="AryxRCSRamp_S" />						
+            </Blocks>
+        </BlockVariantGroup>		
+		
+    </BlockVariantGroups>
+</Definitions>

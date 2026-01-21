@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Blueprints>
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>AryxLynxon_FusionComponentBP</SubtypeId>
+      </Id>
+      <DisplayName>Fusion Coil</DisplayName>
+      <Icon>Textures\GUI\Icons\ARYLYN_FUSION_COMPONENT.dds</Icon>
+      <Prerequisites>
+        <Item Amount="30" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="24" TypeId="Ingot" SubtypeId="Cobalt" />		
+        <Item Amount="16" TypeId="Ingot" SubtypeId="Gold" />
+        <Item Amount="8" TypeId="Ingot" SubtypeId="Platinum" />			
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="AryxLynxon_FusionComponent" />
+      <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+    </Blueprint>		
+	
+  </Blueprints>
+</Definitions>

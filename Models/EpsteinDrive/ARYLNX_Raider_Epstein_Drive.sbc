@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition>
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>ARYLNX_Raider_Epstein_Drive</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_ARYLNX_Raider_Epstein_Drive</DisplayName>
+			<Description>Description_ARYLNX_Raider_Epstein_Drive</Description>
+			<Icon>Textures\GUI\Icons\AstronautBackpack.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\EpsteinDrive\ARYLNX_Raider_Epstein_Drive.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="10"/>
+			</Components>
+			<CriticalComponent Subtype="SteelPlate" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.38" StartY="0.38" EndX="2.62" EndY="2.62"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\EpsteinDrive\ARYLNX_Raider_Epstein_Drive_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\EpsteinDrive\ARYLNX_Raider_Epstein_Drive_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\EpsteinDrive\ARYLNX_Raider_Epstein_Drive_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>ARYLNX_Raider_Epstein_Drive</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

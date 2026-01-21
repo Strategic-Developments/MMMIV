@@ -1,0 +1,1537 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CubeBlocks>
+
+	<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+		<Id>
+			<TypeId>Thrust</TypeId>
+			<SubtypeId>ARYLNX_RZB_Epstein_Drive</SubtypeId>
+		</Id>
+		<DisplayName>Destrier-4 "SUNFLARE" Epstein Drive</DisplayName>
+		<Description>A compact fusion drive designed for a sleek racing pinnace. Provides unrivalled impulse and requires little fuel. [UNN] </Description>
+		<Description>Description_SG_ARYLNX_RZ_Esptein_Drive</Description>
+		<Icon>Textures\GUI\Icons\ARYLYN_RZB_Epstein_Drive.dds</Icon>
+		<CubeSize>Small</CubeSize>
+		<BlockTopology>TriangleMesh</BlockTopology>
+		<Size x="7" y="7" z="15"/>
+		<ModelOffset x="0" y="0" z="0"/>
+		<Model>Models\EpsteinDrive\SG_ARYLNX_RZ_Esptein_Drive.mwm</Model>
+		<Components>
+        <Component Subtype="SteelPlate" Count="100" />
+        <Component Subtype="Construction" Count="25" />
+        <Component Subtype="MetalGrid" Count="50" />
+        <Component Subtype="LargeTube" Count="20" />		
+        <Component Subtype="Superconductor" Count="30" />	
+        <Component Subtype="AryxLynxon_FusionComponent" Count="8" />	
+        <Component Subtype="PowerCell" Count="20" />		
+        <Component Subtype="Thrust" Count="50" />	
+        <Component Subtype="Construction" Count="25" />
+        <Component Subtype="SteelPlate" Count="50" />
+		</Components>
+		<CriticalComponent Subtype="Thrust" Index="0" />
+		<MountPoints>
+			<MountPoint Side="Back" StartX="1.5" StartY="1.5" EndX="5.5" EndY="5.5"/>
+			<MountPoint Side="Left" StartX="12.5" StartY="2.45" EndX="15" EndY="4.55"/>
+			<MountPoint Side="Right" StartX="0.00" StartY="2.45" EndX="2.48" EndY="4.55"/>
+			<MountPoint Side="Top" StartX="1.75" StartY="0.00" EndX="5.25" EndY="2.45"/>
+			<MountPoint Side="Bottom" StartX="1.75" StartY="12.5" EndX="5.25" EndY="15"/>
+		</MountPoints>
+		<BuildProgressModels>
+			<Model BuildPercentUpperBound="0.33" File="Models\EpsteinDrive\SG_ARYLNX_RZ_Esptein_Drive_BS1.mwm"/>
+			<Model BuildPercentUpperBound="0.66" File="Models\EpsteinDrive\SG_ARYLNX_RZ_Esptein_Drive_BS2.mwm"/>
+			<Model BuildPercentUpperBound="1.0" File="Models\EpsteinDrive\SG_ARYLNX_RZ_Esptein_Drive_BS3.mwm"/>
+		</BuildProgressModels>
+		<BlockPairName>LG_ARYLNX_RZ_Epstein_Drive</BlockPairName>
+		<MirroringY>Z</MirroringY>
+		<MirroringZ>Y</MirroringZ>
+		
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>60</BuildTimeSeconds>	  
+      <MaxPowerConsumption>0.3112</MaxPowerConsumption>
+      <MinPowerConsumption>0.0001</MinPowerConsumption>
+      <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+      <ForceMagnitude>4250000</ForceMagnitude>
+      <FuelConverter>
+        <FuelId>
+          <TypeId>GasProperties</TypeId>
+          <SubtypeId>Hydrogen</SubtypeId>
+        </FuelId>
+        <Efficiency>1</Efficiency>
+      </FuelConverter>	  
+	  
+      <SlowdownFactor>1.5</SlowdownFactor>
+      <FlameDamageLengthScale>1</FlameDamageLengthScale>
+      <FlameLengthScale>1.35</FlameLengthScale>
+      <FlameIdleColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>0</W>
+      </FlameIdleColor>
+      <FlameFullColor>
+			<X>35</X>
+			<Y>170</Y>
+			<Z>255</Z>
+			<W>1</W>
+      </FlameFullColor>
+	  
+      <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+      <FlameLengthMaterial>AryxEpsteinDriveThrustMiddle</FlameLengthMaterial>
+      <FlameFlare>LargeGridSmallThruster</FlameFlare>
+	  <FlameVisibilityDistance>25000</FlameVisibilityDistance>
+      <FlameGlareQuerySize>4</FlameGlareQuerySize>
+      <PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+      <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <Public>true</Public>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>75</PCU>
+        <TieredUpdateTimes>
+            <unsignedInt>100</unsignedInt>
+            <unsignedInt>3600</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>		
+	</Definition>
+
+	<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+		<Id>
+			<TypeId>Thrust</TypeId>
+			<SubtypeId>ARYXLNX_YACHT_EPSTEIN_DRIVE</SubtypeId>
+		</Id>
+		<DisplayName>M55-G "Originem" Epstein Drive</DisplayName>
+		<Description>The drive that started it all; a modified magnetic coil fusion drive designed by Solomon Epstein himself. Warranty void if used on yachts with no off button. [CIVILIAN] </Description>
+		<Icon>Textures\GUI\Icons\ARYX_YACHT_EPSTEIN_DRIVE.dds</Icon>
+		<CubeSize>Small</CubeSize>
+		<BlockTopology>TriangleMesh</BlockTopology>
+		<Size x="5" y="5" z="4"/>
+		<ModelOffset x="0" y="0" z="0"/>
+		<Model>Models\EpsteinDrive\ARYX_YACHT_EPSTEIN_DRIVE.mwm</Model>
+		<Components>
+        <Component Subtype="SteelPlate" Count="50" />
+        <Component Subtype="Construction" Count="10" />
+        <Component Subtype="MetalGrid" Count="30" />
+        <Component Subtype="LargeTube" Count="10" />
+		<Component Subtype="AryxLynxon_FusionComponent" Count="4" />		
+        <Component Subtype="Thrust" Count="50" />		
+        <Component Subtype="Construction" Count="10" />
+        <Component Subtype="SteelPlate" Count="25" />
+		</Components>
+		<CriticalComponent Subtype="Thrust" Index="0" />
+		<MountPoints>
+			<MountPoint Side="Back" StartX="1.00" StartY="4.00" EndX="4.00" EndY="5.00"/>
+			<MountPoint Side="Back" StartX="1.00" StartY="0.00" EndX="4.00" EndY="1.00"/>
+			<MountPoint Side="Back" StartX="0.00" StartY="1.00" EndX="1.00" EndY="4.00"/>
+			<MountPoint Side="Back" StartX="1.00" StartY="1.00" EndX="4.00" EndY="4.00"/>
+			<MountPoint Side="Back" StartX="4.00" StartY="1.00" EndX="5.00" EndY="4.00"/>
+		</MountPoints>
+		<BuildProgressModels>
+			<Model BuildPercentUpperBound="0.33" File="Models\EpsteinDrive\ARYX_YACHT_EPSTEIN_DRIVE_BS1.mwm"/>
+			<Model BuildPercentUpperBound="0.67" File="Models\EpsteinDrive\ARYX_YACHT_EPSTEIN_DRIVE_BS2.mwm"/>
+			<Model BuildPercentUpperBound="1.00" File="Models\EpsteinDrive\ARYX_YACHT_EPSTEIN_DRIVE_BS3.mwm"/>
+		</BuildProgressModels>
+		<BlockPairName>LG_ARYX_YACHT_DRIVE</BlockPairName>
+		<MirroringY>Z</MirroringY>
+		<MirroringZ>Y</MirroringZ>
+		
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>45</BuildTimeSeconds>	  
+      <MaxPowerConsumption>0.25674</MaxPowerConsumption>
+      <MinPowerConsumption>0.0001</MinPowerConsumption>
+      <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+      <ForceMagnitude>1750000</ForceMagnitude>
+      <FuelConverter>
+        <FuelId>
+          <TypeId>GasProperties</TypeId>
+          <SubtypeId>Hydrogen</SubtypeId>
+        </FuelId>
+        <Efficiency>1</Efficiency>
+      </FuelConverter>	  
+	  
+      <SlowdownFactor>1.25</SlowdownFactor>
+      <FlameDamageLengthScale>1</FlameDamageLengthScale>
+      <FlameLengthScale>1.35</FlameLengthScale>
+      <FlameIdleColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>0</W>
+      </FlameIdleColor>
+      <FlameFullColor>
+<X>2.5</X><Y>7.5</Y><Z>12.5</Z><W>0.98</W>
+      </FlameFullColor>
+	  
+      <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+      <FlameLengthMaterial>AryxEpsteinDriveThrustMiddle</FlameLengthMaterial>
+      <FlameFlare>LargeGridSmallThruster</FlameFlare>
+	  <FlameVisibilityDistance>25000</FlameVisibilityDistance>
+      <FlameGlareQuerySize>2.5</FlameGlareQuerySize>
+      <PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+      <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <Public>true</Public>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>75</PCU>
+        <TieredUpdateTimes>
+            <unsignedInt>100</unsignedInt>
+            <unsignedInt>3600</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>		
+	</Definition>
+
+
+	<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+      <Id>
+        <TypeId>Thrust</TypeId>
+        <SubtypeId>ARYLNX_Epstein_Drive_S</SubtypeId>
+      </Id>
+		<DisplayName>RT6-B "MORRIGAN" Epstein Drive</DisplayName>
+		<Description>A powerful, compact epstein drive found on first-generation Morrigan-class patrol destroyers. Sports a hexagonal base and single conveyor port for fuel input. [MCRN]</Description>
+		<Icon>Textures\GUI\Icons\ARYLYN_MRG_Epstein_Drive.dds</Icon>
+		<CubeSize>Small</CubeSize>
+		<BlockTopology>TriangleMesh</BlockTopology>
+		<Size x="15" y="15" z="20"/>
+		<ModelOffset x="0" y="0" z="0"/>
+	  <Model>Models\EpsteinDrive\LG_ARYLNX_Epstein_Drive.mwm</Model>	  
+      <Components>
+        <Component Subtype="SteelPlate" Count="600" />
+        <Component Subtype="Construction" Count="250" />
+        <Component Subtype="MetalGrid" Count="300" />
+        <Component Subtype="LargeTube" Count="120" />		
+        <Component Subtype="Superconductor" Count="125" />	
+		<Component Subtype="AryxLynxon_FusionComponent" Count="64" />		
+        <Component Subtype="Thrust" Count="250" />		
+        <Component Subtype="Construction" Count="50" />
+        <Component Subtype="SteelPlate" Count="300" />
+      </Components>
+      <CriticalComponent Subtype="Thrust" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.0" StartY="0.0" EndX="15.0" EndY="15.0"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\EpsteinDrive\LG_ARYLNX_Epstein_Drive_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\EpsteinDrive\LG_ARYLNX_Epstein_Drive_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\EpsteinDrive\LG_ARYLNX_Epstein_Drive_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LG_ARYLNX_Epstein_Drive</BlockPairName>
+			<MirroringZ>Y</MirroringZ>
+			
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>100</BuildTimeSeconds>	  
+      <MaxPowerConsumption>1.0892</MaxPowerConsumption>
+      <MinPowerConsumption>0.000000001</MinPowerConsumption>
+      <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+      <ForceMagnitude>26000000</ForceMagnitude>
+      <FuelConverter> 
+        <FuelId>
+          <TypeId>GasProperties</TypeId>
+          <SubtypeId>Hydrogen</SubtypeId>
+        </FuelId>
+        <Efficiency>1</Efficiency>
+      </FuelConverter>	  
+	  
+      <SlowdownFactor>1.5</SlowdownFactor>
+      <FlameDamageLengthScale>1</FlameDamageLengthScale>
+      <FlameLengthScale>1.35</FlameLengthScale>
+      <FlameIdleColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>0</W>
+      </FlameIdleColor>
+      <FlameFullColor>
+<X>2.5</X><Y>7.5</Y><Z>12.5</Z><W>0.98</W>
+      </FlameFullColor>
+	  
+      <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+      <FlameLengthMaterial>AryxEpsteinDriveThrustMiddle</FlameLengthMaterial>
+      <FlameFlare>LargeGridSmallThruster</FlameFlare>
+	  <FlameVisibilityDistance>25000</FlameVisibilityDistance>
+      <FlameGlareQuerySize>5</FlameGlareQuerySize>
+      <PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+      <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <Public>true</Public>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>150</PCU>
+        <TieredUpdateTimes>
+            <unsignedInt>100</unsignedInt>
+            <unsignedInt>3600</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+    </Definition>
+
+	<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+      <Id>
+        <TypeId>Thrust</TypeId>
+        <SubtypeId>ARYLNX_MUNR_Epstein_Drive_S</SubtypeId>
+      </Id>
+		<DisplayName>S-100 "MUNROE" Light Epstein Drive</DisplayName>
+		<Description>A UNN prototype epstein drive, found on Munroe-class destroyers involved in the pursuit of the Rocinante. Whilst less powerful than her MCRN sister, she still packs a punch. [UNN] </Description>
+		<Icon>Textures\GUI\Icons\ARYLYN_MUNR_Epstein_Drive.dds</Icon>
+		<CubeSize>Small</CubeSize>
+		<BlockTopology>TriangleMesh</BlockTopology>
+		<Size x="15" y="15" z="15"/>
+		<ModelOffset x="0" y="0" z="0"/>
+	  <Model>Models\EpsteinDrive\LG_ARYLYN_MUNR_Epstein_Drive.mwm</Model>  
+      <Components>
+        <Component Subtype="SteelPlate" Count="300" />
+        <Component Subtype="Construction" Count="175" />
+        <Component Subtype="MetalGrid" Count="100" />
+        <Component Subtype="LargeTube" Count="180" />
+		<Component Subtype="AryxLynxon_FusionComponent" Count="64" />		
+        <Component Subtype="Thrust" Count="250" />
+        <Component Subtype="PowerCell" Count="60" />		
+        <Component Subtype="Construction" Count="25" />
+        <Component Subtype="SteelPlate" Count="100" />
+      </Components>
+      <CriticalComponent Subtype="PowerCell" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="15.00" EndY="15.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\EpsteinDrive\LG_ARYLYN_MUNR_Epstein_Drive_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\EpsteinDrive\LG_ARYLYN_MUNR_Epstein_Drive_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\EpsteinDrive\LG_ARYLYN_MUNR_Epstein_Drive_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LG_ARYLYN_MUNR_Epstein_Drive</BlockPairName>
+			<MirroringZ>Y</MirroringZ>
+			
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>80</BuildTimeSeconds>	  
+      <MaxPowerConsumption>1.4004</MaxPowerConsumption>
+      <MinPowerConsumption>0.00000001</MinPowerConsumption>
+      <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+      <ForceMagnitude>24000000</ForceMagnitude>
+      <FuelConverter> 
+        <FuelId>
+          <TypeId>GasProperties</TypeId>
+          <SubtypeId>Hydrogen</SubtypeId>
+        </FuelId>
+        <Efficiency>1</Efficiency>
+      </FuelConverter>	  
+	  
+      <SlowdownFactor>1</SlowdownFactor>
+      <FlameDamageLengthScale>1</FlameDamageLengthScale>
+      <FlameLengthScale>1.35</FlameLengthScale>
+      <FlameIdleColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>0</W>
+      </FlameIdleColor>
+      <FlameFullColor>
+<X>2.5</X><Y>7.5</Y><Z>12.5</Z><W>0.98</W>
+      </FlameFullColor>
+	  
+      <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+      <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+      <FlameFlare>LargeGridSmallThruster</FlameFlare>
+	  <FlameVisibilityDistance>25000</FlameVisibilityDistance>
+      <FlameGlareQuerySize>5</FlameGlareQuerySize>
+      <PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+      <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <Public>true</Public>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>125</PCU>
+        <TieredUpdateTimes>
+            <unsignedInt>100</unsignedInt>
+            <unsignedInt>3600</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+    </Definition>
+
+	<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+      <Id>
+        <TypeId>Thrust</TypeId>
+        <SubtypeId>ARYLNX_PNDR_Epstein_Drive_S</SubtypeId>
+      </Id>
+		<DisplayName>N22 "PANDORA-II" Epstein Drive_S</DisplayName>
+		<Description>A mid-range, compact Epstein Drive designed for civilian luxury and privateer craft. Sports a compact baseplate, ample fuel consumption and impressive thrust. [CIVILIAN]</Description>
+		<Icon>Textures\GUI\Icons\ARYLYN_PANDORA_DRIVE.dds</Icon>
+		<CubeSize>Small</CubeSize>
+		<BlockTopology>TriangleMesh</BlockTopology>
+		<Size x="15" y="15" z="10"/>
+		<ModelOffset x="0" y="0" z="0"/>
+	  <Model>Models\EpsteinDrive\ARYLYN_PANDORA_DRIVE.mwm</Model>	  
+      <Components>
+        <Component Subtype="SteelPlate" Count="280" />
+        <Component Subtype="Construction" Count="200" />
+        <Component Subtype="MetalGrid" Count="80" />
+        <Component Subtype="LargeTube" Count="60" />
+        <Component Subtype="SmallTube" Count="120" />		
+		<Component Subtype="AryxLynxon_FusionComponent" Count="64" />		
+        <Component Subtype="Thrust" Count="200" />
+        <Component Subtype="PowerCell" Count="60" />		
+        <Component Subtype="Construction" Count="20" />
+        <Component Subtype="SteelPlate" Count="80" />
+      </Components>
+      <CriticalComponent Subtype="PowerCell" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="2.50" StartY="2.50" EndX="12.50" EndY="12.50"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\EpsteinDrive\ARYLYN_PANDORA_DRIVE_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\EpsteinDrive\ARYLYN_PANDORA_DRIVE_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\EpsteinDrive\ARYLYN_PANDORA_DRIVE_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>ARYLYNX_PANDORA_EPSTEIN_DRIVE</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>		
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>90</BuildTimeSeconds>	  
+      <MaxPowerConsumption>1.0892</MaxPowerConsumption>
+      <MinPowerConsumption>0.000000001</MinPowerConsumption>
+      <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+      <ForceMagnitude>20000000</ForceMagnitude>
+      <FuelConverter> 
+        <FuelId>
+          <TypeId>GasProperties</TypeId>
+          <SubtypeId>Hydrogen</SubtypeId>
+        </FuelId>
+        <Efficiency>1</Efficiency>
+      </FuelConverter>	  
+	  
+      <SlowdownFactor>1.5</SlowdownFactor>
+      <FlameDamageLengthScale>1</FlameDamageLengthScale>
+      <FlameLengthScale>1.35</FlameLengthScale>
+      <FlameIdleColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>0</W>
+      </FlameIdleColor>
+      <FlameFullColor>
+<X>2.5</X><Y>7.5</Y><Z>12.5</Z><W>0.98</W>
+      </FlameFullColor>
+	  
+      <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+      <FlameLengthMaterial>AryxEpsteinDriveThrustMiddle</FlameLengthMaterial>
+      <FlameFlare>LargeGridSmallThruster</FlameFlare>
+	  <FlameVisibilityDistance>25000</FlameVisibilityDistance>
+      <FlameGlareQuerySize>5</FlameGlareQuerySize>
+      <PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+      <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <Public>true</Public>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>150</PCU>
+        <TieredUpdateTimes>
+            <unsignedInt>100</unsignedInt>
+            <unsignedInt>3600</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+    </Definition>
+
+	<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+      <Id>
+        <TypeId>Thrust</TypeId>
+        <SubtypeId>ARYLNX_QUADRA_Epstein_Drive_S</SubtypeId>
+      </Id>
+		<DisplayName>E-405 "Avalon" Light Epstein Drive</DisplayName>
+		<Description>A smaller, compact epstein drive when compared to its counterparts. Designed to be used in quad-clusters aboard raiding craft like the Granicus, Marco's pursuit ship, or the Dewalt. [BELTER]</Description>
+		<Icon>Textures\GUI\Icons\ARYLYN_QUADRA_EPSTEIN_DRIVE.dds</Icon>
+		<CubeSize>Small</CubeSize>
+		<BlockTopology>TriangleMesh</BlockTopology>
+		<Size x="10" y="10" z="20"/>
+		<ModelOffset x="0" y="0" z="0"/>
+		<Model>Models\EpsteinDrive\ARYX_QUADRA_EPSTEIN_DRIVE.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="210" />
+        <Component Subtype="Construction" Count="100" />
+        <Component Subtype="LargeTube" Count="60" />
+		<Component Subtype="AryxLynxon_FusionComponent" Count="24" />			
+        <Component Subtype="Construction" Count="25" />
+        <Component Subtype="SteelPlate" Count="70" />
+      </Components>
+      <CriticalComponent Subtype="AryxLynxon_FusionComponent" Index="0" />
+		<MountPoints>
+			<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="10.00" EndY="10.00"/>
+		</MountPoints>
+		<BuildProgressModels>
+			<Model BuildPercentUpperBound="0.33" File="Models\EpsteinDrive\ARYX_QUADRA_EPSTEIN_DRIVE_BS1.mwm"/>
+			<Model BuildPercentUpperBound="0.67" File="Models\EpsteinDrive\ARYX_QUADRA_EPSTEIN_DRIVE_BS2.mwm"/>
+			<Model BuildPercentUpperBound="1.00" File="Models\EpsteinDrive\ARYX_QUADRA_EPSTEIN_DRIVE_BS3.mwm"/>
+		</BuildProgressModels>
+	  <BlockPairName>LG_ARYLYN_QUADRA_Epstein_Drive</BlockPairName>
+	  <MirroringZ>Y</MirroringZ>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>60</BuildTimeSeconds>	  
+      <MaxPowerConsumption>0.94916</MaxPowerConsumption>
+      <MinPowerConsumption>0.00000001</MinPowerConsumption>
+      <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+      <ForceMagnitude>10000000</ForceMagnitude>
+      <FuelConverter> 
+        <FuelId>
+          <TypeId>GasProperties</TypeId>
+          <SubtypeId>Hydrogen</SubtypeId>
+        </FuelId>
+        <Efficiency>1</Efficiency>
+      </FuelConverter>	  
+	  
+      <SlowdownFactor>1</SlowdownFactor>
+      <FlameDamageLengthScale>1</FlameDamageLengthScale>
+      <FlameLengthScale>1.35</FlameLengthScale>
+      <FlameIdleColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>0</W>
+      </FlameIdleColor>
+      <FlameFullColor>
+<X>2.5</X><Y>7.5</Y><Z>12.5</Z><W>0.98</W>
+      </FlameFullColor>
+	  
+      <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+      <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+      <FlameFlare>LargeGridSmallThruster</FlameFlare>
+	  <FlameVisibilityDistance>25000</FlameVisibilityDistance>
+      <FlameGlareQuerySize>5</FlameGlareQuerySize>
+      <PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+      <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <Public>true</Public>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>125</PCU>
+        <TieredUpdateTimes>
+            <unsignedInt>100</unsignedInt>
+            <unsignedInt>3600</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+    </Definition>
+	
+	<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+      <Id>
+        <TypeId>Thrust</TypeId>
+        <SubtypeId>ARYLNX_RAIDER_Epstein_Drive_S</SubtypeId>
+      </Id>
+		<DisplayName>LV-300 "Raider" Light Epstein Drive</DisplayName>
+		<Description>Denied the advanced technologies and drive systems of the inner planets, belters were forced to improvise and create drives of their own from salvaged wrecks. Whilst less efficient than their UNN and MCRN counterparts, they are much cheaper and provide respectable thrust. [BELTER]</Description>
+		<Icon>Textures\GUI\Icons\ARYLYN_RAIDER_DRIVE.dds</Icon>
+		<CubeSize>Small</CubeSize>
+		<BlockTopology>TriangleMesh</BlockTopology>
+		<Size x="15" y="15" z="15"/>
+		<ModelOffset x="0" y="0" z="0"/>
+		<Model>Models\EpsteinDrive\ARYLNX_Raider_Epstein_Drive.mwm</Model>
+      <Components>
+        <Component Subtype="SteelPlate" Count="300" />
+        <Component Subtype="Construction" Count="150" />
+        <Component Subtype="LargeTube" Count="180" />
+		<Component Subtype="AryxLynxon_FusionComponent" Count="32" />		
+        <Component Subtype="Girder" Count="120" />		
+        <Component Subtype="Construction" Count="25" />
+        <Component Subtype="SteelPlate" Count="100" />
+      </Components>
+      <CriticalComponent Subtype="AryxLynxon_FusionComponent" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="15.00" EndY="15.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\EpsteinDrive\ARYLNX_Raider_Epstein_Drive_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\EpsteinDrive\ARYLNX_Raider_Epstein_Drive_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\EpsteinDrive\ARYLNX_Raider_Epstein_Drive_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LG_ARYLYN_RAIDER_Epstein_Drive</BlockPairName>
+			<MirroringZ>Y</MirroringZ>
+			<MirroringY>Z</MirroringY>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>60</BuildTimeSeconds>	  
+      <MaxPowerConsumption>1.8672</MaxPowerConsumption>
+      <MinPowerConsumption>0.00000001</MinPowerConsumption>
+      <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+      <ForceMagnitude>19000000</ForceMagnitude>
+      <FuelConverter> 
+        <FuelId>
+          <TypeId>GasProperties</TypeId>
+          <SubtypeId>Hydrogen</SubtypeId>
+        </FuelId>
+        <Efficiency>1</Efficiency>
+      </FuelConverter>	  
+	  
+      <SlowdownFactor>1</SlowdownFactor>
+      <FlameDamageLengthScale>1</FlameDamageLengthScale>
+      <FlameLengthScale>1.35</FlameLengthScale>
+      <FlameIdleColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>0</W>
+      </FlameIdleColor>
+      <FlameFullColor>
+<X>2.5</X><Y>7.5</Y><Z>12.5</Z><W>0.98</W>
+      </FlameFullColor>
+	  
+      <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+      <FlameLengthMaterial>EngineThrustMiddle</FlameLengthMaterial>
+      <FlameFlare>LargeGridSmallThruster</FlameFlare>
+	  <FlameVisibilityDistance>25000</FlameVisibilityDistance>
+      <FlameGlareQuerySize>5</FlameGlareQuerySize>
+      <PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+      <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <Public>true</Public>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>125</PCU>
+        <TieredUpdateTimes>
+            <unsignedInt>100</unsignedInt>
+            <unsignedInt>3600</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+    </Definition>
+
+	<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+      <Id>
+        <TypeId>Thrust</TypeId>
+        <SubtypeId>ARYLNX_ROCI_Epstein_Drive_S</SubtypeId>
+      </Id>
+		<DisplayName>RT8 "TACHI" Epstein Drive</DisplayName>
+		<Description>A medium-sized epstein drive of the RT series, found on Corvette-class frigates and light cruisers such as the Pella. These drives are both iconic, including their reactor vault's lower half, and signature drive pattern. A powerful drive for all legitimate salvages. [MCRN] </Description>
+		<Icon>Textures\GUI\Icons\ARYLYN_Epstein_Drive.dds</Icon>
+		<CubeSize>Small</CubeSize>
+		<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="25" y="25" z="30"/>
+		<ModelOffset x="0" y="0" z="0"/>
+	  <Model>Models\EpsteinDrive\LG_ARYLNX_TCH_Epstein_Drive.mwm</Model>	  
+      <Components>
+        <Component Subtype="SteelPlate" Count="1000" />
+        <Component Subtype="Construction" Count="360" />
+        <Component Subtype="MetalGrid" Count="420" />
+        <Component Subtype="LargeTube" Count="180" />		
+        <Component Subtype="Superconductor" Count="200" />
+        <Component Subtype="AryxLynxon_FusionComponent" Count="72" />				
+        <Component Subtype="Thrust" Count="400" />	
+        <Component Subtype="Construction" Count="80" />
+        <Component Subtype="SteelPlate" Count="600" />
+      </Components>
+      <CriticalComponent Subtype="Thrust" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="2.5" StartY="2.5" EndX="22.5" EndY="22.5"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\EpsteinDrive\LG_ARYLNX_TCH_Epstein_Drive_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\EpsteinDrive\LG_ARYLNX_TCH_Epstein_Drive_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\EpsteinDrive\LG_ARYLNX_TCH_Epstein_Drive_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LG_ARYLNX_ROCI_Epstein_Drive</BlockPairName>
+			<MirroringZ>Y</MirroringZ>
+			
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>150</BuildTimeSeconds>	  
+      <MaxPowerConsumption>2.334</MaxPowerConsumption>
+      <MinPowerConsumption>0.0001</MinPowerConsumption>
+      <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+      <ForceMagnitude>62000000</ForceMagnitude>
+      <FuelConverter>
+        <FuelId>
+          <TypeId>GasProperties</TypeId>
+          <SubtypeId>Hydrogen</SubtypeId>
+        </FuelId>
+        <Efficiency>1</Efficiency>
+      </FuelConverter>	  
+	  
+      <SlowdownFactor>1.5</SlowdownFactor>
+      <FlameDamageLengthScale>1</FlameDamageLengthScale>
+      <FlameLengthScale>1.35</FlameLengthScale>
+      <FlameIdleColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>0</W>
+      </FlameIdleColor>
+      <FlameFullColor>
+<X>2.5</X><Y>7.5</Y><Z>12.5</Z><W>0.98</W>
+      </FlameFullColor>
+	  
+      <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+      <FlameLengthMaterial>AryxEpsteinDriveThrustMiddle</FlameLengthMaterial>
+      <FlameFlare>LargeGridSmallThruster</FlameFlare>
+	  <FlameVisibilityDistance>25000</FlameVisibilityDistance>
+      <FlameGlareQuerySize>5</FlameGlareQuerySize>
+      <PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+      <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <Public>true</Public>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>200</PCU>
+        <TieredUpdateTimes>
+            <unsignedInt>100</unsignedInt>
+            <unsignedInt>3600</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+    </Definition>
+
+	<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+      <Id>
+        <TypeId>Thrust</TypeId>
+        <SubtypeId>ARYLYNX_SILVERSMITH_DRIVE_S</SubtypeId>
+      </Id>
+		<DisplayName>AM-R5 "SILVERSMITH" Supercooled Epstein Drive</DisplayName>
+		<Description>An extraordinarily powerful, experimental Epstein drive produced by Bush Shipyards for the Protogen corporation's Amun-Ra series of ships. Sporting a supercooling system to lower its thermal output and drive signature, this drive fits the bill for any mighty secret warships. [PROTOGEN]</Description>
+		<Icon>Textures\GUI\Icons\ARYLYN_SILVERSMITH_Drive.dds</Icon>
+		<CubeSize>Small</CubeSize>
+		<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="25" y="25" z="20"/>
+		<ModelOffset x="0" y="0" z="0"/>
+	  <Model>Models\EpsteinDrive\ARYLNX_SILVERSMITH.mwm</Model>  
+      <Components>
+        <Component Subtype="SteelPlate" Count="800" />
+        <Component Subtype="Construction" Count="360" />
+        <Component Subtype="MetalGrid" Count="500" />
+        <Component Subtype="LargeTube" Count="200" />			
+        <Component Subtype="Superconductor" Count="350" />
+        <Component Subtype="AryxLynxon_FusionComponent" Count="72" />			
+        <Component Subtype="PowerCell" Count="180" />			
+        <Component Subtype="Thrust" Count="450" />		
+        <Component Subtype="Construction" Count="80" />
+        <Component Subtype="SteelPlate" Count="600" />
+      </Components>
+      <CriticalComponent Subtype="Thrust" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="7.50" EndX="25.00" EndY="17.50"/>
+				<MountPoint Side="Back" StartX="7.50" StartY="17.5" EndX="17.50" EndY="25"/>
+				<MountPoint Side="Back" StartX="7.50" StartY="0.00" EndX="17.50" EndY="7.50"/>
+				<MountPoint Side="Left" StartX="12.50" StartY="7.50" EndX="4.00" EndY="17.50"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="7.50" EndX="7.50" EndY="17.50"/>
+				<MountPoint Side="Top" StartX="7.50" StartY="0.00" EndX="17.50" EndY="7.50"/>
+				<MountPoint Side="Bottom" StartX="7.50" StartY="12.50" EndX="17.50" EndY="20.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\EpsteinDrive\ARYLNX_SILVERSMITH_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\EpsteinDrive\ARYLNX_SILVERSMITH_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\EpsteinDrive\ARYLNX_SILVERSMITH_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LG_ARYLNX_AMUNRA_Epstein_Drive</BlockPairName>
+			<MirroringZ>Y</MirroringZ>
+			
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>160</BuildTimeSeconds>	  
+      <MaxPowerConsumption>2.723</MaxPowerConsumption>
+      <MinPowerConsumption>0.000000001</MinPowerConsumption>
+      <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+      <ForceMagnitude>73000000</ForceMagnitude>
+      <FuelConverter>
+        <FuelId>
+          <TypeId>GasProperties</TypeId>
+          <SubtypeId>Hydrogen</SubtypeId>
+        </FuelId>
+        <Efficiency>1</Efficiency>
+      </FuelConverter>	  
+	  
+      <SlowdownFactor>1.75</SlowdownFactor>
+      <FlameDamageLengthScale>1</FlameDamageLengthScale>
+      <FlameLengthScale>1.35</FlameLengthScale>
+      <FlameIdleColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>0</W>
+      </FlameIdleColor>
+      <FlameFullColor>
+<X>2.5</X><Y>7.5</Y><Z>12.5</Z><W>0.98</W>
+      </FlameFullColor>
+	  
+      <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+      <FlameLengthMaterial>AryxEpsteinDriveThrustMiddle</FlameLengthMaterial>
+      <FlameFlare>LargeGridSmallThruster</FlameFlare>
+	  <FlameVisibilityDistance>25000</FlameVisibilityDistance>
+      <FlameGlareQuerySize>5</FlameGlareQuerySize>
+      <PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+      <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <Public>true</Public>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>200</PCU>
+        <TieredUpdateTimes>
+            <unsignedInt>100</unsignedInt>
+            <unsignedInt>3600</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+    </Definition>
+
+	<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+      <Id>
+        <TypeId>Thrust</TypeId>
+        <SubtypeId>ARYLNX_DRUMMER_Epstein_Drive_S</SubtypeId>
+      </Id>
+		<DisplayName>LV613 "CAMINA" Epstein Drive</DisplayName>
+		<Description>A powerful custom-built midweight Epstein Drive belonging to a ship with the best guns in the belt, once serving her and her family. #PolyamBelterFam [BELTER]</Description>
+		<Icon>Textures\GUI\Icons\ARYX_TYNAN_EPSTEIN_DRIVE.dds</Icon>
+		<CubeSize>Small</CubeSize>
+		<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="25" y="25" z="25"/>
+		<ModelOffset x="0" y="0" z="0"/>
+	  <Model>Models\EpsteinDrive\ARYX_TYNAN_EPSTEIN_DRIVE.mwm</Model>	  
+      <Components>
+        <Component Subtype="SteelPlate" Count="800" />
+        <Component Subtype="Construction" Count="330" />
+        <Component Subtype="MetalGrid" Count="400" />
+        <Component Subtype="LargeTube" Count="150" />		
+        <Component Subtype="AryxLynxon_FusionComponent" Count="72" />				
+        <Component Subtype="Thrust" Count="350" />	
+        <Component Subtype="Construction" Count="120" />
+        <Component Subtype="SteelPlate" Count="400" />
+      </Components>
+      <CriticalComponent Subtype="Thrust" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="5.00" StartY="0.00" EndX="20.00" EndY="25.00"/>
+				<MountPoint Side="Back" StartX="20.00" StartY="5.00" EndX="25.00" EndY="20.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="5.00" EndX="5.00" EndY="20.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\EpsteinDrive\ARYX_TYNAN_EPSTEIN_DRIVE_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\EpsteinDrive\ARYX_TYNAN_EPSTEIN_DRIVE_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\EpsteinDrive\ARYX_TYNAN_EPSTEIN_DRIVE_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LG_ARYLNX_DRUMMER_Epstein_Drive</BlockPairName>
+			<MirroringZ>Y</MirroringZ>
+			
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>150</BuildTimeSeconds>	  
+      <MaxPowerConsumption>2.5</MaxPowerConsumption>
+      <MinPowerConsumption>0.0001</MinPowerConsumption>
+      <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+      <ForceMagnitude>55000000</ForceMagnitude>
+      <FuelConverter>
+        <FuelId>
+          <TypeId>GasProperties</TypeId>
+          <SubtypeId>Hydrogen</SubtypeId>
+        </FuelId>
+        <Efficiency>1</Efficiency>
+      </FuelConverter>	  
+	  
+      <SlowdownFactor>1.5</SlowdownFactor>
+      <FlameDamageLengthScale>1</FlameDamageLengthScale>
+      <FlameLengthScale>1.35</FlameLengthScale>
+      <FlameIdleColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>0</W>
+      </FlameIdleColor>
+      <FlameFullColor>
+<X>2.5</X><Y>7.5</Y><Z>12.5</Z><W>0.98</W>
+      </FlameFullColor>
+	  
+      <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+      <FlameLengthMaterial>AryxEpsteinDriveThrustMiddle</FlameLengthMaterial>
+      <FlameFlare>LargeGridSmallThruster</FlameFlare>
+	  <FlameVisibilityDistance>25000</FlameVisibilityDistance>
+      <FlameGlareQuerySize>5</FlameGlareQuerySize>
+      <PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+      <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <Public>true</Public>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>200</PCU>
+        <TieredUpdateTimes>
+            <unsignedInt>100</unsignedInt>
+            <unsignedInt>3600</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+    </Definition>
+	
+	<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+      <Id>
+        <TypeId>Thrust</TypeId>
+        <SubtypeId>ARYLNX_SCIRCOCCO_Epstein_Drive_S</SubtypeId>
+      </Id>
+		<DisplayName>RTF-B "SCIROCCO" Epstein Drive</DisplayName>
+		<Description>A large epstein drive of the RT series, found on Scirocco-class assault cruisers such as the MCRN Hammurabi and Scirocco. [MCRN] </Description>
+		<Icon>Textures\GUI\Icons\ARYLYN_SCIR_Epstein_Drive.dds</Icon>
+		<CubeSize>Small</CubeSize>
+		<BlockTopology>TriangleMesh</BlockTopology>
+		<Size x="35" y="35" z="35"/>
+		<ModelOffset x="0" y="0" z="0"/>
+	  <Model>Models\EpsteinDrive\ARYX_HAMMURABI_DRIVE.mwm</Model>	  
+      <Components>
+        <Component Subtype="SteelPlate" Count="1700" />
+        <Component Subtype="Construction" Count="360" />
+        <Component Subtype="MetalGrid" Count="550" />
+        <Component Subtype="LargeTube" Count="250" />		
+        <Component Subtype="Superconductor" Count="250" />
+        <Component Subtype="AryxLynxon_FusionComponent" Count="100" />				
+        <Component Subtype="Thrust" Count="520" />	
+        <Component Subtype="Construction" Count="110" />
+        <Component Subtype="SteelPlate" Count="650" />
+      </Components>
+      <CriticalComponent Subtype="Thrust" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="10.00" StartY="30.00" EndX="25.00" EndY="7.00"/>
+				<MountPoint Side="Back" StartX="10.00" StartY="0.00" EndX="25.00" EndY="5.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="10.00" EndX="25.00" EndY="25.00"/>
+				<MountPoint Side="Back" StartX="5.00" StartY="5.00" EndX="30.00" EndY="30.00"/>
+				<MountPoint Side="Back" StartX="30.00" StartY="10.00" EndX="7.00" EndY="25.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\EpsteinDrive\ARYX_HAMMURABI_DRIVE_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.66" File="Models\EpsteinDrive\ARYX_HAMMURABI_DRIVE_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.0" File="Models\EpsteinDrive\ARYX_HAMMURABI_DRIVE_BS3.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>LG_ARYLNX_SCIR_Epstein_Drive</BlockPairName>
+			<MirroringZ>Y</MirroringZ>
+			
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>150</BuildTimeSeconds>	  
+      <MaxPowerConsumption>5.446</MaxPowerConsumption>
+      <MinPowerConsumption>0.0001</MinPowerConsumption>
+      <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+      <ForceMagnitude>125000000</ForceMagnitude>
+      <FuelConverter>
+        <FuelId>
+          <TypeId>GasProperties</TypeId>
+          <SubtypeId>Hydrogen</SubtypeId>
+        </FuelId>
+        <Efficiency>1</Efficiency>
+      </FuelConverter>	  
+	  
+      <SlowdownFactor>1.5</SlowdownFactor>
+      <FlameDamageLengthScale>1</FlameDamageLengthScale>
+      <FlameLengthScale>1.35</FlameLengthScale>
+      <FlameIdleColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>0</W>
+      </FlameIdleColor>
+      <FlameFullColor>
+<X>2.5</X><Y>7.5</Y><Z>12.5</Z><W>0.98</W>
+      </FlameFullColor>
+	  
+      <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+      <FlameLengthMaterial>AryxEpsteinDriveThrustMiddle</FlameLengthMaterial>
+      <FlameFlare>LargeGridSmallThruster</FlameFlare>
+	  <FlameVisibilityDistance>25000</FlameVisibilityDistance>
+      <FlameGlareQuerySize>5</FlameGlareQuerySize>
+      <PrimarySound>ArcARYLYN_edrive_standard_burn</PrimarySound>
+      <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <Public>true</Public>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>200</PCU>
+        <TieredUpdateTimes>
+            <unsignedInt>100</unsignedInt>
+            <unsignedInt>3600</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+    </Definition>
+
+
+	<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+      <Id>
+        <TypeId>Thrust</TypeId>
+        <SubtypeId>ARYLNX_Mega_Epstein_Drive_S</SubtypeId>
+      </Id>
+		<DisplayName>RT-10 "KAMINARI" Superheavy Epstein Drive</DisplayName>
+		<Description>One of the largest epstein drives in modern use, built as part of the Martian navy's RT series of drives. These mighty thrusters are found pushing the quarter-million tonnes of bad news' formally known as Donnager-class battleships. A truly enormous drive, for truly enormous spacecraft. [MCRN]</Description>
+		<Icon>Textures\GUI\Icons\ARYLYN_DNG_Epstein_Drive.dds</Icon>
+		<CubeSize>Small</CubeSize>
+		<BlockTopology>TriangleMesh</BlockTopology>
+		<Size x="55" y="55" z="45"/>
+		<ModelOffset x="0" y="0" z="0"/>
+	  <Model>Models\EpsteinDrive\LG_ARYLNX_Superheavy_Epstein_Drive.mwm</Model>	  
+      <Components>
+        <Component Subtype="SteelPlate" Count="3500" />
+        <Component Subtype="Construction" Count="1000" />
+        <Component Subtype="MetalGrid" Count="900" />
+        <Component Subtype="LargeTube" Count="700" />		
+        <Component Subtype="Superconductor" Count="1750" />	
+        <Component Subtype="AryxLynxon_FusionComponent" Count="120" />			
+        <Component Subtype="Thrust" Count="1250" />		
+        <Component Subtype="Construction" Count="500" />
+        <Component Subtype="SteelPlate" Count="1500" />
+      </Components>
+      <CriticalComponent Subtype="Thrust" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="15.5" StartY="40" EndX="40" EndY="44"/>
+				<MountPoint Side="Back" StartX="15.5" StartY="11.5" EndX="40" EndY="15.5"/>
+				<MountPoint Side="Back" StartX="11.5" StartY="15.5" EndX="15.5" EndY="40"/>
+				<MountPoint Side="Back" StartX="15.5" StartY="15.5" EndX="40" EndY="40"/>
+				<MountPoint Side="Back" StartX="40" StartY="15.5" EndX="44" EndY="40"/>
+			</MountPoints>
+				<BuildProgressModels>
+					<Model BuildPercentUpperBound="0.33" File="Models\EpsteinDrive\LG_ARYLNX_Superheavy_Epstein_Drive_BS1.mwm"/>
+					<Model BuildPercentUpperBound="0.67" File="Models\EpsteinDrive\LG_ARYLNX_Superheavy_Epstein_Drive_BS2.mwm"/>
+					<Model BuildPercentUpperBound="1.00" File="Models\EpsteinDrive\LG_ARYLNX_Superheavy_Epstein_Drive_BS3.mwm"/>
+				</BuildProgressModels>
+			<BlockPairName>LG_ARYLNX_Mega_Epstein_Drive</BlockPairName>
+			<MirroringZ>Y</MirroringZ>
+			
+      <EdgeType>Heavy</EdgeType>
+      <BuildTimeSeconds>200</BuildTimeSeconds>	  
+      <MaxPowerConsumption>10.892</MaxPowerConsumption>
+      <MinPowerConsumption>0.0001</MinPowerConsumption>
+      <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+      <ForceMagnitude>375000000</ForceMagnitude>
+      <FuelConverter>
+        <FuelId>
+          <TypeId>GasProperties</TypeId>
+          <SubtypeId>Hydrogen</SubtypeId>
+        </FuelId>
+        <Efficiency>1</Efficiency>
+      </FuelConverter>	  
+	  
+      <SlowdownFactor>1.5</SlowdownFactor>
+      <FlameDamageLengthScale>1</FlameDamageLengthScale>
+      <FlameLengthScale>1.35</FlameLengthScale>
+      <FlameIdleColor>
+        <X>0</X>
+        <Y>0</Y>
+        <Z>0</Z>
+        <W>0</W>
+      </FlameIdleColor>
+      <FlameFullColor>
+<X>2.5</X><Y>7.5</Y><Z>12.5</Z><W>0.98</W>
+      </FlameFullColor>
+	  
+      <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+      <FlameLengthMaterial>AryxEpsteinDriveThrustMiddle</FlameLengthMaterial>
+      <FlameFlare>LargeGridLargeThruster</FlameFlare>
+	  <FlameVisibilityDistance>25000</FlameVisibilityDistance>
+      <FlameGlareQuerySize>5</FlameGlareQuerySize>
+      <PrimarySound>ArcARYLYN_Very_Large_Epstein_Drive_Fire</PrimarySound>
+      <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+      <DamagedSound>ParticleWeapExpl</DamagedSound>
+      <Public>true</Public>
+      <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+      <DestroySound>WepSmallWarheadExpl</DestroySound>
+      <PCU>300</PCU>
+        <TieredUpdateTimes>
+            <unsignedInt>100</unsignedInt>
+            <unsignedInt>3600</unsignedInt>
+            <unsignedInt>0</unsignedInt>
+        </TieredUpdateTimes>
+    </Definition>
+
+
+
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+		  <Id>
+			<TypeId>Thrust</TypeId>
+			<SubtypeId>AryxRCSThruster</SubtypeId>
+		  </Id>
+		  <DisplayName>Hydrazine RCS Thruster "REX"</DisplayName>
+		  <Icon>Textures\GUI\Icons\ALDS_RCS_Block.dds</Icon>
+		  <Description>Hydrazine thrusters are powerful maneouvreing thrusters used in the turning and reaction control of spacecraft. Firing a supercompressed nozzle of hypergolic hydrazine, these thrusters pack much more of a punch than one would expect from their size.</Description>
+		  <CubeSize>Small</CubeSize>
+		  <GuiVisible>false</GuiVisible>
+		  <BlockTopology>TriangleMesh</BlockTopology>
+		  <Size x="1" y="1" z="1" />
+		  <ModelOffset x="0" y="0" z="0" />
+		  <Model>Models\EpsteinDrive\ALDS_RCSBlock_SG.mwm</Model>
+		  <ThrusterType>Hydrogen</ThrusterType>
+		  <SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+		  <Components>
+			<Component Subtype="SteelPlate" Count="5" />
+			<Component Subtype="Construction" Count="5" />
+			<Component Subtype="MetalGrid" Count="1" />
+			<Component Subtype="LargeTube" Count="2" />
+			<Component Subtype="Construction" Count="1" />
+			<Component Subtype="SteelPlate" Count="1" />
+		  </Components>
+		  <CriticalComponent Subtype="LargeTube" Index="0" />
+
+			<MountPoints>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>		
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\EpsteinDrive\ALDS_RCSBlock_SG_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\EpsteinDrive\ALDS_RCSBlock_SG_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\EpsteinDrive\ALDS_RCSBlock_SG_BS3.mwm"/>
+			</BuildProgressModels>
+
+		  <VoxelPlacement>
+			<!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+			<StaticMode>
+			  <PlacementMode>Volumetric</PlacementMode>
+			  <MaxAllowed>0.2</MaxAllowed>
+			  <MinAllowed>0</MinAllowed>
+			</StaticMode>
+			<DynamicMode>
+			  <PlacementMode>Volumetric</PlacementMode>
+			  <MaxAllowed>0.2</MaxAllowed>
+			  <MinAllowed>0</MinAllowed>
+			</DynamicMode>
+		  </VoxelPlacement>
+		  <BlockPairName>rcsThruster1</BlockPairName>
+		  <Center x="0" y="0" z="0" />
+		  <MirroringZ>Y</MirroringZ>
+		  <EdgeType>Light</EdgeType>
+		  <BuildTimeSeconds>5</BuildTimeSeconds>
+		  <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+		  <ForceMagnitude>150000</ForceMagnitude>
+		  <SlowdownFactor>1</SlowdownFactor>
+		  <FuelConverter>
+			<FuelId>
+			  <TypeId>GasProperties</TypeId>
+			  <SubtypeId>Hydrogen</SubtypeId>
+			</FuelId>
+			<Efficiency>1</Efficiency>
+		  </FuelConverter>
+		  <MaxPowerConsumption>0.015</MaxPowerConsumption>
+		  <MinPowerConsumption>0.000000001</MinPowerConsumption>
+		  <FlameDamageLengthScale>0.001</FlameDamageLengthScale>
+		  <FlameLengthScale>1.35</FlameLengthScale>
+		  <FlameIdleColor>
+			<X>0</X>
+			<Y>0</Y>
+			<Z>0</Z>
+			<W>0</W>
+		  </FlameIdleColor>
+		  <FlameFullColor>
+			<X>1</X>
+			<Y>1</Y>
+			<Z>0.98</Z>
+			<W>0.1</W>
+		  </FlameFullColor>
+		  <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+		  <FlameLengthMaterial>AryxEpsteinDriveThrustMiddle</FlameLengthMaterial>
+		  <FlameFlare>LargeGridSmallThruster</FlameFlare>
+		  <FlameVisibilityDistance>500</FlameVisibilityDistance>
+		  <FlameGlareQuerySize>1</FlameGlareQuerySize>
+		  <PrimarySound>LrgShipSmJetHydrogen</PrimarySound>
+		  <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+		  <DamagedSound>ParticleWeapExpl</DamagedSound>
+		  <Public>true</Public>
+		  <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+		  <DestroySound>WepSmallWarheadExpl</DestroySound>
+		  <PCU>8</PCU>
+		  <IsAirTight>false</IsAirTight>
+			<TieredUpdateTimes>
+				<unsignedInt>100</unsignedInt>
+				<unsignedInt>3600</unsignedInt>
+				<unsignedInt>0</unsignedInt>
+			</TieredUpdateTimes>
+		</Definition>	
+			
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+		  <Id>
+			<TypeId>Thrust</TypeId>
+			<SubtypeId>AryxRCSRamp_S</SubtypeId>
+		  </Id>
+		  <DisplayName>Hydrazine RCS Thruster "REX"</DisplayName>
+		  <Icon>Textures\GUI\Icons\ALDS_RCS_Ramp.dds</Icon>
+		  <Description>Hydrazine thrusters are powerful maneouvreing thrusters used in the turning and reaction control of spacecraft. Firing a supercompressed nozzle of hypergolic hydrazine, these thrusters pack much more of a punch than one would expect from their size.</Description>
+		  <CubeSize>Small</CubeSize>
+			<GuiVisible>false</GuiVisible>
+		  <BlockTopology>TriangleMesh</BlockTopology>
+		  <Size x="1" y="1" z="1" />
+		  <ModelOffset x="0" y="0" z="0" />
+		  <Model>Models\EpsteinDrive\ALDS_RCS_Ramp_SG.mwm</Model>
+		  <ThrusterType>Hydrogen</ThrusterType>
+		  <SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+		  <Components>
+			<Component Subtype="SteelPlate" Count="5" />
+			<Component Subtype="Construction" Count="5" />
+			<Component Subtype="MetalGrid" Count="1" />
+			<Component Subtype="LargeTube" Count="2" />
+			<Component Subtype="Construction" Count="1" />
+			<Component Subtype="SteelPlate" Count="1" />
+		  </Components>
+		  <CriticalComponent Subtype="LargeTube" Index="0" />
+
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="0.50"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\EpsteinDrive\ALDS_RCS_Ramp_SG_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\EpsteinDrive\ALDS_RCS_Ramp_SG_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\EpsteinDrive\ALDS_RCS_Ramp_SG_BS3.mwm"/>
+			</BuildProgressModels>
+
+		  <VoxelPlacement>
+			<!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+			<StaticMode>
+			  <PlacementMode>Volumetric</PlacementMode>
+			  <MaxAllowed>0.2</MaxAllowed>
+			  <MinAllowed>0</MinAllowed>
+			</StaticMode>
+			<DynamicMode>
+			  <PlacementMode>Volumetric</PlacementMode>
+			  <MaxAllowed>0.2</MaxAllowed>
+			  <MinAllowed>0</MinAllowed>
+			</DynamicMode>
+		  </VoxelPlacement>
+		  <BlockPairName>AryxRCSRamp</BlockPairName>
+		  <Center x="0" y="0" z="0" />
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+		  <EdgeType>Light</EdgeType>
+		  <BuildTimeSeconds>5</BuildTimeSeconds>
+		  <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+		  <ForceMagnitude>150000</ForceMagnitude>
+		  <SlowdownFactor>1</SlowdownFactor>
+		  <FuelConverter>
+			<FuelId>
+			  <TypeId>GasProperties</TypeId>
+			  <SubtypeId>Hydrogen</SubtypeId>
+			</FuelId>
+			<Efficiency>1</Efficiency>
+		  </FuelConverter>
+		  <MaxPowerConsumption>0.015</MaxPowerConsumption>
+		  <MinPowerConsumption>0.000000001</MinPowerConsumption>
+		  <FlameDamageLengthScale>0.001</FlameDamageLengthScale>
+		  <FlameLengthScale>1.35</FlameLengthScale>
+		  <FlameIdleColor>
+			<X>0</X>
+			<Y>0</Y>
+			<Z>0</Z>
+			<W>0</W>
+		  </FlameIdleColor>
+		  <FlameFullColor>
+			<X>1</X>
+			<Y>1</Y>
+			<Z>0.98</Z>
+			<W>0.1</W>
+		  </FlameFullColor>
+		  <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+		  <FlameLengthMaterial>AryxEpsteinDriveThrustMiddle</FlameLengthMaterial>
+		  <FlameFlare>LargeGridSmallThruster</FlameFlare>
+		  <FlameVisibilityDistance>500</FlameVisibilityDistance>
+		  <FlameGlareQuerySize>1</FlameGlareQuerySize>
+		  <PrimarySound>LrgShipSmJetHydrogen</PrimarySound>
+		  <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+		  <DamagedSound>ParticleWeapExpl</DamagedSound>
+		  <Public>true</Public>
+		  <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+		  <DestroySound>WepSmallWarheadExpl</DestroySound>
+		  <PCU>8</PCU>
+		  <IsAirTight>false</IsAirTight>
+			<TieredUpdateTimes>
+				<unsignedInt>100</unsignedInt>
+				<unsignedInt>3600</unsignedInt>
+				<unsignedInt>0</unsignedInt>
+			</TieredUpdateTimes>
+		</Definition>			
+			
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+		  <Id>
+			<TypeId>Thrust</TypeId>
+			<SubtypeId>AryxRCSHalfRamp_S</SubtypeId>
+		  </Id>
+		  <DisplayName>Hydrazine RCS Thruster "REX"</DisplayName>
+		  <Icon>Textures\GUI\Icons\ALDS_RCS_HalfRamp.dds</Icon>
+		  <Description>Hydrazine thrusters are powerful maneouvreing thrusters used in the turning and reaction control of spacecraft. Firing a supercompressed nozzle of hypergolic hydrazine, these thrusters pack much more of a punch than one would expect from their size.</Description>
+		  <CubeSize>Small</CubeSize>
+			<GuiVisible>false</GuiVisible>
+		  <BlockTopology>TriangleMesh</BlockTopology>
+		  <Size x="1" y="1" z="1" />
+		  <ModelOffset x="0" y="0" z="0" />
+		  <Model>Models\EpsteinDrive\ALDS_RCS_HalfRamp_SG.mwm</Model>
+		  <ThrusterType>Hydrogen</ThrusterType>
+		  <SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+		  <Components>
+			<Component Subtype="SteelPlate" Count="5" />
+			<Component Subtype="Construction" Count="5" />
+			<Component Subtype="MetalGrid" Count="1" />
+			<Component Subtype="LargeTube" Count="2" />
+			<Component Subtype="Construction" Count="1" />
+			<Component Subtype="SteelPlate" Count="1" />
+		  </Components>
+		  <CriticalComponent Subtype="LargeTube" Index="0" />
+
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="0.50"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\EpsteinDrive\ALDS_RCS_HalfRamp_SG_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\EpsteinDrive\ALDS_RCS_HalfRamp_SG_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\EpsteinDrive\ALDS_RCS_HalfRamp_SG_BS3.mwm"/>
+			</BuildProgressModels>
+
+		  <VoxelPlacement>
+			<!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+			<StaticMode>
+			  <PlacementMode>Volumetric</PlacementMode>
+			  <MaxAllowed>0.2</MaxAllowed>
+			  <MinAllowed>0</MinAllowed>
+			</StaticMode>
+			<DynamicMode>
+			  <PlacementMode>Volumetric</PlacementMode>
+			  <MaxAllowed>0.2</MaxAllowed>
+			  <MinAllowed>0</MinAllowed>
+			</DynamicMode>
+		  </VoxelPlacement>
+		  <BlockPairName>AryxRCSHalfRamp</BlockPairName>
+		  <Center x="0" y="0" z="0" />
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+		  <EdgeType>Light</EdgeType>
+		  <BuildTimeSeconds>5</BuildTimeSeconds>
+		  <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+		  <ForceMagnitude>150000</ForceMagnitude>
+		  <SlowdownFactor>1</SlowdownFactor>
+		  <FuelConverter>
+			<FuelId>
+			  <TypeId>GasProperties</TypeId>
+			  <SubtypeId>Hydrogen</SubtypeId>
+			</FuelId>
+			<Efficiency>1</Efficiency>
+		  </FuelConverter>
+		  <MaxPowerConsumption>0.015</MaxPowerConsumption>
+		  <MinPowerConsumption>0.000000001</MinPowerConsumption>
+		  <FlameDamageLengthScale>0.001</FlameDamageLengthScale>
+		  <FlameLengthScale>1.35</FlameLengthScale>
+		  <FlameIdleColor>
+			<X>0</X>
+			<Y>0</Y>
+			<Z>0</Z>
+			<W>0</W>
+		  </FlameIdleColor>
+		  <FlameFullColor>
+			<X>1</X>
+			<Y>1</Y>
+			<Z>0.98</Z>
+			<W>0.1</W>
+		  </FlameFullColor>
+		  <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+		  <FlameLengthMaterial>AryxEpsteinDriveThrustMiddle</FlameLengthMaterial>
+		  <FlameFlare>LargeGridSmallThruster</FlameFlare>
+		  <FlameVisibilityDistance>500</FlameVisibilityDistance>
+		  <FlameGlareQuerySize>1</FlameGlareQuerySize>
+		  <PrimarySound>LrgShipSmJetHydrogen</PrimarySound>
+		  <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+		  <DamagedSound>ParticleWeapExpl</DamagedSound>
+		  <Public>true</Public>
+		  <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+		  <DestroySound>WepSmallWarheadExpl</DestroySound>
+		  <PCU>8</PCU>
+		  <IsAirTight>false</IsAirTight>
+			<TieredUpdateTimes>
+				<unsignedInt>100</unsignedInt>
+				<unsignedInt>3600</unsignedInt>
+				<unsignedInt>0</unsignedInt>
+			</TieredUpdateTimes>
+		</Definition>		
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+		  <Id>
+			<TypeId>Thrust</TypeId>
+			<SubtypeId>AryxRCSSlant_S</SubtypeId>
+		  </Id>
+		  <DisplayName>Hydrazine RCS Thruster "REX"</DisplayName>
+		  <Icon>Textures\GUI\Icons\ALDS_RCS_Slant.dds</Icon>
+		  <Description>Hydrazine thrusters are powerful maneouvreing thrusters used in the turning and reaction control of spacecraft. Firing a supercompressed nozzle of hypergolic hydrazine, these thrusters pack much more of a punch than one would expect from their size.</Description>
+		  <CubeSize>Small</CubeSize>
+			<GuiVisible>false</GuiVisible>
+		  <BlockTopology>TriangleMesh</BlockTopology>
+		  <Size x="1" y="1" z="1" />
+		  <ModelOffset x="0" y="0" z="0" />
+		  <Model>Models\EpsteinDrive\ALDS_RCS_Slant_SG.mwm</Model>
+		  <ThrusterType>Hydrogen</ThrusterType>
+		  <SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+		  <Components>
+			<Component Subtype="SteelPlate" Count="5" />
+			<Component Subtype="Construction" Count="5" />
+			<Component Subtype="MetalGrid" Count="1" />
+			<Component Subtype="LargeTube" Count="2" />
+			<Component Subtype="Construction" Count="1" />
+			<Component Subtype="SteelPlate" Count="1" />
+		  </Components>
+		  <CriticalComponent Subtype="LargeTube" Index="0" />
+
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>	
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>				
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.5" File="Models\EpsteinDrive\ALDS_RCS_Slant_SG_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\EpsteinDrive\ALDS_RCS_Slant_SG_BS2.mwm"/>
+			</BuildProgressModels>
+
+		  <VoxelPlacement>
+			<!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+			<StaticMode>
+			  <PlacementMode>Volumetric</PlacementMode>
+			  <MaxAllowed>0.2</MaxAllowed>
+			  <MinAllowed>0</MinAllowed>
+			</StaticMode>
+			<DynamicMode>
+			  <PlacementMode>Volumetric</PlacementMode>
+			  <MaxAllowed>0.2</MaxAllowed>
+			  <MinAllowed>0</MinAllowed>
+			</DynamicMode>
+		  </VoxelPlacement>
+		  <BlockPairName>AryxRCSSlant</BlockPairName>
+		  <Center x="0" y="0" z="0" />
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+		  <EdgeType>Light</EdgeType>
+		  <BuildTimeSeconds>5</BuildTimeSeconds>
+		  <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+		  <ForceMagnitude>150000</ForceMagnitude>
+		  <SlowdownFactor>1</SlowdownFactor>
+		  <FuelConverter>
+			<FuelId>
+			  <TypeId>GasProperties</TypeId>
+			  <SubtypeId>Hydrogen</SubtypeId>
+			</FuelId>
+			<Efficiency>1</Efficiency>
+		  </FuelConverter>
+		  <MaxPowerConsumption>0.015</MaxPowerConsumption>
+		  <MinPowerConsumption>0.000000001</MinPowerConsumption>
+		  <FlameDamageLengthScale>0.001</FlameDamageLengthScale>
+		  <FlameLengthScale>1.35</FlameLengthScale>
+		  <FlameIdleColor>
+			<X>0</X>
+			<Y>0</Y>
+			<Z>0</Z>
+			<W>0</W>
+		  </FlameIdleColor>
+		  <FlameFullColor>
+			<X>1</X>
+			<Y>1</Y>
+			<Z>0.98</Z>
+			<W>0.1</W>
+		  </FlameFullColor>
+		  <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+		  <FlameLengthMaterial>AryxEpsteinDriveThrustMiddle</FlameLengthMaterial>
+		  <FlameFlare>LargeGridSmallThruster</FlameFlare>
+		  <FlameVisibilityDistance>500</FlameVisibilityDistance>
+		  <FlameGlareQuerySize>1</FlameGlareQuerySize>
+		  <PrimarySound>LrgShipSmJetHydrogen</PrimarySound>
+		  <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+		  <DamagedSound>ParticleWeapExpl</DamagedSound>
+		  <Public>true</Public>
+		  <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+		  <DestroySound>WepSmallWarheadExpl</DestroySound>
+		  <PCU>8</PCU>
+		  <IsAirTight>false</IsAirTight>
+			<TieredUpdateTimes>
+				<unsignedInt>100</unsignedInt>
+				<unsignedInt>3600</unsignedInt>
+				<unsignedInt>0</unsignedInt>
+			</TieredUpdateTimes>
+		</Definition>		
+		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
+		  <Id>
+			<TypeId>Thrust</TypeId>
+			<SubtypeId>AryxRCS_S</SubtypeId>
+		  </Id>
+		  <DisplayName>Hydrazine RCS Thruster "REX"</DisplayName>
+		  <Icon>Textures\GUI\Icons\ALDS_RCS.dds</Icon>
+		  <Description>Hydrazine thrusters are powerful maneouvreing thrusters used in the turning and reaction control of spacecraft. Firing a supercompressed nozzle of hypergolic hydrazine, these thrusters pack much more of a punch than one would expect from their size.</Description>
+		  <CubeSize>Small</CubeSize>
+			<GuiVisible>false</GuiVisible>
+		  <BlockTopology>TriangleMesh</BlockTopology>
+		  <Size x="1" y="1" z="1" />
+		  <ModelOffset x="0" y="0" z="0" />
+		  <Model>Models\EpsteinDrive\ALDS_RCS_SG.mwm</Model>
+		  <ThrusterType>Hydrogen</ThrusterType>
+		  <SilenceableByShipSoundSystem>true</SilenceableByShipSoundSystem>
+		  <Components>
+			<Component Subtype="SteelPlate" Count="5" />
+			<Component Subtype="Construction" Count="5" />
+			<Component Subtype="MetalGrid" Count="1" />
+			<Component Subtype="LargeTube" Count="2" />
+			<Component Subtype="Construction" Count="1" />
+			<Component Subtype="SteelPlate" Count="1" />
+		  </Components>
+		  <CriticalComponent Subtype="LargeTube" Index="0" />
+
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.5" File="Models\EpsteinDrive\ALDS_RCS_SG_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\EpsteinDrive\ALDS_RCS_SG_BS2.mwm"/>
+			</BuildProgressModels>
+
+		  <VoxelPlacement>
+			<!--Possible settings Both,InVoxel,OutsideVoxel,Volumetric. If volumetric set than MaxAllowed and MinAllowed will be used.-->
+			<StaticMode>
+			  <PlacementMode>Volumetric</PlacementMode>
+			  <MaxAllowed>0.2</MaxAllowed>
+			  <MinAllowed>0</MinAllowed>
+			</StaticMode>
+			<DynamicMode>
+			  <PlacementMode>Volumetric</PlacementMode>
+			  <MaxAllowed>0.2</MaxAllowed>
+			  <MinAllowed>0</MinAllowed>
+			</DynamicMode>
+		  </VoxelPlacement>
+		  <BlockPairName>AryxRCS</BlockPairName>
+		  <Center x="0" y="0" z="0" />
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+		  <EdgeType>Light</EdgeType>
+		  <BuildTimeSeconds>5</BuildTimeSeconds>
+		  <ResourceSinkGroup>Thrust</ResourceSinkGroup>
+		  <ForceMagnitude>150000</ForceMagnitude>
+		  <SlowdownFactor>1</SlowdownFactor>
+		  <FuelConverter>
+			<FuelId>
+			  <TypeId>GasProperties</TypeId>
+			  <SubtypeId>Hydrogen</SubtypeId>
+			</FuelId>
+			<Efficiency>1</Efficiency>
+		  </FuelConverter>
+		  <MaxPowerConsumption>0.015</MaxPowerConsumption>
+		  <MinPowerConsumption>0.000000001</MinPowerConsumption>
+		  <FlameDamageLengthScale>0.001</FlameDamageLengthScale>
+		  <FlameLengthScale>1.35</FlameLengthScale>
+		  <FlameIdleColor>
+			<X>0</X>
+			<Y>0</Y>
+			<Z>0</Z>
+			<W>0</W>
+		  </FlameIdleColor>
+		  <FlameFullColor>
+			<X>1</X>
+			<Y>1</Y>
+			<Z>0.98</Z>
+			<W>0.1</W>
+		  </FlameFullColor>
+		  <FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
+		  <FlameLengthMaterial>AryxEpsteinDriveThrustMiddle</FlameLengthMaterial>
+		  <FlameFlare>LargeGridSmallThruster</FlameFlare>
+		  <FlameVisibilityDistance>500</FlameVisibilityDistance>
+		  <FlameGlareQuerySize>1</FlameGlareQuerySize>
+		  <PrimarySound>LrgShipSmJetHydrogen</PrimarySound>
+		  <DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
+		  <DamagedSound>ParticleWeapExpl</DamagedSound>
+		  <Public>true</Public>
+		  <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+		  <DestroySound>WepSmallWarheadExpl</DestroySound>
+		  <PCU>8</PCU>
+		  <IsAirTight>false</IsAirTight>
+			<TieredUpdateTimes>
+				<unsignedInt>100</unsignedInt>
+				<unsignedInt>3600</unsignedInt>
+				<unsignedInt>0</unsignedInt>
+			</TieredUpdateTimes>
+		</Definition>	
+
+
+
+
+
+
+	</CubeBlocks>
+</Definitions>

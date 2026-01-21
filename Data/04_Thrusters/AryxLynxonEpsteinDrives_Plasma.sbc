@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Definitions Enabled="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <GasProperties>
+        <Gas>
+            <Id>
+                <TypeId>MyObjectBuilder_GasProperties</TypeId>
+                <SubtypeId>Plasma</SubtypeId>
+            </Id>
+            <EnergyDensity>1</EnergyDensity>
+            <!-- MWh/litres -->
+        </Gas>
+    </GasProperties>
+</Definitions>
