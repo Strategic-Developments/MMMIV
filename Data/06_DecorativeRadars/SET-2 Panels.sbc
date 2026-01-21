@@ -1,0 +1,395 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SOFL_SET2_Flat</SubtypeId>
+			</Id>
+			<DisplayName>MAXIM SET-2 Panel</DisplayName>
+			<Description>Search radar commonly found on modern military vessels capable of picking out targets at long ranges, but not designed to acquire target locks
+			Tier 2 Radar (1 Search Radar)</Description>
+			<Icon>Textures\Icons\SET-2\SOFL_SET2_Flat.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Sensors\SET-2 Panels\Flat\SOFL_SET2_Flat.mwm</Model>
+			<Components>
+  				<Component Subtype="SteelPlate" Count="15"/>
+  				<Component Subtype="Construction" Count="35"/>
+  				<Component Subtype="SmallTube" Count="15"/>
+  				<Component Subtype="LargeTube" Count="10"/>
+  				<Component Subtype="Girder" Count="10"/>
+  				<Component Subtype="PowerCell" Count="15"/>
+  				<Component Subtype="MetalGrid" Count="80"/>
+  				<Component Subtype="Superconductor" Count="100"/>
+  				<Component Subtype="Detector" Count="125"/>
+  				<Component Subtype="RadioCommunication" Count="125"/>
+  				
+  				<Component Subtype="SteelPlate" Count="100"/>
+			</Components>
+			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+			</MountPoints>
+			<BlockPairName>SOFL_SET2_Flat</BlockPairName>
+			<IsAirTight>true</IsAirTight>
+			<OverlayTexture></OverlayTexture>
+			<MinFov>0.1</MinFov>
+			<MaxFov>1.04719755</MaxFov>
+			<MirroringY>X</MirroringY>
+			<BlockVariants>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>SOFL_SET2_Flat</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>SOFL_SET2_Flat_Half</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>SOFL_SET2_1x1</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>SOFL_SET2_1x1_Offset</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>SOFL_SET2_1x1_Corner</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>SOFL_SET2_1x1_Corner_Offset</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>SOFL_SET2_1x2</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>SOFL_SET2_1x2_Offset</SubtypeId>
+				</BlockVariant>
+			</BlockVariants>
+		</Definition>
+		
+		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SOFL_SET2_1x1</SubtypeId>
+			</Id>
+			<DisplayName>MAXIM SET-2 Panel</DisplayName>
+			<Description>Search radar commonly found on modern military vessels capable of picking out targets at long ranges, but not designed to acquire target locks
+			Sensors: 1 fixed radar</Description>
+			<Icon>Textures\Icons\SET-2\SOFL_SET2_1x1.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Sensors\SET-2 Panels\1x1\SOFL_SET2_1x1.mwm</Model>
+			<Components>
+  				<Component Subtype="SteelPlate" Count="15"/>
+  				<Component Subtype="Construction" Count="35"/>
+  				<Component Subtype="SmallTube" Count="15"/>
+  				<Component Subtype="LargeTube" Count="10"/>
+  				<Component Subtype="Girder" Count="10"/>
+  				<Component Subtype="PowerCell" Count="15"/>
+  				<Component Subtype="MetalGrid" Count="80"/>
+  				<Component Subtype="Superconductor" Count="100"/>
+  				<Component Subtype="Detector" Count="125"/>
+  				<Component Subtype="RadioCommunication" Count="125"/>
+  				 
+  				<Component Subtype="SteelPlate" Count="100"/>
+			</Components>
+			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+			</MountPoints>
+			<BlockPairName>SOFL_SET2_1x1</BlockPairName>
+			<IsAirTight>true</IsAirTight>
+			<OverlayTexture></OverlayTexture>
+			<MinFov>0.1</MinFov>
+			<MaxFov>1.04719755</MaxFov>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+		</Definition>
+		
+		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SOFL_SET2_1x1_Corner</SubtypeId>
+			</Id>
+			<DisplayName>MAXIM SET-2 Panel</DisplayName>
+			<Description>Search radar commonly found on modern military vessels capable of picking out targets at long ranges, but not designed to acquire target locks
+			Sensors: 1 fixed radar</Description>
+			<Icon>Textures\Icons\SET-2\SOFL_SET2_1x1_Corner.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Sensors\SET-2 Panels\1x1 corner\SOFL_SET2_1x1_Corner.mwm</Model>
+			<Components>
+  				<Component Subtype="SteelPlate" Count="15"/>
+  				<Component Subtype="Construction" Count="35"/>
+  				<Component Subtype="SmallTube" Count="15"/>
+  				<Component Subtype="LargeTube" Count="10"/>
+  				<Component Subtype="Girder" Count="10"/>
+  				<Component Subtype="PowerCell" Count="15"/>
+  				<Component Subtype="MetalGrid" Count="80"/>
+  				<Component Subtype="Superconductor" Count="100"/>
+  				<Component Subtype="Detector" Count="125"/>
+  				<Component Subtype="RadioCommunication" Count="125"/>
+  				 
+  				<Component Subtype="SteelPlate" Count="100"/>
+			</Components>
+			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+			</MountPoints>
+			<BlockPairName>SOFL_SET2_1x1_Corner</BlockPairName>
+			<IsAirTight>true</IsAirTight>
+			<OverlayTexture></OverlayTexture>
+			<MinFov>0.1</MinFov>
+			<MaxFov>1.04719755</MaxFov>
+			<MirroringX>MinusHalfY</MirroringX>
+			<MirroringY>ZHalfY</MirroringY>
+			<MirroringZ>HalfY</MirroringZ>
+		</Definition>
+		
+		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SOFL_SET2_1x1_Corner_Offset</SubtypeId>
+			</Id>
+			<DisplayName>MAXIM SET-2 Panel</DisplayName>
+			<Description>Search radar commonly found on modern military vessels capable of picking out targets at long ranges, but not designed to acquire target locks
+			Sensors: 1 fixed radar</Description>
+			<Icon>Textures\Icons\SET-2\SOFL_SET2_1x1_Corner_Offset.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="2" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Sensors\SET-2 Panels\1X1 corner offset\SOFL_SET2_1x1_Corner_Offset.mwm</Model>
+			<Components>
+  				<Component Subtype="SteelPlate" Count="15"/>
+  				<Component Subtype="Construction" Count="35"/>
+  				<Component Subtype="SmallTube" Count="15"/>
+  				<Component Subtype="LargeTube" Count="10"/>
+  				<Component Subtype="Girder" Count="10"/>
+  				<Component Subtype="PowerCell" Count="15"/>
+  				<Component Subtype="MetalGrid" Count="80"/>
+  				<Component Subtype="Superconductor" Count="100"/>
+  				<Component Subtype="Detector" Count="125"/>
+  				<Component Subtype="RadioCommunication" Count="125"/>
+  				 
+  				<Component Subtype="SteelPlate" Count="100"/>
+			</Components>
+			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
+				<MountPoint Side="Left" StartX="1.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
+				<MountPoint Side="Top" StartX="1.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
+			</MountPoints>
+			<BlockPairName>SOFL_SET2_1x1_Corner_Offset</BlockPairName>
+			<IsAirTight>true</IsAirTight>
+			<OverlayTexture></OverlayTexture>
+			<MinFov>0.1</MinFov>
+			<MaxFov>1.04719755</MaxFov>
+			<MirroringX>HalfY</MirroringX>
+			<MirroringY>XHalfY</MirroringY>
+			<MirroringZ>MinusHalfY</MirroringZ>
+		</Definition>
+		
+		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SOFL_SET2_1x1_Offset</SubtypeId>
+			</Id>
+			<DisplayName>MAXIM SET-2 Panel</DisplayName>
+			<Description>Search radar commonly found on modern military vessels capable of picking out targets at long ranges, but not designed to acquire target locks
+			Sensors: 1 fixed radar</Description>
+			<Icon>Textures\Icons\SET-2\SOFL_SET2_1x1_Offset.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Sensors\SET-2 Panels\1x1 offset\SOFL_SET2_1x1_Offset.mwm</Model>
+			<Components>
+  				<Component Subtype="SteelPlate" Count="15"/>
+  				<Component Subtype="Construction" Count="35"/>
+  				<Component Subtype="SmallTube" Count="15"/>
+  				<Component Subtype="LargeTube" Count="10"/>
+  				<Component Subtype="Girder" Count="10"/>
+  				<Component Subtype="PowerCell" Count="15"/>
+  				<Component Subtype="MetalGrid" Count="80"/>
+  				<Component Subtype="Superconductor" Count="100"/>
+  				<Component Subtype="Detector" Count="125"/>
+  				<Component Subtype="RadioCommunication" Count="125"/>
+  				 
+  				<Component Subtype="SteelPlate" Count="100"/>
+			</Components>
+			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+			</MountPoints>
+			<BlockPairName>SOFL_SET2_1x1_Offset</BlockPairName>
+			<IsAirTight>true</IsAirTight>
+			<OverlayTexture></OverlayTexture>
+			<MinFov>0.1</MinFov>
+			<MaxFov>1.04719755</MaxFov>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+		</Definition>
+		
+		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SOFL_SET2_1x2</SubtypeId>
+			</Id>
+			<DisplayName>MAXIM SET-2 Panel</DisplayName>
+			<Description>Search radar commonly found on modern military vessels capable of picking out targets at long ranges, but not designed to acquire target locks
+			Sensors: 1 fixed radar</Description>
+			<Icon>Textures\Icons\SET-2\SOFL_SET2_1x2.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Sensors\SET-2 Panels\1x2\SOFL_SET2_1x2.mwm</Model>
+			<Components>
+  				<Component Subtype="SteelPlate" Count="15"/>
+  				<Component Subtype="Construction" Count="35"/>
+  				<Component Subtype="SmallTube" Count="15"/>
+  				<Component Subtype="LargeTube" Count="10"/>
+  				<Component Subtype="Girder" Count="10"/>
+  				<Component Subtype="PowerCell" Count="15"/>
+  				<Component Subtype="MetalGrid" Count="80"/>
+  				<Component Subtype="Superconductor" Count="100"/>
+  				<Component Subtype="Detector" Count="125"/>
+  				<Component Subtype="RadioCommunication" Count="125"/>
+  				 
+  				<Component Subtype="SteelPlate" Count="100"/>
+			</Components>
+			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+			</MountPoints>
+			<BlockPairName>SOFL_SET2_1x2</BlockPairName>
+			<IsAirTight>true</IsAirTight>
+			<OverlayTexture></OverlayTexture>
+			<MinFov>0.1</MinFov>
+			<MaxFov>1.04719755</MaxFov>
+			<MirroringX>Y</MirroringX>
+			<MirroringY>X</MirroringY>
+		</Definition>
+		
+		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SOFL_SET2_1x2_Offset</SubtypeId>
+			</Id>
+			<DisplayName>MAXIM SET-2 Panel</DisplayName>
+			<Description>Search radar commonly found on modern military vessels capable of picking out targets at long ranges, but not designed to acquire target locks
+			Sensors: 1 fixed radar</Description>
+			<Icon>Textures\Icons\SET-2\SOFL_SET2_1x2_Offset.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Sensors\SET-2 Panels\1x2 offset\SOFL_SET2_1x2_Offset.mwm</Model>
+			<Components>
+  				<Component Subtype="SteelPlate" Count="15"/>
+  				<Component Subtype="Construction" Count="35"/>
+  				<Component Subtype="SmallTube" Count="15"/>
+  				<Component Subtype="LargeTube" Count="10"/>
+  				<Component Subtype="Girder" Count="10"/>
+  				<Component Subtype="PowerCell" Count="15"/>
+  				<Component Subtype="MetalGrid" Count="80"/>
+  				<Component Subtype="Superconductor" Count="100"/>
+  				<Component Subtype="Detector" Count="125"/>
+  				<Component Subtype="RadioCommunication" Count="125"/>
+  				 
+  				<Component Subtype="SteelPlate" Count="100"/>
+			</Components>
+			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+			</MountPoints>
+			<BlockPairName>SOFL_SET2_1x2_Offset</BlockPairName>
+			<IsAirTight>true</IsAirTight>
+			<OverlayTexture></OverlayTexture>
+			<MinFov>0.1</MinFov>
+			<MaxFov>1.04719755</MaxFov>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+		</Definition>
+		
+		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SOFL_SET2_Flat_Half</SubtypeId>
+			</Id>
+			<DisplayName>MAXIM SET-2 Panel</DisplayName>
+			<Description>Search radar commonly found on modern military vessels capable of picking out targets at long ranges, but not designed to acquire target locks
+			Sensors: 1 fixed radar</Description>
+			<Icon>Textures\Icons\SET-2\SOFL_SET2_Flat_Half.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Sensors\SET-2 Panels\Flat Half\SOFL_SET2_Flat_Half.mwm</Model>
+			<Components>
+  				<Component Subtype="SteelPlate" Count="15"/>
+  				<Component Subtype="Construction" Count="35"/>
+  				<Component Subtype="SmallTube" Count="15"/>
+  				<Component Subtype="LargeTube" Count="10"/>
+  				<Component Subtype="Girder" Count="10"/>
+  				<Component Subtype="PowerCell" Count="15"/>
+  				<Component Subtype="MetalGrid" Count="80"/>
+  				<Component Subtype="Superconductor" Count="100"/>
+  				<Component Subtype="Detector" Count="125"/>
+  				<Component Subtype="RadioCommunication" Count="125"/>
+  				 
+  				<Component Subtype="SteelPlate" Count="100"/>
+			</Components>
+			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+			</MountPoints>
+			<BlockPairName>SOFL_SET2_Flat_Half</BlockPairName>
+			<IsAirTight>true</IsAirTight>
+			<OverlayTexture></OverlayTexture>
+			<MinFov>0.1</MinFov>
+			<MaxFov>1.04719755</MaxFov>
+			<MirroringY>X</MirroringY>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+ <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <BlueprintClassEntries>
+        <Entry Class="Components" BlueprintSubtypeId="SOFL_AESA_TR_Comp_BP" />
+        <Entry Class="Components" BlueprintSubtypeId="SOFL_EM_Horn_Assembly_BP" />
+        <Entry Class="Components" BlueprintSubtypeId="SOFL_Beamformer_Chipset_BP" />
+    </BlueprintClassEntries>
+
+ </Definitions>

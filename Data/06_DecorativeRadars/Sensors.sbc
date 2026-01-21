@@ -1,0 +1,353 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SOFL_Radar_1</SubtypeId>
+			</Id>
+			<DisplayName>MXM-012 Fire Control Radar</DisplayName>
+			<Description>An old, relatively low tech and low power fire control radar
+			Tier 1 radar (1 Track Radar)</Description>
+			<Icon>Textures\Icons\SOFL_Radar_1.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Sensors\Radar 1\SOFL_Radar_1.mwm</Model>
+			<Components>
+  				<Component Subtype="SteelPlate" Count="15"/>
+  				<Component Subtype="Construction" Count="35"/>
+  				<Component Subtype="SmallTube" Count="15"/>
+  				<Component Subtype="LargeTube" Count="10"/>
+  				<Component Subtype="Motor" Count="10"/>
+  				<Component Subtype="MetalGrid" Count="20"/>
+  				<Component Subtype="Detector" Count="30"/>
+  				<Component Subtype="RadioCommunication" Count="30"/>
+  				
+  				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<BlockPairName>SOFL_Radar_1</BlockPairName>
+			<IsAirTight>false</IsAirTight>
+			<OverlayTexture></OverlayTexture>
+			<MinFov>0.1</MinFov>
+			<MaxFov>1.04719755</MaxFov>
+			<BlockVariants>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>SOFL_Radar_1</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>SOFL_ASTS_5</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>SOFL_FR_057</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>SOFL_MXM_008</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>SOFL_MXM_008_Centered</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>SOFL_MXM_005</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>SOFL_MXM_009</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>CubeBlock</TypeId>
+					<SubtypeId>SOFL_CSys_NS_RCG_62</SubtypeId>
+				</BlockVariant>
+			</BlockVariants>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SOFL_ASTS_5</SubtypeId>
+			</Id>
+			<DisplayName>A-STS-5 Radar</DisplayName>
+			<Description>Advanced Search-Track System 5, a nice long range search and track radar
+			Tier 3 Radar (1 Search Radar)</Description>
+			<Icon>Textures\Icons\SOFL_ASTS_5.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Sensors\ASTS 5\SOFL_ASTS_5.mwm</Model>
+			<Components>
+  				<Component Subtype="SteelPlate" Count="16"/>
+  				<Component Subtype="Construction" Count="35"/>
+  				<Component Subtype="SmallTube" Count="20"/>
+  				<Component Subtype="LargeTube" Count="15"/>
+  				<Component Subtype="Girder" Count="15"/>
+  				<Component Subtype="Motor" Count="50"/>
+  				<Component Subtype="PowerCell" Count="25"/>
+  				<Component Subtype="MetalGrid" Count="50"/>
+  				<Component Subtype="Superconductor" Count="100"/>
+  				<Component Subtype="Detector" Count="275"/>
+  				<Component Subtype="SOFL_AESA_TR_Comp" Count="15"/>
+  				<Component Subtype="RadioCommunication" Count="275"/>
+  				
+  				<Component Subtype="Construction" Count="50"/>
+  				<Component Subtype="MetalGrid" Count="150"/>
+  				<Component Subtype="SteelPlate" Count="140"/>
+			</Components>
+			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<BlockPairName>SOFL_ASTS_5</BlockPairName>
+			<IsAirTight>false</IsAirTight>
+			<OverlayTexture></OverlayTexture>
+			<MinFov>0.1</MinFov>
+			<MaxFov>1.04719755</MaxFov>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SOFL_FR_057</SubtypeId>
+			</Id>
+			<DisplayName>FR-057 Block7</DisplayName>
+			<Description>Full-utility-Radar, this specific variant is specifically designed for astronautic use
+			Tier 2 Radar (1 Track Radar)</Description>
+			<Icon>Textures\Icons\SOFL_FR_057.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Sensors\FR-057 block7\SOFL_FR_057.mwm</Model>
+			<Components>
+  				<Component Subtype="SteelPlate" Count="15"/>
+  				<Component Subtype="Construction" Count="35"/>
+  				<Component Subtype="SmallTube" Count="15"/>
+  				<Component Subtype="LargeTube" Count="10"/>
+  				<Component Subtype="Girder" Count="10"/>
+  				<Component Subtype="Motor" Count="30"/>
+ 			    <Component Subtype="PowerCell" Count="15"/>
+  				<Component Subtype="MetalGrid" Count="50"/>
+  				<Component Subtype="Superconductor" Count="100"/>
+  				<Component Subtype="Detector" Count="125"/>
+  				<Component Subtype="RadioCommunication" Count="125"/>
+  				
+  				<Component Subtype="SteelPlate" Count="100"/>
+  			</Components>
+			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<BlockPairName>SOFL_FR_057</BlockPairName>
+			<IsAirTight>false</IsAirTight>
+			<OverlayTexture></OverlayTexture>
+			<MinFov>0.1</MinFov>
+			<MaxFov>1.04719755</MaxFov>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SOFL_MXM_008</SubtypeId>
+			</Id>
+			<DisplayName>MXM-008 Multifunction Radar</DisplayName>
+			<Description>High Power Radar capable of multiple functions
+			Tier 2 Radar (1 Search Radar, 1 Track Radar)</Description>
+			<Icon>Textures\Icons\SOFL_MXM_012.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="3" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Sensors\MXM-012\SOFL_MXM_012.mwm</Model>
+			<Components>
+  				<Component Subtype="SteelPlate" Count="15"/>
+  				<Component Subtype="Construction" Count="35"/>
+  				<Component Subtype="SmallTube" Count="15"/>
+  				<Component Subtype="LargeTube" Count="10"/>
+  				<Component Subtype="Girder" Count="10"/>
+  				<Component Subtype="Motor" Count="30"/>
+ 			    <Component Subtype="PowerCell" Count="15"/>
+  				<Component Subtype="MetalGrid" Count="50"/>
+  				<Component Subtype="Superconductor" Count="100"/>
+  				<Component Subtype="Detector" Count="125"/>
+  				<Component Subtype="RadioCommunication" Count="125"/>
+  				
+  				<Component Subtype="SteelPlate" Count="100"/>
+  			</Components>
+			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
+			</MountPoints>
+			<BlockPairName>SOFL_MXM_008</BlockPairName>
+			<MirroringY>X</MirroringY>
+			<IsAirTight>false</IsAirTight>
+			<OverlayTexture></OverlayTexture>
+			<MinFov>0.1</MinFov>
+			<MaxFov>1.04719755</MaxFov>
+		</Definition>
+		
+		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SOFL_MXM_008_Centered</SubtypeId>
+			</Id>
+			<DisplayName>MXM-008 Multifunction Radar (Centered)</DisplayName>
+			<Description>High Power Radar capable of multiple functions
+			Tier 2 Radar (1 Search Radar, 1 Track Radar)</Description>
+			<Icon>Textures\Icons\SOFL_MXM_012.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Sensors\MXM-012 Centered\SOFL_MXM_012_Centered.mwm</Model>
+			<Components>
+  				<Component Subtype="SteelPlate" Count="15"/>
+  				<Component Subtype="Construction" Count="35"/>
+  				<Component Subtype="SmallTube" Count="15"/>
+  				<Component Subtype="LargeTube" Count="10"/>
+  				<Component Subtype="Girder" Count="10"/>
+  				<Component Subtype="Motor" Count="30"/>
+ 			    <Component Subtype="PowerCell" Count="15"/>
+  				<Component Subtype="MetalGrid" Count="50"/>
+  				<Component Subtype="Superconductor" Count="100"/>
+  				<Component Subtype="Detector" Count="125"/>
+  				<Component Subtype="RadioCommunication" Count="125"/>
+  				
+  				<Component Subtype="SteelPlate" Count="100"/>
+  			</Components>
+			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.50" StartY="0.50" EndX="2.50" EndY="2.50"/>
+			</MountPoints>
+			<BlockPairName>SOFL_MXM_008_Centered</BlockPairName>
+			<MirroringY>X</MirroringY>
+			<OverlayTexture></OverlayTexture>
+			<MinFov>0.1</MinFov>
+			<MaxFov>1.04719755</MaxFov>
+		</Definition>
+		
+		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SOFL_MXM_005</SubtypeId>
+			</Id>
+			<DisplayName>MAXIM-005 Search radar</DisplayName>
+			<Description>Small radar made to outfit smaller vessels, or supplement defensive systems of larger ones.
+			Tier 1 Radar (1 Search Radar)</Description>
+			<Icon>Textures\Icons\SOFL_MXM_005.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Sensors\MXM-005\SOFL_MXM_005.mwm</Model>
+			<Components>
+  				<Component Subtype="SteelPlate" Count="15"/>
+  				<Component Subtype="Construction" Count="35"/>
+  				<Component Subtype="SmallTube" Count="15"/>
+  				<Component Subtype="LargeTube" Count="10"/>
+  				<Component Subtype="Motor" Count="10"/>
+  				<Component Subtype="MetalGrid" Count="20"/>
+  				<Component Subtype="Detector" Count="30"/>
+  				<Component Subtype="RadioCommunication" Count="30"/>
+  				
+  				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+			</MountPoints>
+			<BlockPairName>SOFL_MXM_005</BlockPairName>
+			<MirroringY>X</MirroringY>
+			<IsAirTight>false</IsAirTight>
+			<OverlayTexture></OverlayTexture>
+			<MinFov>0.1</MinFov>
+			<MaxFov>1.04719755</MaxFov>
+		</Definition>
+		
+		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SOFL_MXM_009</SubtypeId>
+			</Id>
+			<DisplayName>MAXIM-009 Advanced Multifunction Radar System</DisplayName>
+			<Description>Advanced Search/Track radar
+			Tier 3 Radar (1 Search Radar, 2 Track Radars)</Description>
+			<Icon>Textures\Icons\SOFL_MXM_009.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="5" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Sensors\MXM-009\SOFL_MXM_009.mwm</Model>
+			<Components>
+  				<Component Subtype="SteelPlate" Count="16"/>
+  				<Component Subtype="Construction" Count="35"/>
+  				<Component Subtype="SmallTube" Count="20"/>
+  				<Component Subtype="LargeTube" Count="15"/>
+  				<Component Subtype="Girder" Count="15"/>
+  				<Component Subtype="Motor" Count="50"/>
+  				<Component Subtype="PowerCell" Count="25"/>
+  				<Component Subtype="MetalGrid" Count="50"/>
+  				<Component Subtype="Superconductor" Count="100"/>
+  				<Component Subtype="Detector" Count="275"/>
+  				<Component Subtype="SOFL_AESA_TR_Comp" Count="15"/>
+  				<Component Subtype="RadioCommunication" Count="275"/>
+  				
+  				<Component Subtype="Construction" Count="50"/>
+  				<Component Subtype="MetalGrid" Count="150"/>
+  				<Component Subtype="SteelPlate" Count="140"/>
+			</Components>
+			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+			</MountPoints>
+			<BlockPairName>SOFL_MXM_009</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<IsAirTight>false</IsAirTight>
+			<OverlayTexture></OverlayTexture>
+			<MinFov>0.1</MinFov>
+			<MaxFov>1.04719755</MaxFov>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SOFL_ASEL_MKXII_FCR</SubtypeId>
+			</Id>
+			<DisplayName>ASEL MkXII FCR</DisplayName>
+			<Description>Capable fire control radar made for smaller vessels
+			Small Grid Tier Radar (1 Track Radar)</Description>
+			<Icon>Textures\Icons\SOFL_ASEL_MKXII_FCR.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Sensors\ASEL MkXII FCR\SOFL_ASEL_MKXII_FCR.mwm</Model>
+			<Components>
+  				<Component Subtype="SteelPlate" Count="1"/>
+  				<Component Subtype="Construction" Count="4"/>
+  				<Component Subtype="SmallTube" Count="2"/>
+  				<Component Subtype="Motor" Count="2"/>
+ 				<Component Subtype="MetalGrid" Count="3"/>
+  				<Component Subtype="Detector" Count="4"/>
+  				<Component Subtype="RadioCommunication" Count="4"/>
+  				
+  				<Component Subtype="SteelPlate" Count="5"/>
+			</Components>
+			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
+			</MountPoints>
+			<BlockPairName>SOFL_ASEL_MKXII_FCR</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<IsAirTight>false</IsAirTight>
+			<OverlayTexture></OverlayTexture>
+			<MinFov>0.1</MinFov>
+			<MaxFov>1.04719755</MaxFov>
+		</Definition>
+
+		
+		
+		
+	</CubeBlocks>
+</Definitions>
