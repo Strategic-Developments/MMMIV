@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks><!--•CUBEBLOCK DEFINITION-->
+		<Definition xsi:type="MyObjectBuilder_TextPanelDefinition">
+			<Id>
+				<TypeId>TextPanel</TypeId>
+				<SubtypeId>Nerd_Radar_Basic</SubtypeId>
+			</Id>
+			<DisplayName>Radar Station</DisplayName>
+			<Description>Radar</Description>
+			<RequiredPowerInput>50</RequiredPowerInput>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

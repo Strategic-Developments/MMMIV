@@ -25,10 +25,10 @@ namespace SRRadarStats
                     //  - those modifying stats can just have the definitions in their place w/o copying any models, sbc files, or sounds to the modified mod.
                     DefinitionPriority = 1,
 
-                    MaxRadiatedPower = 2500, // radiated power of the radar, in kilowatts
-                    Gain = 30, // gain of the radar, in decibels. Must be above 0
-                    Sensitivity = -36, // sensitivity of the radar, in decibels
-                    MaxSearchRange = 40000, // maximum range radar will return targets, regardless of other settings, in meters
+                    MaxRadiatedPower = 0, // radiated power of the radar, in kilowatts
+                    Gain = 0, // gain of the radar, in decibels. Must be above 0
+                    Sensitivity = 0, // sensitivity of the radar, in decibels
+                    MaxSearchRange = 1, // maximum range radar will return targets, regardless of other settings, in meters
 
                     ApertureSize = 40, // aperture size of the radar, in meters^2
                     NoiseFilter = 0, // noise filter of the radar, in decibels
@@ -65,23 +65,23 @@ namespace SRRadarStats
                     //  - those modifying stats can just have the definitions in their place w/o copying any models, sbc files, or sounds to the modified mod.
                     DefinitionPriority = 1,
 
-                    MaxRadiatedPower = 2500, // radiated power of the radar, in kilowatts
-                    Gain = 30, // gain of the radar, in decibels. Must be above 0
-                    Sensitivity = -36, // sensitivity of the radar, in decibels
-                    MaxSearchRange = 40000, // maximum range radar will return targets, regardless of other settings, in meters
+                    MaxRadiatedPower = 50000, // radiated power of the radar, in kilowatts
+                    Gain = 175, // gain of the radar, in decibels. Must be above 0
+                    Sensitivity = -39, // sensitivity of the radar, in decibels
+                    MaxSearchRange = 300000, // maximum range radar will return targets, regardless of other settings, in meters
 
-                    ApertureSize = 40, // aperture size of the radar, in meters^2
+                    ApertureSize = 225, // aperture size of the radar, in meters^2
                     NoiseFilter = 0, // noise filter of the radar, in decibels
                     SignalToNoiseRatio = 1, // ratio of return signal to noise required for the radar to detect targets
 
-                    PositionError = 70, // maximum error of position in any given direction the radar returns in meters
+                    PositionError = 100, // maximum error of position in any given direction the radar returns in meters
                     VelocityError = 5, // maximum error in the velocity vector in any given direction the radar returns (velocity indicator coming soonTM)
 
                     CanTargetLock = true, // determines whether or not the radar can lock. Locked targets have no velocity and position error, and will have the radar detected icon turn red from yellow.
                                           // When a guided missile from Vanilla+ fired from a grid with a radar locking another grid lacks a target, Neb. Radar will provide it with the radar's target lock, assuming a valid block exists on the target exists. Should multiple targets be locked by one grid, the missile will choose the closest one.
                     LOSCheckIncludesParentGrid = false,
                     // determines whether the radar's LOS check will include the grid it is on. Useful for radar paneling and such. Subgrids attached to the main grid count as the main grid in this case.
-                    StealthMultiplier = 1, // if the target is cloaked via the Stealth Drive mod (https://steamcommunity.com/sharedfiles/filedetails/?id=2805859069), then the target's RCS is multiplied by this when the radar scans.
+                    StealthMultiplier = 0.1f, // if the target is cloaked via the Stealth Drive mod (https://steamcommunity.com/sharedfiles/filedetails/?id=2805859069), then the target's RCS is multiplied by this when the radar scans.
 
                     CanDetectAllJumps = true, // Determines if the radar can detect and show any jumps caused by any track visible to the radar.
                     CanDetectLockedJumps = false, // Determines if the radar can detect and show any jumps caused by the tracked locked by the radar.
@@ -105,23 +105,23 @@ namespace SRRadarStats
                     //  - those modifying stats can just have the definitions in their place w/o copying any models, sbc files, or sounds to the modified mod.
                     DefinitionPriority = 1,
 
-                    MaxRadiatedPower = 2500, // radiated power of the radar, in kilowatts
-                    Gain = 30, // gain of the radar, in decibels. Must be above 0
-                    Sensitivity = -36, // sensitivity of the radar, in decibels
-                    MaxSearchRange = 40000, // maximum range radar will return targets, regardless of other settings, in meters
+                    MaxRadiatedPower = 10000, // radiated power of the radar, in kilowatts
+                    Gain = 175, // gain of the radar, in decibels. Must be above 0
+                    Sensitivity = -39, // sensitivity of the radar, in decibels
+                    MaxSearchRange = 250000, // maximum range radar will return targets, regardless of other settings, in meters
 
-                    ApertureSize = 40, // aperture size of the radar, in meters^2
+                    ApertureSize = 225, // aperture size of the radar, in meters^2
                     NoiseFilter = 0, // noise filter of the radar, in decibels
                     SignalToNoiseRatio = 1, // ratio of return signal to noise required for the radar to detect targets
 
-                    PositionError = 70, // maximum error of position in any given direction the radar returns in meters
+                    PositionError = 100, // maximum error of position in any given direction the radar returns in meters
                     VelocityError = 5, // maximum error in the velocity vector in any given direction the radar returns (velocity indicator coming soonTM)
 
                     CanTargetLock = true, // determines whether or not the radar can lock. Locked targets have no velocity and position error, and will have the radar detected icon turn red from yellow.
                                           // When a guided missile from Vanilla+ fired from a grid with a radar locking another grid lacks a target, Neb. Radar will provide it with the radar's target lock, assuming a valid block exists on the target exists. Should multiple targets be locked by one grid, the missile will choose the closest one.
                     LOSCheckIncludesParentGrid = false,
                     // determines whether the radar's LOS check will include the grid it is on. Useful for radar paneling and such. Subgrids attached to the main grid count as the main grid in this case.
-                    StealthMultiplier = 1, // if the target is cloaked via the Stealth Drive mod (https://steamcommunity.com/sharedfiles/filedetails/?id=2805859069), then the target's RCS is multiplied by this when the radar scans.
+                    StealthMultiplier = 0.1f, // if the target is cloaked via the Stealth Drive mod (https://steamcommunity.com/sharedfiles/filedetails/?id=2805859069), then the target's RCS is multiplied by this when the radar scans.
 
                     CanDetectAllJumps = true, // Determines if the radar can detect and show any jumps caused by any track visible to the radar.
                     CanDetectLockedJumps = false, // Determines if the radar can detect and show any jumps caused by the tracked locked by the radar.
@@ -145,10 +145,10 @@ namespace SRRadarStats
                     //  - those modifying stats can just have the definitions in their place w/o copying any models, sbc files, or sounds to the modified mod.
                     DefinitionPriority = 1,
 
-                    MaxRadiatedPower = 2500, // radiated power of the radar, in kilowatts
-                    Gain = 30, // gain of the radar, in decibels. Must be above 0
-                    Sensitivity = -36, // sensitivity of the radar, in decibels
-                    MaxSearchRange = 40000, // maximum range radar will return targets, regardless of other settings, in meters
+                    MaxRadiatedPower = 0, // radiated power of the radar, in kilowatts
+                    Gain = 0, // gain of the radar, in decibels. Must be above 0
+                    Sensitivity = 0, // sensitivity of the radar, in decibels
+                    MaxSearchRange = 1, // maximum range radar will return targets, regardless of other settings, in meters
 
                     ApertureSize = 40, // aperture size of the radar, in meters^2
                     NoiseFilter = 0, // noise filter of the radar, in decibels
@@ -228,9 +228,9 @@ namespace SRRadarStats
                     //  - those modifying stats can just have the definitions in their place w/o copying any models, sbc files, or sounds to the modified mod.
                     DefinitionPriority = 1,
 
-                    MaxRadiatedPower = 1, // max radiated power in kilowatts
-                    Gain = 10, // gain of the jammer in decibels
-                    MaxSearchRange = 45000, // maximum range of the jammer in meters, overriding ALL other stats
+                    MaxRadiatedPower = 100, // max radiated power in kilowatts
+                    Gain = 30, // gain of the jammer in decibels
+                    MaxSearchRange = 300000, // maximum range of the jammer in meters, overriding ALL other stats
 
                     AreaEffectRatio = 0.4f, // Area effect ratio of the jammer. Best explained in the interaction wiki above.
                                             // Essentually, when a radar is jammed, a cylinder of height =2*(the distance from the jammer) and radius of AreaEffectRatio*length centered on the jammer, with the top and bottom being on the line between the radar and jammer
@@ -239,10 +239,10 @@ namespace SRRadarStats
                                                               // why didn't I just make this in degrees - Nerd, 2025
                     LOSCheckIncludesParentGrid = true, // Determines whether the jammer can jam through its own grid.
 
-                    MaxHeat = 90 * 60, // maximum heat the jammer can handle before shutting off. Heat will always increase by 1 every tick. Measured in ProprietaryHeatUnit™
+                    MaxHeat = 0, // maximum heat the jammer can handle before shutting off. Heat will always increase by 1 every tick. Measured in ProprietaryHeatUnit™
                                        // set to -1 to disable
                                        // heat on a GUI somewhere coming soon™
-                    HeatDrainPerTick = 1.5f, // Amount of heat that is dissapated per tick
+                    HeatDrainPerTick = 0f, // Amount of heat that is dissapated per tick
 
 
                     // Below values are only needed if the block is not an interior turret
@@ -268,14 +268,14 @@ namespace SRRadarStats
                     //  - those modifying stats can just have the definitions in their place w/o copying any models, sbc files, or sounds to the modified mod.
                     DefinitionPriority = 1,
 
-                    MaxRadiatedPower = 1, // max radiated power in kilowatts
-                    Gain = 10, // gain of the jammer in decibels
-                    MaxSearchRange = 45000, // maximum range of the jammer in meters, overriding ALL other stats
+                    MaxRadiatedPower = 0.01f, // max radiated power in kilowatts
+                    Gain = 0, // gain of the jammer in decibels
+                    MaxSearchRange = 1, // maximum range of the jammer in meters, overriding ALL other stats
 
                     AreaEffectRatio = 0.4f, // Area effect ratio of the jammer. Best explained in the interaction wiki above.
                                             // Essentually, when a radar is jammed, a cylinder of height =2*(the distance from the jammer) and radius of AreaEffectRatio*length centered on the jammer, with the top and bottom being on the line between the radar and jammer
 
-                    AngleRadians = MathHelperD.ToRadians(15), // angle from the center muzzle of the jammer that ships within are jammed, in radians (keep the MathHelper.ToRadians(value) call if you want to use degrees)
+                    AngleRadians = MathHelperD.ToRadians(1), // angle from the center muzzle of the jammer that ships within are jammed, in radians (keep the MathHelper.ToRadians(value) call if you want to use degrees)
                                                               // why didn't I just make this in degrees - Nerd, 2025
                     LOSCheckIncludesParentGrid = true, // Determines whether the jammer can jam through its own grid.
 

@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>Nerd_JammingBlock</SubtypeId>
+			</Id>
+			<DisplayName>Radar Jammer</DisplayName>
+			<Description>Large grid radar jammer, useful for concealing precise ship position and range.
+			
+Radiated Power: 3kW
+Gain: 20dB
+Max Range: 60km
+Area Effect Ratio: 0.4
+Cone Angle: 25 degrees
+Requires LOS: true</Description>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

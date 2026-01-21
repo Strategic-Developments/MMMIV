@@ -3,7 +3,7 @@
 	<BlockVariantGroups>
 		<BlockVariantGroup>
 			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="mss_blockvariantgroup_thrust"/>
-			<Icon>Textures\GUI\Icons\Cubes\FlailBase.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\ConcordThruster.dds</Icon>
 			<DisplayName>mss_blockvariantgroup_thrust</DisplayName>
 			<Description>Awagga.</Description>
 			<Blocks>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks><!--•CUBEBLOCK DEFINITION-->
+		<Definition xsi:type="MyObjectBuilder_TextPanelDefinition" Enabled="false">
+			<Id>
+				<TypeId>TextPanel</TypeId>
+				<SubtypeId>sr_sg_awacs_radar</SubtypeId>
+			</Id>
+			<DisplayName>Shoo</DisplayName>
+			<Description>Shoo</Description>
+			<Public>false</Public>
+		</Definition>
+	</CubeBlocks>
+</Definitions>

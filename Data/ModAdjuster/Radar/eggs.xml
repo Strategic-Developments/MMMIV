@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_TextPanelDefinition" Enabled="false">
+            <Id>
+                <TypeId>TextPanel</TypeId>
+                <SubtypeId>EyeOfSauron</SubtypeId>
+            </Id>
+			<DisplayName>Shoo</DisplayName>
+			<Description>Shoo</Description>
+			<Public>false</Public>
+        </Definition>
+	</CubeBlocks>
+</Definitions>
