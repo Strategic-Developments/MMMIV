@@ -1,0 +1,1001 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <CubeBlocks>
+        <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+           <Id>
+                <TypeId>ConveyorSorter</TypeId>
+                <SubtypeId>LG_Simple_Laser_Multitool</SubtypeId>
+            </Id>
+            <DisplayName>Simple Laser Multitool</DisplayName>
+            <Description>A multipurpose laser, grinder, and drill. Range of 300m.</Description>
+			<Icon>Textures\GUI\Icons\Cubes\SimpleLaserMultitool.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\large\SimpleLaserMultitool.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="180" />
+                <Component Subtype="Construction" Count="40" />
+                <Component Subtype="LargeTube" Count="12" />
+                <Component Subtype="Computer" Count="5" />
+                <Component Subtype="PowerCell" Count="10" />
+                <Component Subtype="SteelPlate" Count="120" />
+            </Components>
+            <CriticalComponent Subtype="PowerCell" Index="0" />
+            <MountPoints>
+                <MountPoint Side="Left" StartX="1.18" StartY="0.20" EndX="1.92" EndY="0.80" />
+                <MountPoint Side="Right" StartX="0.08" StartY="0.20" EndX="0.82" EndY="0.80" />
+                <MountPoint Side="Top" StartX="0.30" StartY="0.30" EndX="0.70" EndY="0.70" />
+                <MountPoint Side="Bottom" StartX="0.30" StartY="1.30" EndX="0.70" EndY="1.70" />
+                <MountPoint Side="Back" StartX="0" StartY="0" EndX="1" EndY="1" Default="true" />
+            </MountPoints>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00" Default="true" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Left" StartX="0.96" StartY="0.00" EndX="1.96" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.04" StartY="0.00" EndX="1.04" EndY="1.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.04" EndX="1.00" EndY="1.04"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.96" EndX="1.00" EndY="1.96"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\large\SimpleLaserMultitool_BS1.mwm"/>
+				<Model BuildPercentUpperBound="0.67" File="Models\Cubes\large\SimpleLaserMultitool_BS2.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\large\SimpleLaserMultitool_BS3.mwm"/>
+			</BuildProgressModels>
+            <InventorySize>
+                <X>3</X>
+                <Y>3</Y>
+                <Z>2</Z>
+            </InventorySize>
+			<BlockPairName>SimpleLaserMultitool</BlockPairName>
+			<MirroringZ>Y</MirroringZ>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>40</BuildTimeSeconds>
+            <Center x="0" y="0" z="1" />
+            <DeformationRatio>0.2</DeformationRatio>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleHeavyMech</DamagedSound>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>190</PCU>
+            <ToolValues Type="Weld">
+				<EffectShape>Cylinder</EffectShape>
+                <WorkOrder>Uniform</WorkOrder>
+                <WorkOrigin>Emitter</WorkOrigin>
+				<WorkRate>4</WorkRate>
+				<Speed>2.5</Speed>
+				<PickUpFloatings>true</PickUpFloatings>
+				<UpdateInterval>15</UpdateInterval>
+				<AffectOwnGrid>true</AffectOwnGrid>
+                <Emitter>detector_shiptool_1</Emitter>
+                <Offset x="0" y="0" z="-150" />
+                <Radius>2.5</Radius>
+                <Length>300</Length>
+				<HarvestRatio>1</HarvestRatio>
+                <ActivePower>0.5</ActivePower>
+                <DamageCharacters>true</DamageCharacters>
+                <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
+                <Action Type="Secondary" SizeRatio="2" SpeedRatio="0.5" HarvestRatio="0" />
+                <Event Trigger="Firing">
+					<Beam>
+						<Start>particles2</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.1</Width>
+						<Color>
+							<X>8</X>
+							<Y>4</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles3</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.1</Width>
+						<Color>
+							<X>8</X>
+							<Y>4</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles4</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.1</Width>
+						<Color>
+							<X>8</X>
+							<Y>4</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles5</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.1</Width>
+						<Color>
+							<X>8</X>
+							<Y>4</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Weld</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles2</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Weld</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles3</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Weld</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles4</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Weld</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles5</Dummy>
+					</ParticleEffect>
+				</Event>
+				<Event Trigger="RayHit">
+					<ParticleEffect>
+						<Name>ShipWelderArc</Name>
+						<Location>Hit</Location>
+					</ParticleEffect>
+                    <Sound>
+                        <Name>ToolLrgWeldMetal</Name>
+                    </Sound>
+				</Event>
+            </ToolValues>
+            <ToolValues Type="Grind">
+				<EffectShape>Cylinder</EffectShape>
+                <WorkOrder>Uniform</WorkOrder>
+                <WorkOrigin>Emitter</WorkOrigin>
+				<WorkRate>2</WorkRate>
+				<Speed>1</Speed>
+				<PickUpFloatings>true</PickUpFloatings>
+				<UpdateInterval>5</UpdateInterval>
+                <Emitter>detector_shiptool_1</Emitter>
+                <Offset x="0" y="0" z="-150" />
+                <Radius>2.5</Radius>
+                <Length>300</Length>
+				<HarvestRatio>1</HarvestRatio>
+                <ActivePower>0.5</ActivePower>
+                <DamageCharacters>true</DamageCharacters>
+                <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
+                <Action Type="Secondary" SizeRatio="2" SpeedRatio="0.5" HarvestRatio="0" />
+                <Event Trigger="Firing">
+					<Beam>
+						<Start>particles2</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.2</Width>
+						<Color>
+							<X>4</X>
+							<Y>8</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles3</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.2</Width>
+						<Color>
+							<X>4</X>
+							<Y>8</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles4</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.2</Width>
+						<Color>
+							<X>4</X>
+							<Y>8</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles5</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.2</Width>
+						<Color>
+							<X>4</X>
+							<Y>8</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Grind</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles2</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Grind</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles3</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Grind</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles4</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Grind</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles5</Dummy>
+					</ParticleEffect>
+				</Event>
+				<Event Trigger="RayHit">
+					<ParticleEffect>
+						<Name>ShipGrinder</Name>
+						<Location>Hit</Location>
+					</ParticleEffect>
+                    <Sound>
+                        <Name>ToolLrgGrindIdle</Name>
+                    </Sound>
+				</Event>
+            </ToolValues>
+            <ToolValues Type="Drill">
+				<EffectShape>Line</EffectShape>
+                <WorkOrder>Forward</WorkOrder>
+                <WorkOrigin>Emitter</WorkOrigin>
+				<WorkRate>1</WorkRate>
+				<Speed>0.5</Speed>
+				<PickUpFloatings>true</PickUpFloatings>
+				<UpdateInterval>5</UpdateInterval>
+                <Emitter>detector_shiptool_1</Emitter>
+                <Offset x="0" y="0" z="-0.6" />
+                <Radius>2.5</Radius>
+                <Length>300</Length>
+				<HarvestRatio>1</HarvestRatio>
+                <ActivePower>0.5</ActivePower>
+                <DamageCharacters>true</DamageCharacters>
+                <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
+                <Action Type="Secondary" SizeRatio="2" SpeedRatio="2" HarvestRatio="0" />
+                <Event Trigger="Firing">
+					<Beam>
+						<Start>particles2</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.15</Width>
+						<Color>
+							<X>8</X>
+							<Y>7</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles3</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.15</Width>
+						<Color>
+							<X>8</X>
+							<Y>7</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles4</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.15</Width>
+						<Color>
+							<X>8</X>
+							<Y>7</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles5</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.15</Width>
+						<Color>
+							<X>8</X>
+							<Y>7</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Drill</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles2</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Drill</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles3</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Drill</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles4</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Drill</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles5</Dummy>
+					</ParticleEffect>
+				</Event>
+				<Event Trigger="RayHit">
+					<ParticleEffect>
+					<Name>MaterialProperties/ShipDrill</Name>
+					<Location>Hit</Location>
+					<Offset x="0" y="0" z="-4" />
+					</ParticleEffect>
+                    <Sound>
+                        <Name>MaterialProperties/ShipDrill</Name>
+                    </Sound>
+				</Event>
+            </ToolValues>
+        </Definition>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+           <Id>
+                <TypeId>ConveyorSorter</TypeId>
+                <SubtypeId>LG_Simple_Laser_Multitool_Turret</SubtypeId>
+            </Id>
+            <DisplayName>Simple Laser Multitool Turret</DisplayName>
+			<Icon>Textures\GUI\Icons\Cubes\LG_SimpleLaserMultitool_Turret.dds</Icon>
+            <Description>(WIP) A multipurpose laser and grinder turret. Range of 300m.</Description>
+			<CubeSize>Large</CubeSize>
+            <GuiVisible>false</GuiVisible>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="3" y="3" z="3" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>Models\Cubes\Large\laser_turret\LG_SimpleLaserMultitool_Turret.mwm</Model>
+            <UseModelIntersection>true</UseModelIntersection>
+            <Components>
+                <Component Subtype="SteelPlate" Count="180" />
+                <Component Subtype="Construction" Count="40" />
+                <Component Subtype="LargeTube" Count="12" />
+                <Component Subtype="Computer" Count="25" />
+                <Component Subtype="Motor" Count="30" />
+                <Component Subtype="PowerCell" Count="10" />
+                <Component Subtype="SteelPlate" Count="120" />
+            </Components>
+            <CriticalComponent Subtype="PowerCell" Index="0" />
+            <MountPoints>
+                <MountPoint Side="Bottom" StartX="1" StartY="1" EndX="2" EndY="2" />
+            </MountPoints>
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\LG_SimpleLaserMultitool_Turret_BS1.mwm" />
+                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\LG_SimpleLaserMultitool_Turret_BS2.mwm" />
+                <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\LG_SimpleLaserMultitool_Turret_BS3.mwm" />
+            </BuildProgressModels>
+            <InventorySize>
+                <X>3</X>
+                <Y>3</Y>
+                <Z>2</Z>
+            </InventorySize>
+			<BlockPairName>SimpleLaserMultitool_Turret</BlockPairName>
+            <MirroringY>Z</MirroringY>
+            <MirroringZ>Y</MirroringZ>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>40</BuildTimeSeconds>
+            <Center x="1" y="1" z="1" />
+            <DeformationRatio>0.2</DeformationRatio>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleHeavyMech</DamagedSound>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>190</PCU>
+            <ToolValues Type="Weld">
+                <Turret>
+                    <TargetRadius>300</TargetRadius>
+                    <Subpart>
+                        <Name>GatlingTurretBase1</Name>
+                        <RotationAxis>Up</RotationAxis>
+                        <RotationSpeed>90</RotationSpeed>
+                    </Subpart>
+                    <Subpart>
+                        <Name>GatlingTurretBase2</Name>
+                        <RotationAxis>Right</RotationAxis>
+                        <RotationSpeed>60</RotationSpeed>
+                        <MinRotation>-30</MinRotation>
+                        <MaxRotation>125</MaxRotation>
+                    </Subpart>
+					<AimingTolerance>10</AimingTolerance>
+                </Turret>
+				<PickUpFloatings>true</PickUpFloatings>
+				<EffectShape>Line</EffectShape>
+                <WorkOrder>Backward</WorkOrder>
+                <WorkOrigin>Emitter</WorkOrigin>
+				<WorkRate>1</WorkRate>
+				<Speed>2.5</Speed>
+				<UpdateInterval>15</UpdateInterval>
+				<AffectOwnGrid>true</AffectOwnGrid>
+                <Emitter>detector_shiptool_1</Emitter>
+                <Offset x="0" y="0" z="0" />
+                <Radius>2.5</Radius>
+                <Length>300</Length>
+				<HarvestRatio>1</HarvestRatio>
+                <ActivePower>0.75</ActivePower>
+                <DamageCharacters>true</DamageCharacters>
+                <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
+                <Event Trigger="Firing">
+					<Beam>
+						<Start>particles1</Start>
+						<EndLocation>Hit</EndLocation>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.1</Width>
+						<Color>
+							<X>8</X>
+							<Y>4</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles2</Start>
+						<EndLocation>Hit</EndLocation>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.1</Width>
+						<Color>
+							<X>8</X>
+							<Y>4</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles3</Start>
+						<EndLocation>Hit</EndLocation>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.1</Width>
+						<Color>
+							<X>8</X>
+							<Y>4</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles4</Start>
+						<EndLocation>Hit</EndLocation>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.1</Width>
+						<Color>
+							<X>8</X>
+							<Y>4</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Weld</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles1</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Weld</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles2</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Weld</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles3</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Weld</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles4</Dummy>
+					</ParticleEffect>
+				</Event>
+				<Event Trigger="RayHit">
+					<ParticleEffect>
+						<Name>ShipWelderArc</Name>
+						<Location>Hit</Location>
+					</ParticleEffect>
+                    <Sound>
+                        <Name>ToolLrgWeldMetal</Name>
+                    </Sound>
+				</Event>
+            </ToolValues>
+            <ToolValues Type="Grind">
+                <Turret>
+                    <TargetRadius>300</TargetRadius>
+                    <Subpart>
+                        <Name>GatlingTurretBase1</Name>
+                        <RotationAxis>Down</RotationAxis>
+                        <RotationSpeed>90</RotationSpeed>
+                    </Subpart>
+                    <Subpart>
+                        <Name>GatlingTurretBase2</Name>
+                        <RotationAxis>Right</RotationAxis>
+                        <RotationSpeed>60</RotationSpeed>
+                        <MinRotation>-30</MinRotation>
+                        <MaxRotation>125</MaxRotation>
+                    </Subpart>
+					<AimingTolerance>10</AimingTolerance>
+                </Turret>
+				<PickUpFloatings>true</PickUpFloatings>
+				<EffectShape>Line</EffectShape>
+                <WorkOrder>Forward</WorkOrder>
+                <WorkOrigin>Emitter</WorkOrigin>
+				<WorkRate>1</WorkRate>
+				<Speed>1</Speed>
+				<UpdateInterval>5</UpdateInterval>
+                <Emitter>detector_shiptool_1</Emitter>
+                <Offset x="0" y="0" z="0" />
+                <Radius>2.5</Radius>
+                <Length>300</Length>
+				<HarvestRatio>1</HarvestRatio>
+                <ActivePower>0.5</ActivePower>
+                <DamageCharacters>true</DamageCharacters>
+				<AffectOwnGrid>false</AffectOwnGrid>
+                <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
+                <Event Trigger="Firing">
+					<Beam>
+						<Start>particles1</Start>
+						<EndLocation>Hit</EndLocation>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.2</Width>
+						<Color>
+							<X>3</X>
+							<Y>7</Y>
+							<Z>2</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles2</Start>
+						<EndLocation>Hit</EndLocation>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.2</Width>
+						<Color>
+							<X>3</X>
+							<Y>7</Y>
+							<Z>2</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles3</Start>
+						<EndLocation>Hit</EndLocation>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.2</Width>
+						<Color>
+							<X>3</X>
+							<Y>7</Y>
+							<Z>2</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles4</Start>
+						<EndLocation>Hit</EndLocation>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.2</Width>
+						<Color>
+							<X>3</X>
+							<Y>7</Y>
+							<Z>2</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Grind</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles1</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Grind</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles2</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Grind</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles3</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Grind</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles4</Dummy>
+					</ParticleEffect>
+				</Event>
+				<Event Trigger="RayHit">
+					<ParticleEffect>
+						<Name>ShipGrinder</Name>
+						<Location>Hit</Location>
+					</ParticleEffect>
+                    <Sound>
+                        <Name>ToolLrgGrindIdle</Name>
+                    </Sound>
+				</Event>
+            </ToolValues>
+        </Definition>
+        <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+            <Id>
+                <TypeId>ConveyorSorter</TypeId>
+                <SubtypeId>SG_Simple_Laser_Multitool</SubtypeId>
+            </Id>
+            <DisplayName>Simple Laser Multitool</DisplayName>
+            <Description>A multipurpose laser, grinder, and drill. Range of 100m.</Description>
+            <CubeSize>Small</CubeSize>
+            <GuiVisible>false</GuiVisible>
+			<Icon>Textures\GUI\Icons\Cubes\SG_SimpleLaserMultitool.dds</Icon>
+			<CubeSize>Small</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="3" y="3" z="6"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\small\SG_SimpleLaserMultitool.mwm</Model>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Left" StartX="2.99" StartY="0.00" EndX="5.99" EndY="3.00"/>
+				<MountPoint Side="Right" StartX="0.01" StartY="0.00" EndX="3.01" EndY="3.00" PressurizedWhenOpen="true"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.01" EndX="3.00" EndY="3.01"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="2.99" EndX="3.00" EndY="5.99"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\small\SG_SimpleLaserMultitool_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\small\SG_SimpleLaserMultitool_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>SimpleLaserMultitool</BlockPairName>
+			<MirroringZ>X</MirroringZ>
+            <Components>
+                <Component Subtype="SteelPlate" Count="40" />
+                <Component Subtype="Construction" Count="25" />
+                <Component Subtype="LargeTube" Count="6" />
+                <Component Subtype="Computer" Count="1" />
+                <Component Subtype="PowerCell" Count="2" />
+                <Component Subtype="SteelPlate" Count="60" />
+            </Components>
+            <CriticalComponent Subtype="PowerCell" Index="0" />
+            <InventorySize>
+                <X>3</X>
+                <Y>3</Y>
+                <Z>2</Z>
+            </InventorySize>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>30</BuildTimeSeconds>
+            <DeformationRatio>0.2</DeformationRatio>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleHeavyMech</DamagedSound>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>190</PCU>
+            <ToolValues Type="Weld">
+				<EffectShape>Cylinder</EffectShape>
+                <WorkOrder>Uniform</WorkOrder>
+                <WorkOrigin>Emitter</WorkOrigin>
+				<WorkRate>4</WorkRate>
+				<Speed>2.5</Speed>
+				<PickUpFloatings>true</PickUpFloatings>
+				<UpdateInterval>15</UpdateInterval>
+                <Emitter>detector_shiptool_1</Emitter>
+                <Offset x="0" y="0" z="-50" />
+                <Radius>1.2</Radius>
+                <Length>100</Length>
+				<HarvestRatio>1</HarvestRatio>
+                <ActivePower>0.5</ActivePower>
+                <DamageCharacters>true</DamageCharacters>
+                <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
+                <Action Type="Secondary" SizeRatio="3" SpeedRatio="0.5" HarvestRatio="0" />
+                <Event Trigger="Firing">
+					<Beam>
+						<Start>particles2</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.05</Width>
+						<Color>
+							<X>8</X>
+							<Y>4</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles3</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.05</Width>
+						<Color>
+							<X>8</X>
+							<Y>4</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles4</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.05</Width>
+						<Color>
+							<X>8</X>
+							<Y>4</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles5</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.05</Width>
+						<Color>
+							<X>8</X>
+							<Y>4</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Weld</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles1</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Weld</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles2</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Weld</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles3</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Weld</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles4</Dummy>
+					</ParticleEffect>
+				</Event>
+				<Event Trigger="RayHit">
+					<ParticleEffect>
+						<Name>ShipWelderArc</Name>
+						<Location>Hit</Location>
+					</ParticleEffect>
+                    <Sound>
+                        <Name>ToolLrgWeldMetal</Name>
+                    </Sound>
+				</Event>
+            </ToolValues>
+            <ToolValues Type="Grind">
+				<EffectShape>Cylinder</EffectShape>
+                <WorkOrder>Uniform</WorkOrder>
+                <WorkOrigin>Emitter</WorkOrigin>
+				<WorkRate>2</WorkRate>
+				<Speed>1</Speed>
+				<UpdateInterval>5</UpdateInterval>
+                <Emitter>detector_shiptool_1</Emitter>
+                <Offset x="0" y="0" z="-50" />
+                <Radius>1.5</Radius>
+				<PickUpFloatings>true</PickUpFloatings>
+                <Length>100</Length>
+				<HarvestRatio>1</HarvestRatio>
+                <ActivePower>0.3</ActivePower>
+                <DamageCharacters>true</DamageCharacters>
+                <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
+                <Action Type="Secondary" SizeRatio="3" SpeedRatio="0.5" HarvestRatio="0" />
+                <Event Trigger="Firing">
+					<Beam>
+						<Start>particles2</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.15</Width>
+						<Color>
+							<X>4</X>
+							<Y>8</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles3</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.15</Width>
+						<Color>
+							<X>4</X>
+							<Y>8</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles4</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.15</Width>
+						<Color>
+							<X>4</X>
+							<Y>8</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles5</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.15</Width>
+						<Color>
+							<X>4</X>
+							<Y>8</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Grind</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles1</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Grind</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles2</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Grind</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles3</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Grind</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles4</Dummy>
+					</ParticleEffect>
+				</Event>
+				<Event Trigger="RayHit">
+					<ParticleEffect>
+						<Name>ShipGrinder</Name>
+						<Location>Hit</Location>
+					</ParticleEffect>
+                    <Sound>
+                        <Name>ToolLrgGrindIdle</Name>
+                    </Sound>
+				</Event>
+            </ToolValues>
+            <ToolValues Type="Drill">
+				<EffectShape>Line</EffectShape>
+                <WorkOrder>Forward</WorkOrder>
+                <WorkOrigin>Emitter</WorkOrigin>
+				<WorkRate>1</WorkRate>
+				<Speed>0.5</Speed>
+				<PickUpFloatings>true</PickUpFloatings>
+				<UpdateInterval>5</UpdateInterval>
+                <Emitter>detector_shiptool_1</Emitter>
+                <Offset x="0" y="0" z="0" />
+                <Radius>1.5</Radius>
+                <Length>100</Length>
+				<HarvestRatio>1</HarvestRatio>
+                <ActivePower>0.5</ActivePower>
+                <DamageCharacters>true</DamageCharacters>
+                <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
+                <Action Type="Secondary" SizeRatio="2" SpeedRatio="2" HarvestRatio="0" />
+                
+                <Event Trigger="Firing">
+					<Beam>
+						<Start>particles2</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.1</Width>
+						<Color>
+							<X>8</X>
+							<Y>7</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles3</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.1</Width>
+						<Color>
+							<X>8</X>
+							<Y>7</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles4</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.1</Width>
+						<Color>
+							<X>8</X>
+							<Y>7</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>particles5</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>LaserMultitool_Beam</Material>
+						<Width>0.05</Width>
+						<Color>
+							<X>8</X>
+							<Y>7</Y>
+							<Z>3</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Drill</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles1</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Drill</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles2</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Drill</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles3</Dummy>
+					</ParticleEffect>
+					<ParticleEffect>
+						<Name>Multibeam_Start_Drill</Name>
+						<Location>Emitter</Location>
+						<Dummy>particles4</Dummy>
+					</ParticleEffect>
+				</Event>
+				<Event Trigger="RayHit">
+					<ParticleEffect>
+					<Name>MaterialProperties/ShipDrill</Name>
+					<Location>Hit</Location>
+					<Offset x="0" y="0" z="-4" />
+					</ParticleEffect>
+                    <Sound>
+                        <Name>MaterialProperties/ShipDrill</Name>
+                    </Sound>
+				</Event>
+            </ToolValues>
+        </Definition>
+    </CubeBlocks>
+</Definitions>
