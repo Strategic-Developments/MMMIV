@@ -177,18 +177,48 @@ namespace BlueprintMod
                         case "SmallMissileLauncherReload/SmallBlockMediumCalibreGun":
                         case "SmallMissileLauncher/SmallFlareLauncher":
 
-                        case "JumpDrive/SmallPrototechJumpDrive":
-                        case "JumpDrive/LargePrototechJumpDrive":
-                        case "Refinery/SmallPrototechRefinery":
-                        case "Refinery/LargePrototechRefinery":
-
                         case "TurretControlBlock/LargeTurretControlBlock":
                         case "TurretControlBlock/SmallTurretControlBlock":
-                            if (def is MyJumpDriveDefinition)
-                                ((MyJumpDriveDefinition)def).MaxJumpDistance = 1;
-                            else if (def is MyRefineryDefinition)
-                                ((MyRefineryDefinition)def).RefineSpeed = 0.0001f;
+                            def.Enabled = false;
+                            def.Public = false;
+                            break;
+                        case "JumpDrive/SmallPrototechJumpDrive":
+                        case "JumpDrive/LargePrototechJumpDrive":
+                            ((MyJumpDriveDefinition)def).MaxJumpDistance = 1;
+                            def.Enabled = false;
+                            def.Public = false;
+                            break;
+                        case "Refinery/SmallPrototechRefinery":
+                        case "Refinery/LargePrototechRefinery":
+                        case "Refinery/Blast Furnace":
+                            ((MyRefineryDefinition)def).RefineSpeed = 0.0001f;
+                            def.Enabled = false;
+                            def.Public = false;
+                            break;
+                       
 
+                        case "ShipGrinder/LargeShipGrinder":
+                        case "ShipGrinder/LargeShipGrinderReskin":
+                            ((MyShipGrinderDefinition)def).SensorRadius = 0.0001f;
+                            def.Enabled = false;
+                            def.Public = false;
+                            break;
+                        case "ShipWelder/LargeShipWelder":
+                        case "ShipWelder/LargeShipWelderReskin":
+                            ((MyShipWelderDefinition)def).SensorRadius = 0.0001f;
+                            def.Enabled = false;
+                            def.Public = false;
+                            break;
+                        case "Drill/LargeBlockDrill":
+                        case "Drill/LargeBlockDrillReskin":
+                        case "Drill/LargeBlockPrototechDrill":
+                            var drillDef = def as MyShipDrillDefinition;
+                            drillDef.SensorRadius = 0.0001f;
+                            drillDef.SensorOffset = -5f;
+                            drillDef.CutOutOffset = 0.0001f;
+                            drillDef.CutOutRadius = 0.0001f;
+                            drillDef.Speed = 0.0001f;
+                            drillDef.DiscardingMultiplier = 0.0001f;
                             def.Enabled = false;
                             def.Public = false;
                             break;

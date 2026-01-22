@@ -110,11 +110,4 @@
 		<Entry Class="EliteConsumables" BlueprintSubtypeId="mss_lg_t_flail_ammomagazine"/>
 		<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/mss_lg_t_flail_base"/>
 	</BlueprintClassEntries>
-
-
-
-
-
-
-
 </Definitions>
