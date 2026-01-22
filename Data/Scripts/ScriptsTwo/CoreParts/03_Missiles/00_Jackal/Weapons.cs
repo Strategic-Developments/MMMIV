@@ -33,6 +33,13 @@ namespace Scripts
                  },
                 Muzzles = new[] {
                     "muzzle_missile_1",
+                    "muzzle_missile_2",
+                    "muzzle_missile_3",
+                    "muzzle_missile_4",
+                    "muzzle_missile_5",
+                    "muzzle_missile_6",
+                    "muzzle_missile_7",
+                    "muzzle_missile_8",
                 },
                 Ejector = "", // Optional; empty from which to eject "shells" if specified.
                 Scope = "", // Where line of sight checks are performed from. Must be clear of block collision.
@@ -159,7 +166,7 @@ namespace Scripts
                 },
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 200, // Set this to 3600 for beam weapons. This is how fast your gun fires per minute.
+                    RateOfFire = 480 * 3, // Set this to 3600 for beam weapons. This is how fast your gun fires per minute.
                     BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
                     TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
@@ -184,7 +191,7 @@ namespace Scripts
                     ProhibitCoolingWhenOff = false, // If true, prevents blocks that are turned off from cooling down over time
                     ShotsInBurst = 0, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
                     DelayAfterBurst = 0, // How long to spend "reloading" after each burst. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    FireFull = false, // Whether the weapon should fire the full magazine (or the full burst instead if ShotsInBurst > 0), even if the target is lost or the player stops firing prematurely.
+                    FireFull = true, // Whether the weapon should fire the full magazine (or the full burst instead if ShotsInBurst > 0), even if the target is lost or the player stops firing prematurely.
                     GiveUpAfter = false, // Whether the weapon should drop its current target and reacquire a new target after finishing its magazine or burst.
                     BarrelSpinRate = 0, // 0 disables and uses RateOfFire.  If slower than ROF, will increase time to spin up and start shooting.
                     DeterministicSpin = false, // Spin barrel position will always be relative to initial / starting positions (spin will not be as smooth).
