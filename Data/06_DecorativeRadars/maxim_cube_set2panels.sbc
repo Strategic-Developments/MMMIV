@@ -7,8 +7,7 @@
 				<SubtypeId>SOFL_SET2_Flat</SubtypeId>
 			</Id>
 			<DisplayName>MAXIM SET-2 Panel</DisplayName>
-			<Description>Search radar commonly found on modern military vessels capable of picking out targets at long ranges, but not designed to acquire target locks
-			Tier 2 Radar (1 Search Radar)</Description>
+			<Description>DECORATIVE ONLY! Search radar commonly found on modern military vessels.</Description>
 			<Icon>Textures\Icons\SET-2\SOFL_SET2_Flat.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -23,7 +22,6 @@
   				<Component Subtype="Girder" Count="10"/>
   				<Component Subtype="PowerCell" Count="15"/>
   				<Component Subtype="MetalGrid" Count="80"/>
-  				<Component Subtype="Superconductor" Count="100"/>
   				<Component Subtype="Detector" Count="125"/>
   				<Component Subtype="RadioCommunication" Count="125"/>
   				
@@ -85,8 +83,7 @@
 				<SubtypeId>SOFL_SET2_1x1</SubtypeId>
 			</Id>
 			<DisplayName>MAXIM SET-2 Panel</DisplayName>
-			<Description>Search radar commonly found on modern military vessels capable of picking out targets at long ranges, but not designed to acquire target locks
-			Sensors: 1 fixed radar</Description>
+			<Description>DECORATIVE ONLY! Search radar commonly found on modern military vessels.</Description>
 			<Icon>Textures\Icons\SET-2\SOFL_SET2_1x1.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -101,7 +98,6 @@
   				<Component Subtype="Girder" Count="10"/>
   				<Component Subtype="PowerCell" Count="15"/>
   				<Component Subtype="MetalGrid" Count="80"/>
-  				<Component Subtype="Superconductor" Count="100"/>
   				<Component Subtype="Detector" Count="125"/>
   				<Component Subtype="RadioCommunication" Count="125"/>
   				 
@@ -129,8 +125,7 @@
 				<SubtypeId>SOFL_SET2_1x1_Corner</SubtypeId>
 			</Id>
 			<DisplayName>MAXIM SET-2 Panel</DisplayName>
-			<Description>Search radar commonly found on modern military vessels capable of picking out targets at long ranges, but not designed to acquire target locks
-			Sensors: 1 fixed radar</Description>
+			<Description>DECORATIVE ONLY! Search radar commonly found on modern military vessels.</Description>
 			<Icon>Textures\Icons\SET-2\SOFL_SET2_1x1_Corner.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -145,7 +140,6 @@
   				<Component Subtype="Girder" Count="10"/>
   				<Component Subtype="PowerCell" Count="15"/>
   				<Component Subtype="MetalGrid" Count="80"/>
-  				<Component Subtype="Superconductor" Count="100"/>
   				<Component Subtype="Detector" Count="125"/>
   				<Component Subtype="RadioCommunication" Count="125"/>
   				 
@@ -175,8 +169,7 @@
 				<SubtypeId>SOFL_SET2_1x1_Corner_Offset</SubtypeId>
 			</Id>
 			<DisplayName>MAXIM SET-2 Panel</DisplayName>
-			<Description>Search radar commonly found on modern military vessels capable of picking out targets at long ranges, but not designed to acquire target locks
-			Sensors: 1 fixed radar</Description>
+			<Description>DECORATIVE ONLY! Search radar commonly found on modern military vessels.</Description>
 			<Icon>Textures\Icons\SET-2\SOFL_SET2_1x1_Corner_Offset.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -191,7 +184,6 @@
   				<Component Subtype="Girder" Count="10"/>
   				<Component Subtype="PowerCell" Count="15"/>
   				<Component Subtype="MetalGrid" Count="80"/>
-  				<Component Subtype="Superconductor" Count="100"/>
   				<Component Subtype="Detector" Count="125"/>
   				<Component Subtype="RadioCommunication" Count="125"/>
   				 
@@ -222,8 +214,7 @@
 				<SubtypeId>SOFL_SET2_1x1_Offset</SubtypeId>
 			</Id>
 			<DisplayName>MAXIM SET-2 Panel</DisplayName>
-			<Description>Search radar commonly found on modern military vessels capable of picking out targets at long ranges, but not designed to acquire target locks
-			Sensors: 1 fixed radar</Description>
+			<Description>DECORATIVE ONLY! Search radar commonly found on modern military vessels.</Description>
 			<Icon>Textures\Icons\SET-2\SOFL_SET2_1x1_Offset.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -238,7 +229,6 @@
   				<Component Subtype="Girder" Count="10"/>
   				<Component Subtype="PowerCell" Count="15"/>
   				<Component Subtype="MetalGrid" Count="80"/>
-  				<Component Subtype="Superconductor" Count="100"/>
   				<Component Subtype="Detector" Count="125"/>
   				<Component Subtype="RadioCommunication" Count="125"/>
   				 
@@ -266,8 +256,7 @@
 				<SubtypeId>SOFL_SET2_1x2</SubtypeId>
 			</Id>
 			<DisplayName>MAXIM SET-2 Panel</DisplayName>
-			<Description>Search radar commonly found on modern military vessels capable of picking out targets at long ranges, but not designed to acquire target locks
-			Sensors: 1 fixed radar</Description>
+			<Description>DECORATIVE ONLY! Search radar commonly found on modern military vessels.</Description>
 			<Icon>Textures\Icons\SET-2\SOFL_SET2_1x2.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -282,7 +271,6 @@
   				<Component Subtype="Girder" Count="10"/>
   				<Component Subtype="PowerCell" Count="15"/>
   				<Component Subtype="MetalGrid" Count="80"/>
-  				<Component Subtype="Superconductor" Count="100"/>
   				<Component Subtype="Detector" Count="125"/>
   				<Component Subtype="RadioCommunication" Count="125"/>
   				 
@@ -310,8 +298,7 @@
 				<SubtypeId>SOFL_SET2_1x2_Offset</SubtypeId>
 			</Id>
 			<DisplayName>MAXIM SET-2 Panel</DisplayName>
-			<Description>Search radar commonly found on modern military vessels capable of picking out targets at long ranges, but not designed to acquire target locks
-			Sensors: 1 fixed radar</Description>
+			<Description>DECORATIVE ONLY! Search radar commonly found on modern military vessels.</Description>
 			<Icon>Textures\Icons\SET-2\SOFL_SET2_1x2_Offset.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -326,7 +313,6 @@
   				<Component Subtype="Girder" Count="10"/>
   				<Component Subtype="PowerCell" Count="15"/>
   				<Component Subtype="MetalGrid" Count="80"/>
-  				<Component Subtype="Superconductor" Count="100"/>
   				<Component Subtype="Detector" Count="125"/>
   				<Component Subtype="RadioCommunication" Count="125"/>
   				 
@@ -354,8 +340,7 @@
 				<SubtypeId>SOFL_SET2_Flat_Half</SubtypeId>
 			</Id>
 			<DisplayName>MAXIM SET-2 Panel</DisplayName>
-			<Description>Search radar commonly found on modern military vessels capable of picking out targets at long ranges, but not designed to acquire target locks
-			Sensors: 1 fixed radar</Description>
+			<Description>DECORATIVE ONLY! Search radar commonly found on modern military vessels.</Description>
 			<Icon>Textures\Icons\SET-2\SOFL_SET2_Flat_Half.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -370,7 +355,6 @@
   				<Component Subtype="Girder" Count="10"/>
   				<Component Subtype="PowerCell" Count="15"/>
   				<Component Subtype="MetalGrid" Count="80"/>
-  				<Component Subtype="Superconductor" Count="100"/>
   				<Component Subtype="Detector" Count="125"/>
   				<Component Subtype="RadioCommunication" Count="125"/>
   				 

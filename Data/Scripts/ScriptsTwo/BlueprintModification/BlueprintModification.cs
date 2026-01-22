@@ -181,6 +181,9 @@ namespace BlueprintMod
                         case "JumpDrive/LargePrototechJumpDrive":
                         case "Refinery/SmallPrototechRefinery":
                         case "Refinery/LargePrototechRefinery":
+
+                        case "TurretControlBlock/LargeTurretControlBlock":
+                        case "TurretControlBlock/SmallTurretControlBlock":
                             def.Enabled = false;
                             def.Public = false;
                             break;

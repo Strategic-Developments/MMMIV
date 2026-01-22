@@ -7,8 +7,7 @@
 				<SubtypeId>SOFL_Radar_1</SubtypeId>
 			</Id>
 			<DisplayName>MXM-012 Fire Control Radar</DisplayName>
-			<Description>An old, relatively low tech and low power fire control radar
-			Tier 1 radar (1 Track Radar)</Description>
+			<Description>DECORATIVE ONLY! An old, relatively low tech and low power fire control radar.</Description>
 			<Icon>Textures\Icons\SOFL_Radar_1.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -75,8 +74,7 @@
 				<SubtypeId>SOFL_ASTS_5</SubtypeId>
 			</Id>
 			<DisplayName>A-STS-5 Radar</DisplayName>
-			<Description>Advanced Search-Track System 5, a nice long range search and track radar
-			Tier 3 Radar (1 Search Radar)</Description>
+			<Description>DECORATIVE ONLY! Advanced Search-Track System 5, a nice long range search and track radar.</Description>
 			<Icon>Textures\Icons\SOFL_ASTS_5.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -92,9 +90,7 @@
   				<Component Subtype="Motor" Count="50"/>
   				<Component Subtype="PowerCell" Count="25"/>
   				<Component Subtype="MetalGrid" Count="50"/>
-  				<Component Subtype="Superconductor" Count="100"/>
   				<Component Subtype="Detector" Count="275"/>
-  				<Component Subtype="SOFL_AESA_TR_Comp" Count="15"/>
   				<Component Subtype="RadioCommunication" Count="275"/>
   				
   				<Component Subtype="Construction" Count="50"/>
@@ -115,8 +111,7 @@
 				<SubtypeId>SOFL_FR_057</SubtypeId>
 			</Id>
 			<DisplayName>FR-057 Block7</DisplayName>
-			<Description>Full-utility-Radar, this specific variant is specifically designed for astronautic use
-			Tier 2 Radar (1 Track Radar)</Description>
+			<Description>DECORATIVE ONLY! Full-utility-Radar, this specific variant is specifically designed for astronautic use.</Description>
 			<Icon>Textures\Icons\SOFL_FR_057.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -132,7 +127,6 @@
   				<Component Subtype="Motor" Count="30"/>
  			    <Component Subtype="PowerCell" Count="15"/>
   				<Component Subtype="MetalGrid" Count="50"/>
-  				<Component Subtype="Superconductor" Count="100"/>
   				<Component Subtype="Detector" Count="125"/>
   				<Component Subtype="RadioCommunication" Count="125"/>
   				
@@ -152,8 +146,7 @@
 				<SubtypeId>SOFL_MXM_008</SubtypeId>
 			</Id>
 			<DisplayName>MXM-008 Multifunction Radar</DisplayName>
-			<Description>High Power Radar capable of multiple functions
-			Tier 2 Radar (1 Search Radar, 1 Track Radar)</Description>
+			<Description>DECORATIVE ONLY! High Power Radar capable of multiple functions.</Description>
 			<Icon>Textures\Icons\SOFL_MXM_012.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -169,7 +162,6 @@
   				<Component Subtype="Motor" Count="30"/>
  			    <Component Subtype="PowerCell" Count="15"/>
   				<Component Subtype="MetalGrid" Count="50"/>
-  				<Component Subtype="Superconductor" Count="100"/>
   				<Component Subtype="Detector" Count="125"/>
   				<Component Subtype="RadioCommunication" Count="125"/>
   				
@@ -193,8 +185,7 @@
 				<SubtypeId>SOFL_MXM_008_Centered</SubtypeId>
 			</Id>
 			<DisplayName>MXM-008 Multifunction Radar (Centered)</DisplayName>
-			<Description>High Power Radar capable of multiple functions
-			Tier 2 Radar (1 Search Radar, 1 Track Radar)</Description>
+			<Description>DECORATIVE ONLY! High Power Radar capable of multiple functions.</Description>
 			<Icon>Textures\Icons\SOFL_MXM_012.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -210,7 +201,6 @@
   				<Component Subtype="Motor" Count="30"/>
  			    <Component Subtype="PowerCell" Count="15"/>
   				<Component Subtype="MetalGrid" Count="50"/>
-  				<Component Subtype="Superconductor" Count="100"/>
   				<Component Subtype="Detector" Count="125"/>
   				<Component Subtype="RadioCommunication" Count="125"/>
   				
@@ -233,8 +223,7 @@
 				<SubtypeId>SOFL_MXM_005</SubtypeId>
 			</Id>
 			<DisplayName>MAXIM-005 Search radar</DisplayName>
-			<Description>Small radar made to outfit smaller vessels, or supplement defensive systems of larger ones.
-			Tier 1 Radar (1 Search Radar)</Description>
+			<Description>DECORATIVE ONLY! Small radar made to outfit smaller vessels, or supplement defensive systems of larger ones.</Description>
 			<Icon>Textures\Icons\SOFL_MXM_005.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -271,8 +260,7 @@
 				<SubtypeId>SOFL_MXM_009</SubtypeId>
 			</Id>
 			<DisplayName>MAXIM-009 Advanced Multifunction Radar System</DisplayName>
-			<Description>Advanced Search/Track radar
-			Tier 3 Radar (1 Search Radar, 2 Track Radars)</Description>
+			<Description>DECORATIVE ONLY! Advanced Search/Track radar.</Description>
 			<Icon>Textures\Icons\SOFL_MXM_009.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -288,9 +276,7 @@
   				<Component Subtype="Motor" Count="50"/>
   				<Component Subtype="PowerCell" Count="25"/>
   				<Component Subtype="MetalGrid" Count="50"/>
-  				<Component Subtype="Superconductor" Count="100"/>
   				<Component Subtype="Detector" Count="275"/>
-  				<Component Subtype="SOFL_AESA_TR_Comp" Count="15"/>
   				<Component Subtype="RadioCommunication" Count="275"/>
   				
   				<Component Subtype="Construction" Count="50"/>
@@ -315,8 +301,7 @@
 				<SubtypeId>SOFL_ASEL_MKXII_FCR</SubtypeId>
 			</Id>
 			<DisplayName>ASEL MkXII FCR</DisplayName>
-			<Description>Capable fire control radar made for smaller vessels
-			Small Grid Tier Radar (1 Track Radar)</Description>
+			<Description>DECORATIVE ONLY! Capable fire control radar made for smaller vessels.</Description>
 			<Icon>Textures\Icons\SOFL_ASEL_MKXII_FCR.dds</Icon>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -346,8 +331,39 @@
 			<MaxFov>1.04719755</MaxFov>
 		</Definition>
 
-		
-		
+
+		<Definition xsi:type="MyObjectBuilder_CameraBlockDefinition">
+			<Id>
+				<TypeId>CubeBlock</TypeId>
+				<SubtypeId>SOFL_SB_PRR_Series2_Flat</SubtypeId>
+			</Id>
+			<DisplayName>SB PRR Series2 RWR</DisplayName>
+			<Description>DECORATIVE ONLY! Reliable modern passive radar</Description>
+			<Icon>Textures\Icons\SB PRR Series2\SOFL_SB_PRR_Series2_Flat.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="1"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Sensors\SB-PRR Series2\Flat\SOFL_SB_PRR_Series2_Flat.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="15"/>
+				<Component Subtype="Construction" Count="35"/>
+				<Component Subtype="SmallTube" Count="15"/>
+				<Component Subtype="LargeTube" Count="10"/>
+				<Component Subtype="Girder" Count="10"/>
+				<Component Subtype="MetalGrid" Count="15"/>
+				<Component Subtype="Detector" Count="35"/>
+				<Component Subtype="RadioCommunication" Count="55"/>
+
+				<Component Subtype="SteelPlate" Count="50"/>
+			</Components>
+			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+			</MountPoints>
+			<BlockPairName>SOFL_SB_PRR_Series2_Flat</BlockPairName>
+			<MirroringY>X</MirroringY>
+		</Definition>
 		
 	</CubeBlocks>
 </Definitions>

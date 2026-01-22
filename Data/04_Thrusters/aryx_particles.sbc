@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <ParticleEffects>
-  <!--Usage of these particles without explicit permission from Aryx will result in a DMCA.--> 
-  <!-- 5x5 Plume--> 	
+  <ParticleEffects><!--Usage of these particles without explicit permission from Aryx will result in a DMCA.--><!-- 5x5 Plume-->
     <ParticleEffect xsi:type="ParticleEffect">
-      <Id Type="MyObjectBuilder_ParticleEffect" Subtype="AryxMediumDrivePlume" />
+      <Id Type="MyObjectBuilder_ParticleEffect" Subtype="AryxMediumDrivePlume"/>
       <ParticleId>88592168</ParticleId>
       <Length>5</Length>
       <Preload>0</Preload>
@@ -44,7 +42,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.333333343</Time>
@@ -54,7 +52,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
@@ -64,7 +62,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
@@ -74,7 +72,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -90,12 +88,12 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>0.0001</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -114,7 +112,7 @@
                     <Y>5</Y>
                     <Z>1</Z>
                   </ValueVector3>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -123,7 +121,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -139,7 +137,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -148,7 +146,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>2.5</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -157,7 +155,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -166,7 +164,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>170</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -186,22 +184,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.33</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.66</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -220,22 +218,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>8</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0187760554</Time>
                         <ValueFloat>6.09787655</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0284811575</Time>
                         <ValueFloat>4.363076</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>2.5</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -262,7 +260,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>500</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -341,22 +339,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.33</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.66</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -364,7 +362,7 @@
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Particles per frame" Type="Float">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Const" Name="Camera bias" Type="Float">
               <ValueFloat>0</ValueFloat>
@@ -378,22 +376,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>0.25</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0546851866</Time>
                         <ValueFloat>0.229535073</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0614788681</Time>
                         <ValueFloat>0.2149773</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -462,7 +460,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.958237469</Time>
@@ -472,7 +470,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
@@ -482,7 +480,7 @@
                           <Z>0</Z>
                           <W>0</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -498,17 +496,17 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>100</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.00518878968</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -527,7 +525,7 @@
                     <Y>3</Y>
                     <Z>1</Z>
                   </ValueVector3>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -536,7 +534,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -552,7 +550,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>1</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -561,7 +559,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>2.5</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -570,7 +568,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -579,7 +577,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>170</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -599,22 +597,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.333333343</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -633,22 +631,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>8</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0187760554</Time>
                         <ValueFloat>6.09787655</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0284811575</Time>
                         <ValueFloat>4.363076</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>2.5</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -675,7 +673,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>500</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -754,22 +752,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.333333343</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -777,7 +775,7 @@
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Particles per frame" Type="Float">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Const" Name="Camera bias" Type="Float">
               <ValueFloat>0</ValueFloat>
@@ -791,22 +789,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>4</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.009070856</Time>
                         <ValueFloat>5</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.236172035</Time>
                         <ValueFloat>0.6210435</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -875,7 +873,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0343043245</Time>
@@ -885,7 +883,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.248788744</Time>
@@ -895,7 +893,7 @@
                           <Z>1</Z>
                           <W>0.0583932661</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
@@ -905,7 +903,7 @@
                           <Z>0</Z>
                           <W>0</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -921,12 +919,12 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1000</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -945,7 +943,7 @@
                     <Y>1</Y>
                     <Z>1</Z>
                   </ValueVector3>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -954,7 +952,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -970,7 +968,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>1</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -979,7 +977,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -988,7 +986,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -997,7 +995,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>200</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -1017,22 +1015,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.33</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.66</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -1051,17 +1049,17 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>5</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.02459911</Time>
                         <ValueFloat>5</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>4</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -1088,7 +1086,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>350</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -1167,22 +1165,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.333333343</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -1190,7 +1188,7 @@
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Particles per frame" Type="Float">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Const" Name="Camera bias" Type="Float">
               <ValueFloat>0</ValueFloat>
@@ -1204,22 +1202,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>100</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.07118403</Time>
                         <ValueFloat>34.2607956</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0857418254</Time>
                         <ValueFloat>39.40454</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -1288,7 +1286,7 @@
                           <Z>1</Z>
                           <W>1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.333333343</Time>
@@ -1298,7 +1296,7 @@
                           <Z>1</Z>
                           <W>1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
@@ -1308,7 +1306,7 @@
                           <Z>1</Z>
                           <W>1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
@@ -1318,7 +1316,7 @@
                           <Z>1</Z>
                           <W>1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -1334,22 +1332,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>100</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.274992764</Time>
                         <ValueFloat>72.5007248</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6544653</Time>
                         <ValueFloat>34.55347</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -1368,7 +1366,7 @@
                     <Y>0</Y>
                     <Z>0</Z>
                   </ValueVector3>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -1377,7 +1375,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -1393,7 +1391,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>1</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -1402,7 +1400,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -1411,7 +1409,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -1420,7 +1418,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -1440,22 +1438,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.33</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.66</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -1474,17 +1472,17 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>5</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.36330992</Time>
                         <ValueFloat>3.945307</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -1511,7 +1509,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>25</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -1590,22 +1588,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.33</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.66</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -1613,7 +1611,7 @@
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Particles per frame" Type="Float">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Const" Name="Camera bias" Type="Float">
               <ValueFloat>0</ValueFloat>
@@ -1627,22 +1625,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>100</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0352748521</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0527442433</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -1694,12 +1692,12 @@
                     <Y>0</Y>
                     <Z>-7</Z>
                   </ValueVector3>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Position var" Type="Vector3">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Animated" Name="Color" Type="Vector4">
               <Keys>
@@ -1711,19 +1709,19 @@
                     <Z>1</Z>
                     <W>1</W>
                   </ValueVector4>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Color var" Type="Float">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Animated" Name="Range" Type="Float">
               <Keys>
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>8</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -1732,7 +1730,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>1</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -1741,7 +1739,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>8000</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -1750,7 +1748,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0.1</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -1771,10 +1769,9 @@
       </ParticleLights>
       <DistanceMax>3000</DistanceMax>
       <Priority>1</Priority>
-    </ParticleEffect>
-  <!-- 3x3 plume -->
+    </ParticleEffect><!-- 3x3 plume -->
     <ParticleEffect xsi:type="ParticleEffect">
-      <Id Type="MyObjectBuilder_ParticleEffect" Subtype="AryxSmallDrivePlume" />
+      <Id Type="MyObjectBuilder_ParticleEffect" Subtype="AryxSmallDrivePlume"/>
       <ParticleId>88592169</ParticleId>
       <Length>5</Length>
       <Preload>0</Preload>
@@ -1814,7 +1811,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.333333343</Time>
@@ -1824,7 +1821,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
@@ -1834,7 +1831,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
@@ -1844,7 +1841,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -1860,12 +1857,12 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>0.0001</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -1884,7 +1881,7 @@
                     <Y>2</Y>
                     <Z>1</Z>
                   </ValueVector3>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -1893,7 +1890,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -1909,7 +1906,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>15</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -1918,7 +1915,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>2.5</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -1927,7 +1924,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -1936,7 +1933,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>170</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -1956,22 +1953,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.33</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.66</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -1990,22 +1987,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>5</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0187760554</Time>
                         <ValueFloat>5</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0284811575</Time>
                         <ValueFloat>5</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -2032,7 +2029,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>500</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -2111,22 +2108,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.33</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.66</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -2134,7 +2131,7 @@
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Particles per frame" Type="Float">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Const" Name="Camera bias" Type="Float">
               <ValueFloat>0</ValueFloat>
@@ -2148,22 +2145,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>0.25</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0818597</Time>
                         <ValueFloat>0.229535073</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.140090808</Time>
                         <ValueFloat>0.2149773</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -2232,7 +2229,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.958237469</Time>
@@ -2242,7 +2239,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
@@ -2252,7 +2249,7 @@
                           <Z>0</Z>
                           <W>0</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -2268,17 +2265,17 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>100</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.00518878968</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -2297,7 +2294,7 @@
                     <Y>2</Y>
                     <Z>1</Z>
                   </ValueVector3>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -2306,7 +2303,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -2322,7 +2319,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>5</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -2331,7 +2328,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>2.5</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -2340,7 +2337,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -2349,7 +2346,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>170</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -2369,22 +2366,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.333333343</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -2403,22 +2400,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>4</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0187760554</Time>
                         <ValueFloat>3</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0284811575</Time>
                         <ValueFloat>3</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -2445,7 +2442,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>500</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -2524,22 +2521,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.333333343</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -2547,7 +2544,7 @@
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Particles per frame" Type="Float">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Const" Name="Camera bias" Type="Float">
               <ValueFloat>0</ValueFloat>
@@ -2561,22 +2558,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>4</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.009070856</Time>
                         <ValueFloat>5</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.236172035</Time>
                         <ValueFloat>0.6210435</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -2645,7 +2642,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0343043245</Time>
@@ -2655,7 +2652,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.248788744</Time>
@@ -2665,7 +2662,7 @@
                           <Z>1</Z>
                           <W>0.0583932661</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
@@ -2675,7 +2672,7 @@
                           <Z>0</Z>
                           <W>0</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -2691,12 +2688,12 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1000</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -2715,7 +2712,7 @@
                     <Y>1</Y>
                     <Z>1</Z>
                   </ValueVector3>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -2724,7 +2721,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -2740,7 +2737,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>6</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -2749,7 +2746,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -2758,7 +2755,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -2767,7 +2764,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>200</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -2787,22 +2784,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.33</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.66</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -2821,17 +2818,17 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>5</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.02459911</Time>
                         <ValueFloat>3</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -2858,7 +2855,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>350</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -2937,22 +2934,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.333333343</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -2960,7 +2957,7 @@
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Particles per frame" Type="Float">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Const" Name="Camera bias" Type="Float">
               <ValueFloat>0</ValueFloat>
@@ -2974,22 +2971,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>100</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.07118403</Time>
                         <ValueFloat>34.2607956</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0857418254</Time>
                         <ValueFloat>39.40454</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -3058,7 +3055,7 @@
                           <Z>1</Z>
                           <W>1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.333333343</Time>
@@ -3068,7 +3065,7 @@
                           <Z>1</Z>
                           <W>1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
@@ -3078,7 +3075,7 @@
                           <Z>1</Z>
                           <W>1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
@@ -3088,7 +3085,7 @@
                           <Z>1</Z>
                           <W>1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -3104,22 +3101,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>100</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.274992764</Time>
                         <ValueFloat>72.5007248</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6544653</Time>
                         <ValueFloat>34.55347</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -3138,7 +3135,7 @@
                     <Y>0</Y>
                     <Z>0</Z>
                   </ValueVector3>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -3147,7 +3144,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -3163,7 +3160,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>1</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -3172,7 +3169,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -3181,7 +3178,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -3190,7 +3187,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -3210,22 +3207,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.33</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.66</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -3244,17 +3241,17 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>3</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0605083257</Time>
                         <ValueFloat>3</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -3281,7 +3278,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>25</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -3360,22 +3357,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.33</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.66</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -3383,7 +3380,7 @@
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Particles per frame" Type="Float">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Const" Name="Camera bias" Type="Float">
               <ValueFloat>0</ValueFloat>
@@ -3397,22 +3394,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>100</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0352748521</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0527442433</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -3464,12 +3461,12 @@
                     <Y>0</Y>
                     <Z>-7</Z>
                   </ValueVector3>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Position var" Type="Vector3">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Animated" Name="Color" Type="Vector4">
               <Keys>
@@ -3481,19 +3478,19 @@
                     <Z>1</Z>
                     <W>1</W>
                   </ValueVector4>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Color var" Type="Float">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Animated" Name="Range" Type="Float">
               <Keys>
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>8</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -3502,7 +3499,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>1</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -3511,7 +3508,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>8000</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -3520,7 +3517,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0.1</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -3541,10 +3538,9 @@
       </ParticleLights>
       <DistanceMax>3000</DistanceMax>
       <Priority>1</Priority>
-    </ParticleEffect>
-  <!-- Absurdly small plume -->
+    </ParticleEffect><!-- Absurdly small plume -->
     <ParticleEffect xsi:type="ParticleEffect">
-      <Id Type="MyObjectBuilder_ParticleEffect" Subtype="AryxVerySmallDrivePlume" />
+      <Id Type="MyObjectBuilder_ParticleEffect" Subtype="AryxVerySmallDrivePlume"/>
       <ParticleId>907938538</ParticleId>
       <Length>5</Length>
       <Preload>0</Preload>
@@ -3584,7 +3580,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.333333343</Time>
@@ -3594,7 +3590,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
@@ -3604,7 +3600,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
@@ -3614,7 +3610,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -3630,12 +3626,12 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>0.0001</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -3654,7 +3650,7 @@
                     <Y>1</Y>
                     <Z>1</Z>
                   </ValueVector3>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -3663,7 +3659,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -3679,7 +3675,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -3688,7 +3684,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>2.5</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -3697,7 +3693,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -3706,7 +3702,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>170</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -3726,22 +3722,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.33</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.66</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -3760,17 +3756,17 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0284811575</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -3797,7 +3793,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>500</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -3876,22 +3872,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.33</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.66</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -3899,7 +3895,7 @@
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Particles per frame" Type="Float">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Const" Name="Camera bias" Type="Float">
               <ValueFloat>0</ValueFloat>
@@ -3913,22 +3909,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>0.25</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0818597</Time>
                         <ValueFloat>0.229535073</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.140090808</Time>
                         <ValueFloat>0.2149773</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -3997,7 +3993,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.958237469</Time>
@@ -4007,7 +4003,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
@@ -4017,7 +4013,7 @@
                           <Z>0</Z>
                           <W>0</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -4033,17 +4029,17 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>100</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.00518878968</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -4062,7 +4058,7 @@
                     <Y>0.7</Y>
                     <Z>1</Z>
                   </ValueVector3>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -4071,7 +4067,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -4087,7 +4083,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>1</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -4096,7 +4092,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>2.5</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -4105,7 +4101,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -4114,7 +4110,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>170</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -4134,22 +4130,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.333333343</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -4168,22 +4164,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0187760554</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0284811575</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -4210,7 +4206,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>500</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -4289,22 +4285,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.333333343</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -4312,7 +4308,7 @@
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Particles per frame" Type="Float">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Const" Name="Camera bias" Type="Float">
               <ValueFloat>0</ValueFloat>
@@ -4326,22 +4322,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>4</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.009070856</Time>
                         <ValueFloat>5</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.236172035</Time>
                         <ValueFloat>0.6210435</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -4410,7 +4406,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0343043245</Time>
@@ -4420,7 +4416,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.248788744</Time>
@@ -4430,7 +4426,7 @@
                           <Z>1</Z>
                           <W>0.0583932661</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
@@ -4440,7 +4436,7 @@
                           <Z>0</Z>
                           <W>0</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -4456,12 +4452,12 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1000</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -4480,7 +4476,7 @@
                     <Y>0.25</Y>
                     <Z>0.25</Z>
                   </ValueVector3>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -4489,7 +4485,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -4505,7 +4501,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0.4</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -4514,7 +4510,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -4523,7 +4519,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -4532,7 +4528,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>200</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -4552,22 +4548,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.33</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.66</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -4586,17 +4582,17 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>2.5</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.02459911</Time>
                         <ValueFloat>2.5</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -4623,7 +4619,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>350</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -4702,22 +4698,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.333333343</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -4725,7 +4721,7 @@
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Particles per frame" Type="Float">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Const" Name="Camera bias" Type="Float">
               <ValueFloat>0</ValueFloat>
@@ -4739,22 +4735,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>100</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.07118403</Time>
                         <ValueFloat>34.2607956</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0857418254</Time>
                         <ValueFloat>39.40454</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -4806,12 +4802,12 @@
                     <Y>0</Y>
                     <Z>-5</Z>
                   </ValueVector3>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Position var" Type="Vector3">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Animated" Name="Color" Type="Vector4">
               <Keys>
@@ -4823,19 +4819,19 @@
                     <Z>1</Z>
                     <W>1</W>
                   </ValueVector4>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Color var" Type="Float">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Animated" Name="Range" Type="Float">
               <Keys>
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>8</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -4844,7 +4840,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>1</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -4853,7 +4849,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>8000</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -4862,7 +4858,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0.1</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -4883,10 +4879,9 @@
       </ParticleLights>
       <DistanceMax>3000</DistanceMax>
       <Priority>1</Priority>
-    </ParticleEffect>
-  <!-- Yacht Plume -->
+    </ParticleEffect><!-- Yacht Plume -->
     <ParticleEffect xsi:type="ParticleEffect">
-      <Id Type="MyObjectBuilder_ParticleEffect" Subtype="AryxVerySmallYachtDrivePlume" />
+      <Id Type="MyObjectBuilder_ParticleEffect" Subtype="AryxVerySmallYachtDrivePlume"/>
       <ParticleId>907938539</ParticleId>
       <Length>5</Length>
       <Preload>0</Preload>
@@ -4926,7 +4921,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.333333343</Time>
@@ -4936,7 +4931,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
@@ -4946,7 +4941,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
@@ -4956,7 +4951,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -4972,12 +4967,12 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>0.1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -4996,7 +4991,7 @@
                     <Y>1</Y>
                     <Z>1</Z>
                   </ValueVector3>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -5005,7 +5000,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -5021,7 +5016,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -5030,7 +5025,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>2.5</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -5039,7 +5034,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -5048,7 +5043,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>170</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -5068,22 +5063,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.33</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.66</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -5102,17 +5097,17 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0284811575</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0.5</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -5139,7 +5134,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>500</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -5218,22 +5213,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.33</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.66</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -5241,7 +5236,7 @@
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Particles per frame" Type="Float">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Const" Name="Camera bias" Type="Float">
               <ValueFloat>0</ValueFloat>
@@ -5255,22 +5250,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>0.25</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0818597</Time>
                         <ValueFloat>0.229535073</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.140090808</Time>
                         <ValueFloat>0.2149773</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -5339,7 +5334,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.958237469</Time>
@@ -5349,7 +5344,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
@@ -5359,7 +5354,7 @@
                           <Z>0</Z>
                           <W>0</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -5375,17 +5370,17 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>100</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.00518878968</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -5404,7 +5399,7 @@
                     <Y>1</Y>
                     <Z>1</Z>
                   </ValueVector3>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -5413,7 +5408,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -5429,7 +5424,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -5438,7 +5433,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>2.5</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -5447,7 +5442,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -5456,7 +5451,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>170</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -5476,22 +5471,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.333333343</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -5510,17 +5505,17 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1.5</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.2691697</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -5547,7 +5542,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>500</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -5626,22 +5621,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.333333343</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -5649,7 +5644,7 @@
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Particles per frame" Type="Float">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Const" Name="Camera bias" Type="Float">
               <ValueFloat>0</ValueFloat>
@@ -5663,22 +5658,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>4</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.009070856</Time>
                         <ValueFloat>5</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.236172035</Time>
                         <ValueFloat>0.6210435</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -5747,7 +5742,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0343043245</Time>
@@ -5757,7 +5752,7 @@
                           <Z>1</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.248788744</Time>
@@ -5767,7 +5762,7 @@
                           <Z>1</Z>
                           <W>0.0583932661</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
@@ -5777,7 +5772,7 @@
                           <Z>0</Z>
                           <W>0</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -5793,12 +5788,12 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1000</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -5817,7 +5812,7 @@
                     <Y>0.35</Y>
                     <Z>0.35</Z>
                   </ValueVector3>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -5826,7 +5821,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -5842,7 +5837,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -5851,7 +5846,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -5860,7 +5855,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -5869,7 +5864,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>200</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -5889,22 +5884,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.33</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.66</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -5923,17 +5918,17 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.02459911</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -5960,7 +5955,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>350</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -6039,22 +6034,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.333333343</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>2</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -6062,7 +6057,7 @@
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Particles per frame" Type="Float">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Const" Name="Camera bias" Type="Float">
               <ValueFloat>0</ValueFloat>
@@ -6076,22 +6071,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>100</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.07118403</Time>
                         <ValueFloat>34.2607956</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0857418254</Time>
                         <ValueFloat>39.40454</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -6160,7 +6155,7 @@
                           <Z>1</Z>
                           <W>1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.333333343</Time>
@@ -6170,7 +6165,7 @@
                           <Z>1</Z>
                           <W>1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
@@ -6180,7 +6175,7 @@
                           <Z>1</Z>
                           <W>1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
@@ -6190,7 +6185,7 @@
                           <Z>1</Z>
                           <W>1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -6206,22 +6201,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>100</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.274992764</Time>
                         <ValueFloat>72.5007248</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6544653</Time>
                         <ValueFloat>34.55347</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -6240,7 +6235,7 @@
                     <Y>0</Y>
                     <Z>0</Z>
                   </ValueVector3>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -6249,7 +6244,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -6265,7 +6260,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>1</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -6274,7 +6269,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -6283,7 +6278,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -6292,7 +6287,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -6312,22 +6307,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.33</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.66</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -6346,17 +6341,17 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.36330992</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -6383,7 +6378,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>25</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -6462,22 +6457,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.33</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.66</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -6485,7 +6480,7 @@
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Particles per frame" Type="Float">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Const" Name="Camera bias" Type="Float">
               <ValueFloat>0</ValueFloat>
@@ -6499,22 +6494,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>100</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0352748521</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.0527442433</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -6566,12 +6561,12 @@
                     <Y>0</Y>
                     <Z>-5</Z>
                   </ValueVector3>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Position var" Type="Vector3">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Animated" Name="Color" Type="Vector4">
               <Keys>
@@ -6583,19 +6578,19 @@
                     <Z>1</Z>
                     <W>1</W>
                   </ValueVector4>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Color var" Type="Float">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Animated" Name="Range" Type="Float">
               <Keys>
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>8</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -6604,7 +6599,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>1</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -6613,7 +6608,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>8000</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -6622,7 +6617,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0.1</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -6643,10 +6638,9 @@
       </ParticleLights>
       <DistanceMax>3000</DistanceMax>
       <Priority>1</Priority>
-    </ParticleEffect>
-  <!--RCS Plume--> 	
+    </ParticleEffect><!--RCS Plume-->
     <ParticleEffect xsi:type="ParticleEffect">
-      <Id Type="MyObjectBuilder_ParticleEffect" Subtype="AryxRCSPlumeStandard" />
+      <Id Type="MyObjectBuilder_ParticleEffect" Subtype="AryxRCSPlumeStandard"/>
       <ParticleId>88592169</ParticleId>
       <Length>5</Length>
       <Preload>0</Preload>
@@ -6686,7 +6680,7 @@
                           <Z>0.3</Z>
                           <W>0.5</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.2775745</Time>
@@ -6696,7 +6690,7 @@
                           <Z>0.3</Z>
                           <W>0.25</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.5865133</Time>
@@ -6706,7 +6700,7 @@
                           <Z>0.3</Z>
                           <W>0.1</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
@@ -6716,7 +6710,7 @@
                           <Z>0</Z>
                           <W>0</W>
                         </ValueVector4>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -6732,17 +6726,17 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.99</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -6761,7 +6755,7 @@
                     <Y>0</Y>
                     <Z>0</Z>
                   </ValueVector3>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -6770,7 +6764,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -6786,7 +6780,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>5</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -6795,7 +6789,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0.1</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -6804,7 +6798,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>0</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -6813,7 +6807,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>1</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -6833,22 +6827,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.33</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.66</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -6867,22 +6861,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.05080316</Time>
                         <ValueFloat>0.6882956</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.169206262</Time>
                         <ValueFloat>0.5864769</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0.5</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -6909,7 +6903,7 @@
                 <Key>
                   <Time>0</Time>
                   <ValueFloat>120</ValueFloat>
-                  <Value2D />
+                  <Value2D/>
                 </Key>
               </Keys>
             </Property>
@@ -6988,22 +6982,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.333333343</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6666667</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>1</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -7011,7 +7005,7 @@
               </Keys>
             </Property>
             <Property AnimationType="Animated" Name="Particles per frame" Type="Float">
-              <Keys />
+              <Keys/>
             </Property>
             <Property AnimationType="Const" Name="Camera bias" Type="Float">
               <ValueFloat>1</ValueFloat>
@@ -7025,22 +7019,22 @@
                       <Key>
                         <Time>0</Time>
                         <ValueFloat>10</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.2439362</Time>
                         <ValueFloat>7.560638</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>0.6243793</Time>
                         <ValueFloat>3.756207</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                       <Key>
                         <Time>1</Time>
                         <ValueFloat>0</ValueFloat>
-                        <Value2D />
+                        <Value2D/>
                       </Key>
                     </Keys>
                   </Value2D>
@@ -7080,10 +7074,9 @@
           </Properties>
         </ParticleGeneration>
       </ParticleGenerations>
-      <ParticleLights />
+      <ParticleLights/>
       <DistanceMax>3000</DistanceMax>
       <Priority>1</Priority>
     </ParticleEffect>
-	
- </ParticleEffects>
-</Definitions>	
+  </ParticleEffects>
+</Definitions>

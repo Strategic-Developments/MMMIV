@@ -1,0 +1,90 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<BlockVariantGroups>
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="mss_blockvariantgroup_thrust"/>
+			<Icon>Textures\GUI\Icons\Cubes\ConcordThruster.dds</Icon>
+			<DisplayName>mss_blockvariantgroup_thrust</DisplayName>
+			<Description>Awagga.</Description>
+			<Blocks>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="mss_lg_thrust_concord_1x1"/>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="mss_lg_thrust_concord_3x3"/>
+			</Blocks>
+		</BlockVariantGroup>
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="aryx_blockvariantgroup_rcs"/>
+			<Icon>Textures\GUI\Icons\ALDS_RCS_Block.dds</Icon>
+			<DisplayName>RCS Thrusters</DisplayName>
+			<Description>Awagga.</Description>
+			<Blocks>
+				<Block Type="Thrust" Subtype="LynxRcsThruster1"/>
+				<Block Type="Thrust" Subtype="AryxRCS"/>
+				<Block Type="Thrust" Subtype="AryxRCSSlant"/>
+				<Block Type="Thrust" Subtype="AryxRCSHalfRamp"/>
+				<Block Type="Thrust" Subtype="AryxRCSRamp"/>
+				<Block Type="Thrust" Subtype="AryxRCSThruster"/>
+				<Block Type="Thrust" Subtype="AryxRCS_S"/>
+				<Block Type="Thrust" Subtype="AryxRCSSlant_S"/>
+				<Block Type="Thrust" Subtype="AryxRCSHalfRamp_S"/>
+				<Block Type="Thrust" Subtype="AryxRCSRamp_S"/>
+			</Blocks>
+		</BlockVariantGroup>
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="aryx_blockvariantgroup_drives"/>
+			<Icon>Textures\GUI\Icons\ARYLYN_MRG_Epstein_Drive.dds</Icon>
+			<DisplayName>RT6-B &quot;MORRIGAN&quot; Epstein Drive</DisplayName>
+			<Description>Awagga.</Description>
+			<Blocks>
+				<Block Type="Thrust" Subtype="ARYLNX_RAIDER_Epstein_Drive"/>
+				<Block Type="Thrust" Subtype="ARYLNX_Epstein_Drive"/>
+				<Block Type="Thrust" Subtype="ARYLNX_MUNR_Epstein_Drive"/>
+				<Block Type="Thrust" Subtype="ARYLNX_PNDR_Epstein_Drive"/>
+				<Block Type="Thrust" Subtype="ARYLNX_ROCI_Epstein_Drive"/>
+				<Block Type="Thrust" Subtype="ARYLNX_DRUMMER_Epstein_Drive"/>
+				<Block Type="Thrust" Subtype="ARYLYNX_SILVERSMITH_DRIVE"/>
+				<Block Type="Thrust" Subtype="ARYLNX_SCIRCOCCO_Epstein_Drive"/>
+				<Block Type="Thrust" Subtype="ARYLNX_Mega_Epstein_Drive"/>
+			</Blocks>
+		</BlockVariantGroup>
+		<BlockVariantGroup>
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="aryx_blockvariantgroup_drives_sg"/>
+			<Icon>Textures\GUI\Icons\ARYX_YACHT_EPSTEIN_DRIVE.dds</Icon>
+			<DisplayName>M55-G &quot;Originem&quot; Epstein Drive</DisplayName>
+			<Description>Awagga.</Description>
+			<Blocks>
+				<Block Type="Thrust" Subtype="ARYXLNX_YACHT_EPSTEIN_DRIVE"/>
+				<Block Type="Thrust" Subtype="ARYLNX_RZB_Epstein_Drive"/>
+			</Blocks>
+		</BlockVariantGroup>
+	</BlockVariantGroups>
+	<BlockPositions>
+		<BlockPosition>
+			<Name>mss_lg_thrust_concord_1x1</Name>
+			<Position>
+				<X>0</X>
+				<Y>551</Y>
+			</Position>
+		</BlockPosition>
+		<BlockPosition>
+			<Name>LynxRcsThruster1</Name>
+			<Position>
+				<X>1</X>
+				<Y>551</Y>
+			</Position>
+		</BlockPosition>
+		<BlockPosition>
+			<Name>ARYLNX_RAIDER_Epstein_Drive</Name>
+			<Position>
+				<X>2</X>
+				<Y>551</Y>
+			</Position>
+		</BlockPosition>
+		<BlockPosition>
+			<Name>ARYXLNX_YACHT_EPSTEIN_DRIVE</Name>
+			<Position>
+				<X>3</X>
+				<Y>551</Y>
+			</Position>
+		</BlockPosition>
+	</BlockPositions>
+</Definitions>
