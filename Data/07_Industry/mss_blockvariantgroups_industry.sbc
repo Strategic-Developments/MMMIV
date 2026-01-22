@@ -1,15 +1,11 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"  encoding="utf-8"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<BlockVariantGroups>
+		
+	</BlockVariantGroups>
 	<BlockPositions>
 		<BlockPosition>
-			<Name>SOFL_SET2_Flat</Name>
-			<Position>
-				<X>0</X>
-				<Y>553</Y>
-			</Position>
-		</BlockPosition>
-		<BlockPosition>
-			<Name>SOFL_Radar_1</Name>
+			<Name>mss_beamdrill</Name>
 			<Position>
 				<X>1</X>
 				<Y>553</Y>

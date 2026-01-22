@@ -13,7 +13,7 @@
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="3" y="3" z="8"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\Cubes\Large\Erebus_LargeBeamDrill.mwm</Model>
+			<Model>Models\Cubes\Erebus\Erebus_LargeBeamDrill.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<UsesDeformation>false</UsesDeformation>
 			<Components>
@@ -73,7 +73,7 @@
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="5" y="5" z="12"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\Cubes\Large\Erebus_SmallBeamDrill.mwm</Model>
+			<Model>Models\Cubes\Erebus\Erebus_SmallBeamDrill.mwm</Model>
 			<UseModelIntersection>true</UseModelIntersection>
 			<UsesDeformation>false</UsesDeformation>
 			<Components>

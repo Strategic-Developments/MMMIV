@@ -14,7 +14,7 @@
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="5" y="3" z="5" />
 			<ModelOffset x="0" y="0" z="0" />
-			<Model>Models\Cubes\large\CustosBase.mwm</Model>
+			<Model>Models\Cubes\Apophis\CustosBase.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="300" />
 				<Component Subtype="Construction" Count="125" />
@@ -74,7 +74,7 @@
 			</Size>
 			<Mass>2000</Mass>
 			<Volume>1000</Volume>
-			<Model>Models\Cubes\Large\CustosAmmoSTG1.mwm</Model>
+			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>1</Capacity>
 			<AmmoDefinitionId Subtype="mss_blankammo" />

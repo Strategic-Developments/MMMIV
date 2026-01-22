@@ -8,6 +8,7 @@
 			<Description>Awagga.</Description>
 			<Blocks>
 				<Block Type="MyObjectBuilder_ConveyorSorter" Subtype="mss_lg_f_anubis"/>
+				<Block Type="MyObjectBuilder_ConveyorSorter" Subtype="mss_lg_f_nepthys"/>
 			</Blocks>
 		</BlockVariantGroup>
 	</BlockVariantGroups>

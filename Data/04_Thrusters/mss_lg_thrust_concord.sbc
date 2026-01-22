@@ -13,7 +13,7 @@
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="3" y="3" z="7"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\Cubes\large\ConcordThruster.mwm</Model>
+			<Model>Models\Cubes\Concord\ConcordThruster.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="400"/>
 				<Component Subtype="Construction" Count="160"/>
@@ -106,7 +106,7 @@
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="1" z="2"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\Cubes\large\ConcordThruster_Small.mwm</Model>
+			<Model>Models\Cubes\Concord\ConcordThruster_Small.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="50"/>
 				<Component Subtype="Construction" Count="20"/>

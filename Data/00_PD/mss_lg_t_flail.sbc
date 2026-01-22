@@ -13,7 +13,7 @@
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="1" z="1"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\Cubes\large\FlailBase.mwm</Model>
+			<Model>Models\Cubes\Flail\FlailBase.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="300" />
 				<Component Subtype="Construction" Count="125" />
@@ -29,7 +29,7 @@
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
 			</MountPoints>
-			<BlockPairName>FlailBase</BlockPairName>
+			<BlockPairName>mss_lg_t_flail_base</BlockPairName>
 			<MirroringX>Y</MirroringX>
 			<MirroringY>X</MirroringY>
 		<BuildTimeSeconds>10</BuildTimeSeconds>
@@ -77,7 +77,7 @@
 			</Size>
 			<Mass>2000</Mass>
 			<Volume>1000</Volume>
-			<Model>Models\Cubes\Large\CustosAmmoSTG1.mwm</Model>
+			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>60</Capacity>
 			<AmmoDefinitionId Subtype="mss_blankammo" />

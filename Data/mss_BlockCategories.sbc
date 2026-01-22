@@ -16,6 +16,7 @@
 				<string>ConveyorSorter/mss_lg_t_amunra_base</string>
 				<string>ConveyorSorter/mss_lg_t_apophis_base</string>
 				<string>ConveyorSorter/mss_lg_f_anubis</string>
+				<string>ConveyorSorter/mss_lg_f_nepthys</string>
 				<string>ConveyorSorter/mss_lg_t_flail_base</string>
 				<string>ConveyorSorter/mss_lg_t_bastet_base</string>
 
@@ -44,6 +45,8 @@
 				<string>TextPanel/Nerd_Radar_Basic</string>
 				<string>TextPanel/Nerd_Radar_SG</string>
 				<string>ConveyorSorter/Nerd_JammingBlock</string>
+				
+				<!--Industry-->
 
 				<!--Decor Radar-->
 				<string>CubeBlock/SOFL_Radar_1</string>
@@ -64,7 +67,7 @@
 				<TypeId>GuiBlockCategoryDefinition</TypeId>
 				<SubtypeId/>
 			</Id>
-			<DisplayName>   Weaponry</DisplayName>
+			<DisplayName>   Weapon Systems</DisplayName>
 			<Name>Section1_1_weapons</Name>
 			<IsBlockCategory>true</IsBlockCategory>
 			<StrictSearch>true</StrictSearch>
@@ -73,6 +76,7 @@
 				<string>ConveyorSorter/mss_lg_t_amunra_base</string>
 				<string>ConveyorSorter/mss_lg_t_apophis_base</string>
 				<string>ConveyorSorter/mss_lg_f_anubis</string>
+				<string>ConveyorSorter/mss_lg_f_nepthys</string>
 				<string>ConveyorSorter/mss_lg_t_flail_base</string>
 				<string>ConveyorSorter/mss_lg_t_bastet_base</string>
 			</ItemIds>
@@ -111,12 +115,24 @@
 				<TypeId>GuiBlockCategoryDefinition</TypeId>
 				<SubtypeId/>
 			</Id>
-			<DisplayName>   Radar Sustem</DisplayName>
+			<DisplayName>   Radar Sustems</DisplayName>
 			<Name>Section1_3_nebradar</Name>
 			<ItemIds>
 				<string>TextPanel/Nerd_Radar_Basic</string>
 				<string>TextPanel/Nerd_Radar_SG</string>
 				<string>ConveyorSorter/Nerd_JammingBlock</string>
+			</ItemIds>
+		</Category>
+		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
+			<Id>
+				<TypeId>GuiBlockCategoryDefinition</TypeId>
+				<SubtypeId/>
+			</Id>
+			<DisplayName>   Industrial Sustems</DisplayName>
+			<Name>Section1_4_industry</Name>
+			<ItemIds>
+				<string>Drill/mss_lg_beamdrill</string>
+				<string>Drill/mss_sg_beamdrill</string>
 			</ItemIds>
 		</Category>
 		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
