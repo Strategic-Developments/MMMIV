@@ -164,8 +164,8 @@
 				<EffectShape>Cylinder</EffectShape>
                 <WorkOrder>Uniform</WorkOrder>
                 <WorkOrigin>Emitter</WorkOrigin>
-				<WorkRate>2</WorkRate>
-				<Speed>1</Speed>
+				<WorkRate>1</WorkRate>
+				<Speed>0.25</Speed>
 				<PickUpFloatings>true</PickUpFloatings>
 				<UpdateInterval>5</UpdateInterval>
                 <Emitter>detector_shiptool_1</Emitter>
