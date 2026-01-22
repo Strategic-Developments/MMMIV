@@ -18,7 +18,7 @@ namespace Scripts
 
                 new PartAnimationSetDef()
                 {
-                    SubpartId = Names("missile"), //Remember to remove subpart_ from these names!
+                    SubpartId = Names("torpedo"), //Remember to remove subpart_ from these names!
                     BarrelId = "Any", //Trigger anim when this muzzle does something.
                     StartupFireDelay = 0, //Delay in ticks until anim starts.
                     AnimationDelays = Delays(FiringDelay: 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0),//Delay before animation starts

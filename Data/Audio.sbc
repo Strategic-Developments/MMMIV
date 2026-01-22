@@ -121,7 +121,7 @@
             </Waves>
         </Sound>
 
-                <Sound>
+        <Sound>
             <Id>
                 <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
                 <SubtypeId>servo_01</SubtypeId>
@@ -134,6 +134,23 @@
             <Waves>
                 <Wave Type="D3">
                     <Start>Audio\servo_01.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+        <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>missile_launch_far_02</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>300</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <PitchVariation>50</PitchVariation>
+            <Volume>1</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\missile_launch_far_02.wav</Start>
                 </Wave>
             </Waves>
         </Sound>

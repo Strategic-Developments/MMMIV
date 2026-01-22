@@ -9,6 +9,7 @@
 			<Blocks>
 				<Block Type="MyObjectBuilder_ConveyorSorter" Subtype="mss_lg_f_anubis"/>
 				<Block Type="MyObjectBuilder_ConveyorSorter" Subtype="mss_lg_f_nepthys"/>
+				<Block Type="MyObjectBuilder_ConveyorSorter" Subtype="mss_lg_f_jackal"/>
 			</Blocks>
 		</BlockVariantGroup>
 	</BlockVariantGroups>
