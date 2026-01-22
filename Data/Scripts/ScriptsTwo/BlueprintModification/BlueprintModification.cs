@@ -184,6 +184,11 @@ namespace BlueprintMod
 
                         case "TurretControlBlock/LargeTurretControlBlock":
                         case "TurretControlBlock/SmallTurretControlBlock":
+                            if (def is MyJumpDriveDefinition)
+                                ((MyJumpDriveDefinition)def).MaxJumpDistance = 1;
+                            else if (def is MyRefineryDefinition)
+                                ((MyRefineryDefinition)def).RefineSpeed = 0.0001f;
+
                             def.Enabled = false;
                             def.Public = false;
                             break;

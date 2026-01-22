@@ -72,7 +72,7 @@ namespace SRRadarStats
                     Sensitivity = -39, // sensitivity of the radar, in decibels
                     MaxSearchRange = 300000, // maximum range radar will return targets, regardless of other settings, in meters
 
-                    ApertureSize = 225, // aperture size of the radar, in meters^2
+                    ApertureSize = 100, // aperture size of the radar, in meters^2
                     NoiseFilter = 0, // noise filter of the radar, in decibels
                     SignalToNoiseRatio = 1, // ratio of return signal to noise required for the radar to detect targets
 
@@ -114,7 +114,7 @@ namespace SRRadarStats
                     Sensitivity = -39, // sensitivity of the radar, in decibels
                     MaxSearchRange = 250000, // maximum range radar will return targets, regardless of other settings, in meters
 
-                    ApertureSize = 225, // aperture size of the radar, in meters^2
+                    ApertureSize = 100, // aperture size of the radar, in meters^2
                     NoiseFilter = 0, // noise filter of the radar, in decibels
                     SignalToNoiseRatio = 1, // ratio of return signal to noise required for the radar to detect targets
 
@@ -345,29 +345,128 @@ namespace SRRadarStats
 
             UpgradeBlockStats = new Dictionary<string, UpgradeBlockStat>()
             {
-                //["sr_sg_awacs_radar"] = new UpgradeBlockStat()
-                //{
-                //    DefinitionPriority = 1,
-                //    // these two are incompatible with eachother.
-                //    ApplyOnlyWhenFiring = false, // WEAPON BLOCKS ONLY. Makes all of the addons/multipliers apply only when the weapon is firing.
-                //    ApplyOnlyWhenOn = true, // FUNCTIONAL BLOCKS ONLY. Makes all of the addons/multipliers apply only if the block is functional.
+                ["ARYLNX_RAIDER_Epstein_Drive"] = DRIVE_3x3,
+                ["ARYLNX_Epstein_Drive"] = DRIVE_3x3,
+                ["ARYLNX_MUNR_Epstein_Drive"] = DRIVE_3x3,
+                ["ARYLNX_PNDR_Epstein_Drive"] = DRIVE_3x3,
 
-                //    PositionalErrorMultiplier = 1, // Positional error multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
-                //    PositionalErrorAddon = 0, // Positional error addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+                ["ARYLNX_ROCI_Epstein_Drive"] = DRIVE_5x5,
+                ["ARYLNX_DRUMMER_Epstein_Drive"] = DRIVE_5x5,
+                ["ARYLYNX_SILVERSMITH_DRIVE"] = new UpgradeBlockStat()
+                {
+                    DefinitionPriority = 1,
+                    // these two are incompatible with eachother.
+                    ApplyOnlyWhenFiring = false, // WEAPON BLOCKS ONLY. Makes all of the addons/multipliers apply only when the weapon is firing.
+                    ApplyOnlyWhenOn = false, // FUNCTIONAL BLOCKS ONLY. Makes all of the addons/multipliers apply only if the block is functional.
 
-                //    VelocityErrorMultiplier = 1, // Velocity error multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
-                //    VelocityErrorAddon = 0, // Velocity error addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+                    PositionalErrorMultiplier = 1, // Positional error multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    PositionalErrorAddon = 0, // Positional error addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
 
-                //    NoiseFilterMultiplier = 1, // Noise filter multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
-                //    NoiseFilterAddon = 0, // Noise filter addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+                    VelocityErrorMultiplier = 1, // Velocity error multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    VelocityErrorAddon = 0, // Velocity error addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
 
-                //    RCSMultiplier = 50, // RCS multiplier for the grid this is mounted on. Multipliers are calculated BEFORE addons.
-                //    RCSAddon = 500, //  RCS addon for the grid this is mounted on. Addons are calculated AFTER multipliers.
+                    NoiseFilterMultiplier = 1, // Noise filter multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    NoiseFilterAddon = 0, // Noise filter addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
 
-                //    SensitivityMultiplier = 1, // Sensitivity multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
-                //    SensitivityAddon = 0, // Sensitivity addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
-                //},
+                    RCSMultiplier = 2f, // RCS multiplier for the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    RCSAddon = 0, //  RCS addon for the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+                    SensitivityMultiplier = 1, // Sensitivity multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    SensitivityAddon = 0, // Sensitivity addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+                },
+
+                ["ARYLNX_SCIRCOCCO_Epstein_Drive"] = new UpgradeBlockStat()
+                {
+                    DefinitionPriority = 1,
+                    // these two are incompatible with eachother.
+                    ApplyOnlyWhenFiring = false, // WEAPON BLOCKS ONLY. Makes all of the addons/multipliers apply only when the weapon is firing.
+                    ApplyOnlyWhenOn = false, // FUNCTIONAL BLOCKS ONLY. Makes all of the addons/multipliers apply only if the block is functional.
+
+                    PositionalErrorMultiplier = 1, // Positional error multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    PositionalErrorAddon = 0, // Positional error addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+                    VelocityErrorMultiplier = 1, // Velocity error multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    VelocityErrorAddon = 0, // Velocity error addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+                    NoiseFilterMultiplier = 1, // Noise filter multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    NoiseFilterAddon = 0, // Noise filter addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+                    RCSMultiplier = 4.3f, // RCS multiplier for the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    RCSAddon = 0, //  RCS addon for the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+                    SensitivityMultiplier = 1, // Sensitivity multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    SensitivityAddon = 0, // Sensitivity addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+                },
+
+                ["ARYLNX_Mega_Epstein_Drive"] = new UpgradeBlockStat()
+                {
+                    DefinitionPriority = 1,
+                    // these two are incompatible with eachother.
+                    ApplyOnlyWhenFiring = false, // WEAPON BLOCKS ONLY. Makes all of the addons/multipliers apply only when the weapon is firing.
+                    ApplyOnlyWhenOn = false, // FUNCTIONAL BLOCKS ONLY. Makes all of the addons/multipliers apply only if the block is functional.
+
+                    PositionalErrorMultiplier = 1, // Positional error multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    PositionalErrorAddon = 0, // Positional error addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+                    VelocityErrorMultiplier = 1, // Velocity error multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    VelocityErrorAddon = 0, // Velocity error addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+                    NoiseFilterMultiplier = 1, // Noise filter multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    NoiseFilterAddon = 0, // Noise filter addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+                    RCSMultiplier = 7f, // RCS multiplier for the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    RCSAddon = 0, //  RCS addon for the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+                    SensitivityMultiplier = 1, // Sensitivity multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    SensitivityAddon = 0, // Sensitivity addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+                },
             }
+        };
+
+        static UpgradeBlockStat DRIVE_3x3 = new UpgradeBlockStat()
+        {
+            DefinitionPriority = 1,
+            // these two are incompatible with eachother.
+            ApplyOnlyWhenFiring = false, // WEAPON BLOCKS ONLY. Makes all of the addons/multipliers apply only when the weapon is firing.
+            ApplyOnlyWhenOn = false, // FUNCTIONAL BLOCKS ONLY. Makes all of the addons/multipliers apply only if the block is functional.
+
+            PositionalErrorMultiplier = 1, // Positional error multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+            PositionalErrorAddon = 0, // Positional error addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+            VelocityErrorMultiplier = 1, // Velocity error multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+            VelocityErrorAddon = 0, // Velocity error addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+            NoiseFilterMultiplier = 1, // Noise filter multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+            NoiseFilterAddon = 0, // Noise filter addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+            RCSMultiplier = 1.8f, // RCS multiplier for the grid this is mounted on. Multipliers are calculated BEFORE addons.
+            RCSAddon = 0, //  RCS addon for the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+            SensitivityMultiplier = 1, // Sensitivity multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+            SensitivityAddon = 0, // Sensitivity addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+        };
+
+        static UpgradeBlockStat DRIVE_5x5 = new UpgradeBlockStat()
+        {
+            DefinitionPriority = 1,
+            // these two are incompatible with eachother.
+            ApplyOnlyWhenFiring = false, // WEAPON BLOCKS ONLY. Makes all of the addons/multipliers apply only when the weapon is firing.
+            ApplyOnlyWhenOn = false, // FUNCTIONAL BLOCKS ONLY. Makes all of the addons/multipliers apply only if the block is functional.
+
+            PositionalErrorMultiplier = 1, // Positional error multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+            PositionalErrorAddon = 0, // Positional error addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+            VelocityErrorMultiplier = 1, // Velocity error multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+            VelocityErrorAddon = 0, // Velocity error addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+            NoiseFilterMultiplier = 1, // Noise filter multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+            NoiseFilterAddon = 0, // Noise filter addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+            RCSMultiplier = 2.8f, // RCS multiplier for the grid this is mounted on. Multipliers are calculated BEFORE addons.
+            RCSAddon = 0, //  RCS addon for the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+            SensitivityMultiplier = 1, // Sensitivity multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+            SensitivityAddon = 0, // Sensitivity addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
         };
         public override void Init(MyObjectBuilder_SessionComponent sessionComponent)
         {

@@ -7,7 +7,7 @@
 				<SubtypeId>ARYXLNX_YACHT_EPSTEIN_DRIVE</SubtypeId>
 			</Id>
 			<DisplayName>M55-G &quot;Originem&quot; Epstein Drive</DisplayName>
-			<Description>Small and relatively inefficient drive for small utility craft. +50% RCS Signature</Description>
+			<Description>Small and relatively inefficient drive for small utility craft. +400% RCS Signature</Description>
 			<Icon>Textures\GUI\Icons\ARYX_YACHT_EPSTEIN_DRIVE.dds</Icon>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -42,10 +42,10 @@
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Light</EdgeType>
 			<BuildTimeSeconds>45</BuildTimeSeconds>
-			<MaxPowerConsumption>0.25674</MaxPowerConsumption>
+			<MaxPowerConsumption>1.728888889</MaxPowerConsumption>
 			<MinPowerConsumption>0.0001</MinPowerConsumption>
 			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
-			<ForceMagnitude>1750000</ForceMagnitude>
+			<ForceMagnitude>2500000</ForceMagnitude>
 			<FuelConverter>
 				<FuelId>
 					<TypeId>GasProperties</TypeId>
@@ -53,7 +53,7 @@
 				</FuelId>
 				<Efficiency>1</Efficiency>
 			</FuelConverter>
-			<SlowdownFactor>1.25</SlowdownFactor>
+			<SlowdownFactor>1</SlowdownFactor>
 			<FlameDamageLengthScale>1</FlameDamageLengthScale>
 			<FlameLengthScale>1.35</FlameLengthScale>
 			<FlameIdleColor>
@@ -85,6 +85,12 @@
 				<unsignedInt>3600</unsignedInt>
 				<unsignedInt>0</unsignedInt>
 			</TieredUpdateTimes>
+			<BlockVariants>
+				<BlockVariant>
+					<TypeId>Thrust</TypeId>
+					<SubtypeId>ARYLNX_RZB_Epstein_Drive</SubtypeId>
+				</BlockVariant>
+			</BlockVariants>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
 			<Id>
@@ -92,7 +98,7 @@
 				<SubtypeId>ARYLNX_RZB_Epstein_Drive</SubtypeId>
 			</Id>
 			<DisplayName>Destrier-4 &quot;SUNFLARE&quot; Epstein Drive</DisplayName>
-			<Description>Small but somewhat efficient drive for small utility craft. +75% RCS Signature</Description>
+			<Description>Small but somewhat efficient drive for small utility craft. +700% RCS Signature</Description>
 			<Description>Description_SG_ARYLNX_RZ_Esptein_Drive</Description>
 			<Icon>Textures\GUI\Icons\ARYLYN_RZB_Epstein_Drive.dds</Icon>
 			<CubeSize>Small</CubeSize>
@@ -130,10 +136,10 @@
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Light</EdgeType>
 			<BuildTimeSeconds>60</BuildTimeSeconds>
-			<MaxPowerConsumption>0.3112</MaxPowerConsumption>
+			<MaxPowerConsumption>3.112</MaxPowerConsumption>
 			<MinPowerConsumption>0.0001</MinPowerConsumption>
 			<ResourceSinkGroup>Thrust</ResourceSinkGroup>
-			<ForceMagnitude>4250000</ForceMagnitude>
+			<ForceMagnitude>5000000</ForceMagnitude>
 			<FuelConverter>
 				<FuelId>
 					<TypeId>GasProperties</TypeId>
@@ -141,7 +147,7 @@
 				</FuelId>
 				<Efficiency>1</Efficiency>
 			</FuelConverter>
-			<SlowdownFactor>1.5</SlowdownFactor>
+			<SlowdownFactor>1</SlowdownFactor>
 			<FlameDamageLengthScale>1</FlameDamageLengthScale>
 			<FlameLengthScale>1.35</FlameLengthScale>
 			<FlameIdleColor>

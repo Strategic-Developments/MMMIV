@@ -17,16 +17,16 @@
 			<DisplayName>RCS Thrusters</DisplayName>
 			<Description>Awagga.</Description>
 			<Blocks>
-				<Block Type="Thrust" Subtype="LynxRcsThruster1"/>
-				<Block Type="Thrust" Subtype="AryxRCS"/>
-				<Block Type="Thrust" Subtype="AryxRCSSlant"/>
-				<Block Type="Thrust" Subtype="AryxRCSHalfRamp"/>
-				<Block Type="Thrust" Subtype="AryxRCSRamp"/>
-				<Block Type="Thrust" Subtype="AryxRCSThruster"/>
-				<Block Type="Thrust" Subtype="AryxRCS_S"/>
-				<Block Type="Thrust" Subtype="AryxRCSSlant_S"/>
-				<Block Type="Thrust" Subtype="AryxRCSHalfRamp_S"/>
-				<Block Type="Thrust" Subtype="AryxRCSRamp_S"/>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="LynxRcsThruster1"/>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="AryxRCS"/>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="AryxRCSSlant"/>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="AryxRCSHalfRamp"/>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="AryxRCSRamp"/>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="AryxRCSThruster"/>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="AryxRCS_S"/>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="AryxRCSSlant_S"/>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="AryxRCSHalfRamp_S"/>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="AryxRCSRamp_S"/>
 			</Blocks>
 		</BlockVariantGroup>
 		<BlockVariantGroup>
@@ -35,15 +35,15 @@
 			<DisplayName>RT6-B &quot;MORRIGAN&quot; Epstein Drive</DisplayName>
 			<Description>Awagga.</Description>
 			<Blocks>
-				<Block Type="Thrust" Subtype="ARYLNX_RAIDER_Epstein_Drive"/>
-				<Block Type="Thrust" Subtype="ARYLNX_Epstein_Drive"/>
-				<Block Type="Thrust" Subtype="ARYLNX_MUNR_Epstein_Drive"/>
-				<Block Type="Thrust" Subtype="ARYLNX_PNDR_Epstein_Drive"/>
-				<Block Type="Thrust" Subtype="ARYLNX_ROCI_Epstein_Drive"/>
-				<Block Type="Thrust" Subtype="ARYLNX_DRUMMER_Epstein_Drive"/>
-				<Block Type="Thrust" Subtype="ARYLYNX_SILVERSMITH_DRIVE"/>
-				<Block Type="Thrust" Subtype="ARYLNX_SCIRCOCCO_Epstein_Drive"/>
-				<Block Type="Thrust" Subtype="ARYLNX_Mega_Epstein_Drive"/>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="ARYLNX_RAIDER_Epstein_Drive"/>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="ARYLNX_Epstein_Drive"/>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="ARYLNX_MUNR_Epstein_Drive"/>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="ARYLNX_PNDR_Epstein_Drive"/>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="ARYLNX_ROCI_Epstein_Drive"/>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="ARYLNX_DRUMMER_Epstein_Drive"/>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="ARYLYNX_SILVERSMITH_DRIVE"/>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="ARYLNX_SCIRCOCCO_Epstein_Drive"/>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="ARYLNX_Mega_Epstein_Drive"/>
 			</Blocks>
 		</BlockVariantGroup>
 		<BlockVariantGroup>
@@ -52,8 +52,8 @@
 			<DisplayName>M55-G &quot;Originem&quot; Epstein Drive</DisplayName>
 			<Description>Awagga.</Description>
 			<Blocks>
-				<Block Type="Thrust" Subtype="ARYXLNX_YACHT_EPSTEIN_DRIVE"/>
-				<Block Type="Thrust" Subtype="ARYLNX_RZB_Epstein_Drive"/>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="ARYXLNX_YACHT_EPSTEIN_DRIVE"/>
+				<Block Type="MyObjectBuilder_ThrustDefinition" Subtype="ARYLNX_RZB_Epstein_Drive"/>
 			</Blocks>
 		</BlockVariantGroup>
 	</BlockVariantGroups>

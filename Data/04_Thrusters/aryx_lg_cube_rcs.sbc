@@ -99,6 +99,44 @@
 				<unsignedInt>3600</unsignedInt>
 				<unsignedInt>0</unsignedInt>
 			</TieredUpdateTimes>
+			<BlockVariants>
+				<BlockVariant>
+					<TypeId>Thrust</TypeId>
+					<SubtypeId>AryxRCS</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>Thrust</TypeId>
+					<SubtypeId>AryxRCSSlant</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>Thrust</TypeId>
+					<SubtypeId>AryxRCSHalfRamp</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>Thrust</TypeId>
+					<SubtypeId>AryxRCSRamp</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>Thrust</TypeId>
+					<SubtypeId>AryxRCSThruster</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>Thrust</TypeId>
+					<SubtypeId>AryxRCS_S</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>Thrust</TypeId>
+					<SubtypeId>AryxRCSSlant_S</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>Thrust</TypeId>
+					<SubtypeId>AryxRCSHalfRamp_S</SubtypeId>
+				</BlockVariant>
+				<BlockVariant>
+					<TypeId>Thrust</TypeId>
+					<SubtypeId>AryxRCSRamp_S</SubtypeId>
+				</BlockVariant>
+			</BlockVariants>
 		</Definition>
 		<Definition xsi:type="MyObjectBuilder_ThrustDefinition">
 			<Id>
