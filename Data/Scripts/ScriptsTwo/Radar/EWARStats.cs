@@ -70,7 +70,7 @@ namespace SRRadarStats
                     MaxRadiatedPower = 50000, // radiated power of the radar, in kilowatts
                     Gain = 175, // gain of the radar, in decibels. Must be above 0
                     Sensitivity = -39, // sensitivity of the radar, in decibels
-                    MaxSearchRange = 300000, // maximum range radar will return targets, regardless of other settings, in meters
+                    MaxSearchRange = 400000, // maximum range radar will return targets, regardless of other settings, in meters
 
                     ApertureSize = 100, // aperture size of the radar, in meters^2
                     NoiseFilter = 0, // noise filter of the radar, in decibels
