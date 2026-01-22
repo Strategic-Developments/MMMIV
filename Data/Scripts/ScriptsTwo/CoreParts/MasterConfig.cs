@@ -28,7 +28,9 @@ namespace Scripts
                 mss_lg_t_amunra,
 
                 // Missiles
-                mss_lg_f_anubis
+                mss_lg_f_anubis,
+                mss_lg_f_jackal,
+                mss_lg_f_nepthys
             };
             PartDefinitions(
                 CompileWeapons(Weapons)
