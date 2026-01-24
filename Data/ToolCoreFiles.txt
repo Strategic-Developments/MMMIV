@@ -1,1 +1,2 @@
-CubeBlocks_SimpleLaserMultitool.sbc
+07_Industry/mss_lasermultitools.sbc
+07_Industry/mss_alldefs_beamdrills.sbc
