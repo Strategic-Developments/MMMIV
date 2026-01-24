@@ -12,7 +12,7 @@
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="3" y="3" z="3"/>
-			<ModelOffset x="0" y="0" z="0"/>
+			<ModelOffset x="0" y="0" z="1.25"/>
 			<Model>Models\EpsteinDrive\LG_ARYLNX_Epstein_Drive.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="300"/>
