@@ -22,7 +22,7 @@ namespace BlueprintMod
             ["Ingot/Magnesium"] = 10000,
             ["Ingot/Silver"] = 1800,
             ["Ingot/Gold"] = 15000,
-            ["Ingot/Platinum"] = 45000,
+            /*["Ingot/Platinum"] = 45000,*/
             ["Ingot/Uranium"] = 30000,
 
             ["Ore/Ice"] = 50,

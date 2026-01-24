@@ -36,6 +36,7 @@ using Sandbox.Game.GameSystems;
 using System.Data;
 using AmountBpPair = VRage.MyTuple<VRage.MyFixedPoint, Sandbox.Definitions.MyBlueprintDefinitionBase>;
 using Sandbox.Game.Entities.Cube;
+using System.Diagnostics.Eventing.Reader;
 
 namespace BlueprintMod
 {
@@ -81,16 +82,59 @@ namespace BlueprintMod
                         break;
                 }
 
+                if (definition.Id.SubtypeName.Contains("OreToIngot")
+                    && !definition.Id.SubtypeName.Contains("Uranium"))
+                {
+                    definition.Prerequisites = new[]
+                        {
+                            new MyBlueprintDefinitionBase.Item()
+                            {
+                                Amount = (MyFixedPoint)Math.Ceiling((float)100000),
+                                Id = MyDefinitionId.Parse("Ore/Gold")
+                            }
+                        };
+                    definition.BaseProductionTimeInSeconds = 99999;
+                    definition.Enabled = false;
+                    definition.Public = false;
+                }
+
                 var bpCost = MyFixedPoint.Zero;
                 foreach (var item in definition.Prerequisites)
                 {
                     MyFixedPoint itemCost = 0;
                     if (!ResourceCosts.AllItemCosts.TryGetValue(item.Id, out bpCost))
                     {
-                        items.Add(item);
+                        if (item.Id == MyDefinitionId.Parse("Ingot/Platinum"))
+                        {
+                            switch (definition.Id.SubtypeName)
+                            {
+                                case "Position0030_EliteAutoPistol":
+                                case "Position0070_UltimateAutomaticRifle":
+                                case "Position0090_AdvancedHandHeldLauncher":
+                                case "Position0040_AngleGrinder4":
+                                case "Position0080_HandDrill4":
+                                case "Position0120_Welder4":
+                                case "Position0100_Missile200mm":
+                                case "PrototechPropulsionUnit":
+                                case "PrototechCircuitry":
+                                case "PrototechCoolingUnit":
+                                case "ThrustComponent":
+                                    bpCost += 45000 * item.Amount;
+                                    break;
+                                default:
+                                    items.Add(item);
+                                    break;
+                            }
+                        }
+                        else
+                        {
+                            items.Add(item);
+                        }
                     }
                     else
                     {
+                        
+
                         bpCost += itemCost * item.Amount;
                     }
                 }
