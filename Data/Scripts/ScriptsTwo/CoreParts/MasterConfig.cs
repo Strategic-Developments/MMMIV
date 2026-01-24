@@ -18,6 +18,7 @@ namespace Scripts
             {
                 // PD
                 mss_lg_t_flail,
+                mss_lg_t_crook,
 
                 // Cannons
                 mss_lg_t_horus,
@@ -30,7 +31,10 @@ namespace Scripts
                 // Missiles
                 mss_lg_f_anubis,
                 mss_lg_f_jackal,
-                mss_lg_f_nepthys
+                mss_lg_f_nepthys,
+
+                // JumpDisruptors
+                mss_lg_t_thoth
             };
             PartDefinitions(
                 CompileWeapons(Weapons)
