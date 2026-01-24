@@ -207,7 +207,7 @@ namespace Scripts
                     FiringSoundPerShot = true, // Whether to replay the sound for each shot, or just loop over the entire track while firing.
                     ReloadSound = "shell_in_med_01", // Sound SubtypeID, for when your Weapon is in a reloading state
                     NoAmmoSound = "", // Sound for if the user attempts to fire the gun without ammo
-                    HardPointRotationSound = "MERD_Whistle", // Audio played when turret is moving.
+                    HardPointRotationSound = "", // Audio played when turret is moving.
                     BarrelRotationSound = "", // Sound played when the barrel rotates
                     FireSoundEndDelay = 120, // How long the firing audio should keep playing after firing stops. Measured in game ticks(6 = 100ms, 60 = 1 seconds, etc..).
                     FireSoundNoBurst = true, // Don't stop firing sound from looping when delaying after burst.

@@ -155,6 +155,23 @@
             </Waves>
         </Sound>
 
+         <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>shell_out_small2_03</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>300</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <PitchVariation>50</PitchVariation>
+            <Volume>1</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\shell_out_small2_03.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
 
         <Sound>
             <Id>

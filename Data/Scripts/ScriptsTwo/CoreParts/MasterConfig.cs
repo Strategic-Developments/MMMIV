@@ -27,6 +27,7 @@ namespace Scripts
                 // Railguns
                 mss_lg_t_apophis,
                 mss_lg_t_amunra,
+                mss_lg_f_tyet,
 
                 // Missiles
                 mss_lg_f_anubis,
