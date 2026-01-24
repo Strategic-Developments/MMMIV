@@ -126,7 +126,7 @@ namespace Scripts
                     HomeElevation = 0, // Default resting elevation
                     FixedInventorySize = true, // If true, the inventory size will be forced to the exact value specified above regardless of world inventory multipliers
                     InventorySize = 1.5f, // Inventory capacity in kL.
-                    IdlePower = 0.002f, // Constant base power draw in MW.
+                    IdlePower = 80, // Constant base power draw in MW.
                     FixedOffset = false, // Deprecated.
                     Offset = Vector(x: 0, y: 0, z: 0), // Offsets the aiming/firing line of the weapon, in metres.
                     Type = BlockWeapon, // What type of weapon this is; BlockWeapon, HandWeapon, Phantom 
@@ -166,8 +166,8 @@ namespace Scripts
                     ReloadTime = 12 * 60 + 2 * 60, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 1, // Number of physical magazines to consume on reload.
                     DelayUntilFire = 0, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    HeatPerShot = 1, // Heat generated per shot (BarrelsPerShot * HeatPerShot is the total heat per firing event).
-                    MaxHeat = 100000, // Max heat before weapon enters cooldown (70% of max heat).
+                    HeatPerShot = 1500000, // Heat generated per shot (BarrelsPerShot * HeatPerShot is the total heat per firing event).
+                    MaxHeat = 1500000, // Max heat before weapon enters cooldown (70% of max heat).
                     Cooldown = 0f, // Percentage of max heat to be under to start firing again after overheat; accepts 0 - 0.95
                     HeatSinkRate = 100000, // Amount of heat lost per second.
                     HeatSinkRateOverheatMult = 1f, // Multiplier to LoadingDef.HeatSinkRate when the weapon is overheated. 0 disables, negative values are allowed.
@@ -181,7 +181,7 @@ namespace Scripts
                         RofAt0Heat = 1f, // ROF multiplier when DegradeRof is active, if heat was at 0%, NOT when it is at the start threshold; must be greater than 0 or it defaults to 1f
                         RofAt100Heat = 0.25f, // ROF multiplier when DegradeRof is active, if heat was at 100%, NOT when it is at the end threshold; must be greater than 0 or it defaults to 0.25f
                     },
-                    ProhibitCoolingWhenOff = false, // If true, prevents blocks that are turned off from cooling down over time
+                    ProhibitCoolingWhenOff = true, // If true, prevents blocks that are turned off from cooling down over time
                     ShotsInBurst = 0, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
                     DelayAfterBurst = 0, // How long to spend "reloading" after each burst. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     FireFull = false, // Whether the weapon should fire the full magazine (or the full burst instead if ShotsInBurst > 0), even if the target is lost or the player stops firing prematurely.

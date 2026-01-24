@@ -27,7 +27,7 @@ namespace Scripts
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
                     {
 
-                        [Firing] =
+                        [Overheated] =
                             new[] //Firing, Reloading, Overheated, Tracking, On, Off, BurstReload, OutOfAmmo, PreFire define a new[] for each
                             {
 

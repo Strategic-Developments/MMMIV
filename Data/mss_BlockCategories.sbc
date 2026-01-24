@@ -116,7 +116,7 @@
 				<TypeId>GuiBlockCategoryDefinition</TypeId>
 				<SubtypeId/>
 			</Id>
-			<DisplayName>   Radar Sustems</DisplayName>
+			<DisplayName>   Radar Systems</DisplayName>
 			<Name>Section1_3_nebradar</Name>
 			<ItemIds>
 				<string>TextPanel/Nerd_Radar_Basic</string>

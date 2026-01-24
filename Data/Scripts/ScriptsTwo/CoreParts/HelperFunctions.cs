@@ -213,14 +213,15 @@ namespace Scripts
             Vector4 TrailColor,
             float TrailWidth,
             int TrailLength,
-            bool UseColorFade = false
+            bool UseColorFade = false,
+            bool dropVelocity = true
         )
         {
             return new LineDef
             {
                 ColorVariance = Random(start: 1f, end: 1f), // multiply the color by random values within range.
                 WidthVariance = Random(start: 0f, end: 0f), // adds random value to default width (negatives shrinks width)
-                DropParentVelocity = true, // If set to true will not take on the parents (grid/player) initial velocity when rendering.
+                DropParentVelocity = dropVelocity, // If set to true will not take on the parents (grid/player) initial velocity when rendering.
                 Tracer = new TracerBaseDef
                 {
                     Enable = true,

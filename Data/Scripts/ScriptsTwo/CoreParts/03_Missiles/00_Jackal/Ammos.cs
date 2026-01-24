@@ -314,9 +314,9 @@ namespace Scripts
                 DragMinSpeed = 0f, // If DragPerSecond is used, the projectiles speed will never go below this value in m/s
                 Smarts = new SmartsDef
                 {
-                    SteeringLimit = 0f, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
+                    SteeringLimit = 2f, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
-                    Aggressiveness = 0f, // controls how responsive tracking is, recommended value 3-5.
+                    Aggressiveness = 1f, // controls how responsive tracking is, recommended value 3-5.
                     MaxLateralThrust = 0, // controls how sharp the projectile may turn, this is the cheaper but less realistic version of SteeringLimit, cost of 2 on a scale of 1-5, 0 being basic smart.
                     NavAcceleration = 0, // helps influence how the projectile steers, 0 defaults to 1/2 Aggressiveness value or 0 if its 0, a value less than 0 disables this feature. 
                     TrackingDelay = 0, // Measured in Shape diameter units traveled.
@@ -347,77 +347,6 @@ namespace Scripts
                 ModelName = "", // Model Path goes here.  "\\Models\\Ammo\\Starcore_Arrow_Missile_Large"
                 VisualProbability = 1f, // 0-1 % chance of AV appearing (controls all audio AND visual)
                 ShieldHitDraw = false,
-                Particles = new AmmoParticleDef
-                {
-                    Ammo = new ParticleDef
-                    {
-                        Name = "mss_missile_smoke", //ShipWelderArc
-                        Offset = Vector(x: 0, y: 0, z: 0),
-                        Extras = new ParticleOptionDef
-                        {
-                            Scale = 0.5f,
-                        },
-                    },
-                    Eject = new ParticleDef
-                    {
-                        Name = "",
-                        Offset = Vector(x: 0, y: 0, z: 0),
-                        DisableCameraCulling = false, // If true will not cull when not in view of camera, be careful with this and only use if you know you need it
-                        Extras = new ParticleOptionDef
-                        {
-                            Scale = 1,
-                            HitPlayChance = 1f, // 0-1% chance the particle is shown
-                        },
-                    },
-                    Hit = new ParticleDef
-                    {
-                        Name = "",
-                        ApplyToShield = true,
-                        Offset = Vector(x: 0, y: 0, z: 0), // Note you can alter the directionality by passing different options:
-                                                           // Vector(double.MinValue, double.MinValue, double.MinValue), will align the "Up" direction of the particle opposite gravity.  Note this is computationally expensive and should not be used with rapid fire weapons
-                                                           // Vector(double.MaxValue, double.MaxValue, double.MaxValue), will align the "Forward" direction of the particle opposite the trajectory it was going when it hit
-                        DisableCameraCulling = false, // If true, will always draw particle even if off screen, regardless of distance
-                        Extras = new ParticleOptionDef
-                        {
-                            Scale = 1,
-                            HitPlayChance = 1f, // 0-1% chance the particle is shown
-                            MaxDistance = 0, // Max distance from camera to draw particle (will always be drawn within 600m)
-                        },
-                    },
-                    ShieldHit = new ParticleDef //Optional particle for shield hit events (if used, this will play even if your regular hit has ApplyToShield = true).  Note that offset is ignored and figured by WC to rotate the particle to align to the shield
-                    {
-                        Name = "",
-                        DisableCameraCulling = false, // If true, will always draw particle even if off screen, regardless of distance
-                        Extras = new ParticleOptionDef
-                        {
-                            Scale = 1,
-                            HitPlayChance = 1f, // 0-1% chance the particle is shown
-                            MaxDistance = 0, // Max distance from camera to draw particle (will always be drawn within 600m)
-                        },
-                    },
-                    VoxelHit = new ParticleDef //Optional particle for voxel hit events.  Note that offset is ignored and WC will align the "Up" direction of the particle opposite gravity if gravity is present.  
-                    {
-                        Name = "",
-                        DisableCameraCulling = false, // If true, will always draw particle even if off screen, regardless of distance
-                        Extras = new ParticleOptionDef
-                        {
-                            Scale = 1,
-                            HitPlayChance = 1f, // 0-1% chance the particle is shown
-                            MaxDistance = 0, // Max distance from camera to draw particle (will always be drawn within 600m)
-                        },
-                    },
-                    WaterHit = new ParticleDef //Optional particle for water hit events.  Note that offset is ignored and WC will align the "Up" direction of the particle opposite gravity.  
-                    {
-                        Name = "",
-                        DisableCameraCulling = false, // If true, will always draw particle even if off screen, regardless of distance
-                        Extras = new ParticleOptionDef
-                        {
-                            Scale = 1,
-                            HitPlayChance = 1f, // 0-1% chance the particle is shown
-                            MaxDistance = 0, // Max distance from camera to draw particle (will always be drawn within 600m)
-                        },
-                    },
-                },
                 Lines = FX_MISSILE_SMALL,
             },
             AmmoAudio = new AmmoAudioDef
@@ -449,7 +378,7 @@ namespace Scripts
                                     // Overwrites normal damage behavior of requiring a block to be destroyed before damage can continue.  0 disables. 
                                     // To limit max # of blocks hit, set MaxObjectsHit to desired # and ensure CountBlocks = true in ObjectsHit, otherwise it will continue until BaseDamage depletes
             Mass = 0f, // Disabled here. Too lazy to set this to 0 everywhere so MasterConfig does it
-            Health = 7f, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
+            Health = 2f, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0f, // Recoil. This is applied to the Parent Grid.
             DecayPerShot = 0f, // Damage to the firing weapon itself. 
                                //float.MaxValue will drop the weapon to the first build state and destroy all components used for construction
@@ -607,8 +536,8 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 5.5f, // Radius of AOE effect, in meters.
-                    Damage = 5600f,
+                    Radius = 4f, // Radius of AOE effect, in meters.
+                    Damage = 2000f,
                     Depth = 1f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage (total, against shields or grids), except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Linear, //.NoFalloff applies the same damage to all blocks in radius
@@ -619,14 +548,14 @@ namespace Scripts
                     //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
                     //.Exponential drops off exponentially.  Does not scale to max radius
                     ArmOnlyOnHit = true, // Detonation only is available, After it hits something, when this is true. IE, if shot down, it won't explode.
-                    MinArmingTime = 0, // In ticks, before the Ammo is allowed to explode, detonate or similar; This affects shrapnel spawning.
+                    MinArmingTime = 1, // In ticks, before the Ammo is allowed to explode, detonate or similar; This affects shrapnel spawning.
                     NoVisuals = false,
                     NoSound = false,
                     ParticleScale = 1,
                     CustomParticle = "Explosion_Missile", // Particle SubtypeID, from your Particle SBC
                                                           // If you need to set a custom offset, specify it in the "Hit" particle
                     CustomSound = "WepSmallMissileExpl", // SubtypeID from your Audio SBC, not a filename
-                    Shape = Round, // Round or Diamond shape.  Diamond is more performance friendly.
+                    Shape = Diamond, // Round or Diamond shape.  Diamond is more performance friendly.
                 },
             },
             Ewar = new EwarDef
@@ -695,7 +624,7 @@ namespace Scripts
             Trajectory = new TrajectoryDef
             {
                 Guidance = Smart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
-                TargetLossDegree = 45f, // Degrees, Is pointed forward
+                TargetLossDegree = 90f, // Degrees, Is pointed forward
                 TargetLossTime = 30, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 MaxLifeTime = 20 * 60, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
                 AccelPerSec = MISSILE_VELOCITY / 3f, // Acceleration in Meters Per Second. Projectile starts on tick 0 at its parents (weapon/other projectiles) travel velocity.
@@ -752,7 +681,7 @@ namespace Scripts
                         Offset = Vector(x: 0, y: 0, z: 0),
                         Extras = new ParticleOptionDef
                         {
-                            Scale = 0.5f,
+                            Scale = 1f,
                         },
                     },
                     Eject = new ParticleDef

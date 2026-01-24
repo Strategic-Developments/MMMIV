@@ -16,13 +16,13 @@ namespace Scripts
 {
     partial class Parts
     {
-        WeaponDefinition mss_lg_t_bastet => new WeaponDefinition
+        WeaponDefinition mss_lg_t_flail => new WeaponDefinition
         {
             Assignments = new ModelAssignmentsDef
             {
                 MountPoints = new[] {
                     new MountPointDef {
-                        SubtypeId = "mss_lg_t_bastet_base", // Block Subtypeid. Your Cubeblocks contain this information
+                        SubtypeId = "mss_lg_t_flail_base", // Block Subtypeid. Your Cubeblocks contain this information
                         SpinPartId = "None", // For weapons with a spinning barrel such as Gatling Guns. Subpart_Boomsticks must be written as Boomsticks.
                         MuzzlePartId = "elev", // The subpart where your muzzle empties are located. This is often the elevation subpart. Subpart_Boomsticks must be written as Boomsticks.
                         AzimuthPartId = "azim", // Your Rotating Subpart, the bit that moves sideways.
@@ -33,7 +33,7 @@ namespace Scripts
 
                  },
                 Muzzles = new[] {
-                    "muzzle_missile_1","muzzle_missile_2",  // Where your Projectiles spawn. Use numbers not Letters. IE Muzzle_01 not Muzzle_A
+                    "muzzle_projectile_1", // Where your Projectiles spawn. Use numbers not Letters. IE Muzzle_01 not Muzzle_A
                 },
                 Ejector = "", // Optional; empty from which to eject "shells" if specified.
                 Scope = "", // Where line of sight checks are performed from. Must be clear of block collision.
@@ -41,12 +41,12 @@ namespace Scripts
             Targeting = new TargetingDef
             {
                 Threats = new[] {
-                    Grids, // Types of threat to engage: Grids, Projectiles, Characters, Meteors, Neutrals, ScanRoid, ScanPlanet, ScanFriendlyCharacter, ScanFriendlyGrid, ScanEnemyCharacter, ScanEnemyGrid, ScanNeutralCharacter, ScanNeutralGrid, ScanUnOwnedGrid, ScanOwnersGrid
+                    Grids, Projectiles, Characters, Meteors, // Types of threat to engage: Grids, Projectiles, Characters, Meteors, Neutrals, ScanRoid, ScanPlanet, ScanFriendlyCharacter, ScanFriendlyGrid, ScanEnemyCharacter, ScanEnemyGrid, ScanNeutralCharacter, ScanNeutralGrid, ScanUnOwnedGrid, ScanOwnersGrid
                            // Grids are both LG and SG. Use Hardpoint.Other.ProhibitLGTargeting and Use Hardpoint.Other.ProhibitSGTargeting to further differentiate
                 },
                 SubSystems = SUBSYSTEMS_TARGETING,
                 ClosestFirst = true, // Tries to pick closest targets first (blocks on grids, projectiles, etc...).
-                IgnoreDumbProjectiles = false, // Don't fire at non-smart projectiles.
+                IgnoreDumbProjectiles = true, // Don't fire at non-smart projectiles.
                 LockedSmartOnly = false, // Only fire at smart projectiles that are locked on to parent grid.
                 MinimumDiameter = 0, // Minimum diameter of threat to engage.
                 MaximumDiameter = 0, // Maximum diameter of threat to engage; 0 = unlimited.
@@ -81,7 +81,7 @@ namespace Scripts
             },
             HardPoint = new HardPointDef
             {
-                PartName = "Bastet-Pattern Artillery Battery", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
+                PartName = "Flail-Pattern PDC", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
                 DeviateShotAngle = 0f, // Projectile inaccuracy in degrees.
                 AimingTolerance = 1f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
                 AimLeadingPrediction = Accurate, // Level of turret aim prediction; Off (aim straight at target), Basic (doesn't account for target acceleration), Accurate, Advanced (these last two are identical)
@@ -118,17 +118,17 @@ namespace Scripts
                 },
                 HardWare = new HardwareDef
                 {
-                    RotateRate = VERYSLOW_ROTATE_SPEED, // Max traversal speed of azimuth subpart in radians per tick (0.1 is approximately 360 degrees per second).
-                    ElevateRate = VERYSLOW_ROTATE_SPEED, // Max traversal speed of elevation subpart in radians per tick.
+                    RotateRate = PD_ROTATE_SPEED, // Max traversal speed of azimuth subpart in radians per tick (0.1 is approximately 360 degrees per second).
+                    ElevateRate = PD_ROTATE_SPEED, // Max traversal speed of elevation subpart in radians per tick.
                     MinAzimuth = -180, // Az/Ele figures are in degrees
                     MaxAzimuth = 180,
-                    MinElevation = -9,
-                    MaxElevation = 50,
+                    MinElevation = -15,
+                    MaxElevation = 90,
                     HomeAzimuth = 0, // Default resting rotation angle
                     HomeElevation = 15, // Default resting elevation
                     InventorySize = 1f, // Inventory capacity in kL.
                     FixedInventorySize = true, // If true, the inventory size will be forced to the exact value specified above regardless of world inventory multipliers
-                    IdlePower = 0.02f, // Constant base power draw in MW.
+                    IdlePower = 40, // Constant base power draw in MW.
                     FixedOffset = false, // Deprecated.
                     Offset = Vector(x: 0, y: 0, z: 0), // Offsets the aiming/firing line of the weapon, in metres.
                     Type = BlockWeapon, // What type of weapon this is; BlockWeapon, HandWeapon, Phantom 
@@ -161,16 +161,16 @@ namespace Scripts
                 },
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 60, // Set this to 3600 for beam weapons. This is how fast your gun fires per minute.
+                    RateOfFire = 1800, // Set this to 3600 for beam weapons. This is how fast your gun fires per minute.
                     BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
                     TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
-                    ReloadTime = 6 * 60, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    MagsToLoad = 2, // Number of physical magazines to consume on reload.
+                    ReloadTime = 4 * 60, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    MagsToLoad = 1, // Number of physical magazines to consume on reload.
                     DelayUntilFire = 0, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    HeatPerShot = 1, // Heat generated per shot (BarrelsPerShot * HeatPerShot is the total heat per firing event).
-                    MaxHeat = 100000, // Max heat before weapon enters cooldown (70% of max heat).
-                    Cooldown = 0f, // Percentage of max heat to be under to start firing again after overheat; accepts 0 - 0.95
+                    HeatPerShot = (int)(1200000f / (3600f / 60f)), // Heat generated per shot (BarrelsPerShot * HeatPerShot is the total heat per firing event).
+                    MaxHeat = 2000000, // Max heat before weapon enters cooldown (70% of max heat).
+                    Cooldown = 0.5f, // Percentage of max heat to be under to start firing again after overheat; accepts 0 - 0.95
                     HeatSinkRate = 100000, // Amount of heat lost per second.
                     HeatSinkRateOverheatMult = 1f, // Multiplier to LoadingDef.HeatSinkRate when the weapon is overheated. 0 disables, negative values are allowed.
                                                    // Beware that negative values makes a weapon unusable should it overheat if it doesn't also have negative LoadingDef.HeatSinkRate, which does not work properly at the moment (heat does not update unless it has heat).
@@ -183,11 +183,11 @@ namespace Scripts
                         RofAt0Heat = 1f, // ROF multiplier when DegradeRof is active, if heat was at 0%, NOT when it is at the start threshold; must be greater than 0 or it defaults to 1f
                         RofAt100Heat = 0.25f, // ROF multiplier when DegradeRof is active, if heat was at 100%, NOT when it is at the end threshold; must be greater than 0 or it defaults to 0.25f
                     },
-                    ProhibitCoolingWhenOff = false, // If true, prevents blocks that are turned off from cooling down over time
-                    ShotsInBurst = 0, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
+                    ProhibitCoolingWhenOff = true, // If true, prevents blocks that are turned off from cooling down over time
+                    ShotsInBurst = 6, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
                     DelayAfterBurst = 0, // How long to spend "reloading" after each burst. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    FireFull = false, // Whether the weapon should fire the full magazine (or the full burst instead if ShotsInBurst > 0), even if the target is lost or the player stops firing prematurely.
-                    GiveUpAfter = false, // Whether the weapon should drop its current target and reacquire a new target after finishing its magazine or burst.
+                    FireFull = true, // Whether the weapon should fire the full magazine (or the full burst instead if ShotsInBurst > 0), even if the target is lost or the player stops firing prematurely.
+                    GiveUpAfter = true, // Whether the weapon should drop its current target and reacquire a new target after finishing its magazine or burst.
                     BarrelSpinRate = 0, // 0 disables and uses RateOfFire.  If slower than ROF, will increase time to spin up and start shooting.
                     DeterministicSpin = false, // Spin barrel position will always be relative to initial / starting positions (spin will not be as smooth).
                     SpinFree = true, // Spin barrel while not firing.
@@ -203,11 +203,11 @@ namespace Scripts
                 Audio = new HardPointAudioDef
                 {
                     PreFiringSound = "", // Audio for warmup effect.
-                    FiringSound = "shell_out_med_far_01", // Audio for firing.
+                    FiringSound = "shell_out_tiny_01", // Audio for firing.
                     FiringSoundPerShot = true, // Whether to replay the sound for each shot, or just loop over the entire track while firing.
                     ReloadSound = "shell_in_med_01", // Sound SubtypeID, for when your Weapon is in a reloading state
                     NoAmmoSound = "", // Sound for if the user attempts to fire the gun without ammo
-                    HardPointRotationSound = "servo_01", // Audio played when turret is moving.
+                    HardPointRotationSound = "", // Audio played when turret is moving.
                     BarrelRotationSound = "", // Sound played when the barrel rotates
                     FireSoundEndDelay = 120, // How long the firing audio should keep playing after firing stops. Measured in game ticks(6 = 100ms, 60 = 1 seconds, etc..).
                     FireSoundNoBurst = true, // Don't stop firing sound from looping when delaying after burst.
@@ -216,7 +216,7 @@ namespace Scripts
                 {
                     Effect1 = new ParticleDef
                     {
-                        Name = "Explosion_MediumCaliberShell", // SubtypeId of muzzle particle effect.
+                        Name = "AutocannonBlast", // SubtypeId of muzzle particle effect.
                         Offset = Vector(x: 0, y: 0, z: 0), // Offsets the effect from the muzzle empty.
                         DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
@@ -246,7 +246,8 @@ namespace Scripts
                 },
             },
             Ammos = new[] {
-                mss_lg_t_bastet_ammo,
+                mss_lg_t_flail_ammo,
+                mss_lg_t_flail_ammo_tra
             },
             //Animations = mss_lg_t_amunra_anim,
             //Upgrades = UpgradeModules,

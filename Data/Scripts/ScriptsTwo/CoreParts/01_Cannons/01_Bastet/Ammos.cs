@@ -39,21 +39,21 @@ namespace Scripts
 { // Don't edit above this line
     partial class Parts
     {
-        private AmmoDef mss_lg_t_horus_ammo => new AmmoDef // Your ID, for slotting into the Weapon CS
+        private AmmoDef mss_lg_t_bastet_ammo => new AmmoDef // Your ID, for slotting into the Weapon CS
         {
-            AmmoMagazine = "mss_lg_t_horus_ammomagazine", // SubtypeId of physical ammo magazine. Use "Energy" for weapons without physical ammo.
-            AmmoRound = "mss_lg_t_horus_ammo", // Unique name used in server overrides and in the terminal (default).  Should be different for each ammoDef used by the same weapon.  Referred to for Shrapnel.
+            AmmoMagazine = "mss_lg_t_bastet_ammomagazine", // SubtypeId of physical ammo magazine. Use "Energy" for weapons without physical ammo.
+            AmmoRound = "mss_lg_t_bastet_ammo", // Unique name used in server overrides and in the terminal (default).  Should be different for each ammoDef used by the same weapon.  Referred to for Shrapnel.
             TerminalName = "AP", // Optional terminal name for this ammo type, used when picking ammo/cycling consumables.  Safe to have duplicates across different ammo defs.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 75, // Modified in MasterConfig here, actually just the power requirement needed to fire at 1.0 ROF scalar  If patterning ammos, only the main ammo (first fired) will count toward energy.
             BaseDamage = 25000, // Direct damage; one steel plate is worth 100.
             BaseDamageCutoff = 0,  // Maximum amount of pen damage to apply per block hit.  Deducts from BaseDamage and uses DamageScales modifiers
-                                   // Optional penetration mechanic to apply damage to blocks beyond the first hit, without requiring the block to be destroyed.  
+                                   // Optional penetration mechanic to apply damage to blocks beyond the first hit, without requiring the block to be destroyed.
                                    // Overwrites normal damage behavior of requiring a block to be destroyed before damage can continue.  0 disables. 
                                    // To limit max # of blocks hit, set MaxObjectsHit to desired # and ensure CountBlocks = true in ObjectsHit, otherwise it will continue until BaseDamage depletes
-            Mass = 100f, // In kilograms; how much force the impact will apply to the target, multiplied by projectile speed at time of impact (beams only use the Mass value specified, no multiplier)
-            Health = 0, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
-            BackKickForce = 100f * CANNON_VELOCITY, // Recoil. This is applied to the Parent Grid.
+            Mass = 75f, // In kilograms; how much force the impact will apply to the target, multiplied by projectile speed at time of impact (beams only use the Mass value specified, no multiplier)
+            Health = 20, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
+            BackKickForce = 75f * CANNON_VELOCITY, // Recoil. This is applied to the Parent Grid.
             DecayPerShot = 0f, // Damage to the firing weapon itself. 
                                //float.MaxValue will drop the weapon to the first build state and destroy all components used for construction
                                //If greater than cube integrity it will remove the cube upon firing, without causing deformation (makes it look like the whole "block" flew away)
@@ -90,7 +90,7 @@ namespace Scripts
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
-                AmmoRound = "MagicFragment", // AmmoRound field of the ammo to spawn.
+                AmmoRound = "", // AmmoRound field of the ammo to spawn.
                 Fragments = 100, // Number of projectiles to spawn.
                 Degrees = 15, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = false, // Spawn projectiles backward instead of forward.
@@ -226,12 +226,12 @@ namespace Scripts
                 },
                 EndOfLife = new EndOfLifeDef
                 {
-                    Enable = false,
-                    Radius = 5f, // Radius of AOE effect, in meters.
-                    Damage = 5f,
+                    Enable = true,
+                    Radius = 7f, // Radius of AOE effect, in meters.
+                    Damage = 10000f,
                     Depth = 1f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
-                    MaxAbsorb = 64000f, // Soft cutoff for damage (total, against shields or grids), except for pooled falloff.  If pooled falloff, limits max damage per block.
-                    Falloff = Pooled, // Options:
+                    MaxAbsorb = 0f, // Soft cutoff for damage (total, against shields or grids), except for pooled falloff.  If pooled falloff, limits max damage per block.
+                    Falloff = Linear, // Options:
                     // NoFalloff applies the same damage to all blocks in radius
                     // Linear drops evenly by distance from center out to max radius
                     // Curve drops off damage sharply as it approaches the max radius
@@ -244,10 +244,10 @@ namespace Scripts
                     NoVisuals = false,
                     NoSound = false,
                     ParticleScale = 1,
-                    CustomParticle = "particleName", // Particle SubtypeID, from your Particle SBC
+                    CustomParticle = "", // Particle SubtypeID, from your Particle SBC
                                                      // If you need to set a custom offset, specify it in the "Hit" particle
-                    CustomSound = "soundName", // SubtypeID from your Audio SBC, not a filename
-                    Shape = Diamond, // Round or Diamond shape.  Diamond is more performance friendly.
+                    CustomSound = "", // SubtypeID from your Audio SBC, not a filename
+                    Shape = Round, // Round or Diamond shape.  Diamond is more performance friendly.
                 },
             },
             Ewar = new EwarDef
@@ -647,11 +647,11 @@ namespace Scripts
                         },
                     },
                 },
-                Lines = FX_CANNON_LARGE,
+                Lines = FX_CANNON_MEDIUM,
             },
             AmmoAudio = new AmmoAudioDef
             {
-                TravelSound = "MERD_Whistle", // SubtypeID for your Sound File. Travel is sound generated around your projectile in flight
+                TravelSound = "", // SubtypeID for your Sound File. Travel is sound generated around your projectile in flight
                 HitSound = "MERD_RailgunHit", // Default hit sound, used unless optional hit sounds below are populated.  MUST HAVE A VALUE FOR ANY HIT SOUND TO WORK! 
                 ShotSound = "", // Sound when fired
                 OverrideShotSound = false, // When true, will use this ammo's ShotSound regardless of the given weapon's shot sound, rather than only using ShotSound if the weapon's shot sound is ""

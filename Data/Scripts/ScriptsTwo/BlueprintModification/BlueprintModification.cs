@@ -52,9 +52,33 @@ namespace BlueprintMod
 
             foreach (var definition in MyDefinitionManager.Static.GetBlueprintDefinitions())
             {
-                if (!definition.Enabled || !definition.Public || definition.Results.Length > 1)
+                if (!definition.Enabled || !definition.Public)
                 {
                     continue;
+                }
+
+                switch (definition.Id.SubtypeName)
+                {
+                    case "Position0080_NATO_25x184mmMagazine":
+                    case "Position0090_AutocannonClip":
+                    case "Position0110_MediumCalibreAmmo":
+                    case "Position0120_LargeCalibreAmmo":
+                    case "Position0130_SmallRailgunAmmo":
+                    case "Position0140_LargeRailgunAmmo":
+                        definition.Prerequisites = new[]
+                        {
+                            new MyBlueprintDefinitionBase.Item()
+                            {
+                                Amount = (MyFixedPoint)Math.Ceiling((float)1),
+                                Id = MyDefinitionId.Parse("Component/ZoneChip")
+                            }
+                        };
+                        definition.BaseProductionTimeInSeconds = 99999;
+                        definition.Enabled = false;
+                        definition.Public = false;
+                        continue;
+                    default:
+                        break;
                 }
 
                 var bpCost = MyFixedPoint.Zero;

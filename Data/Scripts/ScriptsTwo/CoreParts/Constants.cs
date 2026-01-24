@@ -103,7 +103,8 @@ namespace Scripts
             TrailColor: Color(red: 1f, green: 0.3f, blue: 0.2f, alpha: 0.04f) * 15f,
             TrailWidth: 2.0f,
             TrailLength: 13,
-            UseColorFade: false
+            UseColorFade: false,
+            dropVelocity: false
             );
 
         internal LineDef FX_MISSILE_MEDIUM => GenericTracer(
@@ -113,7 +114,8 @@ namespace Scripts
             TrailColor: Color(red: 1f, green: 0.6f, blue: 0.5f, alpha: 0.04f) * 15f,
             TrailWidth: 2.5f,
             TrailLength: 16,
-            UseColorFade: false
+            UseColorFade: false,
+            dropVelocity: false
             );
 
         internal LineDef FX_MISSILE_LARGE => GenericTracer(
@@ -123,7 +125,8 @@ namespace Scripts
             TrailColor: Color(red: 1f, green: 0.7f, blue: 0.5f, alpha: 0.04f) * 15f,
             TrailWidth: 3f,
             TrailLength: 19,
-            UseColorFade: false
+            UseColorFade: false,
+            dropVelocity: false
             );
 
         #endregion
@@ -173,7 +176,7 @@ namespace Scripts
             ShellWidth: 0.4f,
             TrailColor: Color(0.2f, 0.4f, 1f, 0.01f) * 8f, //Color(0.4f, 0.5f, 1f, 0.01f) * 15f,
             TrailWidth: 0.4f,
-            TrailLength: 8
+            TrailLength: 12
             );
 
         internal LineDef FX_RAILGUN_TINY => GenericTracer(
@@ -182,33 +185,33 @@ namespace Scripts
             ShellWidth: 0.6f,
             TrailColor: Color(0.2f, 0.3f, 1f, 0.02f) * 13f, //Color(0.4f, 0.5f, 1f, 0.01f) * 15f,
             TrailWidth: 0.5f,
-            TrailLength: 10
+            TrailLength: 15
             );
         internal LineDef FX_RAILGUN_SMALL => GenericTracer(
-            ShellColor: Color(0.5f, 0.6f, 1f, 0.03f) * 20f,
+            ShellColor: Color(0.5f, 0.6f, 1f, 0.03f) * 30f,
             ShellLength: 50f,
-            ShellWidth: 0.8f,
-            TrailColor: Color(0.3f, 0.4f, 1f, 0.02f) * 16f, //Color(0.4f, 0.5f, 1f, 0.01f) * 15f,
-            TrailWidth: 0.7f,
-            TrailLength: 12
-            );
-
-        internal LineDef FX_RAILGUN_MEDIUM => GenericTracer(
-            ShellColor: Color(0.6f, 0.7f, 1f, 0.025f) * 30f,
-            ShellLength: 75f,
-            ShellWidth: 1.0f,
-            TrailColor: Color(0.4f, 0.5f, 1f, 0.02f) * 16f, //Color(0.4f, 0.5f, 1f, 0.01f) * 15f,
+            ShellWidth: 1.1f,
+            TrailColor: Color(0.3f, 0.4f, 1f, 0.02f) * 20f, //Color(0.4f, 0.5f, 1f, 0.01f) * 15f,
             TrailWidth: 0.9f,
             TrailLength: 20
             );
 
-        internal LineDef FX_RAILGUN_LARGE => GenericTracer(
-            ShellColor: Color(0.7f, 0.8f, 1f, 0.015f) * 40f,
-            ShellLength: 125f,
+        internal LineDef FX_RAILGUN_MEDIUM => GenericTracer(
+            ShellColor: Color(0.6f, 0.7f, 1f, 0.025f) * 40f,
+            ShellLength: 75f,
             ShellWidth: 1.2f,
-            TrailColor: Color(0.5f, 0.6f, 1f, 0.02f) * 20f, //Color(0.4f, 0.5f, 1f, 0.01f) * 15f,
+            TrailColor: Color(0.4f, 0.5f, 1f, 0.02f) * 26f, //Color(0.4f, 0.5f, 1f, 0.01f) * 15f,
             TrailWidth: 1.0f,
-            TrailLength: 24
+            TrailLength: 25
+            );
+
+        internal LineDef FX_RAILGUN_LARGE => GenericTracer(
+            ShellColor: Color(0.7f, 0.8f, 1f, 0.015f) * 50f,
+            ShellLength: 125f,
+            ShellWidth: 1.5f,
+            TrailColor: Color(0.5f, 0.6f, 1f, 0.02f) * 30f, //Color(0.4f, 0.5f, 1f, 0.01f) * 15f,
+            TrailWidth: 1.2f,
+            TrailLength: 30
             );
         #endregion
     }

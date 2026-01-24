@@ -29,7 +29,7 @@ namespace BlueprintMod
             ["Ore/Scrap"] = 1,
             ["Ingot/Scrap"] = 1,
             ["Ingot/PrototechScrap"] = 600000,
-            ["PhysicalObject/SpaceCredit"] = 100,
+            ["PhysicalObject/SpaceCredit"] = 1,
             ["ConsumableItem/Powerkit"] = 5000,
             ["ConsumableItem/Medkit"] = 5000,
             ["Package/Package"] = 5000000,
