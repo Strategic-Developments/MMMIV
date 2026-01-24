@@ -247,6 +247,8 @@ namespace Scripts
             },
             Ammos = new[] {
                 mss_lg_t_apophis_ammo,
+                mss_lg_t_apophis_ammo_special,
+                mss_lg_t_apophis_ammo_special_shrapnel
             },
             Animations = mss_lg_t_apophis_anim,
             //Upgrades = UpgradeModules,

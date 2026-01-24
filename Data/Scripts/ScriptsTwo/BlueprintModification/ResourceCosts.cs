@@ -14,29 +14,28 @@ namespace BlueprintMod
         public static readonly Dictionary<string, double> BaseItemCosts = new Dictionary<string, double>()
         {
             /* Ingots */
-            ["Ingot/Stone"] = 1,
-            ["Ingot/Iron"] = 40,
-            ["Ingot/Nickel"] = 300,
-            ["Ingot/Silicon"] = 200,
-            ["Ingot/Cobalt"] = 800,
-            ["Ingot/Magnesium"] = 10000,
-            ["Ingot/Silver"] = 1800,
-            ["Ingot/Gold"] = 15000,
+            ["Ingot/Stone"] = 0.01,
+            ["Ingot/Iron"] = 0.4,
+            ["Ingot/Nickel"] = 3,
+            ["Ingot/Silicon"] = 2,
+            ["Ingot/Cobalt"] = 8,
+            ["Ingot/Magnesium"] = 100,
+            ["Ingot/Silver"] = 180,
+            ["Ingot/Gold"] = 150,
             /*["Ingot/Platinum"] = 45000,*/
-            ["Ingot/Uranium"] = 30000,
+            ["Ingot/Uranium"] = 300,
 
-            ["Ore/Ice"] = 50,
+            ["Ore/Ice"] = 0.5,
             ["Ore/Scrap"] = 1,
             ["Ingot/Scrap"] = 1,
-            ["Ingot/PrototechScrap"] = 600000,
-            ["PhysicalObject/SpaceCredit"] = 1,
-            ["ConsumableItem/Powerkit"] = 5000,
-            ["ConsumableItem/Medkit"] = 5000,
-            ["Package/Package"] = 5000000,
-            ["ConsumableItem/ClangCola"] = 10000,
-            ["ConsumableItem/CosmicCoffee"] = 10000,
-            ["Component/EngineerPlushie"] = 25000,
-            ["Component/SabiroidPlushie"] = 25000,
+            ["Ingot/PrototechScrap"] = 6000,
+            ["ConsumableItem/Powerkit"] = 50,
+            ["ConsumableItem/Medkit"] = 50,
+            ["Package/Package"] = 50000,
+            ["ConsumableItem/ClangCola"] = 100,
+            ["ConsumableItem/CosmicCoffee"] = 100,
+            ["Component/EngineerPlushie"] = 250,
+            ["Component/SabiroidPlushie"] = 250,
         };
 
         public static Dictionary<MyDefinitionId, MyFixedPoint> AllItemCosts = new Dictionary<MyDefinitionId, MyFixedPoint>();

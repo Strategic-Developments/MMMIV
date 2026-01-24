@@ -119,7 +119,7 @@ namespace BlueprintMod
                                 case "PrototechCircuitry":
                                 case "PrototechCoolingUnit":
                                 case "ThrustComponent":
-                                    bpCost += 45000 * item.Amount;
+                                    bpCost += 450 * item.Amount;
                                     break;
                                 default:
                                     items.Add(item);
@@ -133,8 +133,6 @@ namespace BlueprintMod
                     }
                     else
                     {
-                        
-
                         bpCost += itemCost * item.Amount;
                     }
                 }
@@ -143,7 +141,7 @@ namespace BlueprintMod
 
                     items.Add(new MyBlueprintDefinitionBase.Item()
                     {
-                        Amount = (MyFixedPoint)Math.Ceiling((float)bpCost),
+                        Amount = bpCost,
                         Id = MyDefinitionId.Parse("PhysicalObject/SpaceCredit")
                     });
                 }
