@@ -52,7 +52,80 @@ namespace Scripts
                        },
                    },
             },
-            //These are the animation sets the weapon uses in various states
+
+            //These are the animation sets the weapon uses in various states.
+            AnimationSets = new[]
+            {   //Region is used for organisation as it creates a collapsible tag.
+				#region Barrels Animations
+
+                new PartAnimationSetDef()
+                {
+                    SubpartId = Names("salvo"), //Remember to remove subpart_ from these names!
+                    BarrelId = "Any", //Trigger anim when this muzzle does something.
+                    StartupFireDelay = 0, //Delay in ticks until anim starts.
+                    AnimationDelays = Delays(FiringDelay: 0, ReloadingDelay: 0, OverheatedDelay: 0, TrackingDelay: 0, LockedDelay: 0, OnDelay: 0, OffDelay: 0, BurstReloadDelay: 0, OutOfAmmoDelay: 0, PreFireDelay: 0),//Delay before animation starts
+                    Reverse = Events(),
+                    Loop = Events(), //Don't touch these.
+                    EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
+                    {
+
+                        [NoMagsToLoad] = new[]
+                            {
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new[]
+                                    {
+                                        Transformation(0, 0, 0), //linear movement
+                                    },
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+                            [Reloading] = new[]
+                            {
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new[]
+                                    {
+                                        Transformation(0, 0, 0), //linear movement
+                                    },
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 14 * 60, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Delay, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new[]
+                                    {
+                                        Transformation(0, 0, 0), //linear movement
+                                    },
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show,
+                                    LinearPoints = new XYZ[0],
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                            },
+
+                    }
+
+                },
+                #endregion
+            }
 
         };
     }
