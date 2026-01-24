@@ -6,7 +6,7 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>mss_lg_t_thoth_base</SubtypeId>
 			</Id>
-			<DisplayName>Thoth-Pattern Jump Disruptor</DisplayName>
+			<DisplayName>Thoth-Pattern Jump Disruptor Turret</DisplayName>
 			<Description>where do you think YOURE going</Description>
 			<Icon>Textures\GUI\Icons\Cubes\InterdictorTurret.dds</Icon>
 			<CubeSize>Large</CubeSize>
@@ -29,7 +29,7 @@
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
 			</MountPoints>
-			<BlockPairName>InterdictorTurret</BlockPairName>
+			<BlockPairName>mss_lg_t_thoth_base</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 		<BuildTimeSeconds>10</BuildTimeSeconds>
@@ -74,7 +74,7 @@
 			<Volume>1000</Volume>
 			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
-			<Capacity>1</Capacity>
+			<Capacity>120</Capacity>
 			<AmmoDefinitionId Subtype="mss_blankammo" />
 
 			<MinimumOfferAmount>100</MinimumOfferAmount>
