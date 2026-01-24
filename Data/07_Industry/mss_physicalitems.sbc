@@ -20,7 +20,6 @@
 			<IconSymbol>IconSymbol_Stone</IconSymbol>
 			<MinimalPricePerUnit>10</MinimalPricePerUnit>
 			<CanPlayerOrder>true</CanPlayerOrder>
-			<Public>false</Public>
 		</PhysicalItem>
 		<PhysicalItem>
 			<Id>
@@ -45,7 +44,6 @@
 			<MinimumOrderAmount>1000</MinimumOrderAmount>
 			<MaximumOrderAmount>20000</MaximumOrderAmount>
 			<CanPlayerOrder>true</CanPlayerOrder>
-			<Public>false</Public>
 		</PhysicalItem>
 		<PhysicalItem>
 			<Id>
@@ -72,7 +70,6 @@
 			<CanPlayerOrder>true</CanPlayerOrder>
 			<MinimumAcquisitionAmount>100</MinimumAcquisitionAmount>
 			<MaximumAcquisitionAmount>500</MaximumAcquisitionAmount>
-			<Public>false</Public>
 		</PhysicalItem>
 		<PhysicalItem>
 			<Id>
@@ -99,7 +96,6 @@
 			<CanPlayerOrder>true</CanPlayerOrder>
 			<MinimumAcquisitionAmount>100</MinimumAcquisitionAmount>
 			<MaximumAcquisitionAmount>500</MaximumAcquisitionAmount>
-			<Public>false</Public>
 		</PhysicalItem>
 		<PhysicalItem>
 			<Id>
@@ -126,7 +122,6 @@
 			<CanPlayerOrder>true</CanPlayerOrder>
 			<MinimumAcquisitionAmount>100</MinimumAcquisitionAmount>
 			<MaximumAcquisitionAmount>500</MaximumAcquisitionAmount>
-			<Public>false</Public>
 		</PhysicalItem>
 		<PhysicalItem>
 			<Id>
@@ -153,7 +148,6 @@
 			<CanPlayerOrder>true</CanPlayerOrder>
 			<MinimumAcquisitionAmount>100</MinimumAcquisitionAmount>
 			<MaximumAcquisitionAmount>500</MaximumAcquisitionAmount>
-			<Public>false</Public>
 		</PhysicalItem>
 		<PhysicalItem>
 			<Id>
@@ -180,7 +174,6 @@
 			<CanPlayerOrder>true</CanPlayerOrder>
 			<MinimumAcquisitionAmount>100</MinimumAcquisitionAmount>
 			<MaximumAcquisitionAmount>500</MaximumAcquisitionAmount>
-			<Public>false</Public>
 		</PhysicalItem>
 		<PhysicalItem>
 			<Id>
@@ -207,7 +200,6 @@
 			<CanPlayerOrder>true</CanPlayerOrder>
 			<MinimumAcquisitionAmount>100</MinimumAcquisitionAmount>
 			<MaximumAcquisitionAmount>500</MaximumAcquisitionAmount>
-			<Public>false</Public>
 		</PhysicalItem>
 		<PhysicalItem>
 			<Id>
@@ -234,7 +226,6 @@
 			<CanPlayerOrder>true</CanPlayerOrder>
 			<MinimumAcquisitionAmount>100</MinimumAcquisitionAmount>
 			<MaximumAcquisitionAmount>500</MaximumAcquisitionAmount>
-			<Public>false</Public>
 		</PhysicalItem><!-- Ingots -->
 		<PhysicalItem>
 			<Id>
