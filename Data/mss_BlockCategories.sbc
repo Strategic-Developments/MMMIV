@@ -50,6 +50,8 @@
 				<string>TextPanel/Nerd_Radar_Basic</string>
 				<string>TextPanel/Nerd_Radar_SG</string>
 				<string>ConveyorSorter/Nerd_JammingBlock</string>
+				<string>Beacon/LargeBlockIFFBeacon</string>
+				<string>Beacon/SmallBlockIFFBeacon</string>
 				
 				<!--Industry-->
 
@@ -129,6 +131,8 @@
 				<string>TextPanel/Nerd_Radar_Basic</string>
 				<string>TextPanel/Nerd_Radar_SG</string>
 				<string>ConveyorSorter/Nerd_JammingBlock</string>
+				<string>Beacon/LargeBlockIFFBeacon</string>
+				<string>Beacon/SmallBlockIFFBeacon</string>
 			</ItemIds>
 		</Category>
 		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
