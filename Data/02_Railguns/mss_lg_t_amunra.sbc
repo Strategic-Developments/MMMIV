@@ -6,7 +6,7 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>mss_lg_t_amunra_base</SubtypeId>
 			</Id>
-			<DisplayName>Amun-Ra Heavy Railgun</DisplayName>
+			<DisplayName>Amun-Ra Heavy Railgun Turret</DisplayName>
 			<Description>Superheavy railgun with a high fire rate. Loads Amun-Ra Railgun Sabots.</Description>
 			<Icon>Textures\GUI\Icons\Cubes\AmunRa.dds</Icon>
 			<CubeSize>Large</CubeSize>

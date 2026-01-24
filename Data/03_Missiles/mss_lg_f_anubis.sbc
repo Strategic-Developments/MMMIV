@@ -6,7 +6,7 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>mss_lg_f_anubis</SubtypeId>
 			</Id>
-			<DisplayName>Anubis Heavy Missile Tube</DisplayName>
+			<DisplayName>Anubis Heavy Missile Tube Fixed</DisplayName>
 			<Description>Single-tube heavy missile. Loads Anubis Missiles.</Description>
 			<Icon>Textures\GUI\Icons\Cubes\MissileTube.dds</Icon>
 			<CubeSize>Large</CubeSize>

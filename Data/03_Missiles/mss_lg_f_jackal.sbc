@@ -6,7 +6,7 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>mss_lg_f_jackal</SubtypeId>
 			</Id>
-			<DisplayName>Jackal Light Missile Launcher</DisplayName>
+			<DisplayName>Jackal Light Missile Launcher Fixed</DisplayName>
 			<Description>Octuple-tube launcher, fires fast and evasive missiles. Loads Jackal Missiles.</Description>
 			<Icon>Textures\GUI\Icons\Cubes\JackalLauncher.dds</Icon>
 			<CubeSize>Large</CubeSize>

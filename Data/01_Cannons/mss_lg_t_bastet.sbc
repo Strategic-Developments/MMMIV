@@ -6,7 +6,7 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>mss_lg_t_bastet_base</SubtypeId>
 			</Id>
-			<DisplayName>Bastet-Pattern Heavy Artillery Cannon</DisplayName>
+			<DisplayName>Bastet-Pattern Heavy Artillery Turret</DisplayName>
 			<Description>Double-barreled repeating artillery battery. Loads Bastet Cannon Shells.</Description>
 			<Icon>Textures\GUI\Icons\Cubes\BastetBase.dds</Icon>
 			<CubeSize>Large</CubeSize>

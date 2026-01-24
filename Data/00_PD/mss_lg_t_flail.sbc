@@ -6,7 +6,7 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>mss_lg_t_flail_base</SubtypeId>
 			</Id>
-			<DisplayName>Flail-Pattern Point Defense Cannon</DisplayName>
+			<DisplayName>Flail-Pattern Point Defense Turret</DisplayName>
 			<Description>Close-in kinetic gatling cannon. Loads Flail Ammunition Box.</Description>
 			<Icon>Textures\GUI\Icons\Cubes\FlailBase.dds</Icon>
 			<CubeSize>Large</CubeSize>
