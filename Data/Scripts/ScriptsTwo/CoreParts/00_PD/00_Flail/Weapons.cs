@@ -128,7 +128,7 @@ namespace Scripts
                     HomeElevation = 15, // Default resting elevation
                     InventorySize = 1f, // Inventory capacity in kL.
                     FixedInventorySize = true, // If true, the inventory size will be forced to the exact value specified above regardless of world inventory multipliers
-                    IdlePower = 40, // Constant base power draw in MW.
+                    IdlePower = 20, // Constant base power draw in MW.
                     FixedOffset = false, // Deprecated.
                     Offset = Vector(x: 0, y: 0, z: 0), // Offsets the aiming/firing line of the weapon, in metres.
                     Type = BlockWeapon, // What type of weapon this is; BlockWeapon, HandWeapon, Phantom 
