@@ -172,6 +172,40 @@
             </Waves>
         </Sound>
 
+         <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>heavyrailgunsfx</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>1000</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <PitchVariation>50</PitchVariation>
+            <Volume>2</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\heavyrailgunsfx.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+         <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>shell_out_small_03</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>1000</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <PitchVariation>50</PitchVariation>
+            <Volume>2</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\shell_out_small_03.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
 
         <Sound>
             <Id>

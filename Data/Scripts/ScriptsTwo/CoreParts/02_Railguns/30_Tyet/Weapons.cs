@@ -201,7 +201,7 @@ namespace Scripts
                 Audio = new HardPointAudioDef
                 {
                     PreFiringSound = "MERD_RailgunCharge",
-                    FiringSound = "MERD_RailgunShot", // WepShipGatlingShot
+                    FiringSound = "heavyrailgunsfx", // WepShipGatlingShot
                     FiringSoundPerShot = true,
                     ReloadSound = "shell_in_med_01",
                     NoAmmoSound = "WepShipGatlingNoAmmo",
