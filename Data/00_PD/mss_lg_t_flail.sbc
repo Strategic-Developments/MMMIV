@@ -30,8 +30,8 @@
 				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
 			</MountPoints>
 			<BlockPairName>mss_lg_t_flail_base</BlockPairName>
-			<MirroringX>Y</MirroringX>
-			<MirroringY>X</MirroringY>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
 		<BuildTimeSeconds>10</BuildTimeSeconds>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>

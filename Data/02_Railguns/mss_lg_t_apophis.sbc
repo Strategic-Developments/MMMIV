@@ -27,6 +27,9 @@
 				<Component Subtype="SteelPlate" Count="500" />
 			</Components>
 			<CriticalComponent Subtype="Motor" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="5.00" EndY="5.00"/>
+			</MountPoints>
 			<BlockPairName>mss_lg_t_apophis_base</BlockPairName>
 			<EdgeType>Light</EdgeType>
 			<BuildTimeSeconds>15</BuildTimeSeconds>
