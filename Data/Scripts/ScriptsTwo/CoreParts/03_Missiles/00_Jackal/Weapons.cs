@@ -106,7 +106,7 @@ namespace Scripts
                     DisableStatus = false, // Do not display weapon status NoTarget, Reloading, NoAmmo, etc..
                     DisableSupportingPD = false, // If true, the supporting point defense terminal option will be removed and this weapon will only target projectiles targeting the construct it's placed on
                     ProhibitShotDelay = false, // If true, removes shot delay options for players.  This may be desirable for weapons that use heat or bursts as a balance mechanic and deliberately do not offer the ROF slider.
-                    ProhibitBurstCount = false, // If true, removes burst shot count options for players.
+                    ProhibitBurstCount = true, // If true, removes burst shot count options for players.
                 },
                 Ai = new AiDef
                 {
@@ -167,7 +167,7 @@ namespace Scripts
                 Loading = new LoadingDef
                 {
                     RateOfFire = 480 * 3, // Set this to 3600 for beam weapons. This is how fast your gun fires per minute.
-                    BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
+                    BarrelsPerShot = 8, // How many muzzles will fire a projectile per fire event.
                     TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
                     ReloadTime = 12 * 60 + 2 * 60, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
