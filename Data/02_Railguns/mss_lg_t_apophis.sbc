@@ -136,7 +136,7 @@
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>mss_lg_t_apophis_ammomagazine_special</SubtypeId>
 			</Id>
-			<DisplayName>Apophis Railgun Sabot</DisplayName>
+			<DisplayName>Apophis Flechette Railgun Sabot</DisplayName>
 			<Prerequisites>
 				<Item Amount="15000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
 				<Item Amount="15" TypeId="Ingot" SubtypeId="Platinum"/>

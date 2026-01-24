@@ -102,7 +102,7 @@
 				</Prerequisites>
 				<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_flail_ammomagazine"/>
 				<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
-				<Icon>Textures\GUI\Icons\Cubes\MerDMK1Base.dds</Icon>
+				<Icon>Textures\GUI\Icons\Cubes\FlailBase.dds</Icon>
 			</Blueprint>
 		</Blueprints>
 	<BlueprintClassEntries>
