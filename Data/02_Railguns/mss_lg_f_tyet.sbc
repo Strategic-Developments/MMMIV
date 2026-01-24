@@ -96,7 +96,7 @@
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>mss_lg_f_tyet_ammomagazine_special</SubtypeId>
 			</Id>
-			<DisplayName>Tyet Flechette Railgun Sabot</DisplayName>
+			<DisplayName>Tyet HE Railgun Sabot</DisplayName>
 			<!--<Icon>Textures\GUI\Icons\Cubes\CustosAmmoSTG1.png</Icon>-->
 			<!--gun as the ammo icon makes it SO much easier to ID things-->
 			<Icon>Textures\GUI\Icons\Cubes\TyetRailgun.dds</Icon>
@@ -139,7 +139,7 @@
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>mss_lg_f_tyet_ammomagazine_special</SubtypeId>
 			</Id>
-			<DisplayName>Tyet Flechette Railgun Sabot</DisplayName>
+			<DisplayName>Tyet HE Railgun Sabot</DisplayName>
 			<Prerequisites>
 				<Item Amount="15000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
 				<Item Amount="15" TypeId="Ingot" SubtypeId="Platinum"/>
