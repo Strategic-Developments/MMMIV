@@ -137,8 +137,8 @@ namespace Scripts
             ShellLength: 25f,
             ShellWidth: 0.6f,
             TrailColor: Color(red: 1f, green: 0.8f, blue: 0.44f, alpha: 0.04f) * 15f,
-            TrailWidth: 0f,
-            TrailLength: 1
+            TrailWidth: 0.5f,
+            TrailLength: 3
             );
 
         internal LineDef FX_CANNON_SMALL => GenericTracer(

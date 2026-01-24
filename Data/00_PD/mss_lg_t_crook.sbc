@@ -6,9 +6,8 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>mss_lg_t_crook_base</SubtypeId>
 			</Id>
-			<DisplayName>Crook-Pattern Heavy Autocannon</DisplayName>
-			<Description>Designed using stolen EnCorp parts in concealed Csillar weapons labs, the Viceroy is a blisteringly powerful autocannon meant for point-defense and close-in combat.
-			25km range, 20kps, extremely good vs everything in range, uses Viceroy Autocannon Cartridges.</Description>
+			<DisplayName>Crook-Pattern Flak Turret</DisplayName>
+			<Description>Close range flak cannon designed to counter missile swarms.</Description>
 			<Icon>Textures\GUI\Icons\Cubes\CSILLAPDC_BASE.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -72,7 +71,7 @@
 			<Volume>1000</Volume>
 			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
-			<Capacity>60</Capacity>
+			<Capacity>20</Capacity>
 			<AmmoDefinitionId Subtype="mss_blankammo" />
 
 			<MinimumOfferAmount>100</MinimumOfferAmount>
@@ -97,7 +96,7 @@
 				</Prerequisites>
 				<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_crook_ammomagazine"/>
 				<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
-				<Icon>Textures\GUI\Icons\Cubes\MerDMK1Base.dds</Icon>
+				<Icon>Textures\GUI\Icons\Cubes\CSILLAPDC_BASE.dds</Icon>
 			</Blueprint>
 		</Blueprints>
 

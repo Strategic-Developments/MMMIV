@@ -32,7 +32,7 @@
 				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
 				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
 			</MountPoints>
-			<BlockPairName>JackalLauncher</BlockPairName>
+			<BlockPairName>mss_lg_f_jackal</BlockPairName>
 			<MirroringZ>Y</MirroringZ>
 			<EdgeType>Light</EdgeType>
 			<BuildTimeSeconds>70</BuildTimeSeconds>
