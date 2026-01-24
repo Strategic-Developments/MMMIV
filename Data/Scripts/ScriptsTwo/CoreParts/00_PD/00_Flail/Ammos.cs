@@ -116,7 +116,6 @@ namespace Scripts
                 Patterns = new[] { // If enabled, set of multiple ammos to fire in order instead of the main ammo.
                     "mss_lg_t_flail_ammo_tra",
                     "mss_lg_t_flail_ammo",
-                    "mss_lg_t_flail_ammo",
                 },
                 Mode = Weapon, // Select when to activate this pattern, options: Never, Weapon, Fragment, Both 
                 TriggerChance = 1f, // This is %
