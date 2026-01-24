@@ -84,26 +84,68 @@
 			<MaximumOrderAmount>2000</MaximumOrderAmount>
 			<CanPlayerOrder>true</CanPlayerOrder>
 		</AmmoMagazine>
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>mss_lg_t_bastet_ammomagazine_special</SubtypeId>
+			</Id>
+			<DisplayName>Bastet Smart Cannon Shell</DisplayName>
+			<!--<Icon>Textures\GUI\Icons\Cubes\CustosAmmoSTG1.png</Icon>-->
+			<!--gun as the ammo icon makes it SO much easier to ID things-->
+			<Icon>Textures\GUI\Icons\Cubes\BastetBase.dds</Icon>
+			<Size>
+				<X>0.2</X>
+				<Y>0.2</Y>
+				<Z>0.2</Z>
+			</Size>
+			<Mass>2000</Mass>
+			<Volume>1000</Volume>
+			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
+			<PhysicalMaterial>Ammo</PhysicalMaterial>
+			<Capacity>1</Capacity>
+			<AmmoDefinitionId Subtype="mss_blankammo" />
+
+			<MinimumOfferAmount>100</MinimumOfferAmount>
+			<MaximumOfferAmount>1000</MaximumOfferAmount>
+			<MinimumOrderAmount>100</MinimumOrderAmount>
+			<MaximumOrderAmount>2000</MaximumOrderAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</AmmoMagazine>
 	</AmmoMagazines>
 	<Blueprints>
 			<!--BLUEPRINT DEFINITION-->
-			<Blueprint>
-				<Id>
-					<TypeId>BlueprintDefinition</TypeId>
-					<SubtypeId>mss_lg_t_bastet_ammomagazine</SubtypeId>
-				</Id>
-				<DisplayName>Bastet Cannon Shell</DisplayName>
-				<Prerequisites>
-					<Item Amount="250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
-				</Prerequisites>
-				<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_bastet_ammomagazine"/>
-				<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
-				<Icon>Textures\GUI\Icons\Cubes\MerDMK1Base.dds</Icon>
-			</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>mss_lg_t_bastet_ammomagazine</SubtypeId>
+			</Id>
+			<DisplayName>Bastet Cannon Shell</DisplayName>
+			<Prerequisites>
+				<Item Amount="250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+			</Prerequisites>
+			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_bastet_ammomagazine"/>
+			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+			<Icon>Textures\GUI\Icons\Cubes\MerDMK1Base.dds</Icon>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>mss_lg_t_bastet_ammomagazine_special</SubtypeId>
+			</Id>
+			<DisplayName>Bastet Smart Cannon Shell</DisplayName>
+			<Prerequisites>
+				<Item Amount="250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+				<Item Amount="25" TypeId="Ingot" SubtypeId="Platinum"/>
+			</Prerequisites>
+			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_bastet_ammomagazine_special"/>
+			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+			<Icon>Textures\GUI\Icons\Cubes\MerDMK1Base.dds</Icon>
+		</Blueprint>
 		</Blueprints>
 	<BlueprintClassEntries>
 		<!--BLUEPRINT CLASS ENTRY DEFINITION-->
 		<Entry Class="EliteConsumables" BlueprintSubtypeId="mss_lg_t_bastet_ammomagazine"/>
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="mss_lg_t_bastet_ammomagazine_special"/>
 		<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/mss_lg_t_bastet_base"/>
 	</BlueprintClassEntries>
 </Definitions>

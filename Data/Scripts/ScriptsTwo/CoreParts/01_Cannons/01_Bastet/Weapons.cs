@@ -247,6 +247,7 @@ namespace Scripts
             },
             Ammos = new[] {
                 mss_lg_t_bastet_ammo,
+                mss_lg_t_bastet_ammo_special
             },
             //Animations = mss_lg_t_amunra_anim,
             //Upgrades = UpgradeModules,

@@ -41,7 +41,7 @@ namespace Scripts
             Targeting = new TargetingDef
             {
                 Threats = new[] {
-                    Grids, // Types of threat to engage: Grids, Projectiles, Characters, Meteors, Neutrals, ScanRoid, ScanPlanet, ScanFriendlyCharacter, ScanFriendlyGrid, ScanEnemyCharacter, ScanEnemyGrid, ScanNeutralCharacter, ScanNeutralGrid, ScanUnOwnedGrid, ScanOwnersGrid
+                    Grids, Projectiles, // Types of threat to engage: Grids, Projectiles, Characters, Meteors, Neutrals, ScanRoid, ScanPlanet, ScanFriendlyCharacter, ScanFriendlyGrid, ScanEnemyCharacter, ScanEnemyGrid, ScanNeutralCharacter, ScanNeutralGrid, ScanUnOwnedGrid, ScanOwnersGrid
                            // Grids are both LG and SG. Use Hardpoint.Other.ProhibitLGTargeting and Use Hardpoint.Other.ProhibitSGTargeting to further differentiate
                 },
                 SubSystems = SUBSYSTEMS_TARGETING,
@@ -247,6 +247,10 @@ namespace Scripts
             },
             Ammos = new[] {
                 mss_lg_t_horus_ammo,
+                mss_lg_t_horus_ammo_special,
+                mss_lg_t_horus_ammo_special_expl,
+                mss_lg_t_horus_ammo_special_shrapnel,
+                mss_lg_t_horus_ammo_special_spawner
             },
             //Animations = mss_lg_t_amunra_anim,
             //Upgrades = UpgradeModules,
