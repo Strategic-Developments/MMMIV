@@ -6,7 +6,7 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>mss_lg_t_horus_base</SubtypeId>
 			</Id>
-			<DisplayName>Horus-Pattern Artillery Battery</DisplayName>
+			<DisplayName>Horus-Pattern Artillery Turret</DisplayName>
 			<Description>Single-barreled autoloading cannon. Loads Horus Cannon Shells.</Description>
 			<Icon>Textures\GUI\Icons\Cubes\MerDMK1Base.dds</Icon>
 			<CubeSize>Large</CubeSize>

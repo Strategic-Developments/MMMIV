@@ -90,7 +90,7 @@ namespace Scripts
                 DeviateShotAngle = 0f, // Projectile inaccuracy in degrees.
                 AimingTolerance = 1f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
                 AimLeadingPrediction = Advanced, // Level of turret aim prediction; Off (aim straight at target), Basic (doesn't account for target acceleration), Accurate, Advanced (these last two are identical)
-                DelayCeaseFire = 120, // Measured in game ticks (6 = 100ms, 60 = 1 second, etc..). Length of time the weapon continues firing after trigger is released - while a target is available.
+                DelayCeaseFire = 3 * 60, // Measured in game ticks (6 = 100ms, 60 = 1 second, etc..). Length of time the weapon continues firing after trigger is released - while a target is available.
                 AddToleranceToTracking = false, // Allows turret to track to the edge of the AimingTolerance cone instead of dead centre.
                 CanShootSubmerged = false, // Whether the weapon itself will be usable if submerged when using WaterMod.
                 CanTargetSubmerged = false, // Whether the weapon can target things underwater (note this works as an OR for ammo that ignores water, so if either this is true or the ammo ignores water, targeting will proceed)
@@ -172,7 +172,7 @@ namespace Scripts
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
                     ReloadTime = 12 * 60 + 2 * 60, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 8, // Number of physical magazines to consume on reload.
-                    DelayUntilFire = 0, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    DelayUntilFire = 2 * 60, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 1600000 / 8, // Heat generated per shot (BarrelsPerShot * HeatPerShot is the total heat per firing event).
                     MaxHeat = 1500000, // Max heat before weapon enters cooldown (70% of max heat).
                     Cooldown = 0f, // Percentage of max heat to be under to start firing again after overheat; accepts 0 - 0.95
@@ -208,7 +208,7 @@ namespace Scripts
                 Audio = new HardPointAudioDef
                 {
                     PreFiringSound = "",
-                    FiringSound = "WepTurretMissileShot", // WepShipGatlingShot
+                    FiringSound = "missile_launch_far_02", // WepShipGatlingShot
                     FiringSoundPerShot = true,
                     ReloadSound = "",
                     NoAmmoSound = "WepShipGatlingNoAmmo",
@@ -254,7 +254,7 @@ namespace Scripts
                 mss_lg_f_jackal_ammo_stage2,
 
             },
-            // Animations = mss_lg_f_anubis_anim,
+             Animations = mss_lg_f_jackal_anim,
             //Upgrades = UpgradeModules,
         };
     }

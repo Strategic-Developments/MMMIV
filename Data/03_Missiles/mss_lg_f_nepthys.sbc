@@ -6,7 +6,7 @@
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>mss_lg_f_nepthys</SubtypeId>
 			</Id>
-			<DisplayName>Nepthys Torpedo Tube</DisplayName>
+			<DisplayName>Nepthys Torpedo Tube Fixed</DisplayName>
 			<Description>Single-tube, slow but armored torpedo. Loads Nepthys Missiles.</Description>
 			<Icon>Textures\GUI\Icons\Cubes\NepthysTorpedoLauncher.dds</Icon>
 			<CubeSize>Large</CubeSize>
