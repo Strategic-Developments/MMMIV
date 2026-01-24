@@ -10,7 +10,34 @@ namespace Scripts
     {
         private AnimationDef mss_lg_f_anubis_anim => new AnimationDef
         {
-
+            EventParticles = new Dictionary<PartAnimationSetDef.EventTriggers, EventParticle[]>
+            {
+                [PreFire] = new[]{ //This particle fires in the Prefire state, during the 10 second windup the gauss cannon has.
+                                   //Valid options include Firing, Reloading, Overheated, Tracking, On, Off, BurstReload, OutOfAmmo, PreFire.
+                       new EventParticle
+                       {
+                           EmptyNames = Names("muzzle_projectile_1"), //If you want an effect on your own dummy
+                           MuzzleNames = Names("muzzle_projectile_1"), //If you want an effect on the muzzle
+                           StartDelay = 0, //ticks 60 = 1 second, delay until particle starts.
+                           LoopDelay = 0, //ticks 60 = 1 second
+                           ForceStop = false,
+                           Particle = new ParticleDef
+                           {
+                               Name = "mss_missile_prefire_smoke", //Particle subtypeID
+                               Color = Color(red: 1, green: 1, blue: 1, alpha: 1), //This is redundant as recolouring is no longer supported.
+                               Offset = Vector(0,0,-6.5f),
+                               Extras = new ParticleOptionDef //do your particle colours in your particle file instead.
+                               {
+                                   Loop = true, //Should match your particle definition.
+                                   Restart = false,
+                                   MaxDistance = 1000, //meters
+                                   MaxDuration = 180, //ticks 60 = 1 second
+                                   Scale = 1.75f, //How chunky the particle is.
+                               }
+                           }
+                       },
+                   },
+            },
             //These are the animation sets the weapon uses in various states.
             AnimationSets = new[]
             {   //Region is used for organisation as it creates a collapsible tag.
@@ -27,43 +54,53 @@ namespace Scripts
                     EventMoveSets = new Dictionary<PartAnimationSetDef.EventTriggers, RelMove[]>
                     {
 
-                        [Overheated] =
-                            new[] //Firing, Reloading, Overheated, Tracking, On, Off, BurstReload, OutOfAmmo, PreFire define a new[] for each
+                        [NoMagsToLoad] = new[]
                             {
-
-                               new RelMove //This is an animation block, and moves a subpart named subpart_leftRail -0.2 on the X axis.
+                                new RelMove
                                 {
                                     CenterEmpty = "",
                                     TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
-                                    MovementType = Linear, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
                                     LinearPoints = new[]
                                     {
-                                        Transformation(0f, 0, 2f), //linear movement in XYZ axes.
+                                        Transformation(0, 0, 0), //linear movement
                                     },
                                     Rotation = Transformation(0, 0, 0), //degrees
                                     RotAroundCenter = Transformation(0, 0, 0), //degrees
                                 },
-                               new RelMove //This is an animation block, and moves a subpart named subpart_leftRail -0.2 on the X axis.
+                            },
+                            [Reloading] = new[]
+                            {
+                                new RelMove
                                 {
                                     CenterEmpty = "",
-                                    TicksToMove = 12 * 60, //number of ticks to complete motion, 60 = 1 second
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Hide, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
+                                    LinearPoints = new[]
+                                    {
+                                        Transformation(0, 0, 0), //linear movement
+                                    },
+                                    Rotation = Transformation(0, 0, 0), //degrees
+                                    RotAroundCenter = Transformation(0, 0, 0), //degrees
+                                },
+                                new RelMove
+                                {
+                                    CenterEmpty = "",
+                                    TicksToMove = 14 * 60, //number of ticks to complete motion, 60 = 1 second
                                     MovementType = Delay, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
                                     LinearPoints = new[]
                                     {
-                                        Transformation(0f, 0, 0f), //linear movement in XYZ axes.
+                                        Transformation(0, 0, 0), //linear movement
                                     },
                                     Rotation = Transformation(0, 0, 0), //degrees
                                     RotAroundCenter = Transformation(0, 0, 0), //degrees
                                 },
-                               new RelMove //This is an animation block, and moves a subpart named subpart_leftRail -0.2 on the X axis.
+                                new RelMove
                                 {
                                     CenterEmpty = "",
-                                    TicksToMove = 1 * 60, //number of ticks to complete motion, 60 = 1 second
-                                    MovementType = ExpoDecay, //Linear,ExpoDecay,ExpoGrowth,Delay,Show, //instant or fade Hide, //instant or fade
-                                    LinearPoints = new[]
-                                    {
-                                        Transformation(0f, 0, -2f), //linear movement in XYZ axes.
-                                    },
+                                    TicksToMove = 1, //number of ticks to complete motion, 60 = 1 second
+                                    MovementType = Show,
+                                    LinearPoints = new XYZ[0],
                                     Rotation = Transformation(0, 0, 0), //degrees
                                     RotAroundCenter = Transformation(0, 0, 0), //degrees
                                 },
