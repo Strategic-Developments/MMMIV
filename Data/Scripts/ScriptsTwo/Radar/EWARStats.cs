@@ -269,7 +269,7 @@ namespace SRRadarStats
                     MinElevation = -45, // Angle in degrees from grid forward to allow the subpart to go to down. Not used if the jammer is an interior turret.
                     MaxElevation = 90, // Angle in degrees from grid forward to allow the subpart to go to up. Not used if the jammer is an interior turret.
 
-                    PowerRequirementOverride = 75f,
+                    PowerRequirementOverride = 50f,
                 },
                 ["sr_sg_t_jammerpod_base"] = new JammerStat()
                 {
