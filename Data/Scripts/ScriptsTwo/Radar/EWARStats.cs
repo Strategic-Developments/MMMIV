@@ -249,7 +249,7 @@ namespace SRRadarStats
                                                               // why didn't I just make this in degrees - Nerd, 2025
                     LOSCheckIncludesParentGrid = true, // Determines whether the jammer can jam through its own grid.
 
-                    MaxHeat = 0, // maximum heat the jammer can handle before shutting off. Heat will always increase by 1 every tick. Measured in ProprietaryHeatUnit™
+                    MaxHeat = -1, // maximum heat the jammer can handle before shutting off. Heat will always increase by 1 every tick. Measured in ProprietaryHeatUnit™
                                        // set to -1 to disable
                                        // heat on a GUI somewhere coming soon™
                     HeatDrainPerTick = 0f, // Amount of heat that is dissapated per tick
