@@ -23,6 +23,7 @@
 				<string>ConveyorSorter/mss_lg_t_crook_base</string>
 				<string>ConveyorSorter/mss_lg_f_tyet</string>
 				<string>ConveyorSorter/mss_lg_t_thoth_base</string>
+				<string>ConveyorSorter/mss_lg_f_ennead</string>
 				
 				
 
@@ -91,6 +92,7 @@
 				<string>ConveyorSorter/mss_lg_t_crook_base</string>
 				<string>ConveyorSorter/mss_lg_f_tyet</string>
 				<string>ConveyorSorter/mss_lg_t_thoth_base</string>
+				<string>ConveyorSorter/mss_lg_f_ennead</string>
 			</ItemIds>
 		</Category>
 		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
@@ -210,6 +212,7 @@
 				<string>ConveyorSorter/mss_lg_t_bastet_base</string>
 				<string>ConveyorSorter/mss_lg_f_tyet</string>
 				<string>ConveyorSorter/mss_lg_t_thoth_base</string>
+				<string>ConveyorSorter/mss_lg_f_ennead</string>
 				
 			</ItemIds>
 		</Category>

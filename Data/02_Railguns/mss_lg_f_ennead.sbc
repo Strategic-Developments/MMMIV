@@ -1,0 +1,155 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>mss_lg_f_ennead</SubtypeId>
+			</Id>
+			<DisplayName>Ennead Superheavy Spinal Railgun</DisplayName>
+			<Description>OBLITERATE</Description>
+			<Icon>Textures\GUI\Icons\Cubes\EnneadSuperheavy.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="2" y="3" z="13"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Ennead\EnneadSuperheavy.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="150" />
+				<Component Subtype="Construction" Count="80" />
+				<Component Subtype="MetalGrid" Count="40" />				
+				<Component Subtype="LargeTube" Count="40" />
+				<Component Subtype="Motor" Count="50" />
+				<Component Subtype="Computer" Count="100" />
+				<Component Subtype="Construction" Count="20" />
+				<Component Subtype="SteelPlate" Count="50" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.00" EndY="3.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="13.00" EndY="3.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="13.00" EndY="3.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="2.00" EndY="13.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="2.00" EndY="13.00"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Ennead\EnneadSuperheavy_BS1.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>mss_lg_f_ennead</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+			<BuildTimeSeconds>15</BuildTimeSeconds>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<ResourceSinkGroup>Conveyors</ResourceSinkGroup>
+			<PowerInput>0.00025</PowerInput>
+			<InventorySize>
+				<X>1</X>
+				<Y>1</Y>
+				<Z>1</Z>
+			</InventorySize>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>255</PCU>
+			<IsAirTight>true</IsAirTight>
+		</Definition>
+	</CubeBlocks>
+
+<AmmoMagazines>
+		<!--•AMMOMAGAZINE DEFINITION-->
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>mss_lg_f_ennead_ammomagazine</SubtypeId>
+			</Id>
+			<DisplayName>Ennead Railgun Sabot</DisplayName>
+			<!--<Icon>Textures\GUI\Icons\Cubes\CustosAmmoSTG1.png</Icon>-->
+			<!--gun as the ammo icon makes it SO much easier to ID things-->
+			<Icon>Textures\GUI\Icons\Cubes\EnneadSuperheavy.dds</Icon>
+			<Size>
+				<X>0.2</X>
+				<Y>0.2</Y>
+				<Z>0.2</Z>
+			</Size>
+			<Mass>2000</Mass>
+			<Volume>1000</Volume>
+			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
+			<PhysicalMaterial>Ammo</PhysicalMaterial>
+			<Capacity>1</Capacity>
+			<AmmoDefinitionId Subtype="mss_blankammo" />
+
+			<MinimumOfferAmount>100</MinimumOfferAmount>
+			<MaximumOfferAmount>1000</MaximumOfferAmount>
+			<MinimumOrderAmount>100</MinimumOrderAmount>
+			<MaximumOrderAmount>2000</MaximumOrderAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</AmmoMagazine>
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>mss_lg_f_ennead_ammomagazine_special</SubtypeId>
+			</Id>
+			<DisplayName>Ennead HE Railgun Sabot</DisplayName>
+			<!--<Icon>Textures\GUI\Icons\Cubes\CustosAmmoSTG1.png</Icon>-->
+			<!--gun as the ammo icon makes it SO much easier to ID things-->
+			<Icon>Textures\GUI\Icons\Cubes\EnneadSuperheavy.dds</Icon>
+			<Size>
+				<X>0.2</X>
+				<Y>0.2</Y>
+				<Z>0.2</Z>
+			</Size>
+			<Mass>2000</Mass>
+			<Volume>1000</Volume>
+			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
+			<PhysicalMaterial>Ammo</PhysicalMaterial>
+			<Capacity>1</Capacity>
+			<AmmoDefinitionId Subtype="mss_blankammo" />
+
+			<MinimumOfferAmount>100</MinimumOfferAmount>
+			<MaximumOfferAmount>1000</MaximumOfferAmount>
+			<MinimumOrderAmount>100</MinimumOrderAmount>
+			<MaximumOrderAmount>2000</MaximumOrderAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</AmmoMagazine>
+	</AmmoMagazines>
+	<Blueprints>
+		<!--BLUEPRINT DEFINITION-->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>mss_lg_f_ennead_ammomagazine</SubtypeId>
+			</Id>
+			<DisplayName>Ennead Railgun Sabot</DisplayName>
+			<Prerequisites>
+				<Item Amount="250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+			</Prerequisites>
+			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_f_ennead_ammomagazine"/>
+			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+			<Icon>Textures\GUI\Icons\Cubes\AmunRa.dds</Icon>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>mss_lg_f_ennead_ammomagazine_special</SubtypeId>
+			</Id>
+			<DisplayName>Ennead HE Railgun Sabot</DisplayName>
+			<Prerequisites>
+				<Item Amount="15000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+				<Item Amount="15" TypeId="Ingot" SubtypeId="Platinum"/>
+			</Prerequisites>
+			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_f_ennead_ammomagazine_special"/>
+			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+			<Icon>Textures\GUI\Icons\Cubes\AmunRa.dds</Icon>
+		</Blueprint>
+	</Blueprints>
+	<BlueprintClassEntries>
+		<!--BLUEPRINT CLASS ENTRY DEFINITION-->
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="mss_lg_f_ennead_ammomagazine"/>
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="mss_lg_f_ennead_ammomagazine_special"/>
+		<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/mss_lg_f_ennead_base"/>
+	</BlueprintClassEntries>
+	
+</Definitions>
