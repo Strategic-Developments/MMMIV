@@ -210,9 +210,9 @@ namespace Scripts
                 },
                 EndOfLife = new EndOfLifeDef
                 {
-                    Enable = false,
-                    Radius = 5f, // Radius of AOE effect, in meters.
-                    Damage = 5f,
+                    Enable = true,
+                    Radius = 1f, // Radius of AOE effect, in meters.
+                    Damage = 2f,
                     Depth = 1f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage (total, against shields or grids), except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Pooled, //.NoFalloff applies the same damage to all blocks in radius
@@ -222,14 +222,14 @@ namespace Scripts
                     //.Squeeze does little damage to the middle, but rapidly increases damage toward max radius
                     //.Pooled damage behaves in a pooled manner that once exhausted damage ceases.
                     //.Exponential drops off exponentially.  Does not scale to max radius
-                    ArmOnlyOnHit = true, // Detonation only is available, After it hits something, when this is true. IE, if shot down, it won't explode.
+                    ArmOnlyOnHit = false, // Detonation only is available, After it hits something, when this is true. IE, if shot down, it won't explode.
                     MinArmingTime = 0, // In ticks, before the Ammo is allowed to explode, detonate or similar; This affects shrapnel spawning.
                     NoVisuals = false,
                     NoSound = false,
-                    ParticleScale = 1,
-                    CustomParticle = "Explosion_AmmunitionTiny", // Particle SubtypeID, from your Particle SBC
-                                                          // If you need to set a custom offset, specify it in the "Hit" particle
-                    CustomSound = "soundName", // SubtypeID from your Audio SBC, not a filename
+                    ParticleScale = 2,
+                    CustomParticle = "mss_flak_explosion", // Particle SubtypeID, from your Particle SBC
+                                                                  // If you need to set a custom offset, specify it in the "Hit" particle
+                    CustomSound = "WepSmallMissileExpl", // SubtypeID from your Audio SBC, not a filename
                     Shape = Diamond, // Round or Diamond shape.  Diamond is more performance friendly.
                 },
             },
@@ -550,8 +550,8 @@ namespace Scripts
                     //.Exponential drops off exponentially.  Does not scale to max radius
                     ArmOnlyOnHit = false, // Detonation only is available, After it hits something, when this is true. IE, if shot down, it won't explode.
                     MinArmingTime = 0, // In ticks, before the Ammo is allowed to explode, detonate or similar; This affects shrapnel spawning.
-                    NoVisuals = false,
-                    NoSound = false,
+                    NoVisuals = true,
+                    NoSound = true,
                     ParticleScale = 1,
                     CustomParticle = "Explosion_AmmunitionLarge", // Particle SubtypeID, from your Particle SBC
                                                                   // If you need to set a custom offset, specify it in the "Hit" particle

@@ -647,7 +647,7 @@ namespace Scripts
                         },
                     },
                 },
-                Lines = FX_CANNON_MEDIUM,
+                Lines = FX_CANNON_LARGE,
             },
             AmmoAudio = new AmmoAudioDef
             {
@@ -1290,7 +1290,7 @@ namespace Scripts
                         },
                     },
                 },
-                Lines = FX_CANNON_MEDIUM,
+                Lines = FX_CANNON_LARGE,
             },
             AmmoAudio = new AmmoAudioDef
             {
