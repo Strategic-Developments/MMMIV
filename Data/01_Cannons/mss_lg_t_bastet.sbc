@@ -71,8 +71,8 @@
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>2000</Mass>
-			<Volume>1000</Volume>
+			<Mass>1338.75</Mass>
+			<Volume>780</Volume>
 			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>1</Capacity>
@@ -98,8 +98,8 @@
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>2000</Mass>
-			<Volume>1000</Volume>
+			<Mass>1530</Mass>
+			<Volume>890</Volume>
 			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>1</Capacity>

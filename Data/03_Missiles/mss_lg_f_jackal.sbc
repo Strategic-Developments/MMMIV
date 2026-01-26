@@ -72,8 +72,8 @@
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>2000</Mass>
-			<Volume>1000</Volume>
+			<Mass>550</Mass>
+			<Volume>340</Volume>
 			<Model>Models\Cubes\Ammos\JackalMissiles.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>1</Capacity>
