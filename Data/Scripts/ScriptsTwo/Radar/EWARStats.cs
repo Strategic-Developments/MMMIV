@@ -326,8 +326,8 @@ namespace SRRadarStats
                     //  - those modifying stats can just have the definitions in their place w/o copying any models, sbc files, or sounds to the modified mod.
                     DefinitionPriority = 1,
 
-                    MaxCharacters = 0, // maximum characters the IFF beacon will use
-                    ShowClass = false, // whether or not the IFF beacon name change will completely replace (false) or only add its name after the class name (true)
+                    MaxCharacters = 32, // maximum characters the IFF beacon will use
+                    ShowClass = true, // whether or not the IFF beacon name change will completely replace (false) or only add its name after the class name (true)
                 },
                 ["SmallBlockIFFBeacon"] = new IFFBlockStat()
                 {
@@ -338,8 +338,8 @@ namespace SRRadarStats
                     //  - those modifying stats can just have the definitions in their place w/o copying any models, sbc files, or sounds to the modified mod.
                     DefinitionPriority = 1,
 
-                    MaxCharacters = 0, // maximum characters the IFF beacon will use
-                    ShowClass = false, // whether or not the IFF beacon name change will completely replace (false) or only add its name after the class name (true)
+                    MaxCharacters = 32, // maximum characters the IFF beacon will use
+                    ShowClass = true, // whether or not the IFF beacon name change will completely replace (false) or only add its name after the class name (true)
                 },
             },
 
