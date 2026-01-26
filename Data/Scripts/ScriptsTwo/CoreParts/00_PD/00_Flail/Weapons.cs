@@ -93,7 +93,7 @@ namespace Scripts
                 ScanTrackOnly = false, // This weapon only scans and tracks entities, this disables un-needed functionality and customizes for this purpose. 
                 Ui = new UiDef
                 {
-                    RateOfFire = false, // Enables terminal slider for changing rate of fire.
+                    RateOfFire = true, // Enables terminal slider for changing rate of fire.
                     RateOfFireMin = 0.5f, // Sets the minimum limit for the rate of fire slider, default is 0.  Range is 0-1f.
                     ToggleGuidance = false, // Enables terminal option to disable smart projectile guidance.
                     EnableOverload = false, // Enables terminal option to turn on Overload; this allows energy weapons to double damage per shot, at the cost of quadrupled power draw and heat gain, and 2% self damage on overheat.
@@ -161,7 +161,7 @@ namespace Scripts
                 },
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 1800, // Set this to 3600 for beam weapons. This is how fast your gun fires per minute.
+                    RateOfFire = 3600, // Set this to 3600 for beam weapons. This is how fast your gun fires per minute.
                     BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
                     TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
