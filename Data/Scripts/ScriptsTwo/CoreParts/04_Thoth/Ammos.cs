@@ -253,7 +253,7 @@ namespace Scripts
                 Enable = true, // Enables EWAR effects AND DISABLES BASE DAMAGE AND AOE DAMAGE!!
                 Type = JumpNull, // EnergySink, Emp, Offense, Nav, Dot, AntiSmart, JumpNull, Anchor, Tractor, Pull, Push, 
                 Mode = Effect, // Effect , Field
-                Strength = 90000f,
+                Strength = JD_INTEGRITY * 5,
                 Radius = 250f, // Meters
                 Duration = 5 * 60, // In Ticks
                 StackDuration = false, // Combined Durations

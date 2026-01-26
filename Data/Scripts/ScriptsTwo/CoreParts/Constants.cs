@@ -62,7 +62,7 @@ namespace Scripts
         const float MISSILE_START_VELOCITY = 200f;
         const float MISSILE_VELOCITY = 1250f - MISSILE_START_VELOCITY;
 
-        const float JD_INTEGRITY = 16000;
+        const float JD_INTEGRITY = 30100;
 
         const float INV_FILL_AMOUNT = 0.95f;
         const float INV_LOW_AMOUNT = 0.6f;
