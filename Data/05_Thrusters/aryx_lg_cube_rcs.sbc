@@ -67,8 +67,8 @@
 			</FuelConverter>
 			<MaxPowerConsumption>1.556</MaxPowerConsumption>
 			<MinPowerConsumption>0.000000001</MinPowerConsumption>
-			<FlameDamageLengthScale>0.001</FlameDamageLengthScale>
-			<FlameLengthScale>1.35</FlameLengthScale>
+			<FlameDamageLengthScale>1</FlameDamageLengthScale>
+			<FlameLengthScale>3</FlameLengthScale>
 			<FlameIdleColor>
 				<X>0</X>
 				<Y>0</Y>
@@ -77,8 +77,8 @@
 			</FlameIdleColor>
 			<FlameFullColor>
 				<X>1</X>
-				<Y>1</Y>
-				<Z>0.98</Z>
+				<Y>0.75</Y>
+				<Z>0.5</Z>
 				<W>0.1</W>
 			</FlameFullColor>
 			<FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
@@ -205,8 +205,8 @@
 			</FuelConverter>
 			<MaxPowerConsumption>1.556</MaxPowerConsumption>
 			<MinPowerConsumption>0.000000001</MinPowerConsumption>
-			<FlameDamageLengthScale>0.001</FlameDamageLengthScale>
-			<FlameLengthScale>1.35</FlameLengthScale>
+			<FlameDamageLengthScale>1</FlameDamageLengthScale>
+			<FlameLengthScale>3</FlameLengthScale>
 			<FlameIdleColor>
 				<X>0</X>
 				<Y>0</Y>
@@ -215,8 +215,8 @@
 			</FlameIdleColor>
 			<FlameFullColor>
 				<X>1</X>
-				<Y>1</Y>
-				<Z>0.98</Z>
+				<Y>0.75</Y>
+				<Z>0.5</Z>
 				<W>0.1</W>
 			</FlameFullColor>
 			<FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
@@ -305,8 +305,8 @@
 			</FuelConverter>
 			<MaxPowerConsumption>1.556</MaxPowerConsumption>
 			<MinPowerConsumption>0.000000001</MinPowerConsumption>
-			<FlameDamageLengthScale>0.001</FlameDamageLengthScale>
-			<FlameLengthScale>1.35</FlameLengthScale>
+			<FlameDamageLengthScale>1</FlameDamageLengthScale>
+			<FlameLengthScale>3</FlameLengthScale>
 			<FlameIdleColor>
 				<X>0</X>
 				<Y>0</Y>
@@ -315,8 +315,8 @@
 			</FlameIdleColor>
 			<FlameFullColor>
 				<X>1</X>
-				<Y>1</Y>
-				<Z>0.98</Z>
+				<Y>0.75</Y>
+				<Z>0.5</Z>
 				<W>0.1</W>
 			</FlameFullColor>
 			<FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
@@ -404,8 +404,8 @@
 			</FuelConverter>
 			<MaxPowerConsumption>1.556</MaxPowerConsumption>
 			<MinPowerConsumption>0.000000001</MinPowerConsumption>
-			<FlameDamageLengthScale>0.001</FlameDamageLengthScale>
-			<FlameLengthScale>1.35</FlameLengthScale>
+			<FlameDamageLengthScale>1</FlameDamageLengthScale>
+			<FlameLengthScale>3</FlameLengthScale>
 			<FlameIdleColor>
 				<X>0</X>
 				<Y>0</Y>
@@ -414,8 +414,8 @@
 			</FlameIdleColor>
 			<FlameFullColor>
 				<X>1</X>
-				<Y>1</Y>
-				<Z>0.98</Z>
+				<Y>0.75</Y>
+				<Z>0.5</Z>
 				<W>0.1</W>
 			</FlameFullColor>
 			<FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>
@@ -502,8 +502,8 @@
 			</FuelConverter>
 			<MaxPowerConsumption>1.556</MaxPowerConsumption>
 			<MinPowerConsumption>0.000000001</MinPowerConsumption>
-			<FlameDamageLengthScale>0.001</FlameDamageLengthScale>
-			<FlameLengthScale>1.35</FlameLengthScale>
+			<FlameDamageLengthScale>1</FlameDamageLengthScale>
+			<FlameLengthScale>3</FlameLengthScale>
 			<FlameIdleColor>
 				<X>0</X>
 				<Y>0</Y>
@@ -512,8 +512,8 @@
 			</FlameIdleColor>
 			<FlameFullColor>
 				<X>1</X>
-				<Y>1</Y>
-				<Z>0.98</Z>
+				<Y>0.75</Y>
+				<Z>0.5</Z>
 				<W>0.1</W>
 			</FlameFullColor>
 			<FlamePointMaterial>EngineThrustMiddle</FlamePointMaterial>

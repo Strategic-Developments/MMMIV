@@ -52,7 +52,7 @@ namespace Scripts
                                    // Overwrites normal damage behavior of requiring a block to be destroyed before damage can continue.  0 disables. 
                                    // To limit max # of blocks hit, set MaxObjectsHit to desired # and ensure CountBlocks = true in ObjectsHit, otherwise it will continue until BaseDamage depletes
             Mass = 750, // In kilograms; how much force the impact will apply to the target, multiplied by projectile speed at time of impact (beams only use the Mass value specified, no multiplier)
-            Health = 20, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
+            Health = 30, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 1012.5f * CANNON_VELOCITY, // Recoil. This is applied to the Parent Grid.
             DecayPerShot = 0f, // Damage to the firing weapon itself. 
                                //float.MaxValue will drop the weapon to the first build state and destroy all components used for construction
