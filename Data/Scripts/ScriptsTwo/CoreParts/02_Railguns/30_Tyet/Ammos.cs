@@ -647,7 +647,7 @@ namespace Scripts
                         },
                     },
                 },
-                Lines = FX_RAILGUN_LARGE,
+                Lines = FX_RAILGUN_MEDIUM,
             },
             AmmoAudio = new AmmoAudioDef
             {
@@ -1290,7 +1290,7 @@ namespace Scripts
                         },
                     },
                 },
-                Lines = FX_RAILGUN_LARGE,
+                Lines = FX_RAILGUN_MEDIUM_RED,
             },
             AmmoAudio = new AmmoAudioDef
             {

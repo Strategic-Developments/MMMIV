@@ -537,7 +537,7 @@ namespace Scripts
                 EndOfLife = new EndOfLifeDef
                 {
                     Enable = true,
-                    Radius = 400f, // Radius of AOE effect, in meters.
+                    Radius = 300f, // Radius of AOE effect, in meters.
                     Damage = 2f,
                     Depth = 0f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage (total, against shields or grids), except for pooled falloff.  If pooled falloff, limits max damage per block.
@@ -553,7 +553,7 @@ namespace Scripts
                     NoVisuals = true,
                     NoSound = true,
                     ParticleScale = 1,
-                    CustomParticle = "Explosion_AmmunitionLarge", // Particle SubtypeID, from your Particle SBC
+                    CustomParticle = "mss_flak_explosion", // Particle SubtypeID, from your Particle SBC
                                                                   // If you need to set a custom offset, specify it in the "Hit" particle
                     CustomSound = "WepSmallMissileExpl", // SubtypeID from your Audio SBC, not a filename
                     Shape = Round, // Round or Diamond shape.  Diamond is more performance friendly.

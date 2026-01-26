@@ -213,6 +213,24 @@ namespace Scripts
             TrailWidth: 1.2f,
             TrailLength: 30
             );
+
+        internal LineDef FX_RAILGUN_MEDIUM_RED => GenericTracer(
+            ShellColor: Color(1f, 0.7f, 0.6f, 0.025f) * 40f,
+            ShellLength: 75f,
+            ShellWidth: 1.2f,
+            TrailColor: Color(1f, 0.5f, 0.4f, 0.02f) * 26f, //Color(0.4f, 0.5f, 1f, 0.01f) * 15f,
+            TrailWidth: 1.0f,
+            TrailLength: 25
+            );
+
+        internal LineDef FX_RAILGUN_LARGE_RED => GenericTracer(
+            ShellColor: Color(1f, 0.8f, 0.7f, 0.015f) * 50f,
+            ShellLength: 125f,
+            ShellWidth: 1.5f,
+            TrailColor: Color(1f, 0.6f, 0.5f, 0.02f) * 30f, //Color(0.4f, 0.5f, 1f, 0.01f) * 15f,
+            TrailWidth: 1.2f,
+            TrailLength: 30
+            );
         #endregion
     }
 }

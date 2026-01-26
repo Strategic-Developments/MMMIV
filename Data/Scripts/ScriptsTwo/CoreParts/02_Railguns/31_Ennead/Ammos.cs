@@ -1290,7 +1290,7 @@ namespace Scripts
                         },
                     },
                 },
-                Lines = FX_RAILGUN_LARGE,
+                Lines = FX_RAILGUN_LARGE_RED,
             },
             AmmoAudio = new AmmoAudioDef
             {

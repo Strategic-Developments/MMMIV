@@ -449,7 +449,7 @@ namespace Scripts
                                     // Overwrites normal damage behavior of requiring a block to be destroyed before damage can continue.  0 disables. 
                                     // To limit max # of blocks hit, set MaxObjectsHit to desired # and ensure CountBlocks = true in ObjectsHit, otherwise it will continue until BaseDamage depletes
             Mass = 1250, // Disabled here. Too lazy to set this to 0 everywhere so MasterConfig does it
-            Health = 7f, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
+            Health = 12f, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0f, // Recoil. This is applied to the Parent Grid.
             DecayPerShot = 0f, // Damage to the firing weapon itself. 
                                //float.MaxValue will drop the weapon to the first build state and destroy all components used for construction
@@ -728,7 +728,7 @@ namespace Scripts
                     KeepAliveAfterTargetLoss = true, // Whether to stop early death of projectile on target loss
                     OffsetRatio = 0.1f, // The ratio to offset the random direction (0 to 1) 
                     OffsetTime = 40, // how often to offset degree, measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..)
-                    OffsetMinRange = 500, // The range from target at which offsets are no longer active
+                    OffsetMinRange = 1000, // The range from target at which offsets are no longer active
                     FocusOnly = true, // Only target the HUD or AI focused target (this includes changes to the hud-selected target.  Set MaxTargets = 1 to keep it from switching (aka fire and forget)
                     FocusEviction = false, // If FocusOnly and this to true will force smarts to lose target when there is no focus target (IE you must keep the target selected or the projectile will lose the target)
                     ScanRange = 0, // 0 disables projectile screening, the max range that this projectile will be seen at by defending grids (adds this projectile to defenders lookup database). 

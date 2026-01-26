@@ -571,7 +571,7 @@ namespace Scripts
                 MaxStacks = 10, // Max Debuffs at once
                 NoHitParticle = false,
                 /*
-                EnergySink : Targets & Shutdowns Power Supplies, such as Batteries & Reactor
+                EnergySink : Targets & Shutdowns Power Supplies, such as Batteries & Reactor  
                 Emp : Targets & Shutdown any Block capable of being powered
                 Offense : Targets & Shutdowns Weaponry
                 Nav : Targets & Shutdown Gyros or Locks them down
@@ -641,7 +641,7 @@ namespace Scripts
                 Smarts = new SmartsDef
                 {
                     SteeringLimit = 0f, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
-                    Inaccuracy = 15f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
+                    Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
                     Aggressiveness = 4f, // controls how responsive tracking is, recommended value 3-5.
                     MaxLateralThrust = 1, // controls how sharp the projectile may turn, this is the cheaper but less realistic version of SteeringLimit, cost of 2 on a scale of 1-5, 0 being basic smart.
                     NavAcceleration = 0, // helps influence how the projectile steers, 0 defaults to 1/2 Aggressiveness value or 0 if its 0, a value less than 0 disables this feature. 
@@ -655,9 +655,9 @@ namespace Scripts
                     NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
                     Roam = false, // Roam current area after target loss
                     KeepAliveAfterTargetLoss = true, // Whether to stop early death of projectile on target loss
-                    OffsetRatio = 0.2f, // The ratio to offset the random direction (0 to 1) 
+                    OffsetRatio = 0.3f, // The ratio to offset the random direction (0 to 1) 
                     OffsetTime = 30, // how often to offset degree, measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..)
-                    OffsetMinRange = 0, // The range from target at which offsets are no longer active
+                    OffsetMinRange = 1000, // The range from target at which offsets are no longer active
                     FocusOnly = true, // Only target the HUD or AI focused target (this includes changes to the hud-selected target.  Set MaxTargets = 1 to keep it from switching (aka fire and forget)
                     FocusEviction = false, // If FocusOnly and this to true will force smarts to lose target when there is no focus target (IE you must keep the target selected or the projectile will lose the target)
                     ScanRange = 0, // 0 disables projectile screening, the max range that this projectile will be seen at by defending grids (adds this projectile to defenders lookup database). 
