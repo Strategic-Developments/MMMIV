@@ -92,7 +92,7 @@
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>mss_lg_f_ennead_ammomagazine_special</SubtypeId>
 			</Id>
-			<DisplayName>Ennead HE Railgun Sabot</DisplayName>
+			<DisplayName>Ennead HE/Flechette Railgun Sabot</DisplayName>
 			<!--<Icon>Textures\GUI\Icons\Cubes\CustosAmmoSTG1.png</Icon>-->
 			<!--gun as the ammo icon makes it SO much easier to ID things-->
 			<Icon>Textures\GUI\Icons\Cubes\EnneadSuperheavy.dds</Icon>
@@ -128,21 +128,21 @@
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_f_ennead_ammomagazine"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
-			<Icon>Textures\GUI\Icons\Cubes\AmunRa.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\EnneadSuperheavy.dds</Icon>
 		</Blueprint>
 		<Blueprint>
 			<Id>
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>mss_lg_f_ennead_ammomagazine_special</SubtypeId>
 			</Id>
-			<DisplayName>Ennead HE Railgun Sabot</DisplayName>
+			<DisplayName>Ennead HE/Flechette Railgun Sabot</DisplayName>
 			<Prerequisites>
 				<Item Amount="15000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
 				<Item Amount="15" TypeId="Ingot" SubtypeId="Platinum"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_f_ennead_ammomagazine_special"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
-			<Icon>Textures\GUI\Icons\Cubes\AmunRa.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\EnneadSuperheavy.dds</Icon>
 		</Blueprint>
 	</Blueprints>
 	<BlueprintClassEntries>
