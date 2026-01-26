@@ -58,7 +58,7 @@ namespace Scripts
         const float PD_SLOW_VELOCITY = 2500;
         const float PD_VELOCITY = 5000;
         const float CANNON_VELOCITY = 2500;
-        const float RAILGUN_VELOCITY = 15000f;
+        const float RAILGUN_VELOCITY = 10000f;
         const float MISSILE_START_VELOCITY = 200f;
         const float MISSILE_VELOCITY = 1250f - MISSILE_START_VELOCITY;
 

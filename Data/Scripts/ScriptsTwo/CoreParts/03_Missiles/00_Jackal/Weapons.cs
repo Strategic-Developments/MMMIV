@@ -162,7 +162,7 @@ namespace Scripts
                     CheckForAnyWeapon = false, // If true, the check will fail if ANY weapon is present, not just weapons of the same subtype.
                     ProhibitLGTargeting = false, // If true, prohibits block from targeting Large Grids (best used in server-specific weapon packs)
                     ProhibitSGTargeting = true, // If true, prohibits block from targeting Small Grids (best used in server-specific weapon packs)
-                    ProhibitSubsystemChanges = true,
+                    ProhibitSubsystemChanges = false,
                 },
                 Loading = new LoadingDef
                 {

@@ -27,7 +27,7 @@ namespace Scripts
                         MuzzlePartId = "None", // The subpart where your muzzle empties are located. This is often the elevation subpart. Subpart_Boomsticks must be written as Boomsticks.
                         AzimuthPartId = "None", // Your Rotating Subpart, the bit that moves sideways.
                         ElevationPartId = "None",// Your Elevating Subpart, that bit that moves up.
-                        DurabilityMod = S2_DAMAGE_MULTIPLIER, // GeneralDamageMultiplier, 0.25f = 25% damage taken.
+                        DurabilityMod = S7_DAMAGE_MULTIPLIER, // GeneralDamageMultiplier, 0.25f = 25% damage taken.
                         IconName = "" // Overlay for block inventory slots, like reactors, refineries, etc.  Looks in mod root folder\Textures\GUI\Icons\
                     },
                  },
@@ -126,7 +126,7 @@ namespace Scripts
                     HomeElevation = 0, // Default resting elevation
                     FixedInventorySize = true, // If true, the inventory size will be forced to the exact value specified above regardless of world inventory multipliers
                     InventorySize = 1.5f, // Inventory capacity in kL.
-                    IdlePower = 60, // Constant base power draw in MW.
+                    IdlePower = 120, // Constant base power draw in MW.
                     FixedOffset = false, // Deprecated.
                     Offset = Vector(x: 0, y: 0, z: 0), // Offsets the aiming/firing line of the weapon, in metres.
                     Type = BlockWeapon, // What type of weapon this is; BlockWeapon, HandWeapon, Phantom 
@@ -155,15 +155,15 @@ namespace Scripts
                     CheckForAnyWeapon = false, // If true, the check will fail if ANY weapon is present, not just weapons of the same subtype.
                     ProhibitLGTargeting = false, // If true, prohibits block from targeting Large Grids (best used in server-specific weapon packs)
                     ProhibitSGTargeting = true, // If true, prohibits block from targeting Small Grids (best used in server-specific weapon packs)
-                    ProhibitSubsystemChanges = true,
+                    ProhibitSubsystemChanges = false,
                 },
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 60, // Set this to 3600 for beam weapons. This is how fast your gun fires per minute.
+                    RateOfFire = 2, // Set this to 3600 for beam weapons. This is how fast your gun fires per minute.
                     BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
                     TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
-                    ReloadTime = 14 * 60, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = 30 * 60, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 1, // Number of physical magazines to consume on reload.
                     DelayUntilFire = 2 * 60, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = 1500000, // Heat generated per shot (BarrelsPerShot * HeatPerShot is the total heat per firing event).
@@ -244,8 +244,9 @@ namespace Scripts
             },
             Ammos = new[] {
                 mss_lg_f_ennead_ammo,
-                mss_lg_f_ennead_ammo_special,
-
+                mss_lg_f_ennead_ammo_special_he,
+                mss_lg_f_ennead_ammo_special_flechette,
+                mss_lg_f_ennead_ammo_special_shrapnel
             },
             // Animations = mss_lg_f_anubis_anim,
             //Upgrades = UpgradeModules,
