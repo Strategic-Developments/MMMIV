@@ -16,7 +16,6 @@
 			<Model>Models\Cubes\Crook\CSILLAPDC_BASE.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="100"/>
-				
 				<Component Subtype="Construction" Count="250"/>
 				<Component Subtype="MetalGrid" Count="250"/>
 				<Component Subtype="SmallTube" Count="80"/>
@@ -24,7 +23,6 @@
 				<Component Subtype="Motor" Count="100"/>
 				<Component Subtype="Detector" Count="100"/>
 				<Component Subtype="Computer" Count="600"/>
-			
 				<Component Subtype="Construction" Count="100"/>
 				<Component Subtype="SteelPlate" Count="300"/>
 			</Components>
@@ -37,7 +35,7 @@
 				<Model BuildPercentUpperBound="0.67" File="Models\Cubes\Crook\CSILLAPDC_BASE_BS2.mwm"/>
 				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Crook\CSILLAPDC_BASE_BS3.mwm"/>
 			</BuildProgressModels>
-			<BlockPairName>CSILLAPDC_BASE</BlockPairName>
+			<BlockPairName>mss_lg_t_crook_base</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 			<DamageEffectName>Damage_WeapExpl_Damaged</DamageEffectName>
@@ -50,17 +48,13 @@
 			</TargetingGroups>
 		</Definition>
 	</CubeBlocks>
-	
-<AmmoMagazines>
-		<!--•AMMOMAGAZINE DEFINITION-->
+	<AmmoMagazines><!--•AMMOMAGAZINE DEFINITION-->
 		<AmmoMagazine>
 			<Id>
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>mss_lg_t_crook_ammomagazine</SubtypeId>
 			</Id>
-			<DisplayName>Crook Magazine</DisplayName>
-			<!--<Icon>Textures\GUI\Icons\Cubes\CustosAmmoSTG1.png</Icon>-->
-			<!--gun as the ammo icon makes it SO much easier to ID things-->
+			<DisplayName>Crook Flak Magazine</DisplayName><!--<Icon>Textures\GUI\Icons\Cubes\CustosAmmoSTG1.png</Icon>--><!--gun as the ammo icon makes it SO much easier to ID things-->
 			<Icon>Textures\GUI\Icons\Cubes\CSILLAPDC_BASE.dds</Icon>
 			<Size>
 				<X>0.2</X>
@@ -72,8 +66,31 @@
 			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>20</Capacity>
-			<AmmoDefinitionId Subtype="mss_blankammo" />
-
+			<AmmoDefinitionId Subtype="mss_blankammo"/>
+			<MinimumOfferAmount>100</MinimumOfferAmount>
+			<MaximumOfferAmount>1000</MaximumOfferAmount>
+			<MinimumOrderAmount>100</MinimumOrderAmount>
+			<MaximumOrderAmount>2000</MaximumOrderAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</AmmoMagazine>
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>mss_lg_t_crook_ammomagazine_special</SubtypeId>
+			</Id>
+			<DisplayName>Crook HE Magazine</DisplayName><!--<Icon>Textures\GUI\Icons\Cubes\CustosAmmoSTG1.png</Icon>--><!--gun as the ammo icon makes it SO much easier to ID things-->
+			<Icon>Textures\GUI\Icons\Cubes\CSILLAPDC_BASE.dds</Icon>
+			<Size>
+				<X>0.2</X>
+				<Y>0.2</Y>
+				<Z>0.2</Z>
+			</Size>
+			<Mass>875</Mass>
+			<Volume>490</Volume>
+			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
+			<PhysicalMaterial>Ammo</PhysicalMaterial>
+			<Capacity>20</Capacity>
+			<AmmoDefinitionId Subtype="mss_blankammo"/>
 			<MinimumOfferAmount>100</MinimumOfferAmount>
 			<MaximumOfferAmount>1000</MaximumOfferAmount>
 			<MinimumOrderAmount>100</MinimumOrderAmount>
@@ -81,33 +98,38 @@
 			<CanPlayerOrder>true</CanPlayerOrder>
 		</AmmoMagazine>
 	</AmmoMagazines>
-
-
-	<Blueprints>
-			<!--BLUEPRINT DEFINITION-->
-			<Blueprint>
-				<Id>
-					<TypeId>BlueprintDefinition</TypeId>
-					<SubtypeId>mss_lg_t_crook_ammomagazine</SubtypeId>
-				</Id>
-				<DisplayName>Crook Magazine</DisplayName>
-				<Prerequisites>
-					<Item Amount="250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
-				</Prerequisites>
-				<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_crook_ammomagazine"/>
-				<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
-				<Icon>Textures\GUI\Icons\Cubes\CSILLAPDC_BASE.dds</Icon>
-			</Blueprint>
-		</Blueprints>
-
-
-	<BlueprintClassEntries>
-		<!--BLUEPRINT CLASS ENTRY DEFINITION-->
+	<Blueprints><!--BLUEPRINT DEFINITION-->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>mss_lg_t_crook_ammomagazine</SubtypeId>
+			</Id>
+			<DisplayName>Crook Flak Magazine</DisplayName>
+			<Prerequisites>
+				<Item Amount="250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+			</Prerequisites>
+			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_crook_ammomagazine"/>
+			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+			<Icon>Textures\GUI\Icons\Cubes\CSILLAPDC_BASE.dds</Icon>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>mss_lg_t_crook_ammomagazine_special</SubtypeId>
+			</Id>
+			<DisplayName>Crook HE Magazine</DisplayName>
+			<Prerequisites>
+				<Item Amount="250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+				<Item Amount="25" TypeId="Ingot" SubtypeId="Platinum"/>
+			</Prerequisites>
+			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_crook_ammomagazine_special"/>
+			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+			<Icon>Textures\GUI\Icons\Cubes\CSILLAPDC_BASE.dds</Icon>
+		</Blueprint>
+	</Blueprints>
+	<BlueprintClassEntries><!--BLUEPRINT CLASS ENTRY DEFINITION-->
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="mss_lg_t_crook_ammomagazine"/>
 		<Entry Class="EliteConsumables" BlueprintSubtypeId="mss_lg_t_crook_ammomagazine"/>
 		<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/mss_lg_t_crook_base"/>
 	</BlueprintClassEntries>
-
-
-
-
 </Definitions>

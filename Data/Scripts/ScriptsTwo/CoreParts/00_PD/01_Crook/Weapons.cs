@@ -250,7 +250,8 @@ namespace Scripts
                 mss_lg_t_crook_ammo,
                 mss_lg_t_crook_ammo_expl,
                 mss_lg_t_crook_ammo_shrapnel_spawner,
-                mss_lg_t_crook_ammo_shrapnel
+                mss_lg_t_crook_ammo_shrapnel,
+                mss_lg_t_crook_ammo_special
             },
             //Animations = mss_lg_t_amunra_anim,
             //Upgrades = UpgradeModules,

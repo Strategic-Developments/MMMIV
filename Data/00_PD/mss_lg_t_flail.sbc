@@ -15,24 +15,24 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Flail\FlailBase.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="300" />
-				<Component Subtype="Construction" Count="125" />
-				<Component Subtype="MetalGrid" Count="300" />
-				<Component Subtype="LargeTube" Count="100" />
-				<Component Subtype="Motor" Count="300" />
-				<Component Subtype="Computer" Count="300" />
-				<Component Subtype="Superconductor" Count="15" />
-				<Component Subtype="Construction" Count="125" />
-				<Component Subtype="SteelPlate" Count="500" />
+				<Component Subtype="SteelPlate" Count="300"/>
+				<Component Subtype="Construction" Count="125"/>
+				<Component Subtype="MetalGrid" Count="300"/>
+				<Component Subtype="LargeTube" Count="100"/>
+				<Component Subtype="Motor" Count="300"/>
+				<Component Subtype="Computer" Count="300"/>
+				<Component Subtype="Superconductor" Count="15"/>
+				<Component Subtype="Construction" Count="125"/>
+				<Component Subtype="SteelPlate" Count="500"/>
 			</Components>
-			<CriticalComponent Subtype="Computer" Index="0" />
+			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
 			</MountPoints>
 			<BlockPairName>mss_lg_t_flail_base</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
-		<BuildTimeSeconds>10</BuildTimeSeconds>
+			<BuildTimeSeconds>10</BuildTimeSeconds>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
 			<ResourceSinkGroup>Conveyors</ResourceSinkGroup>
@@ -51,24 +51,15 @@
 			<IsAirTight>true</IsAirTight>
 		</Definition>
 	</CubeBlocks>
-<Weapons>
-		<!--•WEAPON DEFINITION-->
-
-	</Weapons>
-	<Ammos>
-		<!--•AMMO DEFINITION-->
-
-	</Ammos>
-	<AmmoMagazines>
-		<!--•AMMOMAGAZINE DEFINITION-->
+	<Weapons><!--•WEAPON DEFINITION--></Weapons>
+	<Ammos><!--•AMMO DEFINITION--></Ammos>
+	<AmmoMagazines><!--•AMMOMAGAZINE DEFINITION-->
 		<AmmoMagazine>
 			<Id>
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>mss_lg_t_flail_ammomagazine</SubtypeId>
 			</Id>
-			<DisplayName>Flail Ammunition Box</DisplayName>
-			<!--<Icon>Textures\GUI\Icons\Cubes\CustosAmmoSTG1.png</Icon>-->
-			<!--gun as the ammo icon makes it SO much easier to ID things-->
+			<DisplayName>Flail Ammunition Box</DisplayName><!--<Icon>Textures\GUI\Icons\Cubes\CustosAmmoSTG1.png</Icon>--><!--gun as the ammo icon makes it SO much easier to ID things-->
 			<Icon>Textures\GUI\Icons\Cubes\FlailBase.dds</Icon>
 			<Size>
 				<X>0.2</X>
@@ -80,8 +71,7 @@
 			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>60</Capacity>
-			<AmmoDefinitionId Subtype="mss_blankammo" />
-
+			<AmmoDefinitionId Subtype="mss_blankammo"/>
 			<MinimumOfferAmount>100</MinimumOfferAmount>
 			<MaximumOfferAmount>1000</MaximumOfferAmount>
 			<MinimumOrderAmount>100</MinimumOrderAmount>
@@ -93,22 +83,19 @@
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>mss_lg_t_flail_ammomagazine_special</SubtypeId>
 			</Id>
-			<DisplayName>Flail DU Ammunition Box</DisplayName>
-			<!--<Icon>Textures\GUI\Icons\Cubes\CustosAmmoSTG1.png</Icon>-->
-			<!--gun as the ammo icon makes it SO much easier to ID things-->
+			<DisplayName>Flail DU Ammunition Box</DisplayName><!--<Icon>Textures\GUI\Icons\Cubes\CustosAmmoSTG1.png</Icon>--><!--gun as the ammo icon makes it SO much easier to ID things-->
 			<Icon>Textures\GUI\Icons\Cubes\FlailBase.dds</Icon>
 			<Size>
 				<X>0.2</X>
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>478.8</Mass>
-			<Volume>140</Volume>
+			<Mass>2872.8</Mass>
+			<Volume>830</Volume>
 			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
-			<Capacity>60</Capacity>
-			<AmmoDefinitionId Subtype="mss_blankammo" />
-
+			<Capacity>360</Capacity>
+			<AmmoDefinitionId Subtype="mss_blankammo"/>
 			<MinimumOfferAmount>100</MinimumOfferAmount>
 			<MaximumOfferAmount>1000</MaximumOfferAmount>
 			<MinimumOrderAmount>100</MinimumOrderAmount>
@@ -116,25 +103,38 @@
 			<CanPlayerOrder>true</CanPlayerOrder>
 		</AmmoMagazine>
 	</AmmoMagazines>
-	<Blueprints>
-			<!--BLUEPRINT DEFINITION-->
-			<Blueprint>
-				<Id>
-					<TypeId>BlueprintDefinition</TypeId>
-					<SubtypeId>mss_lg_t_flail_ammomagazine</SubtypeId>
-				</Id>
-				<DisplayName>Flail Ammo Box</DisplayName>
-				<Prerequisites>
-					<Item Amount="250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
-				</Prerequisites>
-				<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_flail_ammomagazine"/>
-				<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
-				<Icon>Textures\GUI\Icons\Cubes\FlailBase.dds</Icon>
-			</Blueprint>
-		</Blueprints>
-	<BlueprintClassEntries>
-		<!--BLUEPRINT CLASS ENTRY DEFINITION-->
+	<Blueprints><!--BLUEPRINT DEFINITION-->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>mss_lg_t_flail_ammomagazine</SubtypeId>
+			</Id>
+			<DisplayName>Flail Ammo Box</DisplayName>
+			<Prerequisites>
+				<Item Amount="250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+			</Prerequisites>
+			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_flail_ammomagazine"/>
+			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+			<Icon>Textures\GUI\Icons\Cubes\FlailBase.dds</Icon>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>mss_lg_t_flail_ammomagazine_special</SubtypeId>
+			</Id>
+			<DisplayName>Flail Ammo Box</DisplayName>
+			<Prerequisites>
+				<Item Amount="250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+				<Item Amount="25" TypeId="Ingot" SubtypeId="Platinum"/>
+			</Prerequisites>
+			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_flail_ammomagazine_special"/>
+			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+			<Icon>Textures\GUI\Icons\Cubes\FlailBase.dds</Icon>
+		</Blueprint>
+	</Blueprints>
+	<BlueprintClassEntries><!--BLUEPRINT CLASS ENTRY DEFINITION-->
 		<Entry Class="EliteConsumables" BlueprintSubtypeId="mss_lg_t_flail_ammomagazine"/>
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="mss_lg_t_flail_ammomagazine_special"/>
 		<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/mss_lg_t_flail_base"/>
 	</BlueprintClassEntries>
 </Definitions>

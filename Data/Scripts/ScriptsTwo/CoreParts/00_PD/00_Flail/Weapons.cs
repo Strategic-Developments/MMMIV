@@ -247,7 +247,9 @@ namespace Scripts
             },
             Ammos = new[] {
                 mss_lg_t_flail_ammo,
-                mss_lg_t_flail_ammo_tra
+                mss_lg_t_flail_ammo_tra,
+                mss_lg_t_flail_ammo_special,
+                mss_lg_t_flail_ammo_special_tra
             },
             //Animations = mss_lg_t_amunra_anim,
             //Upgrades = UpgradeModules,

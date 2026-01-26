@@ -43,7 +43,7 @@ namespace Scripts
         {
             AmmoMagazine = "mss_lg_t_horus_ammomagazine", // SubtypeId of physical ammo magazine. Use "Energy" for weapons without physical ammo.
             AmmoRound = "mss_lg_t_horus_ammo", // Unique name used in server overrides and in the terminal (default).  Should be different for each ammoDef used by the same weapon.  Referred to for Shrapnel.
-            TerminalName = "AP", // Optional terminal name for this ammo type, used when picking ammo/cycling consumables.  Safe to have duplicates across different ammo defs.
+            TerminalName = "HE", // Optional terminal name for this ammo type, used when picking ammo/cycling consumables.  Safe to have duplicates across different ammo defs.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 75, // Modified in MasterConfig here, actually just the power requirement needed to fire at 1.0 ROF scalar  If patterning ammos, only the main ammo (first fired) will count toward energy.
             BaseDamage = 1, // Direct damage; one steel plate is worth 100.
@@ -686,7 +686,7 @@ namespace Scripts
         {
             AmmoMagazine = "mss_lg_t_horus_ammomagazine_special", // SubtypeId of physical ammo magazine. Use "Energy" for weapons without physical ammo.
             AmmoRound = "mss_lg_t_horus_ammo_special", // Unique name used in server overrides and in the terminal (default).  Should be different for each ammoDef used by the same weapon.  Referred to for Shrapnel.
-            TerminalName = "Timed Fuse", // Optional terminal name for this ammo type, used when picking ammo/cycling consumables.  Safe to have duplicates across different ammo defs.
+            TerminalName = "Flak", // Optional terminal name for this ammo type, used when picking ammo/cycling consumables.  Safe to have duplicates across different ammo defs.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 1f, // Modified in MasterConfig here, actually just the power requirement needed to fire at 1.0 ROF scalar
             BaseDamage = 1, // Direct damage; one steel plate is worth 100.
