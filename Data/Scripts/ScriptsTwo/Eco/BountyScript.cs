@@ -243,6 +243,7 @@ namespace Meridian.Economy
                 _pendingLastHit.Remove(l);
                 _pending.Remove(l);
             }
+            _longDumpList.Clear();
         }
 
         private static string GetPlayerName(long identityId)
