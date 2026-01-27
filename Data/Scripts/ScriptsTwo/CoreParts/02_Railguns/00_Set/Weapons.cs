@@ -41,7 +41,7 @@ namespace Scripts
             Targeting = new TargetingDef
             {
                 Threats = new[] {
-                    Grids, // Types of threat to engage: Grids, Projectiles, Characters, Meteors, Neutrals, ScanRoid, ScanPlanet, ScanFriendlyCharacter, ScanFriendlyGrid, ScanEnemyCharacter, ScanEnemyGrid, ScanNeutralCharacter, ScanNeutralGrid, ScanUnOwnedGrid, ScanOwnersGrid
+                    Grids, Projectiles, // Types of threat to engage: Grids, Projectiles, Characters, Meteors, Neutrals, ScanRoid, ScanPlanet, ScanFriendlyCharacter, ScanFriendlyGrid, ScanEnemyCharacter, ScanEnemyGrid, ScanNeutralCharacter, ScanNeutralGrid, ScanUnOwnedGrid, ScanOwnersGrid
                            // Grids are both LG and SG. Use Hardpoint.Other.ProhibitLGTargeting and Use Hardpoint.Other.ProhibitSGTargeting to further differentiate
                 },
                 SubSystems = SUBSYSTEMS_TARGETING,
@@ -81,7 +81,7 @@ namespace Scripts
             },
             HardPoint = new HardPointDef
             {
-                PartName = "Apophis-Pattern Railgun", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
+                PartName = "Set-Pattern Railgun", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
                 DeviateShotAngle = 0f, // Projectile inaccuracy in degrees.
                 AimingTolerance = 1f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
                 AimLeadingPrediction = Accurate, // Level of turret aim prediction; Off (aim straight at target), Basic (doesn't account for target acceleration), Accurate, Advanced (these last two are identical)
@@ -128,7 +128,7 @@ namespace Scripts
                     HomeElevation = 15, // Default resting elevation
                     InventorySize = 1f, // Inventory capacity in kL.
                     FixedInventorySize = true, // If true, the inventory size will be forced to the exact value specified above regardless of world inventory multipliers
-                    IdlePower = 180, // Constant base power draw in MW.
+                    IdlePower = 60, // Constant base power draw in MW.
                     FixedOffset = false, // Deprecated.
                     Offset = Vector(x: 0, y: 0, z: 0), // Offsets the aiming/firing line of the weapon, in metres.
                     Type = BlockWeapon, // What type of weapon this is; BlockWeapon, HandWeapon, Phantom 
@@ -161,15 +161,15 @@ namespace Scripts
                 },
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 120, // Set this to 3600 for beam weapons. This is how fast your gun fires per minute.
+                    RateOfFire = 15, // Set this to 3600 for beam weapons. This is how fast your gun fires per minute.
                     BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
                     TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
-                    ReloadTime = 2 * 60, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = 4 * 60, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 1, // Number of physical magazines to consume on reload.
                     DelayUntilFire = 2 * 60, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    HeatPerShot = 1000000, // Heat generated per shot (BarrelsPerShot * HeatPerShot is the total heat per firing event).
-                    MaxHeat = 2000000, // Max heat before weapon enters cooldown (70% of max heat).
+                    HeatPerShot = 400000, // Heat generated per shot (BarrelsPerShot * HeatPerShot is the total heat per firing event).
+                    MaxHeat = 400000, // Max heat before weapon enters cooldown (70% of max heat).
                     Cooldown = 0f, // Percentage of max heat to be under to start firing again after overheat; accepts 0 - 0.95
                     HeatSinkRate = 100000, // Amount of heat lost per second.
                     HeatSinkRateOverheatMult = 1f, // Multiplier to LoadingDef.HeatSinkRate when the weapon is overheated. 0 disables, negative values are allowed.

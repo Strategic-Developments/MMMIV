@@ -13,6 +13,7 @@
 			<ItemIds>
 				<!--Weapons-->
 				<string>ConveyorSorter/mss_lg_t_horus_base</string>
+				<string>ConveyorSorter/mss_lg_t_set_base</string>
 				<string>ConveyorSorter/mss_lg_t_amunra_base</string>
 				<string>ConveyorSorter/mss_lg_t_apophis_base</string>
 				<string>ConveyorSorter/mss_lg_f_anubis</string>
@@ -81,6 +82,7 @@
 			<IsBlockCategory>true</IsBlockCategory>
 			<StrictSearch>true</StrictSearch>
 			<ItemIds>
+				<string>ConveyorSorter/mss_lg_t_set_base</string>
 				<string>ConveyorSorter/mss_lg_t_horus_base</string>
 				<string>ConveyorSorter/mss_lg_t_amunra_base</string>
 				<string>ConveyorSorter/mss_lg_t_apophis_base</string>
@@ -149,6 +151,8 @@
 			<ItemIds>
 				<string>Drill/mss_lg_beamdrill</string>
 				<string>Drill/mss_sg_beamdrill</string>
+				<string>ConveyorSorter/LG_Simple_Laser_Multitool</string>
+				<string>ConveyorSorter/SG_Simple_Laser_Multitool</string>
 			</ItemIds>
 		</Category>
 		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">

@@ -46,14 +46,14 @@ namespace Scripts
             TerminalName = "AP", // Optional terminal name for this ammo type, used when picking ammo/cycling consumables.  Safe to have duplicates across different ammo defs.
             HybridRound = true, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 40, // Modified in MasterConfig here, actually just the power requirement needed to fire at 1.0 ROF scalar  If patterning ammos, only the main ammo (first fired) will count toward energy.
-            BaseDamage = 17000, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 4000, // Direct damage; one steel plate is worth 100.
             BaseDamageCutoff = 0,  // Maximum amount of pen damage to apply per block hit.  Deducts from BaseDamage and uses DamageScales modifiers
                                    // Optional penetration mechanic to apply damage to blocks beyond the first hit, without requiring the block to be destroyed.  
                                    // Overwrites normal damage behavior of requiring a block to be destroyed before damage can continue.  0 disables. 
                                    // To limit max # of blocks hit, set MaxObjectsHit to desired # and ensure CountBlocks = true in ObjectsHit, otherwise it will continue until BaseDamage depletes
-            Mass = 500, // In kilograms; how much force the impact will apply to the target, multiplied by projectile speed at time of impact (beams only use the Mass value specified, no multiplier)
+            Mass = 150, // In kilograms; how much force the impact will apply to the target, multiplied by projectile speed at time of impact (beams only use the Mass value specified, no multiplier)
             Health = 0, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
-            BackKickForce = 500 * RAILGUN_VELOCITY, // Recoil. This is applied to the Parent Grid.
+            BackKickForce = 150 * RAILGUN_VELOCITY, // Recoil. This is applied to the Parent Grid.
             DecayPerShot = 0f, // Damage to the firing weapon itself. 
                                //float.MaxValue will drop the weapon to the first build state and destroy all components used for construction
                                //If greater than cube integrity it will remove the cube upon firing, without causing deformation (makes it look like the whole "block" flew away)
@@ -141,7 +141,7 @@ namespace Scripts
                 MaxIntegrity = 0f, // Blocks with integrity higher than this value will be immune to damage from this projectile; 0 = disabled.
                 DamageVoxels = false, // Whether to damage voxels.
                 SelfDamage = false, // Whether to damage the weapon's own grid.
-                HealthHitModifier = 0.5, // How much Health to subtract from another projectile on hit; defaults to 1 if zero or less.
+                HealthHitModifier = 20, // How much Health to subtract from another projectile on hit; defaults to 1 if zero or less.
                                          // AOE also subtracts this value from projectiles in the radius.
                 VoxelHitModifier = 1, // Voxel damage multiplier; defaults to 1 if zero or less.
                 Characters = -1f, // Character damage multiplier; defaults to 1 if zero or less.
@@ -696,7 +696,7 @@ namespace Scripts
                                    // To limit max # of blocks hit, set MaxObjectsHit to desired # and ensure CountBlocks = true in ObjectsHit, otherwise it will continue until BaseDamage depletes
             Mass = 0f, // In kilograms; how much force the impact will apply to the target, multiplied by projectile speed at time of impact (beams only use the Mass value specified, no multiplier)
             Health = 0, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
-            BackKickForce = 1000 * RAILGUN_VELOCITY, // Recoil. This is applied to the Parent Grid.
+            BackKickForce = 300 * RAILGUN_VELOCITY, // Recoil. This is applied to the Parent Grid.
             DecayPerShot = 0f, // Damage to the firing weapon itself. 
                                //float.MaxValue will drop the weapon to the first build state and destroy all components used for construction
                                //If greater than cube integrity it will remove the cube upon firing, without causing deformation (makes it look like the whole "block" flew away)
@@ -1329,15 +1329,15 @@ namespace Scripts
         {
             AmmoMagazine = "Energy", // SubtypeId of physical ammo magazine. Use "Energy" for weapons without physical ammo.
             AmmoRound = "mss_lg_t_set_ammo_special_shrapnel", // Unique name used in server overrides and in the terminal (default).  Should be different for each ammoDef used by the same weapon.  Referred to for Shrapnel.
-            TerminalName = "AP", // Optional terminal name for this ammo type, used when picking ammo/cycling consumables.  Safe to have duplicates across different ammo defs.
+            TerminalName = "Flechette", // Optional terminal name for this ammo type, used when picking ammo/cycling consumables.  Safe to have duplicates across different ammo defs.
             HybridRound = true, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 40, // Modified in MasterConfig here, actually just the power requirement needed to fire at 1.0 ROF scalar  If patterning ammos, only the main ammo (first fired) will count toward energy.
-            BaseDamage = 17000 / 16f, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 4000 / 16f, // Direct damage; one steel plate is worth 100.
             BaseDamageCutoff = 0,  // Maximum amount of pen damage to apply per block hit.  Deducts from BaseDamage and uses DamageScales modifiers
                                    // Optional penetration mechanic to apply damage to blocks beyond the first hit, without requiring the block to be destroyed.  
                                    // Overwrites normal damage behavior of requiring a block to be destroyed before damage can continue.  0 disables. 
                                    // To limit max # of blocks hit, set MaxObjectsHit to desired # and ensure CountBlocks = true in ObjectsHit, otherwise it will continue until BaseDamage depletes
-            Mass = 1000f / 32f, // In kilograms; how much force the impact will apply to the target, multiplied by projectile speed at time of impact (beams only use the Mass value specified, no multiplier)
+            Mass = 300 / 32f, // In kilograms; how much force the impact will apply to the target, multiplied by projectile speed at time of impact (beams only use the Mass value specified, no multiplier)
             Health = 0, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0, // Recoil. This is applied to the Parent Grid.
             DecayPerShot = 0f, // Damage to the firing weapon itself. 
@@ -1427,7 +1427,7 @@ namespace Scripts
                 MaxIntegrity = 0f, // Blocks with integrity higher than this value will be immune to damage from this projectile; 0 = disabled.
                 DamageVoxels = false, // Whether to damage voxels.
                 SelfDamage = false, // Whether to damage the weapon's own grid.
-                HealthHitModifier = 0.5, // How much Health to subtract from another projectile on hit; defaults to 1 if zero or less.
+                HealthHitModifier = 20, // How much Health to subtract from another projectile on hit; defaults to 1 if zero or less.
                                          // AOE also subtracts this value from projectiles in the radius.
                 VoxelHitModifier = 1, // Voxel damage multiplier; defaults to 1 if zero or less.
                 Characters = -1f, // Character damage multiplier; defaults to 1 if zero or less.

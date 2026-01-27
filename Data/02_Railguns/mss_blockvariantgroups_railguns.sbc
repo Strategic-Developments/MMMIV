@@ -3,10 +3,11 @@
 	<BlockVariantGroups>
 		<BlockVariantGroup>
 			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="mss_blockvariantgroup_railguns"/>
-			<Icon>Textures\GUI\Icons\Cubes\CustosBase.png</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\SetTurretBase.dds</Icon>
 			<DisplayName>mss_blockvariantgroup_railguns</DisplayName>
 			<Description>Awagga.</Description>
 			<Blocks>
+				<Block Type="MyObjectBuilder_ConveyorSorter" Subtype="mss_lg_t_set_base"/>
 				<Block Type="MyObjectBuilder_ConveyorSorter" Subtype="mss_lg_t_apophis_base"/>
 				<Block Type="MyObjectBuilder_ConveyorSorter" Subtype="mss_lg_t_amunra_base"/>
 				<Block Type="MyObjectBuilder_ConveyorSorter" Subtype="mss_lg_f_tyet"/>
@@ -18,7 +19,7 @@
 
 	<BlockPositions>
         <BlockPosition>
-            <Name>mss_lg_t_apophis_base</Name>
+            <Name>mss_lg_t_set_base</Name>
             <Position>
                 <X>2</X>
 				<Y>550</Y>

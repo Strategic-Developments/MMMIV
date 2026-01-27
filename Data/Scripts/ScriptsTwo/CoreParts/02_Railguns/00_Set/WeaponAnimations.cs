@@ -26,13 +26,14 @@ namespace Scripts
                            {
                                Name = "RailgunChargeEffect", //Particle subtypeID
                                Color = Color(red: 25, green: 25, blue: 25, alpha: 1), //This is redundant as recolouring is no longer supported.
+                               Offset = Vector(0, 0, 4),
                                Extras = new ParticleOptionDef //do your particle colours in your particle file instead.
                                {
                                    Loop = true, //Should match your particle definition.
                                    Restart = false,
                                    MaxDistance = 1000, //meters
                                    MaxDuration = 120, //ticks 60 = 1 second
-                                   Scale = 1, //How chunky the particle is.
+                                   Scale = 0.9f, //How chunky the particle is.
                                }
                            }
                        },
