@@ -74,7 +74,7 @@
 			<Volume>1000</Volume>
 			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
-			<Capacity>120</Capacity>
+			<Capacity>500</Capacity>
 			<AmmoDefinitionId Subtype="mss_blankammo" />
 
 			<MinimumOfferAmount>100</MinimumOfferAmount>
