@@ -24,6 +24,7 @@ namespace Meridian.Economy
         private const int PayoutIntervalTicks = 1 * 60;
         private const int PayoutIntervalCombatEndTicks = 30 * 60;
         private const long PlayerKillBounty = 50000;
+        private const float PAYOUT_RATIO = 0.75f;
 
         private bool _registered;
 
@@ -124,7 +125,7 @@ namespace Meridian.Economy
                 price += GetHydrogenBonusByLiters(slim);
 
                 if (price > 0)
-                    QueuePayout(attackerId, (long)price);
+                    QueuePayout(attackerId, (long)(price * PAYOUT_RATIO));
             }
 
 
