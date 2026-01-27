@@ -4,17 +4,16 @@
 		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
 			<Id>
 				<TypeId>ConveyorSorter</TypeId>
-				<SubtypeId>mss_lg_t_apophis_base</SubtypeId>
+				<SubtypeId>mss_lg_t_set_base</SubtypeId>
 			</Id>
-			<DisplayName>Apophis Railgun Turret</DisplayName>
-			<Description>Rapid-firing heavy railgun. Loads Apophis Railgun Sabots.</Description>
-			<Icon>Textures\GUI\Icons\Cubes\CustosBase.png</Icon>
+			<DisplayName>Set-Pattern Light Railgun Turret</DisplayName>
+			<Description>Repeating 75mm light railgun. Loads Set Railgun Sabots.</Description>
+			<Icon>Textures\GUI\Icons\Cubes\SetTurretBase.dds</Icon>
 			<CubeSize>Large</CubeSize>
-			<GuiVisible>false</GuiVisible>
 			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="5" y="3" z="5" />
-			<ModelOffset x="0" y="0" z="0" />
-			<Model>Models\Cubes\Apophis\CustosBase.mwm</Model>
+			<Size x="3" y="2" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Set\SetTurretBase.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="300" />
 				<Component Subtype="Construction" Count="125" />
@@ -28,12 +27,12 @@
 			</Components>
 			<CriticalComponent Subtype="Motor" Index="0" />
 			<MountPoints>
-				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="5.00" EndY="5.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
 			</MountPoints>
-			<BlockPairName>mss_lg_t_apophis_base</BlockPairName>
+			<BlockPairName>mss_lg_t_set_base</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
-			<EdgeType>Light</EdgeType>
+		<EdgeType>Light</EdgeType>
 			<BuildTimeSeconds>15</BuildTimeSeconds>
 			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
 			<DamagedSound>ParticleHeavyMech</DamagedSound>
@@ -53,25 +52,18 @@
 			<IsAirTight>true</IsAirTight>
 		</Definition>
 	</CubeBlocks>
-	<Weapons>
-		<!--•WEAPON DEFINITION-->
-
-	</Weapons>
-	<Ammos>
-		<!--•AMMO DEFINITION-->
-
-	</Ammos>
+	
 	<AmmoMagazines>
 		<!--•AMMOMAGAZINE DEFINITION-->
 		<AmmoMagazine>
 			<Id>
 				<TypeId>AmmoMagazine</TypeId>
-				<SubtypeId>mss_lg_t_apophis_ammomagazine</SubtypeId>
+				<SubtypeId>mss_lg_t_set_ammomagazine</SubtypeId>
 			</Id>
-			<DisplayName>Apophis Railgun Sabot</DisplayName>
+			<DisplayName>Set Railgun Sabot</DisplayName>
 			<!--<Icon>Textures\GUI\Icons\Cubes\CustosAmmoSTG1.png</Icon>-->
 			<!--gun as the ammo icon makes it SO much easier to ID things-->
-			<Icon>Textures\GUI\Icons\Cubes\CustosBase.png</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\SetTurretBase.dds</Icon>
 			<Size>
 				<X>0.2</X>
 				<Y>0.2</Y>
@@ -93,12 +85,12 @@
 		<AmmoMagazine>
 			<Id>
 				<TypeId>AmmoMagazine</TypeId>
-				<SubtypeId>mss_lg_t_apophis_ammomagazine_special</SubtypeId>
+				<SubtypeId>mss_lg_t_set_ammomagazine_special</SubtypeId>
 			</Id>
-			<DisplayName>Apophis Flechette Railgun Sabot</DisplayName>
+			<DisplayName>Set Flechette Railgun Sabot</DisplayName>
 			<!--<Icon>Textures\GUI\Icons\Cubes\CustosAmmoSTG1.png</Icon>-->
 			<!--gun as the ammo icon makes it SO much easier to ID things-->
-			<Icon>Textures\GUI\Icons\Cubes\CustosBase.png</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\SetTurretBase.dds</Icon>
 			<Size>
 				<X>0.2</X>
 				<Y>0.2</Y>
@@ -123,35 +115,35 @@
 		<Blueprint>
 			<Id>
 				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>mss_lg_t_apophis_ammomagazine</SubtypeId>
+				<SubtypeId>mss_lg_t_set_ammomagazine</SubtypeId>
 			</Id>
-			<DisplayName>Apophis Railgun Sabot</DisplayName>
+			<DisplayName>Set Railgun Sabot</DisplayName>
 			<Prerequisites>
 				<Item Amount="250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
 			</Prerequisites>
-			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_apophis_ammomagazine"/>
+			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_set_ammomagazine"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
-			<Icon>Textures\GUI\Icons\Cubes\CustosBase.png</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\SetTurretBase.dds</Icon>
 		</Blueprint>
 		<Blueprint>
 			<Id>
 				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>mss_lg_t_apophis_ammomagazine_special</SubtypeId>
+				<SubtypeId>mss_lg_t_set_ammomagazine_special</SubtypeId>
 			</Id>
-			<DisplayName>Apophis Flechette Railgun Sabot</DisplayName>
+			<DisplayName>Set Flechette Railgun Sabot</DisplayName>
 			<Prerequisites>
 				<Item Amount="15000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
 				<Item Amount="15" TypeId="Ingot" SubtypeId="Platinum"/>
 			</Prerequisites>
-			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_apophis_ammomagazine_special"/>
+			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_set_ammomagazine_special"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
-			<Icon>Textures\GUI\Icons\Cubes\CustosBase.png</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\SetTurretBase.dds</Icon>
 		</Blueprint>
 	</Blueprints>
 	<BlueprintClassEntries>
 		<!--BLUEPRINT CLASS ENTRY DEFINITION-->
-		<Entry Class="EliteConsumables" BlueprintSubtypeId="mss_lg_t_apophis_ammomagazine"/>
-		<Entry Class="EliteConsumables" BlueprintSubtypeId="mss_lg_t_apophis_ammomagazine_special"/>
-		<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/mss_lg_t_apophis_base"/>
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="mss_lg_t_set_ammomagazine"/>
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="mss_lg_t_set_ammomagazine_special"/>
+		<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/mss_lg_t_set_base"/>
 	</BlueprintClassEntries>
 </Definitions>

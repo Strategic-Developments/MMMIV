@@ -29,6 +29,7 @@ namespace Scripts
                 mss_lg_t_amunra,
                 mss_lg_f_tyet,
                 mss_lg_f_ennead,
+                mss_lg_t_set,
 
                 // Missiles
                 mss_lg_f_anubis,
