@@ -1,54 +1,72 @@
-﻿using System;
+﻿using Sandbox.Definitions;
+using Sandbox.ModAPI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using Sandbox.Definitions;
-using Sandbox.Game;
-using Sandbox.Game.Entities;
-using Sandbox.ModAPI;
-using VRage.Game.ModAPI.Interfaces;
-using VRage.Game;
-using VRage.Game.Components;
-using VRage.Game.Entity;
-using VRage.Game.ModAPI;
-using VRage.ModAPI;
-using VRage.Utils;
-using VRageMath;
-using Sandbox.Game.EntityComponents;
-using Sandbox.Common.ObjectBuilders;
-using VRage.ObjectBuilders;
-using VRage.Game.Models;
-using VRage.Render.Particles;
-using System.Linq.Expressions;
-using System.IO;
-using Sandbox.ModAPI.Interfaces;
-using Sandbox.Game.Weapons;
 using VRage;
-using VRage.Collections;
-using VRage.Voxels;
-using ProtoBuf;
-using System.Collections.Concurrent;
-using VRage.Serialization;
-using Sandbox.Engine.Physics;
-using Sandbox.Game.GameSystems;
-using System.Data;
-using AmountBpPair = VRage.MyTuple<VRage.MyFixedPoint, Sandbox.Definitions.MyBlueprintDefinitionBase>;
-using Sandbox.Game.Entities.Cube;
-using System.Diagnostics.Eventing.Reader;
+using VRage.Game;
+using VRage.ObjectBuilders;
 
-namespace BlueprintMod
+namespace Meridian
 {
-    [MySessionComponentDescriptor(MyUpdateOrder.NoUpdate)]
-    internal class BlueprintModification : MySessionComponentBase
+    public class ResourceCosts
     {
-        public override void LoadData()
+        public readonly Dictionary<MyDefinitionId, MyFixedPoint> BaseItemCosts;
+        public readonly Dictionary<MyDefinitionId, MyFixedPoint> AllItemCosts;
+        public readonly Dictionary<MyDefinitionId, MyFixedPoint> AllBlockCosts;
+
+        public readonly Dictionary<string, double> GasCosts;
+
+        public ResourceCosts()
         {
-            foreach (var item in ResourceCosts.BaseItemCosts)
+            var baseItemCosts = new Dictionary<string, double>()
             {
-                ResourceCosts.AllItemCosts.Add(MyDefinitionId.Parse(MyObjectBuilderType.LEGACY_TYPE_PREFIX + item.Key), (MyFixedPoint)item.Value);
+                /* Ingots */
+                ["Ingot/Stone"] = 0.01,
+                ["Ingot/Iron"] = 0.4,
+                ["Ingot/Nickel"] = 3,
+                ["Ingot/Silicon"] = 2,
+                ["Ingot/Cobalt"] = 8,
+                ["Ingot/Magnesium"] = 100,
+                ["Ingot/Silver"] = 180,
+                ["Ingot/Gold"] = 150,
+                /*["Ingot/Platinum"] = 450,*/
+                ["Ingot/Uranium"] = 300,
+
+                ["Ore/Ice"] = 0.5,
+                ["Ore/Scrap"] = 1,
+                ["Ingot/Scrap"] = 1,
+                ["Ingot/PrototechScrap"] = 6000,
+                ["ConsumableItem/Powerkit"] = 50,
+                ["ConsumableItem/Medkit"] = 50,
+                ["Package/Package"] = 50000,
+                ["ConsumableItem/ClangCola"] = 100,
+                ["ConsumableItem/CosmicCoffee"] = 100,
+                ["Component/EngineerPlushie"] = 250,
+                ["Component/SabiroidPlushie"] = 250,
+            };
+
+            BaseItemCosts = new Dictionary<MyDefinitionId, MyFixedPoint>();
+            AllItemCosts = new Dictionary<MyDefinitionId, MyFixedPoint>();
+            AllBlockCosts = new Dictionary<MyDefinitionId, MyFixedPoint>();
+
+            GasCosts = new Dictionary<string, double>()
+            {
+                ["Oxygen"] = 0.0045,
+                ["Hydrogen"] = 0.00225,
+            };
+
+            foreach (var item in baseItemCosts)
+            {
+                BaseItemCosts.Add(MyDefinitionId.Parse(MyObjectBuilderType.LEGACY_TYPE_PREFIX + item.Key), (MyFixedPoint)item.Value);
+                AllItemCosts.Add(MyDefinitionId.Parse(MyObjectBuilderType.LEGACY_TYPE_PREFIX + item.Key), (MyFixedPoint)item.Value);
             }
+        }
+
+        public void ChangeAndComputePrices()
+        {
             List<MyBlueprintDefinitionBase.Item> items = new List<MyBlueprintDefinitionBase.Item>();
 
             foreach (var definition in MyDefinitionManager.Static.GetBlueprintDefinitions())
@@ -102,7 +120,7 @@ namespace BlueprintMod
                 foreach (var item in definition.Prerequisites)
                 {
                     MyFixedPoint itemCost = 0;
-                    if (!ResourceCosts.AllItemCosts.TryGetValue(item.Id, out bpCost))
+                    if (!BaseItemCosts.TryGetValue(item.Id, out bpCost))
                     {
                         if (item.Id == MyDefinitionId.Parse("Ingot/Platinum"))
                         {
@@ -144,20 +162,47 @@ namespace BlueprintMod
                         Amount = bpCost,
                         Id = MyDefinitionId.Parse("PhysicalObject/SpaceCredit")
                     });
+                    definition.BaseProductionTimeInSeconds = 1 / 60f;
                 }
 
                 definition.Prerequisites = items.ToArray();
                 items.Clear();
 
-                definition.BaseProductionTimeInSeconds = 1 / 60f;
+                if (definition?.Results != null && definition.Results.Length > 0)
+                {
+                    MyFixedPoint other;
+                    if (AllItemCosts.TryGetValue(definition.Results[0].Id, out other))
+                    {
+                        if (other > 0 && bpCost > 0)
+                            AllItemCosts[definition.Results[0].Id] = other > bpCost ? bpCost : other;
+                        else if (bpCost > 0)
+                            AllItemCosts[definition.Results[0].Id] = bpCost;
+                    }
+                    else
+                    {
+                        AllItemCosts.Add(definition.Results[0].Id, bpCost);
+                    }
+                }
             }
-            
+
             // KILL MAREK ROSA
             foreach (var item in MyDefinitionManager.Static.GetAllDefinitions())
             {
                 if (item is MyCubeBlockDefinition)
                 {
                     var def = item as MyCubeBlockDefinition;
+
+                    MyFixedPoint totalCost = 0;
+                    foreach (var component in def.Components)
+                    {
+                        MyFixedPoint cost = 0;
+                        if (AllItemCosts.TryGetValue(component.Definition.Id, out cost))
+                        {
+                            totalCost += cost * component.Count;
+                        }
+                    }
+                    AllBlockCosts.Add(def.Id, totalCost);
+
                     switch (def.Id.ToString().Replace(MyObjectBuilderType.LEGACY_TYPE_PREFIX, ""))
                     {
                         case "Thrust/LargeBlockLargeHydrogenThrust":
@@ -261,7 +306,7 @@ namespace BlueprintMod
                             def.Enabled = false;
                             def.Public = false;
                             break;
-                       
+
 
                         case "ShipGrinder/LargeShipGrinder":
                         case "ShipGrinder/LargeShipGrinderReskin":
