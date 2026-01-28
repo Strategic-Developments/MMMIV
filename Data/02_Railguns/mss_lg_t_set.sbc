@@ -15,17 +15,25 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Set\SetTurretBase.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="300" />
-				<Component Subtype="Construction" Count="125" />
-				<Component Subtype="MetalGrid" Count="300" />
-				<Component Subtype="LargeTube" Count="100" />
-				<Component Subtype="Motor" Count="300" />
-				<Component Subtype="Computer" Count="300" />
-				<Component Subtype="Superconductor" Count="15" />
-				<Component Subtype="Construction" Count="125" />
-				<Component Subtype="SteelPlate" Count="500" />
+				<Component Subtype="SteelPlate" Count="10"/>
+				<Component Subtype="Construction" Count="25"/>
+				<Component Subtype="MetalGrid" Count="10"/>
+				<Component Subtype="PowerCell" Count="20"/>
+				<Component Subtype="SmallTube" Count="15"/>
+				<Component Subtype="LargeTube" Count="20"/>
+				<Component Subtype="GravityGenerator" Count="2"/>
+				<Component Subtype="Superconductor" Count="100"/>
+				<Component Subtype="Motor" Count="25"/>
+				<Component Subtype="Display" Count="3"/>
+				<Component Subtype="Computer" Count="10"/>
+				<!-- FUNCTIONAL LINE /\ UP NONFUNCTIONAL -->
+				<Component Subtype="Computer" Count="100"/>
+				<Component Subtype="Motor" Count="35"/>
+				<Component Subtype="MetalGrid" Count="100"/>
+				<Component Subtype="Construction" Count="150"/>
+				<Component Subtype="SteelPlate" Count="160"/>
 			</Components>
-			<CriticalComponent Subtype="Motor" Index="0" />
+			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
 			</MountPoints>
