@@ -15,16 +15,24 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Ennead\EnneadSuperheavy.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="150" />
-				<Component Subtype="Construction" Count="80" />
-				<Component Subtype="MetalGrid" Count="40" />				
-				<Component Subtype="LargeTube" Count="40" />
-				<Component Subtype="Motor" Count="50" />
-				<Component Subtype="Computer" Count="100" />
-				<Component Subtype="Construction" Count="20" />
-				<Component Subtype="SteelPlate" Count="50" />
+				<Component Subtype="SteelPlate" Count="60"/>
+				<Component Subtype="Construction" Count="110"/>
+				<Component Subtype="MetalGrid" Count="50"/>
+				<Component Subtype="PowerCell" Count="70"/>
+				<Component Subtype="SmallTube" Count="50"/>
+				<Component Subtype="LargeTube" Count="50"/>
+				<Component Subtype="GravityGenerator" Count="10"/>
+				<Component Subtype="Superconductor" Count="500"/>
+				<Component Subtype="Motor" Count="100"/>
+				<Component Subtype="Display" Count="10"/>
+				<Component Subtype="Computer" Count="400"/>
+				<!-- FUNCTIONAL LINE /\ UP NONFUNCTIONAL -->
+				<Component Subtype="Girder" Count="320"/>
+				<Component Subtype="MetalGrid" Count="440"/>
+				<Component Subtype="Construction" Count="400"/>
+				<Component Subtype="SteelPlate" Count="400"/>
 			</Components>
-			<CriticalComponent Subtype="Computer" Index="0" />
+			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.00" EndY="3.00"/>
 				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="13.00" EndY="3.00"/>

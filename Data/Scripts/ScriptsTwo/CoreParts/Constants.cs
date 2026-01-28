@@ -49,11 +49,11 @@ namespace Scripts
         const bool DEBUG_MODE = false;
         const float C = 299792458;
 
-        public const float S1_DAMAGE_MULTIPLIER = 1 / 2f;
-        public const float S2_DAMAGE_MULTIPLIER = 1 / 3f;
-        public const float S3_DAMAGE_MULTIPLIER = 1 / 4f;
-        public const float S5_DAMAGE_MULTIPLIER = 1 / 5f;
-        public const float S7_DAMAGE_MULTIPLIER = 1 / 6f;
+        public const float S1_DAMAGE_MULTIPLIER = 1;
+        public const float S2_DAMAGE_MULTIPLIER = 1;
+        public const float S3_DAMAGE_MULTIPLIER = 1;
+        public const float S5_DAMAGE_MULTIPLIER = 1;
+        public const float S7_DAMAGE_MULTIPLIER = 1;
 
         const float PD_SLOW_VELOCITY = 2500;
         const float PD_VELOCITY = 5000;
@@ -72,7 +72,7 @@ namespace Scripts
         const float MEDIUM_RANGE = 10000;
         const float LONG_RANGE = 20000;
 
-        const float ROTATE_CONSTANT = ((float)Math.PI / 180f) / 60f;
+        const float ROTATE_CONSTANT = (float)(Math.PI / (180d * 60d));
         const float PD_ROTATE_SPEED = 1800f * ROTATE_CONSTANT;
         const float FAST_ROTATE_SPEED = 120f * ROTATE_CONSTANT;
         const float MEDIUM_ROTATE_SPEED = 60f * ROTATE_CONSTANT;
