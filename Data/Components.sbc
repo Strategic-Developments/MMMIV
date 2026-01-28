@@ -1,0 +1,416 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Components>
+        <!-- <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>GuidanceEnhancer</SubtypeId>
+            </Id>
+            <DisplayName>Sentient Guidance Enhancer</DisplayName>
+            <Icon>Textures\GUI\Icons\components\GuidanceEnhancer.dds</Icon>
+            <Size>
+                <X>0.1</X>
+                <Y>0.1</Y>
+                <Z>0.05</Z>
+            </Size>
+            <Mass>12</Mass>
+            <Volume>5</Volume>
+            <Model>Models\Components\GuidanceEnhancer.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <MaxIntegrity>25</MaxIntegrity>
+            <DropProbability>0.45</DropProbability>
+            <Health>25</Health>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>100</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
+        </Component> 
+	
+
+
+
+
+    <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>MemoryCells</SubtypeId>
+            </Id>
+            <DisplayName>Faded Memorycells</DisplayName>
+            <Icon>Textures\GUI\Icons\components\MemoryCells.dds</Icon>
+            <Size>
+                <X>0.1</X>
+                <Y>0.1</Y>
+                <Z>0.05</Z>
+            </Size>
+            <Mass>12</Mass>
+            <Volume>5</Volume>
+            <Model>Models\Components\MemoryCells.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <MaxIntegrity>25</MaxIntegrity>
+            <DropProbability>0.45</DropProbability>
+            <Health>25</Health>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>100</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
+        </Component> 
+
+
+    <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>NetworkLibrary</SubtypeId>
+            </Id>
+            <DisplayName>Neural Library</DisplayName>
+            <Icon>Textures\GUI\Icons\components\NetworkLibrary.dds</Icon>
+            <Size>
+                <X>0.1</X>
+                <Y>0.1</Y>
+                <Z>0.05</Z>
+            </Size>
+            <Mass>12</Mass>
+            <Volume>5</Volume>
+            <Model>Models\Components\NetworkLibrary.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <MaxIntegrity>25</MaxIntegrity>
+            <DropProbability>0.45</DropProbability>
+            <Health>25</Health>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>100</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
+        </Component> 
+
+
+
+
+    <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>SensorClusterComponent</SubtypeId>
+            </Id>
+            <DisplayName>Gravimetric Sensors</DisplayName>
+            <Icon>Textures\GUI\Icons\components\SensorClusterComponent.dds</Icon>
+            <Size>
+                <X>0.1</X>
+                <Y>0.1</Y>
+                <Z>0.05</Z>
+            </Size>
+            <Mass>12</Mass>
+            <Volume>5</Volume>
+            <Model>Models\Components\SensorClusterComponent.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <MaxIntegrity>25</MaxIntegrity>
+            <DropProbability>0.45</DropProbability>
+            <Health>25</Health>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>100</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
+        </Component> 
+
+
+
+
+   <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>Soulbank</SubtypeId>
+            </Id>
+            <DisplayName>Digital Soulbank</DisplayName>
+            <Icon>Textures\GUI\Icons\components\Soulbank.dds</Icon>
+            <Size>
+                <X>0.1</X>
+                <Y>0.1</Y>
+                <Z>0.05</Z>
+            </Size>
+            <Mass>12</Mass>
+            <Volume>5</Volume>
+            <Model>Models\Components\Soulbank.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <MaxIntegrity>25</MaxIntegrity>
+            <DropProbability>0.45</DropProbability>
+            <Health>25</Health>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>100</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
+        </Component> 
+
+
+
+  <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>TargetingComputer</SubtypeId>
+            </Id>
+            <DisplayName>Blood-Fused Nanovault</DisplayName>
+            <Icon>Textures\GUI\Icons\components\TargetingComputerComponent.dds</Icon>
+            <Size>
+                <X>0.1</X>
+                <Y>0.1</Y>
+                <Z>0.05</Z>
+            </Size>
+            <Mass>12</Mass>
+            <Volume>5</Volume>
+            <Model>Models\Components\TargetingComputerComponent.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <MaxIntegrity>25</MaxIntegrity>
+            <DropProbability>0.45</DropProbability>
+            <Health>25</Health>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>100</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
+        </Component> 
+
+ <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>ThrusterUnit</SubtypeId>
+            </Id>
+            <DisplayName>Magpulse Thrusters</DisplayName>
+            <Icon>Textures\GUI\Icons\components\ThrusterUnit.dds</Icon>
+            <Size>
+                <X>0.1</X>
+                <Y>0.1</Y>
+                <Z>0.05</Z>
+            </Size>
+            <Mass>12</Mass>
+            <Volume>5</Volume>
+            <Model>Models\Components\ThrusterUnit.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <MaxIntegrity>25</MaxIntegrity>
+            <DropProbability>0.45</DropProbability>
+            <Health>25</Health>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>100</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
+        </Component>  -->
+
+
+
+ <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>CoordsNetwork</SubtypeId>
+            </Id>
+            <DisplayName>Ancient Coordinates</DisplayName>
+            <Icon>Textures\GUI\Icons\components\CoordsNetwork.dds</Icon>
+            <Size>
+                <X>0.1</X>
+                <Y>0.1</Y>
+                <Z>0.05</Z>
+            </Size>
+            <Mass>12</Mass>
+            <Volume>5</Volume>
+            <Model>Models\Components\CoordsNetwork.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <MaxIntegrity>25</MaxIntegrity>
+            <DropProbability>0.45</DropProbability>
+            <Health>25</Health>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>100</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
+        </Component> 
+
+
+ <!-- <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>FortificationSchematics</SubtypeId>
+            </Id>
+            <DisplayName>AEGIS Fortification Schematics</DisplayName>
+            <Icon>Textures\GUI\Icons\components\FortificationSchematics.dds</Icon>
+            <Size>
+                <X>0.1</X>
+                <Y>0.1</Y>
+                <Z>0.05</Z>
+            </Size>
+            <Mass>12</Mass>
+            <Volume>5</Volume>
+            <Model>Models\Components\FortificationSchematics.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <MaxIntegrity>25</MaxIntegrity>
+            <DropProbability>0.45</DropProbability>
+            <Health>25</Health>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>100</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
+        </Component>  -->
+
+     <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>StarterOreShipment</SubtypeId>
+            </Id>
+            <DisplayName>Basic Ingot Shipment</DisplayName>
+            <Icon>Textures\GUI\Icons\components\Pallet.dds</Icon>
+            <Size>
+                <X>0.1</X>
+                <Y>0.1</Y>
+                <Z>0.05</Z>
+            </Size>
+            <Mass>200000</Mass>
+            <Volume>1000</Volume>
+            <Model>Models\Components\Pallet.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <MaxIntegrity>25</MaxIntegrity>
+            <DropProbability>0.45</DropProbability>
+            <Health>25</Health>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>100</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
+        </Component> 
+
+
+    <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>AdvancedOreShipment</SubtypeId>
+            </Id>
+            <DisplayName>Advanced Ingot Shipment</DisplayName>
+            <Icon>Textures\GUI\Icons\components\Pallet.dds</Icon>
+            <Size>
+                <X>0.1</X>
+                <Y>0.1</Y>
+                <Z>0.05</Z>
+            </Size>
+            <Mass>200000</Mass>
+            <Volume>1000</Volume>
+            <Model>Models\Components\Pallet.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <MaxIntegrity>25</MaxIntegrity>
+            <DropProbability>0.45</DropProbability>
+            <Health>25</Health>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>100</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
+        </Component> 
+
+
+
+
+
+
+
+
+    <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>RestrictedOreShipment</SubtypeId>
+            </Id>
+            <DisplayName>Restricted Ingot Shipment</DisplayName>
+            <Icon>Textures\GUI\Icons\components\Pallet.dds</Icon>
+            <Size>
+                <X>0.1</X>
+                <Y>0.1</Y>
+                <Z>0.05</Z>
+            </Size>
+            <Mass>200000</Mass>
+            <Volume>1000</Volume>
+            <Model>Models\Components\Pallet.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <MaxIntegrity>25</MaxIntegrity>
+            <DropProbability>0.45</DropProbability>
+            <Health>25</Health>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>100</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
+        </Component> 
+
+
+
+
+
+    <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>IssuedIngotShipment</SubtypeId>
+            </Id>
+            <DisplayName>Fleet-Issue Ingot Shipment</DisplayName>
+            <Icon>Textures\GUI\Icons\components\Pallet.dds</Icon>
+            <Size>
+                <X>0.1</X>
+                <Y>0.1</Y>
+                <Z>0.05</Z>
+            </Size>
+            <Mass>200000</Mass>
+            <Volume>1000</Volume>
+            <Model>Models\Components\Pallet.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <MaxIntegrity>25</MaxIntegrity>
+            <DropProbability>0.45</DropProbability>
+            <Health>25</Health>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>100</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
+        </Component> 
+
+
+
+
+
+
+
+    </Components>
+</Definitions>

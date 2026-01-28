@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+ <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"> 
+
+  
+
+
+   <BlueprintClassEntries>
+	
+
+      <Entry Class="EliteEquipment" BlueprintSubtypeId="IssuedIngotShipmentBP" />
+      <Entry Class="EliteEquipment" BlueprintSubtypeId="TechIngotShipmentBP" />
+      <Entry Class="EliteEquipment" BlueprintSubtypeId="AdvancedIngotShipmentBP" />
+      <Entry Class="EliteEquipment" BlueprintSubtypeId="IngotShipmentBP" />
+
+      
+   </BlueprintClassEntries>
+</Definitions>

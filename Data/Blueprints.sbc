@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Blueprints> 
+
+	
+<!--   
+	<Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>SAIDSBlueBP</SubtypeId>
+      </Id>
+      <DisplayName>Railgun Ammunition</DisplayName>
+      <Icon>Textures\GUI\Icons\ammo\blueammo.dds</Icon>
+	  
+      <Prerequisites>
+        <Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Cobalt" />
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Silver" />
+        <Item Amount="0.5" TypeId="Ingot" SubtypeId="Gold" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="BlueAmmoMagDef" />
+      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+	  
+    </Blueprint>
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>SAIDSPurpleBP</SubtypeId>
+      </Id>
+      <DisplayName>Guided Ammunition</DisplayName>
+      <Icon>Textures\GUI\Icons\ammo\purpleammo.dds</Icon>
+	  
+      <Prerequisites>
+        <Item Amount="5" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="3" TypeId="Ingot" SubtypeId="Magnesium" />
+        <Item Amount="5" TypeId="Ingot" SubtypeId="Nickel" />
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Silicon" />
+
+      </Prerequisites>
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="PurpleAmmoMagDef" />
+      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+	  
+    </Blueprint>
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>SAIDSGreenBP</SubtypeId>
+      </Id>
+      <DisplayName>Autocannon Ammunition</DisplayName>
+      <Icon>Textures\GUI\Icons\ammo\greenammo.dds</Icon>
+	  
+      <Prerequisites>
+        <Item Amount="3" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="2.5" TypeId="Ingot" SubtypeId="Magnesium" />
+        <Item Amount="5" TypeId="Ingot" SubtypeId="Cobalt" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="GreenAmmoMagDef" />
+      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+	  
+    </Blueprint>
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>SAIDSRedBP</SubtypeId>
+      </Id>
+      <DisplayName>Artillery Ammunition</DisplayName>
+      <Icon>Textures\GUI\Icons\ammo\redammo.dds</Icon>
+	  
+      <Prerequisites>
+        <Item Amount="5" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="3.5" TypeId="Ingot" SubtypeId="Magnesium" />
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Cobalt" />
+        <Item Amount="15" TypeId="Ingot" SubtypeId="Uranium" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="AmmoMagazine" SubtypeId="RedAmmoMagDef" />
+      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+	  
+    </Blueprint>
+
+  
+ 
+
+
+
+
+<Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>GuidanceEnhancerBP</SubtypeId>
+      </Id>
+      <DisplayName>Sentient Guidance Enhancer</DisplayName>
+      <Icon>Textures\GUI\Icons\Components\GuidanceEnhancer.dds</Icon>
+	  
+      <Prerequisites>
+        <Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Cobalt" />
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Silver" />
+        <Item Amount="0.5" TypeId="Ingot" SubtypeId="Gold" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="GuidanceEnhancer" />
+      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+	  
+    </Blueprint>
+
+
+
+<Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>MemoryCellsBP</SubtypeId>
+      </Id>
+      <DisplayName>Faded Memorycells</DisplayName>
+      <Icon>Textures\GUI\Icons\Components\MemoryCells.dds</Icon>
+	  
+      <Prerequisites>
+        <Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Cobalt" />
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Silver" />
+        <Item Amount="0.5" TypeId="Ingot" SubtypeId="Gold" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="MemoryCells" />
+      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+	  
+    </Blueprint>
+
+
+
+
+<Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>NetworkLibraryBP</SubtypeId>
+      </Id>
+      <DisplayName>Neural Network Library</DisplayName>
+      <Icon>Textures\GUI\Icons\Components\NetworkLibrary.dds</Icon>
+	  
+      <Prerequisites>
+        <Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Cobalt" />
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Silver" />
+        <Item Amount="0.5" TypeId="Ingot" SubtypeId="Gold" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="NetworkLibrary" />
+      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+	  
+    </Blueprint>
+
+
+<Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>SensorClusterComponentBP</SubtypeId>
+      </Id>
+      <DisplayName>Gravimetric Sensor Cluster</DisplayName>
+      <Icon>Textures\GUI\Icons\Components\SensorClusterComponent.dds</Icon>
+	  
+      <Prerequisites>
+        <Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Cobalt" />
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Silver" />
+        <Item Amount="0.5" TypeId="Ingot" SubtypeId="Gold" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="SensorClusterComponent" />
+      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+	  
+    </Blueprint>
+
+
+
+
+<Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>SoulbankBP</SubtypeId>
+      </Id>
+      <DisplayName>Gravimetric Sensor Cluster</DisplayName>
+      <Icon>Textures\GUI\Icons\Components\Soulbank.dds</Icon>
+	  
+      <Prerequisites>
+        <Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Cobalt" />
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Silver" />
+        <Item Amount="0.5" TypeId="Ingot" SubtypeId="Gold" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="Soulbank" />
+      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+	  
+    </Blueprint>
+
+
+
+
+<Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>TargetingComputerBP</SubtypeId>
+      </Id>
+      <DisplayName>Blood-Fused Targeting Computer</DisplayName>
+      <Icon>Textures\GUI\Icons\Components\TargetingComputerComponent.dds</Icon>
+	  
+      <Prerequisites>
+        <Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Cobalt" />
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Silver" />
+        <Item Amount="0.5" TypeId="Ingot" SubtypeId="Gold" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="TargetingComputer" />
+      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+	  
+    </Blueprint>
+
+
+<Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>ThrusterUnitBP</SubtypeId>
+      </Id>
+      <DisplayName>Magpulse Thruster Unit</DisplayName>
+      <Icon>Textures\GUI\Icons\Components\ThrusterUnit.dds</Icon>
+	  
+      <Prerequisites>
+        <Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Cobalt" />
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Silver" />
+        <Item Amount="0.5" TypeId="Ingot" SubtypeId="Gold" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="ThrusterUnit" />
+      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+	  
+    </Blueprint> -->
+    
+<Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>CoordsNetworkBP</SubtypeId>
+      </Id>
+      <DisplayName>Ancient Coordinates Database</DisplayName>
+      <Icon>Textures\GUI\Icons\Components\CoordsNetwork.dds</Icon>
+	  
+      <Prerequisites>
+        <Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Cobalt" />
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Silver" />
+        <Item Amount="0.5" TypeId="Ingot" SubtypeId="Gold" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="CoordsNetwork" />
+      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+	  
+    </Blueprint>
+
+<!-- 
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>FortificationSchematicsBP</SubtypeId>
+      </Id>
+      <DisplayName>AEGIS Fortification Schematics</DisplayName>
+      <Icon>Textures\GUI\Icons\Components\FortificationSchematics.dds</Icon>
+	  
+      <Prerequisites>
+        <Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Cobalt" />
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Silver" />
+        <Item Amount="0.5" TypeId="Ingot" SubtypeId="Gold" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="FortificationSchematics" />
+      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+	  
+    </Blueprint> -->
+
+
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>IngotShipmentBP</SubtypeId>
+      </Id>
+      <DisplayName>Basic Ingot Shipment</DisplayName>
+      <Icon>Textures\GUI\Icons\Components\Pallet.dds</Icon>
+	  
+      <Prerequisites>
+        <Item Amount="50000" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="1000" TypeId="Ingot" SubtypeId="Silicon" />
+        <Item Amount="2000" TypeId="Ingot" SubtypeId="Nickel" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="StarterOreShipment" />
+      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+	  
+    </Blueprint>
+
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>AdvancedIngotShipmentBP</SubtypeId>
+      </Id>
+      <DisplayName>Advanced Ingot Shipment</DisplayName>
+      <Icon>Textures\GUI\Icons\Components\Pallet.dds</Icon>
+	  
+      <Prerequisites>
+        <Item Amount="50000" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="500" TypeId="Ingot" SubtypeId="Silicon" />
+        <Item Amount="750" TypeId="Ingot" SubtypeId="Nickel" />
+        <Item Amount="350" TypeId="Ingot" SubtypeId="Cobalt" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="AdvancedOreShipment" />
+      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+	  
+    </Blueprint>
+
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>TechIngotShipmentBP</SubtypeId>
+      </Id>
+      <DisplayName>Restricted Ingot Shipment</DisplayName>
+      <Icon>Textures\GUI\Icons\Components\Pallet.dds</Icon>
+	  
+      <Prerequisites>
+        <Item Amount="10000" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="2000" TypeId="Ingot" SubtypeId="Gold" />
+        <Item Amount="1000" TypeId="Ingot" SubtypeId="Platinum" />
+        <Item Amount="2000" TypeId="Ingot" SubtypeId="Silver" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="RestrictedOreShipment" />
+      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+	  
+    </Blueprint>
+
+
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>IssuedIngotShipmentBP</SubtypeId>
+      </Id>
+      <DisplayName>Fleet-Issue Ingot Shipment</DisplayName>
+      <Icon>Textures\GUI\Icons\Components\Pallet.dds</Icon>
+	  
+      <Prerequisites>
+        <Item Amount="100000" TypeId="Ingot" SubtypeId="Iron" />
+        <Item Amount="2000" TypeId="Ingot" SubtypeId="Uranium" />
+        <Item Amount="2000" TypeId="Ingot" SubtypeId="Platinum" />
+        <Item Amount="2000" TypeId="Ingot" SubtypeId="Silver" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="IssuedIngotShipment" />
+      <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+	  
+    </Blueprint>
+
+
+
+
+
+
+    
+  </Blueprints>
+</Definitions>
