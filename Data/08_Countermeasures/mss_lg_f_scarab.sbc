@@ -13,7 +13,7 @@
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="1" z="2"/>
 			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\Cubes\large\CountermeasureLauncher.mwm</Model>
+			<Model>Models\Cubes\Scarab\CountermeasureLauncher.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="20"/>
 				<Component Subtype="Construction" Count="40"/>
@@ -39,7 +39,7 @@
 				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
 			</MountPoints>
 			<BuildProgressModels>
-				<Model BuildPercentUpperBound="1.00" File="Models\Scarab\large\CountermeasureLauncher_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Scarab\CountermeasureLauncher_BS1.mwm"/>
 			</BuildProgressModels>
 			<BlockPairName>CountermeasureLauncher</BlockPairName>
 			<MirroringY>Z</MirroringY>

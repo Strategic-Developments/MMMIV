@@ -652,7 +652,7 @@ namespace Scripts
             AmmoAudio = new AmmoAudioDef
             {
                 TravelSound = "", // SubtypeID for your Sound File. Travel is sound generated around your projectile in flight
-                HitSound = "MERD_RailgunHit", // Default hit sound, used unless optional hit sounds below are populated.  MUST HAVE A VALUE FOR ANY HIT SOUND TO WORK! 
+                HitSound = "", // Default hit sound, used unless optional hit sounds below are populated.  MUST HAVE A VALUE FOR ANY HIT SOUND TO WORK! 
                 ShotSound = "", // Sound when fired
                 OverrideShotSound = false, // When true, will use this ammo's ShotSound regardless of the given weapon's shot sound, rather than only using ShotSound if the weapon's shot sound is ""
                 ShieldHitSound = "", // Shield hit
@@ -1295,7 +1295,7 @@ namespace Scripts
             AmmoAudio = new AmmoAudioDef
             {
                 TravelSound = "", // SubtypeID for your Sound File. Travel is sound generated around your projectile in flight
-                HitSound = "MERD_RailgunHit", // Default hit sound, used unless optional hit sounds below are populated.  MUST HAVE A VALUE FOR ANY HIT SOUND TO WORK! 
+                HitSound = "", // Default hit sound, used unless optional hit sounds below are populated.  MUST HAVE A VALUE FOR ANY HIT SOUND TO WORK! 
                 ShotSound = "", // Sound when fired
                 OverrideShotSound = false, // When true, will use this ammo's ShotSound regardless of the given weapon's shot sound, rather than only using ShotSound if the weapon's shot sound is ""
                 ShieldHitSound = "", // Shield hit

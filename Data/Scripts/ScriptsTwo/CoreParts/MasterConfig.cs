@@ -24,6 +24,9 @@ namespace Scripts
                 mss_lg_t_horus,
                 mss_lg_t_bastet,
 
+                // NPC Weapons
+                mss_lg_t_entropicdisintegrator, 
+
                 // Railguns
                 mss_lg_t_apophis,
                 mss_lg_t_amunra,
