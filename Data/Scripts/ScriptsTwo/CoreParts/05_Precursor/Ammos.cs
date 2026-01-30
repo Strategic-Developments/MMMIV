@@ -42,7 +42,7 @@ namespace Scripts
             Shape = new ShapeDef //defines the collision shape of projectile, defaults line and visual Line Length if set to 0
             {
                 Shape = LineShape,
-                Diameter = 1,
+                Diameter = 30,
             },
             ObjectsHit = new ObjectsHitDef
             {
@@ -218,7 +218,7 @@ namespace Scripts
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
                 DesiredSpeed = 0,
-                MaxTrajectory = 5500f,
+                MaxTrajectory = 15000f,
                 //FieldTime was here, it's dead now is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable.
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
@@ -575,7 +575,7 @@ namespace Scripts
                 MaxLifeTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                 AccelPerSec = 0f,
                 DesiredSpeed = 0,
-                MaxTrajectory = 2000f,
+                MaxTrajectory = 12000f,
                 //FieldTime was here, it's dead now is disabled, a value causes the projectile to come to rest, spawn a field and remain for a time (Measured in game ticks, 60 = 1 second)
                 GravityMultiplier = 0f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable.
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed
