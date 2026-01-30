@@ -16,7 +16,7 @@ namespace Scripts
 {
     partial class Parts
     {
-        WeaponDefinition mss_lg_t_entropicdisintegrator => new WeaponDefinition
+        WeaponDefinition mss_lg_t_entropic => new WeaponDefinition
         {
             Assignments = new ModelAssignmentsDef
             {

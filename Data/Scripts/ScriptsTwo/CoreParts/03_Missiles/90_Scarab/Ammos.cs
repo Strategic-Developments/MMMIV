@@ -52,7 +52,7 @@ namespace Scripts
                                     // Overwrites normal damage behavior of requiring a block to be destroyed before damage can continue.  0 disables. 
                                     // To limit max # of blocks hit, set MaxObjectsHit to desired # and ensure CountBlocks = true in ObjectsHit, otherwise it will continue until BaseDamage depletes
             Mass = 0f, // Disabled here. Too lazy to set this to 0 everywhere so MasterConfig does it
-            Health = 5f, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
+            Health = 0f, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 0f, // Recoil. This is applied to the Parent Grid.
             DecayPerShot = 0f, // Damage to the firing weapon itself. 
                                //float.MaxValue will drop the weapon to the first build state and destroy all components used for construction
@@ -234,14 +234,14 @@ namespace Scripts
             },
             Ewar = new EwarDef
             {
-                Enable = false, // Enables EWAR effects AND DISABLES BASE DAMAGE AND AOE DAMAGE!!
-                Type = EnergySink, // EnergySink, Emp, Offense, Nav, Dot, AntiSmart, JumpNull, Anchor, Tractor, Pull, Push, 
-                Mode = Effect, // Effect , Field
-                Strength = 100f,
-                Radius = 5f, // Meters
-                Duration = 100, // In Ticks
-                StackDuration = true, // Combined Durations
-                Depletable = true,
+                Enable = true, // Enables EWAR effects AND DISABLES BASE DAMAGE AND AOE DAMAGE!!
+                Type = AntiSmartv2, // EnergySink, Emp, Offense, Nav, Dot, AntiSmart, JumpNull, Anchor, Tractor, Pull, Push, 
+                Mode = Field, // Effect , Field
+                Strength = 4,
+                Radius = 2500, // Meters
+                Duration = 90, // In Ticks
+                StackDuration = false, // Combined Durations
+                Depletable = false,
                 MaxStacks = 10, // Max Debuffs at once
                 NoHitParticle = false,
                 /*
@@ -270,12 +270,12 @@ namespace Scripts
                 },
                 Field = new FieldDef
                 {
-                    Interval = 0, // Time between each pulse, in game ticks (60 == 1 second), starts at 0 (59 == tick 60).
-                    PulseChance = 0, // Chance from 0 - 100 that an entity in the field will be hit by any given pulse.
+                    Interval = 30, // Time between each pulse, in game ticks (60 == 1 second), starts at 0 (59 == tick 60).
+                    PulseChance = 100, // Chance from 0 - 100 that an entity in the field will be hit by any given pulse.
                     GrowTime = 0, // How many ticks it should take the field to grow to full size.
                     HideModel = false, // Hide the default bubble, or other model if specified.
-                    ShowParticle = true, // Show Block damage effect.
-                    TriggerRange = 250f, //range at which fields are triggered
+                    ShowParticle = false, // Show Block damage effect.
+                    TriggerRange = 2500f, //range at which fields are triggered
                     Particle = new ParticleDef // Particle effect to generate at the field's position.
                     {
                         Name = "", // SubtypeId of field particle effect.
@@ -297,42 +297,42 @@ namespace Scripts
             },
             Trajectory = new TrajectoryDef
             {
-                Guidance = Smart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
+                Guidance = DetectSmart, // None, Remote, TravelTo, Smart, DetectTravelTo, DetectSmart, DetectFixed
                 TargetLossDegree = 180f, // Degrees, Is pointed forward
                 TargetLossTime = 0, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                MaxLifeTime = 60, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
-                AccelPerSec = MISSILE_START_VELOCITY, // Acceleration in Meters Per Second. Projectile starts on tick 0 at its parents (weapon/other projectiles) travel velocity.
-                DesiredSpeed = MISSILE_START_VELOCITY, // voxel phasing if you go above 5100
-                MaxTrajectory = LONG_RANGE, // Max Distance the projectile or beam can Travel.
+                MaxLifeTime = 125, // 0 is disabled, Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..). time begins at 0 and time must EXCEED this value to trigger "time > maxValue". Please have a value for this, It stops Bad things.
+                AccelPerSec = 0, // Acceleration in Meters Per Second. Projectile starts on tick 0 at its parents (weapon/other projectiles) travel velocity.
+                DesiredSpeed = 600, // voxel phasing if you go above 5100
+                MaxTrajectory = 1200, // Max Distance the projectile or beam can Travel.
                 DeaccelTime = 0, // EWAR & Mines only- time to spend slowing down to stop at end of trajectory.  0 is instant stop
                 GravityMultiplier = 1f, // Gravity multiplier, influences the trajectory of the projectile, value greater than 0 to enable. Natural Gravity Only.
                 SpeedVariance = Random(start: 0, end: 0), // subtracts value from DesiredSpeed. Be warned, you can make your projectile go backwards.
                 RangeVariance = Random(start: 0, end: 0), // subtracts value from MaxTrajectory
                 MaxTrajectoryTime = 0, // How long the weapon must fire before it reaches MaxTrajectory.
                 TotalAcceleration = 0f, // 0 means no limit, something to do due with a thing called delta and something called v.
-                DragPerSecond = 0f, // Amount of drag (m/s) deducted from the projectile's speed, multiplied by age.  Will not go below zero/negative.  Note that turrets will not be able to reliably account for this with non-smart ammo.
+                DragPerSecond = 300, // Amount of drag (m/s) deducted from the projectile's speed, multiplied by age.  Will not go below zero/negative.  Note that turrets will not be able to reliably account for this with non-smart ammo.
                 DragMinSpeed = 0f, // If DragPerSecond is used, the projectiles speed will never go below this value in m/s
                 Smarts = new SmartsDef
                 {
-                    SteeringLimit = 2f, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
+                    SteeringLimit = 0f, // 0 means no limit, value is in degrees, good starting is 150.  This enable advanced smart "control", cost of 3 on a scale of 1-5, 0 being basic smart.
                     Inaccuracy = 0f, // 0 is perfect, hit accuracy will be a random num of meters between 0 and this value.
-                    Aggressiveness = 1f, // controls how responsive tracking is, recommended value 3-5.
+                    Aggressiveness = 0f, // controls how responsive tracking is, recommended value 3-5.
                     MaxLateralThrust = 0, // controls how sharp the projectile may turn, this is the cheaper but less realistic version of SteeringLimit, cost of 2 on a scale of 1-5, 0 being basic smart.
                     NavAcceleration = 0, // helps influence how the projectile steers, 0 defaults to 1/2 Aggressiveness value or 0 if its 0, a value less than 0 disables this feature. 
                     TrackingDelay = 0, // Measured in Shape diameter units traveled.
                     AccelClearance = false, // Setting this to true will prevent smart acceleration until it is clear of the grid and tracking delay has been met (free fall).
                     MaxChaseTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    OverideTarget = false, // when set to true ammo picks its own target, does not use hardpoint's.
+                    OverideTarget = true, // when set to true ammo picks its own target, does not use hardpoint's.
                     CheckFutureIntersection = false, // Utilize obstacle avoidance for drones/smarts
                     FutureIntersectionRange = 0, // Range in front of the projectile at which it will detect obstacle.  If set to zero it defaults to DesiredSpeed + Shape Diameter
-                    MaxTargets = 1, // Number of targets allowed before ending, 0 = unlimited, 1 = stay with first target when fired
+                    MaxTargets = 0, // Number of targets allowed before ending, 0 = unlimited, 1 = stay with first target when fired
                     NoTargetExpire = false, // Expire without ever having a target at TargetLossTime
                     Roam = false, // Roam current area after target loss
-                    KeepAliveAfterTargetLoss = true, // Whether to stop early death of projectile on target loss
-                    OffsetRatio = 0f, // The ratio to offset the random direction (0 to 1) 
-                    OffsetTime = 0, // how often to offset degree, measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..)
+                    KeepAliveAfterTargetLoss = false, // Whether to stop early death of projectile on target loss
+                    OffsetRatio = 0.05f, // The ratio to offset the random direction (0 to 1) 
+                    OffsetTime = 60, // how often to offset degree, measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..)
                     OffsetMinRange = 0, // The range from target at which offsets are no longer active
-                    FocusOnly = true, // Only target the HUD or AI focused target (this includes changes to the hud-selected target.  Set MaxTargets = 1 to keep it from switching (aka fire and forget)
+                    FocusOnly = false, // Only target the HUD or AI focused target (this includes changes to the hud-selected target.  Set MaxTargets = 1 to keep it from switching (aka fire and forget)
                     FocusEviction = false, // If FocusOnly and this to true will force smarts to lose target when there is no focus target (IE you must keep the target selected or the projectile will lose the target)
                     ScanRange = 0, // 0 disables projectile screening, the max range that this projectile will be seen at by defending grids (adds this projectile to defenders lookup database). 
                     NoSteering = false, // this disables target follow and instead travel straight ahead (but will respect offsets).
@@ -347,7 +347,24 @@ namespace Scripts
                 ModelName = "", // Model Path goes here.  "\\Models\\Ammo\\Starcore_Arrow_Missile_Large"
                 VisualProbability = 1f, // 0-1 % chance of AV appearing (controls all audio AND visual)
                 ShieldHitDraw = false,
-                Lines = FX_MISSILE_SMALL,
+                Lines = new LineDef
+                {
+                    ColorVariance = Random(start: 1f, end: 1f), // multiply the color by random values within range.
+                    WidthVariance = Random(start: 0f, end: 0f), // adds random value to default width (negatives shrinks width)
+                    Tracer = new TracerBaseDef
+                    {
+                        Enable = true,
+                        Length = 5f, //
+                        Width = 2f, //
+                        Color = Color(red: 45f, green: 20, blue: 12.5f, alpha: 1), // RBG 255 is Neon Glowing, 100 is Quite Bright.
+                        VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
+                        VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
+                        Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
+                            "ProjectileTrailLine", // Please always have this Line set, if this Section is enabled.
+                        },
+                        TextureMode = Normal, // Normal, Cycle, Chaos, Wave
+                    },
+                },
             },
             AmmoAudio = new AmmoAudioDef
             {

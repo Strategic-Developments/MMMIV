@@ -47,7 +47,7 @@ namespace Scripts
             Targeting = new TargetingDef
             {
                 Threats = new[] {
-                    Grids, Neutrals // Types of threat to engage: Grids, Projectiles, Characters, Meteors, Neutrals, ScanRoid, ScanPlanet, ScanFriendlyCharacter, ScanFriendlyGrid, ScanEnemyCharacter, ScanEnemyGrid, ScanNeutralCharacter, ScanNeutralGrid, ScanUnOwnedGrid, ScanOwnersGrid
+                    Projectiles // Types of threat to engage: Grids, Projectiles, Characters, Meteors, Neutrals, ScanRoid, ScanPlanet, ScanFriendlyCharacter, ScanFriendlyGrid, ScanEnemyCharacter, ScanEnemyGrid, ScanNeutralCharacter, ScanNeutralGrid, ScanUnOwnedGrid, ScanOwnersGrid
                 },
                 SubSystems = SUBSYSTEMS_TARGETING,
                 ClosestFirst = true, // Tries to pick closest targets first (blocks on grids, projectiles, etc...).
@@ -86,11 +86,11 @@ namespace Scripts
             },
             HardPoint = new HardPointDef
             {
-                PartName = "Scarab Countermeasures Launcher", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
+                PartName = "Scarab Countermeasure Launcher", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
                 DeviateShotAngle = 0f, // Projectile inaccuracy in degrees.
                 AimingTolerance = 1f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
                 AimLeadingPrediction = Advanced, // Level of turret aim prediction; Off (aim straight at target), Basic (doesn't account for target acceleration), Accurate, Advanced (these last two are identical)
-                DelayCeaseFire = 3 * 60, // Measured in game ticks (6 = 100ms, 60 = 1 second, etc..). Length of time the weapon continues firing after trigger is released - while a target is available.
+                DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 second, etc..). Length of time the weapon continues firing after trigger is released - while a target is available.
                 AddToleranceToTracking = false, // Allows turret to track to the edge of the AimingTolerance cone instead of dead centre.
                 CanShootSubmerged = false, // Whether the weapon itself will be usable if submerged when using WaterMod.
                 CanTargetSubmerged = false, // Whether the weapon can target things underwater (note this works as an OR for ammo that ignores water, so if either this is true or the ammo ignores water, targeting will proceed)
@@ -133,7 +133,7 @@ namespace Scripts
                     HomeElevation = 0, // Default resting elevation
                     FixedInventorySize = true, // If true, the inventory size will be forced to the exact value specified above regardless of world inventory multipliers
                     InventorySize = 1.5f, // Inventory capacity in kL.
-                    IdlePower = 60, // Constant base power draw in MW.
+                    IdlePower = 20, // Constant base power draw in MW.
                     FixedOffset = false, // Deprecated.
                     Offset = Vector(x: 0, y: 0, z: 0), // Offsets the aiming/firing line of the weapon, in metres.
                     Type = BlockWeapon, // What type of weapon this is; BlockWeapon, HandWeapon, Phantom 
@@ -157,27 +157,27 @@ namespace Scripts
                     DisableLosCheck = false, // Do not perform LOS checks at all... not advised for self tracking weapons
                     NoVoxelLosCheck = false, // If set to true this ignores voxels for LOS checking.. which means weapons will fire at targets behind voxels.  However, this can save cpu in some situations, use with caution. 
                     Debug = DEBUG_MODE, // Force enables debug mode - will output damage stats to WC log.
-                    RestrictionRadius = 0, // Prevents other blocks of this type from being placed within this distance of the centre of the block.
-                    CheckInflatedBox = false, // If true, the above distance check is performed from the edge of the block instead of the centre.
-                    CheckForAnyWeapon = false, // If true, the check will fail if ANY weapon is present, not just weapons of the same subtype.
+                    RestrictionRadius = 7, // Prevents other blocks of this type from being placed within this distance of the centre of the block.
+                    CheckInflatedBox = true, // If true, the above distance check is performed from the edge of the block instead of the centre.
+                    CheckForAnyWeapon = true, // If true, the check will fail if ANY weapon is present, not just weapons of the same subtype.
                     ProhibitLGTargeting = false, // If true, prohibits block from targeting Large Grids (best used in server-specific weapon packs)
-                    ProhibitSGTargeting = true, // If true, prohibits block from targeting Small Grids (best used in server-specific weapon packs)
+                    ProhibitSGTargeting = false, // If true, prohibits block from targeting Small Grids (best used in server-specific weapon packs)
                     ProhibitSubsystemChanges = false,
                 },
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 480 * 3, // Set this to 3600 for beam weapons. This is how fast your gun fires per minute.
-                    BarrelsPerShot = 8, // How many muzzles will fire a projectile per fire event.
+                    RateOfFire = 240, // Set this to 3600 for beam weapons. This is how fast your gun fires per minute.
+                    BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
                     TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
-                    ReloadTime = 12 * 60 + 2 * 60, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    MagsToLoad = 8, // Number of physical magazines to consume on reload.
-                    DelayUntilFire = 2 * 60, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    HeatPerShot = 1600000 / 8, // Heat generated per shot (BarrelsPerShot * HeatPerShot is the total heat per firing event).
-                    MaxHeat = 1500000, // Max heat before weapon enters cooldown (70% of max heat).
+                    ReloadTime = 0, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    MagsToLoad = 1, // Number of physical magazines to consume on reload.
+                    DelayUntilFire = 0, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    HeatPerShot = 40000, // Heat generated per shot (BarrelsPerShot * HeatPerShot is the total heat per firing event).
+                    MaxHeat = 200000, // Max heat before weapon enters cooldown (70% of max heat).
                     Cooldown = 0f, // Percentage of max heat to be under to start firing again after overheat; accepts 0 - 0.95
                     HeatSinkRate = 100000, // Amount of heat lost per second.
-                    HeatSinkRateOverheatMult = 1f, // Multiplier to LoadingDef.HeatSinkRate when the weapon is overheated. 0 disables, negative values are allowed.
+                    HeatSinkRateOverheatMult = 0.1f, // Multiplier to LoadingDef.HeatSinkRate when the weapon is overheated. 0 disables, negative values are allowed.
                                                    // Beware that negative values makes a weapon unusable should it overheat if it doesn't also have negative LoadingDef.HeatSinkRate, which does not work properly at the moment (heat does not update unless it has heat).
                     AllowOverheatShooting = false, // Disables weapon overheating disallowing the weapon to fire. Useful if you want DegradeRof but want the weapon to keep shooting even at max heat.
                     DegradeRof = false, // Progressively lower rate of fire when over 80% heat threshold (80% of max heat).
@@ -191,7 +191,7 @@ namespace Scripts
                     ProhibitCoolingWhenOff = true, // If true, prevents blocks that are turned off from cooling down over time
                     ShotsInBurst = 0, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
                     DelayAfterBurst = 0, // How long to spend "reloading" after each burst. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    FireFull = true, // Whether the weapon should fire the full magazine (or the full burst instead if ShotsInBurst > 0), even if the target is lost or the player stops firing prematurely.
+                    FireFull = false, // Whether the weapon should fire the full magazine (or the full burst instead if ShotsInBurst > 0), even if the target is lost or the player stops firing prematurely.
                     GiveUpAfter = false, // Whether the weapon should drop its current target and reacquire a new target after finishing its magazine or burst.
                     BarrelSpinRate = 0, // 0 disables and uses RateOfFire.  If slower than ROF, will increase time to spin up and start shooting.
                     DeterministicSpin = false, // Spin barrel position will always be relative to initial / starting positions (spin will not be as smooth).
@@ -208,7 +208,7 @@ namespace Scripts
                 Audio = new HardPointAudioDef
                 {
                     PreFiringSound = "",
-                    FiringSound = "missile_launch_far_02", // WepShipGatlingShot
+                    FiringSound = "WepTurretMissileShot", // WepShipGatlingShot
                     FiringSoundPerShot = true,
                     ReloadSound = "",
                     NoAmmoSound = "WepShipGatlingNoAmmo",
@@ -220,7 +220,7 @@ namespace Scripts
                 {
                     Effect1 = new ParticleDef
                     {
-                        Name = "", // SubtypeId of muzzle particle effect.
+                        Name = "Muzzle_Flash_FlareLauncher", // SubtypeId of muzzle particle effect.
                         Offset = Vector(x: 0, y: 0, z: 0), // Offsets the effect from the muzzle empty.
                         DisableCameraCulling = false, // If not true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
@@ -251,9 +251,6 @@ namespace Scripts
             },
             Ammos = new[] {
                 mss_lg_f_scarab_ammo,
-                
-
-
             },
             // Animations = mss_lg_f_jackal_anim,
             //Upgrades = UpgradeModules,

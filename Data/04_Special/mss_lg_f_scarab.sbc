@@ -4,7 +4,7 @@
 		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
 			<Id>
 				<TypeId>ConveyorSorter</TypeId>
-				<SubtypeId>CountermeasureLauncher</SubtypeId>
+				<SubtypeId>mss_lg_f_scarab</SubtypeId>
 			</Id>
 			<DisplayName>Scarab-Pattern Countermeasure Launcher</DisplayName>
 			<Description>Launches IR flares.</Description>
@@ -12,23 +12,21 @@
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="1" z="2"/>
-			<ModelOffset x="0" y="0" z="0"/>
+			<ModelOffset x="0" y="0" z="1"/>
 			<Model>Models\Cubes\Scarab\CountermeasureLauncher.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="20"/>
-				<Component Subtype="Construction" Count="40"/>
-				<Component Subtype="MetalGrid" Count="10"/>
-				<Component Subtype="SmallTube" Count="25"/>
-				<Component Subtype="LargeTube" Count="25"/>
+				<Component Subtype="SteelPlate" Count="25"/>
+				<Component Subtype="Construction" Count="60"/>
+				<Component Subtype="MetalGrid" Count="24"/>
+				<Component Subtype="SmallTube" Count="60"/>
+				<Component Subtype="LargeTube" Count="40"/>
 				<Component Subtype="Motor" Count="40"/>
-				<Component Subtype="Display" Count="3"/>
-				<Component Subtype="Computer" Count="10"/>
+				<Component Subtype="Display" Count="4"/>
+				<Component Subtype="Computer" Count="60"/>
 				<!-- FUNCTIONAL LINE /\ UP NONFUNCTIONAL -->
-				<Component Subtype="Computer" Count="100"/>
-				<Component Subtype="Motor" Count="35"/>
-				<Component Subtype="MetalGrid" Count="100"/>
-				<Component Subtype="Construction" Count="150"/>
-				<Component Subtype="SteelPlate" Count="160"/>
+				<Component Subtype="MetalGrid" Count="50"/>
+				<Component Subtype="Construction" Count="50"/>
+				<Component Subtype="SteelPlate" Count="120"/>
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
@@ -41,7 +39,7 @@
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Scarab\CountermeasureLauncher_BS1.mwm"/>
 			</BuildProgressModels>
-			<BlockPairName>CountermeasureLauncher</BlockPairName>
+			<BlockPairName>mss_lg_f_scarab</BlockPairName>
 			<MirroringY>Z</MirroringY>
 			<MirroringZ>Y</MirroringZ>
 		<EdgeType>Light</EdgeType>
@@ -81,11 +79,11 @@
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>2500</Mass>
-			<Volume>1530</Volume>
+			<Mass>50</Mass>
+			<Volume>300</Volume>
 			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
-			<Capacity>1</Capacity>
+			<Capacity>8</Capacity>
 			<AmmoDefinitionId Subtype="mss_blankammo" />
 
 			<MinimumOfferAmount>100</MinimumOfferAmount>

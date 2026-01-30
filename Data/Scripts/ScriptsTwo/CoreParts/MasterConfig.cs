@@ -24,9 +24,6 @@ namespace Scripts
                 mss_lg_t_horus,
                 mss_lg_t_bastet,
 
-                // NPC Weapons
-                mss_lg_t_entropicdisintegrator, 
-
                 // Railguns
                 mss_lg_t_apophis,
                 mss_lg_t_amunra,
@@ -39,8 +36,10 @@ namespace Scripts
                 mss_lg_f_jackal,
                 mss_lg_f_nepthys,
 
-                // JumpDisruptors
-                mss_lg_t_thoth
+                // Special
+                mss_lg_f_scarab,
+                mss_lg_t_thoth,
+                mss_lg_t_entropic,
             };
             PartDefinitions(
                 CompileWeapons(Weapons)
