@@ -203,9 +203,9 @@ namespace Scripts
                 Audio = new HardPointAudioDef
                 {
                     PreFiringSound = "", // Audio for warmup effect.
-                    FiringSound = "shell_out_med_far_01", // Audio for firing.
+                    FiringSound = "shell_out_big_far_04", // Audio for firing.
                     FiringSoundPerShot = true, // Whether to replay the sound for each shot, or just loop over the entire track while firing.
-                    ReloadSound = "shell_in_med_01", // Sound SubtypeID, for when your Weapon is in a reloading state
+                    ReloadSound = "shell_out_big_far_04", // Sound SubtypeID, for when your Weapon is in a reloading state
                     NoAmmoSound = "", // Sound for if the user attempts to fire the gun without ammo
                     HardPointRotationSound = "servo_01", // Audio played when turret is moving.
                     BarrelRotationSound = "", // Sound played when the barrel rotates

@@ -56,6 +56,24 @@
          <Sound>
             <Id>
                 <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
+                <SubtypeId>shell_out_big_far_04</SubtypeId>
+            </Id>
+            <Category>SHOT</Category>
+            <MaxDistance>1600</MaxDistance>
+            <PreventSynchronization>0</PreventSynchronization>
+            <PitchVariation>50</PitchVariation>
+            <Volume>1</Volume>
+            <Waves>
+                <Wave Type="D3">
+                    <Start>Audio\shell_out_big_far_04.wav</Start>
+                </Wave>
+            </Waves>
+        </Sound>
+
+
+         <Sound>
+            <Id>
+                <TypeId>MyObjectBuilder_AudioDefinition</TypeId>
                 <SubtypeId>shell_out_tiny_01</SubtypeId>
             </Id>
             <Category>SHOT</Category>
