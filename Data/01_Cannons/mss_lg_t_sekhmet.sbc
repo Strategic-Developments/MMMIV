@@ -1,0 +1,155 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>mss_lg_t_sekhmet_base</SubtypeId>
+			</Id>
+			<DisplayName>Sekhmet-Pattern Heavy Artillery Turret</DisplayName>
+			<Description>Superheavy twin-barrelled artillery battery with an auxiliary missile launcher.</Description>
+			<Icon>Textures\GUI\Icons\Cubes\TitanEVOPhase3Base.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="7" y="5" z="7"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\Sekhmet\TitanEVOPhase3Base.mwm</Model>
+			<Components>
+				<Component Subtype="SteelPlate" Count="200"/>
+				<Component Subtype="Construction" Count="300"/>
+				<Component Subtype="MetalGrid" Count="200"/>
+				<Component Subtype="SmallTube" Count="260"/>
+				<Component Subtype="LargeTube" Count="200"/>
+				<Component Subtype="Motor" Count="200"/>
+				<Component Subtype="Display" Count="40"/>
+				<Component Subtype="Computer" Count="900"/>
+				<!-- FUNCTIONAL LINE /\ UP NONFUNCTIONAL -->
+				<Component Subtype="Girder" Count="640"/>
+				<Component Subtype="MetalGrid" Count="840"/>
+				<Component Subtype="Construction" Count="800"/>
+				<Component Subtype="SteelPlate" Count="800"/>
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0"/>
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.02" StartY="0.01" EndX="6.98" EndY="1.01"/>
+				<MountPoint Side="Back" StartX="0.10" StartY="0.01" EndX="6.90" EndY="1.01"/>
+				<MountPoint Side="Left" StartX="0.01" StartY="0.01" EndX="6.99" EndY="1.01"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.01" EndX="7.00" EndY="1.01"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="7.00" EndY="7.00"/>
+			</MountPoints>
+			<BlockPairName>mss_lg_t_sekhmet_base</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+		<BuildTimeSeconds>10</BuildTimeSeconds>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<ResourceSinkGroup>Conveyors</ResourceSinkGroup>
+			<PowerInput>0.00025</PowerInput>
+			<InventorySize>
+				<X>1</X>
+				<Y>1</Y>
+				<Z>1</Z>
+			</InventorySize>
+			<EmissiveColorPreset>Default</EmissiveColorPreset>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>255</PCU>
+			<IsAirTight>true</IsAirTight>
+		</Definition>
+	</CubeBlocks>
+	<AmmoMagazines>
+		<!--•AMMOMAGAZINE DEFINITION-->
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>mss_lg_t_sekhmet_ammomagazine</SubtypeId>
+			</Id>
+			<DisplayName>Sekhmet Cannon Shell</DisplayName>
+			<!--<Icon>Textures\GUI\Icons\Cubes\CustosAmmoSTG1.png</Icon>-->
+			<!--gun as the ammo icon makes it SO much easier to ID things-->
+			<Icon>Textures\GUI\Icons\Cubes\TitanEVOPhase3Base.dds</Icon>
+			<Size>
+				<X>0.2</X>
+				<Y>0.2</Y>
+				<Z>0.2</Z>
+			</Size>
+			<Mass>1338.75</Mass>
+			<Volume>780</Volume>
+			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
+			<PhysicalMaterial>Ammo</PhysicalMaterial>
+			<Capacity>1</Capacity>
+			<AmmoDefinitionId Subtype="mss_blankammo" />
+
+			<MinimumOfferAmount>100</MinimumOfferAmount>
+			<MaximumOfferAmount>1000</MaximumOfferAmount>
+			<MinimumOrderAmount>100</MinimumOrderAmount>
+			<MaximumOrderAmount>2000</MaximumOrderAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</AmmoMagazine>
+		<AmmoMagazine>
+			<Id>
+				<TypeId>AmmoMagazine</TypeId>
+				<SubtypeId>mss_lg_t_sekhmet_ammomagazine_special</SubtypeId>
+			</Id>
+			<DisplayName>Sekhmet Smart Cannon Shell</DisplayName>
+			<!--<Icon>Textures\GUI\Icons\Cubes\CustosAmmoSTG1.png</Icon>-->
+			<!--gun as the ammo icon makes it SO much easier to ID things-->
+			<Icon>Textures\GUI\Icons\Cubes\TitanEVOPhase3Base.dds</Icon>
+			<Size>
+				<X>0.2</X>
+				<Y>0.2</Y>
+				<Z>0.2</Z>
+			</Size>
+			<Mass>1530</Mass>
+			<Volume>890</Volume>
+			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
+			<PhysicalMaterial>Ammo</PhysicalMaterial>
+			<Capacity>1</Capacity>
+			<AmmoDefinitionId Subtype="mss_blankammo" />
+
+			<MinimumOfferAmount>100</MinimumOfferAmount>
+			<MaximumOfferAmount>1000</MaximumOfferAmount>
+			<MinimumOrderAmount>100</MinimumOrderAmount>
+			<MaximumOrderAmount>2000</MaximumOrderAmount>
+			<CanPlayerOrder>true</CanPlayerOrder>
+		</AmmoMagazine>
+	</AmmoMagazines>
+	<Blueprints>
+			<!--BLUEPRINT DEFINITION-->
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>mss_lg_t_sekhmet_ammomagazine</SubtypeId>
+			</Id>
+			<DisplayName>Sekhmet Cannon Shell</DisplayName>
+			<Prerequisites>
+				<Item Amount="250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+			</Prerequisites>
+			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_sekhmet_ammomagazine"/>
+			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+			<Icon>Textures\GUI\Icons\Cubes\MerDMK1Base.dds</Icon>
+		</Blueprint>
+		<Blueprint>
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>mss_lg_t_sekhmet_ammomagazine_special</SubtypeId>
+			</Id>
+			<DisplayName>Sekhmet Smart Cannon Shell</DisplayName>
+			<Prerequisites>
+				<Item Amount="250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+				<Item Amount="25" TypeId="Ingot" SubtypeId="Platinum"/>
+			</Prerequisites>
+			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_sekhmet_ammomagazine_special"/>
+			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
+			<Icon>Textures\GUI\Icons\Cubes\MerDMK1Base.dds</Icon>
+		</Blueprint>
+		</Blueprints>
+	<BlueprintClassEntries>
+		<!--BLUEPRINT CLASS ENTRY DEFINITION-->
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="mss_lg_t_sekhmet_ammomagazine"/>
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="mss_lg_t_sekhmet_ammomagazine_special"/>
+		<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/mss_lg_t_sekhmet_base"/>
+	</BlueprintClassEntries>
+</Definitions>
