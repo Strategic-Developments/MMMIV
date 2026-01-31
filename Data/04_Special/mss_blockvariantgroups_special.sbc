@@ -3,7 +3,7 @@
 	<BlockVariantGroups>
 		<BlockVariantGroup>
 			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="mss_blockvariantgroup_special"/>
-			<Icon>Textures\GUI\Icons\Cubes\MissileTube.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\CountermeasureLauncher.dds</Icon>
 			<DisplayName>mss_blockvariantgroup_special</DisplayName>
 			<Description>Awagga.</Description>
 			<Blocks>

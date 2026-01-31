@@ -345,24 +345,94 @@ namespace Scripts
             AmmoGraphics = new GraphicDef
             {
                 ModelName = "", // Model Path goes here.  "\\Models\\Ammo\\Starcore_Arrow_Missile_Large"
-                VisualProbability = 1f, // 0-1 % chance of AV appearing (controls all audio AND visual)
+                VisualProbability = 1f, // %
                 ShieldHitDraw = false,
+                Particles = new AmmoParticleDef
+                {
+                    Ammo = new ParticleDef
+                    {
+                        Name = "Smoke_Flare", //ShipWelderArc AMSFLARE
+                        Offset = Vector(x: 0, y: 0, z: -0.21f),
+                        Extras = new ParticleOptionDef
+                        {
+                            Scale = 0.5f,
+                        },
+                    },
+                    Hit = new ParticleDef
+                    {
+                        Name = "",
+                        ApplyToShield = true,
+                        Offset = Vector(x: 0, y: 0, z: 0),
+                        Extras = new ParticleOptionDef
+                        {
+                            Scale = 1,
+                            HitPlayChance = 1f,
+                        },
+                    },
+                    Eject = new ParticleDef
+                    {
+                        Name = "",
+                        ApplyToShield = true,
+                        Offset = Vector(x: 0, y: 0, z: 0),
+                        Extras = new ParticleOptionDef
+                        {
+                            Scale = 1,
+                            HitPlayChance = 1f,
+                        },
+                    },
+                },
                 Lines = new LineDef
                 {
-                    ColorVariance = Random(start: 1f, end: 1f), // multiply the color by random values within range.
+                    ColorVariance = Random(start: 0f, end: 0f), // multiply the color by random values within range.
                     WidthVariance = Random(start: 0f, end: 0f), // adds random value to default width (negatives shrinks width)
                     Tracer = new TracerBaseDef
                     {
                         Enable = true,
-                        Length = 5f, //
-                        Width = 2f, //
-                        Color = Color(red: 45f, green: 20, blue: 12.5f, alpha: 1), // RBG 255 is Neon Glowing, 100 is Quite Bright.
+                        Length = 4f, //
+                        Width = 0.4f, //
+                        Color = Color(red: 70, green: 70, blue: 20f, alpha: 45), // RBG 255 is Neon Glowing, 100 is Quite Bright.
                         VisualFadeStart = 0, // Number of ticks the weapon has been firing before projectiles begin to fade their color
                         VisualFadeEnd = 0, // How many ticks after fade began before it will be invisible.
                         Textures = new[] {// WeaponLaser, ProjectileTrailLine, WarpBubble, etc..
-                            "ProjectileTrailLine", // Please always have this Line set, if this Section is enabled.
+                            "WeaponLaser", // Please always have this Line set, if this Section is enabled.
                         },
                         TextureMode = Normal, // Normal, Cycle, Chaos, Wave
+                        Segmentation = new SegmentDef
+                        {
+                            Enable = false, // If true Tracer TextureMode is ignored
+                            Textures = new[] {
+                                "WeaponLaser", // Please always have this Line set, if this Section is enabled.
+                            },
+                            SegmentLength = 0f, // Uses the values below.
+                            SegmentGap = 0f, // Uses Tracer textures and values
+                            Speed = 1f, // meters per second
+                            Color = Color(red: 15, green: 15, blue: 1f, alpha: 1),
+                            WidthMultiplier = 1f,
+                            Reverse = false,
+                            UseLineVariance = true,
+                            WidthVariance = Random(start: 0f, end: 0f),
+                            ColorVariance = Random(start: 0f, end: 0f)
+                        }
+                    },
+                    Trail = new TrailDef
+                    {
+                        Enable = true,
+                        Textures = new[] {
+                            "WeaponLaser", // Please always have this Line set, if this Section is enabled.
+                        },
+                        TextureMode = Normal,
+                        DecayTime = 8, // In Ticks. 1 = 1 Additional Tracer generated per motion, 33 is 33 lines drawn per projectile. Keep this number low.
+                        Color = Color(red: 4, green: 4, blue: 3, alpha: 1),
+                        Back = false,
+                        CustomWidth = 0.8f,
+                        UseWidthVariance = false,
+                        UseColorFade = true,
+                    },
+                    OffsetEffect = new OffsetEffectDef
+                    {
+                        MaxOffset = 0,// 0 offset value disables this effect
+                        MinLength = 0.2f,
+                        MaxLength = 3,
                     },
                 },
             },

@@ -84,7 +84,7 @@ namespace Meridian.Economy
 
         public static bool IsNPCFaction(IMyFaction faction) => faction.IsEveryoneNpc();
 
- private void OnDestroyed(object target, MyDamageInformation info)
+private void OnDestroyed(object target, MyDamageInformation info)
 {
     // Defensive null check to avoid NREs when RaiseDestroyed is invoked with a null target
     if (target == null)
@@ -115,21 +115,31 @@ namespace Meridian.Economy
     if (!TryResolveAttackerIdentity(info.AttackerId, out attackerId) || attackerId == 0)
         return;
 
-    if (MyAPIGateway.Session?.Factions == null)
+    // Faction subsystem must be available
+    var factions = MyAPIGateway.Session?.Factions;
+    if (factions == null)
         return;
 
-    var atkFac = MyAPIGateway.Session.Factions.TryGetPlayerFaction(attackerId);
-    var vicFac = MyAPIGateway.Session.Factions.TryGetPlayerFaction(defenderId);
+    var atkFac = factions.TryGetPlayerFaction(attackerId);
+    var vicFac = factions.TryGetPlayerFaction(defenderId);
 
     // Defensive null check: players may not be in a faction in Space Engineers
     if (atkFac == null || vicFac == null)
         return;
 
-    if (!MyAPIGateway.Session.Factions.AreFactionsEnemies(atkFac.FactionId, vicFac.FactionId))
+    // Defensive check for AreFactionsEnemies call
+    if (!factions.AreFactionsEnemies(atkFac.FactionId, vicFac.FactionId))
+        return;
+
+    // Defensive checks for block definition and price lookup chain
+    var blockDef = slim.BlockDefinition;
+    var costs = PriceChanger.Instance?.Costs;
+    var allCosts = costs?.AllBlockCosts;
+    if (blockDef == null || allCosts == null)
         return;
 
     MyFixedPoint price;
-    if (PriceChanger.Instance.Costs.AllBlockCosts.TryGetValue(slim.BlockDefinition.Id, out price))
+    if (allCosts.TryGetValue(blockDef.Id, out price))
     {
         price += GetHydrogenBonusByLiters(slim);
 
