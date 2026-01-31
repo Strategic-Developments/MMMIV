@@ -225,7 +225,7 @@ namespace Scripts
                             Restart = false, // Whether to end a looping effect instantly when firing stops.
                             MaxDistance = 5000,
                             MaxDuration = 0,
-                            Scale = 1f, // Scale of effect.
+                            Scale = 1.5f, // Scale of effect.
                         },
                     },
                     Effect2 = new ParticleDef

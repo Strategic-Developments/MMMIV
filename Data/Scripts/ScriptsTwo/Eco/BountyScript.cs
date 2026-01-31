@@ -84,52 +84,59 @@ namespace Meridian.Economy
 
         public static bool IsNPCFaction(IMyFaction faction) => faction.IsEveryoneNpc();
 
-        private void OnDestroyed(object target, MyDamageInformation info)
-        {
-            // Skip common non-combat damage types
-            if (info.Type == Damage_Deformation || info.Type == Damage_Grinding)
-                return;
+ private void OnDestroyed(object target, MyDamageInformation info)
+{
+    // Defensive null check to avoid NREs when RaiseDestroyed is invoked with a null target
+    if (target == null)
+        return;
 
-            // Character killed
-            var ch = target as IMyCharacter;
-            if (ch != null)
-            {
-                HandleCharacterDeath(ch, info);
-                return;
-            }
+    // Skip common non-combat damage types
+    if (info.Type == Damage_Deformation || info.Type == Damage_Grinding)
+        return;
 
-            // Block destroyed
-            var slim = target as IMySlimBlock;
-            if (slim == null || slim.CubeGrid == null)
-                return;
+    // Character killed
+    var ch = target as IMyCharacter;
+    if (ch != null)
+    {
+        HandleCharacterDeath(ch, info);
+        return;
+    }
 
-            long defenderId = GetPrimaryOwnerIdentity(slim.CubeGrid);
-            if (defenderId == 0)
-                return;
+    // Block destroyed
+    var slim = target as IMySlimBlock;
+    if (slim == null || slim.CubeGrid == null)
+        return;
 
-            long attackerId;
-            if (!TryResolveAttackerIdentity(info.AttackerId, out attackerId) || attackerId == 0)
-                return;
+    long defenderId = GetPrimaryOwnerIdentity(slim.CubeGrid);
+    if (defenderId == 0)
+        return;
 
-            if (MyAPIGateway.Session?.Factions == null)
-                return;
+    long attackerId;
+    if (!TryResolveAttackerIdentity(info.AttackerId, out attackerId) || attackerId == 0)
+        return;
 
-            var atkFac = MyAPIGateway.Session.Factions.TryGetPlayerFaction(attackerId);
-            var vicFac = MyAPIGateway.Session.Factions.TryGetPlayerFaction(defenderId);
-            if (!MyAPIGateway.Session.Factions.AreFactionsEnemies(atkFac.FactionId, vicFac.FactionId))
-                return;
+    if (MyAPIGateway.Session?.Factions == null)
+        return;
 
-            MyFixedPoint price;
-            if (PriceChanger.Instance.Costs.AllBlockCosts.TryGetValue(slim.BlockDefinition.Id, out price))
-            {
-                price += GetHydrogenBonusByLiters(slim);
+    var atkFac = MyAPIGateway.Session.Factions.TryGetPlayerFaction(attackerId);
+    var vicFac = MyAPIGateway.Session.Factions.TryGetPlayerFaction(defenderId);
 
-                if (price > 0)
-                    QueuePayout(attackerId, (long)(price * PAYOUT_RATIO));
-            }
+    // Defensive null check: players may not be in a faction in Space Engineers
+    if (atkFac == null || vicFac == null)
+        return;
 
+    if (!MyAPIGateway.Session.Factions.AreFactionsEnemies(atkFac.FactionId, vicFac.FactionId))
+        return;
 
-        }
+    MyFixedPoint price;
+    if (PriceChanger.Instance.Costs.AllBlockCosts.TryGetValue(slim.BlockDefinition.Id, out price))
+    {
+        price += GetHydrogenBonusByLiters(slim);
+
+        if (price > 0)
+            QueuePayout(attackerId, (long)(price * PAYOUT_RATIO));
+    }
+}
 
         private void HandleCharacterDeath(IMyCharacter ch, MyDamageInformation info)
         {
