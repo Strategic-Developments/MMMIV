@@ -25,7 +25,7 @@
 				<Component Subtype="Computer" Count="900"/>
 				<!-- FUNCTIONAL LINE /\ UP NONFUNCTIONAL -->
 				<Component Subtype="Girder" Count="640"/>
-				<Component Subtype="MetalGrid" Count="840"/>
+				<Component Subtype="MetalGrid" Count="880"/>
 				<Component Subtype="Construction" Count="800"/>
 				<Component Subtype="SteelPlate" Count="800"/>
 			</Components>
