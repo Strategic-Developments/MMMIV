@@ -581,7 +581,7 @@ namespace Scripts
 
 
             MyLog.Default.WriteLineAndConsole($"WDef {weapon.HardPoint.PartName} w/ {ammo.AmmoRound} - Min: {ShotsPerSecMin * 60f} @ {HeatPerSecMin} -> {MinSPSPostHeat * 60f}, Max: {ShotsPerSecMax * 60f} @ {HeatPerSecMax} -> {MaxSPSPostHeat * 60f}");
-            return Math.Max(MaxSPSPostHeat, MinSPSPostHeat) * 60f / keenAmmo.Capacity;
+            return Math.Max(MaxSPSPostHeat, MinSPSPostHeat) * 60f * Loading.BarrelsPerShot / keenAmmo.Capacity;
         }
 
         // from CoreSystems
