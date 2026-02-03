@@ -2,7 +2,11 @@
 <Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Prefabs>
     <Prefab xsi:type="MyObjectBuilder_PrefabDefinition">
-      <Id Type="MyObjectBuilder_PrefabDefinition" Subtype="FrontiersmanSpawn" />
+      <Id Type="MyObjectBuilder_PrefabDefinition" Subtype="FrontiersmanSkiff" />
+       <DisplayName>TestDestroyer</DisplayName>
+	  <Description>Test</Description>
+      <Icon>Textures\GUI\Prefabs\B-60BulkFreighter.dds</Icon>
+      <TooltipImage>Textures\GUI\Prefabs\B-60BulkFreighter.png</TooltipImage>
       <CubeGrids>
         <CubeGrid>
           <SubtypeName />

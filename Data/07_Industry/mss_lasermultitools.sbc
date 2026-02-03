@@ -164,7 +164,7 @@
 				<EffectShape>Cylinder</EffectShape>
                 <WorkOrder>Uniform</WorkOrder>
                 <WorkOrigin>Emitter</WorkOrigin>
-				<WorkRate>2</WorkRate>
+				<WorkRate>3</WorkRate>
 				<Speed>0.25</Speed>
 				<PickUpFloatings>true</PickUpFloatings>
 				<UpdateInterval>5</UpdateInterval>
