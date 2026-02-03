@@ -72,7 +72,7 @@
                 <Radius>2.5</Radius>
                 <Length>300</Length>
 				<HarvestRatio>1</HarvestRatio>
-                <ActivePower>50</ActivePower>
+                <ActivePower>5</ActivePower>
                 <DamageCharacters>true</DamageCharacters>
                 <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
                 <Action Type="Secondary" SizeRatio="2" SpeedRatio="0.5" HarvestRatio="0" />
@@ -173,7 +173,7 @@
                 <Radius>2.5</Radius>
                 <Length>300</Length>
 				<HarvestRatio>1</HarvestRatio>
-                <ActivePower>50</ActivePower>
+                <ActivePower>5</ActivePower>
                 <DamageCharacters>true</DamageCharacters>
                 <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
                 <Action Type="Secondary" SizeRatio="2" SpeedRatio="0.5" HarvestRatio="0" />
@@ -343,7 +343,7 @@
                 <Radius>2.5</Radius>
                 <Length>300</Length>
 				<HarvestRatio>1</HarvestRatio>
-                <ActivePower>50</ActivePower>
+                <ActivePower>5</ActivePower>
                 <DamageCharacters>true</DamageCharacters>
                 <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
                 <Event Trigger="Firing">
@@ -455,7 +455,7 @@
                 <Radius>2.5</Radius>
                 <Length>300</Length>
 				<HarvestRatio>1</HarvestRatio>
-                <ActivePower>50</ActivePower>
+                <ActivePower>5</ActivePower>
                 <DamageCharacters>true</DamageCharacters>
 				<AffectOwnGrid>false</AffectOwnGrid>
                 <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
@@ -603,7 +603,7 @@
                 <Radius>1.2</Radius>
                 <Length>100</Length>
 				<HarvestRatio>1</HarvestRatio>
-                <ActivePower>15</ActivePower>
+                <ActivePower>5</ActivePower>
                 <DamageCharacters>true</DamageCharacters>
                 <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
                 <Action Type="Secondary" SizeRatio="3" SpeedRatio="0.5" HarvestRatio="0" />
@@ -704,7 +704,7 @@
 				<PickUpFloatings>true</PickUpFloatings>
                 <Length>100</Length>
 				<HarvestRatio>1</HarvestRatio>
-                <ActivePower>15</ActivePower>
+                <ActivePower>1</ActivePower>
                 <DamageCharacters>true</DamageCharacters>
                 <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
                 <Action Type="Secondary" SizeRatio="3" SpeedRatio="0.5" HarvestRatio="0" />
