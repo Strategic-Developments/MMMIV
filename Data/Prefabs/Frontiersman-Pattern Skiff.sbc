@@ -5,7 +5,7 @@
       <Id Type="MyObjectBuilder_PrefabDefinition" Subtype="FrontiersmanSkiff" />
        <DisplayName>TestDestroyer</DisplayName>
 	  <Description>Test</Description>
-      <Icon>Textures\GUI\Prefabs\B-60BulkFreighter.dds</Icon>
+      <Icon>Textures\GUI\Prefabs\FrontiersmanShip.dds</Icon>
       <TooltipImage>Textures\GUI\Prefabs\Frontiersman.png</TooltipImage>
       <CubeGrids>
         <CubeGrid>
