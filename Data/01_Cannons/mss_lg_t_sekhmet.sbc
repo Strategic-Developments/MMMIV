@@ -75,8 +75,8 @@
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>1338.75</Mass>
-			<Volume>780</Volume>
+			<Mass>1290</Mass>
+			<Volume>2231.25</Volume>
 			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>1</Capacity>
@@ -102,8 +102,8 @@
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>1530</Mass>
-			<Volume>890</Volume>
+			<Mass>1480</Mass>
+			<Volume>2550</Volume>
 			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>1</Capacity>
@@ -129,7 +129,7 @@
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_sekhmet_ammomagazine"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
-			<Icon>Textures\GUI\Icons\Cubes\MerDMK1Base.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\TitanEVOPhase3Base.dds</Icon>
 		</Blueprint>
 		<Blueprint>
 			<Id>
@@ -143,7 +143,7 @@
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_sekhmet_ammomagazine_special"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
-			<Icon>Textures\GUI\Icons\Cubes\MerDMK1Base.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\TitanEVOPhase3Base.dds</Icon>
 		</Blueprint>
 		</Blueprints>
 	<BlueprintClassEntries>
