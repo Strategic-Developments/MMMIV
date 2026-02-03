@@ -398,9 +398,6 @@ namespace Scripts
 
                 foreach (var wep in weapon.Assignments.MountPoints)
                 {
-                    if (wep.SubtypeId.Contains("khalkeus"))
-                        continue;
-
                     MyCubeBlockDefinition keendef;
                     if (modBlocks.TryGetValue(wep.SubtypeId, out keendef))
                     {

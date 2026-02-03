@@ -126,7 +126,7 @@ namespace Scripts
                     MaxElevation = 90,
                     HomeAzimuth = 0, // Default resting rotation angle
                     HomeElevation = 15, // Default resting elevation
-                    InventorySize = 1f, // Inventory capacity in kL.
+                    InventorySize = 830 * 2 / 1000f, // Inventory capacity in kL.
                     FixedInventorySize = true, // If true, the inventory size will be forced to the exact value specified above regardless of world inventory multipliers
                     IdlePower = 30, // Constant base power draw in MW.
                     FixedOffset = false, // Deprecated.

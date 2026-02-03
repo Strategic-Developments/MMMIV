@@ -76,7 +76,7 @@
 				<Z>0.2</Z>
 			</Size>
 			<Mass>1290</Mass>
-			<Volume>2231.25</Volume>
+			<Volume>1170</Volume>
 			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>1</Capacity>
@@ -103,7 +103,7 @@
 				<Z>0.2</Z>
 			</Size>
 			<Mass>1480</Mass>
-			<Volume>2550</Volume>
+			<Volume>1330</Volume>
 			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>1</Capacity>
