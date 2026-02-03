@@ -128,7 +128,7 @@ namespace Scripts
                     HomeElevation = 15, // Default resting elevation
                     InventorySize = 1f, // Inventory capacity in kL.
                     FixedInventorySize = true, // If true, the inventory size will be forced to the exact value specified above regardless of world inventory multipliers
-                    IdlePower = 160, // Constant base power draw in MW.
+                    IdlePower = 240, // Constant base power draw in MW.
                     FixedOffset = false, // Deprecated.
                     Offset = Vector(x: 0, y: 0, z: 0), // Offsets the aiming/firing line of the weapon, in metres.
                     Type = BlockWeapon, // What type of weapon this is; BlockWeapon, HandWeapon, Phantom 
@@ -205,7 +205,7 @@ namespace Scripts
                     PreFiringSound = "", // Audio for warmup effect.
                     FiringSound = "shell_out_big_far_04", // Audio for firing.
                     FiringSoundPerShot = true, // Whether to replay the sound for each shot, or just loop over the entire track while firing.
-                    ReloadSound = "shell_out_big_far_04", // Sound SubtypeID, for when your Weapon is in a reloading state
+                    ReloadSound = "shell_in_med_01", // Sound SubtypeID, for when your Weapon is in a reloading state
                     NoAmmoSound = "", // Sound for if the user attempts to fire the gun without ammo
                     HardPointRotationSound = "servo_01", // Audio played when turret is moving.
                     BarrelRotationSound = "", // Sound played when the barrel rotates
