@@ -41,6 +41,9 @@ namespace Scripts
                 mss_lg_f_scarab,
                 mss_lg_t_thoth,
                 mss_lg_t_entropic,
+
+                // only vanilla "weapon" that will exist
+                LargeSearchlight,
             };
             PartDefinitions(
                 CompileWeapons(Weapons)

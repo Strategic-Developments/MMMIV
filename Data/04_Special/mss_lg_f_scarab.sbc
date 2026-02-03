@@ -12,7 +12,7 @@
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="1" y="1" z="2"/>
-			<ModelOffset x="0" y="0" z="1"/>
+			<Center x="0" y="0" z="1"/>
 			<Model>Models\Cubes\Scarab\CountermeasureLauncher.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="25"/>
@@ -79,8 +79,8 @@
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>50</Mass>
-			<Volume>300</Volume>
+			<Mass>247.5</Mass>
+			<Volume>250</Volume>
 			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>8</Capacity>
@@ -102,7 +102,7 @@
 			</Id>
 			<DisplayName>Scarab Countermeasures</DisplayName>
 			<Prerequisites>
-				<Item Amount="250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+				<Item Amount="534" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_f_scarab_ammomagazine"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>

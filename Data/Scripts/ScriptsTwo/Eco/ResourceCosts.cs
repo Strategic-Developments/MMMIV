@@ -287,6 +287,9 @@ namespace Meridian
                         case "ConveyorSorter/SmallRailgun":
                         case "SmallMissileLauncherReload/SmallBlockMediumCalibreGun":
                         case "SmallMissileLauncher/SmallFlareLauncher":
+                            def.Enabled = false;
+                            def.Public = false;
+                            break;
 
                         case "TurretControlBlock/LargeTurretControlBlock":
                         case "TurretControlBlock/SmallTurretControlBlock":

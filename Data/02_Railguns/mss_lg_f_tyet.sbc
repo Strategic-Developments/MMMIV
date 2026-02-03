@@ -135,7 +135,7 @@
 			</Id>
 			<DisplayName>Tyet Railgun Sabot</DisplayName>
 			<Prerequisites>
-				<Item Amount="250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+				<Item Amount="6250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_f_tyet_ammomagazine"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
@@ -148,8 +148,8 @@
 			</Id>
 			<DisplayName>Tyet HE Railgun Sabot</DisplayName>
 			<Prerequisites>
-				<Item Amount="15000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
-				<Item Amount="15" TypeId="Ingot" SubtypeId="Platinum"/>
+				<Item Amount="10417" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+				<Item Amount="14.584" TypeId="Ingot" SubtypeId="Platinum"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_f_tyet_ammomagazine_special"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>

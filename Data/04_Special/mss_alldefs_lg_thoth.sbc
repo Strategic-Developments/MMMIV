@@ -78,8 +78,8 @@
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>2000</Mass>
-			<Volume>1000</Volume>
+			<Mass>1200</Mass>
+			<Volume>70</Volume>
 			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>500</Capacity>
@@ -103,7 +103,7 @@
 				</Id>
 				<DisplayName>Thoth Inhibition Core</DisplayName>
 				<Prerequisites>
-					<Item Amount="250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+					<Item Amount="34721" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
 				</Prerequisites>
 				<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_thoth_ammomagazine"/>
 				<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>

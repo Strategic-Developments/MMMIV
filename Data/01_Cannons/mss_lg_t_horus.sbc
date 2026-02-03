@@ -128,7 +128,7 @@
 			</Id>
 			<DisplayName>Horus Cannon Shell</DisplayName>
 			<Prerequisites>
-				<Item Amount="250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+				<Item Amount="667" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_horus_ammomagazine"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
@@ -141,8 +141,8 @@
 			</Id>
 			<DisplayName>Horus Cannon Shell</DisplayName>
 			<Prerequisites>
-				<Item Amount="250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
-				<Item Amount="15" TypeId="Ingot" SubtypeId="Platinum"/>
+				<Item Amount="1500" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+				<Item Amount="1" TypeId="Ingot" SubtypeId="Platinum"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_horus_ammomagazine_special"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>

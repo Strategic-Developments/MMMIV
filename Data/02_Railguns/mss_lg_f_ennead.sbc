@@ -132,7 +132,7 @@
 			</Id>
 			<DisplayName>Ennead Railgun Sabot</DisplayName>
 			<Prerequisites>
-				<Item Amount="250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+				<Item Amount="10000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_f_ennead_ammomagazine"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
@@ -145,8 +145,8 @@
 			</Id>
 			<DisplayName>Ennead HE/Flechette Railgun Sabot</DisplayName>
 			<Prerequisites>
-				<Item Amount="15000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
-				<Item Amount="15" TypeId="Ingot" SubtypeId="Platinum"/>
+				<Item Amount="17500" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+				<Item Amount="25" TypeId="Ingot" SubtypeId="Platinum"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_f_ennead_ammomagazine_special"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>

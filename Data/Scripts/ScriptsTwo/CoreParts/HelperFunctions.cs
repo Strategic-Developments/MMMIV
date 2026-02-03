@@ -636,7 +636,7 @@ namespace Scripts
             //Shots per second
             shotsPerSecondV2 = 1.0f / shotsPerSecondV2;
 
-            return shotsPerSecondV2 * trajectilesPerBarrel;
+            return shotsPerSecondV2 * trajectilesPerBarrel * barrelsPerShot;
         }
         private string GetTabs(int numTabs)
         {

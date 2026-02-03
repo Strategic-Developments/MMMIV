@@ -69,7 +69,7 @@
 				<TypeId>AmmoMagazine</TypeId>
 				<SubtypeId>mss_lg_f_jackal_ammomagazine</SubtypeId>
 			</Id>
-			<DisplayName>Jackal Torpedo</DisplayName>
+			<DisplayName>Jackal Missile</DisplayName>
 			<!--<Icon>Textures\GUI\Icons\Cubes\CustosAmmoSTG1.png</Icon>-->
 			<!--gun as the ammo icon makes it SO much easier to ID things-->
 			<Icon>Textures\GUI\Icons\Cubes\JackalLauncher.dds</Icon>
@@ -101,7 +101,7 @@
 			</Id>
 			<DisplayName>Jackal Missile</DisplayName>
 			<Prerequisites>
-				<Item Amount="250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+				<Item Amount="1563" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_f_jackal_ammomagazine"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
