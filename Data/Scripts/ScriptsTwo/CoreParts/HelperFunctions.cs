@@ -481,6 +481,7 @@ namespace Scripts
 
                             AppendAmmoStats(
                                 stringBuilder,
+                                weapon,
                                 ammo,
                                 weapon.Ammos,
                                 templist,
@@ -526,7 +527,117 @@ namespace Scripts
 
             return AllWeapons.ToArray();
         }
+        public float GetMagsPerMin(WeaponDefinition weapon, AmmoDef ammo, out MyAmmoMagazineDefinition keenAmmo)
+        {
+            var Hardpoint = weapon.HardPoint;
+            var Loading = Hardpoint.Loading;
 
+            float MinROF = Loading.RateOfFire * (Hardpoint.Ui.RateOfFire ? Hardpoint.Ui.RateOfFireMin : 1);
+
+            int TicksPerShotMax = (int)(3600f / Loading.RateOfFire);
+            int TicksPerShotMin = (int)(3600f / MinROF);
+
+            keenAmmo = MyDefinitionManager.Static.GetAmmoMagazineDefinition(MyDefinitionId.Parse($"MyObjectBuilder_AmmoMagazine/{ammo.AmmoMagazine}"));
+            float ShotsPerSecMax = GetShotsPerSecond(keenAmmo.Capacity, Loading.MagsToLoad, Loading.RateOfFire, Loading.ReloadTime, Loading.BarrelsPerShot, Loading.TrajectilesPerBarrel, Loading.ShotsInBurst, Loading.DelayAfterBurst);
+            float ShotsPerSecMin = GetShotsPerSecond(keenAmmo.Capacity, Loading.MagsToLoad, (int)MinROF, Loading.ReloadTime, Loading.BarrelsPerShot, Loading.TrajectilesPerBarrel, Loading.ShotsInBurst, Loading.DelayAfterBurst);
+
+
+            double heatmod = ammo.HeatModifier < 0 ? 1 : ammo.HeatModifier;
+
+            double HeatPerSecMax = (ShotsPerSecMax * Loading.HeatPerShot * Loading.BarrelsPerShot * heatmod) - Loading.HeatSinkRate;
+            double HeatPerSecMin = (ShotsPerSecMin * Loading.HeatPerShot * Loading.BarrelsPerShot * heatmod) - Loading.HeatSinkRate;
+
+            float MaxSPSPostHeat = 0;
+            float MinSPSPostHeat = 0;
+            if (HeatPerSecMax <= 0)
+            {
+                MaxSPSPostHeat = ShotsPerSecMax;
+                MyLog.Default.WriteLineAndConsole("HeatPerSecMax <= 0");
+            }
+            else
+            {
+                double safeToOverheatMax = (Loading.MaxHeat - (Loading.MaxHeat * Loading.Cooldown)) / HeatPerSecMax;
+                double cooldownTimeMax = (Loading.MaxHeat - (Loading.MaxHeat * Loading.Cooldown)) / Loading.HeatSinkRate;
+                double timeHeatCycleMax = (safeToOverheatMax + cooldownTimeMax);
+
+                MaxSPSPostHeat = (float)((safeToOverheatMax / timeHeatCycleMax) * ShotsPerSecMax);
+
+                MyLog.Default.WriteLineAndConsole($"{safeToOverheatMax}/({safeToOverheatMax}+{cooldownTimeMax})*{ShotsPerSecMax}={MaxSPSPostHeat} ({timeHeatCycleMax})");
+            }
+            if (HeatPerSecMin <= 0)
+            {
+                MinSPSPostHeat = ShotsPerSecMin;
+                MyLog.Default.WriteLineAndConsole("HeatPerSecMin <= 0");
+            }
+            else
+            {
+                double safeToOverheatMin = (Loading.MaxHeat - (Loading.MaxHeat * Loading.Cooldown)) / HeatPerSecMin;
+                double cooldownTimeMin = (Loading.MaxHeat - (Loading.MaxHeat * Loading.Cooldown)) / Loading.HeatSinkRate;
+                double timeHeatCycleMin = (safeToOverheatMin + cooldownTimeMin);
+
+                MinSPSPostHeat = (float)((safeToOverheatMin / timeHeatCycleMin) * ShotsPerSecMin);
+                MyLog.Default.WriteLineAndConsole($"{safeToOverheatMin}/({safeToOverheatMin}+{cooldownTimeMin})*{ShotsPerSecMin}={MinSPSPostHeat} ({timeHeatCycleMin})");
+            }
+
+
+            MyLog.Default.WriteLineAndConsole($"WDef {weapon.HardPoint.PartName} w/ {ammo.AmmoRound} - Min: {ShotsPerSecMin * 60f} @ {HeatPerSecMin} -> {MinSPSPostHeat * 60f}, Max: {ShotsPerSecMax * 60f} @ {HeatPerSecMax} -> {MaxSPSPostHeat * 60f}");
+            return Math.Max(MaxSPSPostHeat, MinSPSPostHeat) * 60f / keenAmmo.Capacity;
+        }
+
+        // from CoreSystems
+        private float GetShotsPerSecond(int magCapacity, int magPerReload, int rof, int reloadTime, int barrelsPerShot, int trajectilesPerBarrel, int shotsInBurst, int delayAfterBurst)
+        {
+            if (true) //WHy is this required ;_;
+            {
+                if (magPerReload < 1)
+                    magPerReload = 1;
+                var reloadsPerRoF = rof / ((magCapacity * magPerReload) / (float)barrelsPerShot);
+                var burstsPerRoF = shotsInBurst == 0 ? 0 : rof / (float)shotsInBurst;
+                var ticksReloading = reloadsPerRoF * reloadTime;
+
+                var ticksDelaying = burstsPerRoF * delayAfterBurst;
+
+                float shotsPerSecond = rof / (60f + (ticksReloading / 60) + (ticksDelaying / 60));
+            }
+
+            var totMagCap = magCapacity * magPerReload;
+
+            // How many times will the weapon shoot per magazine
+            var shotsPerMagazine = totMagCap == 1 ? 0 : (Math.Ceiling((float)totMagCap / barrelsPerShot) - 1);
+
+            // How many bursts per magazine
+            var burstPerMagazine = shotsInBurst == 0 ? 0 : Math.Ceiling(((float)totMagCap / (float)shotsInBurst) - 1); // how many bursts per magazine
+
+            //Case of no reload time
+            if (reloadTime == 0)
+            {
+                shotsPerMagazine = totMagCap == 1 ? 0 : (Math.Ceiling((float)totMagCap / barrelsPerShot));
+                burstPerMagazine = shotsInBurst == 0 ? 0 : Math.Ceiling(((float)totMagCap / (float)shotsInBurst));
+            }
+
+            //in tick - time spent shooting magazine
+            var timeShots = shotsPerMagazine == 0 ? 0 : shotsPerMagazine * ((float)3600 / rof);
+            // in tick - time spent on burst
+            var timeBurst = burstPerMagazine == 0 ? 0 : burstPerMagazine * ((float)delayAfterBurst);
+            // total time per mag
+            var timePerCycle = timeShots + timeBurst + reloadTime; //add delayed fire
+
+            //if 0 its a non magazine weapon so a cycle will be base on rof
+            timePerCycle = timePerCycle == 0 ? ((float)3600 / rof) : timePerCycle;
+
+            //this part might be shit
+            timePerCycle = timePerCycle < ((float)3600 / rof) ? ((float)3600 / rof) : timePerCycle;
+
+            // Convert to seconds
+            timePerCycle = (float)timePerCycle / 60f;
+
+            //Shots per cycle
+            var shotsPerSecondV2 = (float)timePerCycle / (totMagCap);
+            //Shots per second
+            shotsPerSecondV2 = 1.0f / shotsPerSecondV2;
+
+            return shotsPerSecondV2 * trajectilesPerBarrel;
+        }
         private string GetTabs(int numTabs)
         {
             return new string(' ', numTabs * 2);
@@ -534,6 +645,7 @@ namespace Scripts
 
         private void AppendAmmoStats(
             StringBuilder stringBuilder,
+            WeaponDefinition weaponDefinition,
             AmmoDef ammo,
             AmmoDef[] ammos,
             List<string> visitedAmmos,
@@ -554,6 +666,19 @@ namespace Scripts
             numTabs++;
             bool shouldShowScales = false;
             var gridScales = ammo.DamageScales;
+
+            if (ammo.HardPointUsable)
+            {
+                MyAmmoMagazineDefinition ammodef;
+                var realROF = GetMagsPerMin(weaponDefinition, ammo, out ammodef);
+
+                stringBuilder.Append(
+                       $"\n{GetTabs(numTabs)}Ammo Mag: {ammodef.DisplayNameText}"
+                   );
+                stringBuilder.Append(
+                       $"\n{GetTabs(numTabs)}Mags/Min: {realROF}"
+                   );
+            }
 
             if (ammo.Health > 0)
             {
@@ -690,7 +815,7 @@ namespace Scripts
                 {
                     if (a.AmmoRound == ammo.Fragment.AmmoRound)
                     {
-                        AppendAmmoStats(stringBuilder, a, ammos, visitedAmmos, numTabs, large);
+                        AppendAmmoStats(stringBuilder, weaponDefinition, a, ammos, visitedAmmos, numTabs, large);
                     }
                 }
             }
