@@ -63,6 +63,35 @@
             <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
         </Component> 
 
+        <Component>
+            <Id>
+                <TypeId>Component</TypeId>
+                <SubtypeId>PostlightModule</SubtypeId>
+            </Id>
+            <DisplayName>Postlight Module</DisplayName>
+            <Icon>Textures\GUI\Icons\Components\PostlightModule.dds</Icon>
+            <Size>
+                <X>0.1</X>
+                <Y>0.1</Y>
+                <Z>0.05</Z>
+            </Size>
+            <Mass>12</Mass>
+            <Volume>5</Volume>
+            <Model>Models\Cubes\IndustrialComponents\PostlightModule.mwm</Model>
+            <PhysicalMaterial>Metal</PhysicalMaterial>
+            <MaxIntegrity>25</MaxIntegrity>
+            <DropProbability>0.45</DropProbability>
+            <Health>25</Health>
+            <MinimumOfferAmount>10</MinimumOfferAmount>
+            <MaximumOfferAmount>500</MaximumOfferAmount>
+            <MinimumOrderAmount>10</MinimumOrderAmount>
+            <MaximumOrderAmount>100</MaximumOrderAmount>
+            <CanPlayerOrder>true</CanPlayerOrder>
+
+            <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
+            <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
+        </Component> 
+
 
         <Component>
             <Id>

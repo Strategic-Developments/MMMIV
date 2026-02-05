@@ -303,7 +303,6 @@ namespace Meridian
                             def.Public = false;
                             break;
                         case "Refinery/SmallPrototechRefinery":
-                        case "Refinery/LargePrototechRefinery":
                         case "Refinery/Blast Furnace":
                             ((MyRefineryDefinition)def).RefineSpeed = 0.0001f;
                             def.Enabled = false;

@@ -22,6 +22,24 @@
     </Blueprint>
 
 
+    <Blueprint>
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>PostlightModuleBP</SubtypeId>
+      </Id>
+      <DisplayName>Postlight Module</DisplayName>
+      <Icon>Textures\GUI\Icons\Components\IndustrialModule.dds</Icon>
+	  
+      <Prerequisites>
+        <Item Amount="10000" TypeId="PhysicalObject" SubtypeId="SpaceCredit" />
+        <Item Amount="100" TypeId="Ingot" SubtypeId="PrototechScrap" />
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="PostlightModule" />
+      <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
+	  
+    </Blueprint>
+
+
 <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
