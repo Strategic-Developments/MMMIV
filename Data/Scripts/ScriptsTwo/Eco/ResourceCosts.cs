@@ -38,7 +38,7 @@ namespace Meridian
                 ["Ore/Ice"] = 0.5,
                 ["Ore/Scrap"] = 1,
                 ["Ingot/Scrap"] = 1,
-                ["Ingot/PrototechScrap"] = 6000,
+                /*["Ingot/PrototechScrap"] = 6000,*/
                 ["ConsumableItem/Powerkit"] = 50,
                 ["ConsumableItem/Medkit"] = 50,
                 ["Package/Package"] = 50000,
