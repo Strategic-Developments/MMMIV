@@ -8,14 +8,7 @@
                 <SubtypeId>StealthDrive1x1</SubtypeId>
             </Id>
             <DisplayName>Stealth Drive</DisplayName>
-            <Icon>Textures\GUI\Icons\Cubes\Aryx_AWE_TacticalModule.dds</Icon>
             <Description>Allows a ship to enter stealth, becoming almost invisible as well as undetectable by weapon systems.</Description>
-            <CubeSize>Large</CubeSize>
-            <GuiVisible>false</GuiVisible>
-            <BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="1" y="1" z="1"/>
-            <ModelOffset x="0" y="0" z="0" />
-			<Model>Models\Cubes\large\StealthDrive1x1.mwm</Model>
             <Components>
                 <Component Subtype="SteelPlate" Count="800" />
                 <Component Subtype="Construction" Count="200" />
@@ -28,31 +21,6 @@
                 <Component Subtype="SteelPlate" Count="200" />
             </Components>
             <CriticalComponent Subtype="Computer" Index="0" />
-			<MountPoints>
-				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
-			</MountPoints>
-			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\large\StealthDrive1x1_BS1.mwm"/>
-				<Model BuildPercentUpperBound="0.67" File="Models\Cubes\large\StealthDrive1x1_BS2.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\large\StealthDrive1x1_BS3.mwm"/>
-			</BuildProgressModels>
-            <BlockPairName>StealthDrive1x1</BlockPairName>
-            <MirroringX>Z</MirroringX>
-            <MirroringZ>Y</MirroringZ>
-            <EdgeType>Light</EdgeType>
-            <IsAirTight>true</IsAirTight>
-            <PrimarySound>BlockModuleEfficiency</PrimarySound>
-            <DamageEffectName>Damage_Electrical_Damaged</DamageEffectName>
-            <DamagedSound>ParticleElectrical</DamagedSound>
-            <EmissiveColorPreset>Default</EmissiveColorPreset>
-            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
-            <DestroySound>WepSmallWarheadExpl</DestroySound>
-            <PCU>500</PCU>
         </Definition>
 
     </CubeBlocks>
