@@ -306,13 +306,11 @@ namespace Meridian
                             def.Public = false;
                             break;
                         case "JumpDrive/SmallPrototechJumpDrive":
-                        case "JumpDrive/LargePrototechJumpDrive":
                             ((MyJumpDriveDefinition)def).MaxJumpDistance = 1;
                             def.Enabled = false;
                             def.Public = false;
                             break;
                         case "Refinery/SmallPrototechRefinery":
-                        case "Refinery/LargePrototechRefinery":
                         case "Refinery/Blast Furnace":
                             ((MyRefineryDefinition)def).RefineSpeed = 0.0001f;
                             def.Enabled = false;

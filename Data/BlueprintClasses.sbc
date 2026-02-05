@@ -19,6 +19,7 @@
       <Entry Class="Industrial_Modules" BlueprintSubtypeId="CombatModuleBP" />
 
       <Entry Class="Experimental_Modules" BlueprintSubtypeId="StealthModuleBP" />
+      <Entry Class="Experimental_Modules" BlueprintSubtypeId="PostlightModuleBP" />
 
       
    </BlueprintClassEntries>
