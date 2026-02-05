@@ -38,7 +38,7 @@ namespace Meridian
                 ["Ore/Ice"] = 0.5,
                 ["Ore/Scrap"] = 1,
                 ["Ingot/Scrap"] = 1,
-                ["Ingot/PrototechScrap"] = 6000,
+                /*["Ingot/PrototechScrap"] = 6000,*/
                 ["ConsumableItem/Powerkit"] = 50,
                 ["ConsumableItem/Medkit"] = 50,
                 ["Package/Package"] = 50000,
@@ -100,20 +100,29 @@ namespace Meridian
                         break;
                 }
 
-                if (definition.Id.SubtypeName.Contains("OreToIngot")
-                    && !definition.Id.SubtypeName.Contains("Uranium"))
+                if (definition.Id.SubtypeName.Contains("OreToIngot"))
                 {
-                    definition.Prerequisites = new[]
-                        {
-                            new MyBlueprintDefinitionBase.Item()
-                            {
-                                Amount = (MyFixedPoint)Math.Ceiling((float)100000),
-                                Id = MyDefinitionId.Parse("Ore/Gold")
-                            }
-                        };
-                    definition.BaseProductionTimeInSeconds = 99999;
-                    definition.Enabled = false;
-                    definition.Public = false;
+                    //definition.Prerequisites = new[]
+                    //    {
+                    //        new MyBlueprintDefinitionBase.Item()
+                    //        {
+                    //            Amount = (MyFixedPoint)Math.Ceiling((float)100000),
+                    //            Id = MyDefinitionId.Parse("Ore/Gold")
+                    //        }
+                    //    };
+                    //definition.BaseProductionTimeInSeconds = 99999;
+                    //definition.Enabled = false;
+                    //definition.Public = false;
+
+                    if (definition.Id.SubtypeName.Contains("Uranium"))
+                    {
+                        definition.Results[0].Amount = 1;
+                        definition.BaseProductionTimeInSeconds = 0.01f;
+                    }
+                    else
+                    {
+                        definition.BaseProductionTimeInSeconds = 1 / 60f;
+                    }
                 }
 
                 var bpCost = MyFixedPoint.Zero;
