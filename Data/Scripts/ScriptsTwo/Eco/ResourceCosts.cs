@@ -306,7 +306,6 @@ namespace Meridian
                             def.Public = false;
                             break;
                         case "JumpDrive/SmallPrototechJumpDrive":
-                        case "JumpDrive/LargePrototechJumpDrive":
                             ((MyJumpDriveDefinition)def).MaxJumpDistance = 1;
                             def.Enabled = false;
                             def.Public = false;
