@@ -116,12 +116,12 @@ namespace Meridian
 
                     if (definition.Id.SubtypeName.Contains("Uranium"))
                     {
-                        definition.Results[0].Amount = 1;
-                        definition.BaseProductionTimeInSeconds = 0.01f;
+                        definition.BaseProductionTimeInSeconds = 1 / 60f;
                     }
                     else
                     {
-                        definition.BaseProductionTimeInSeconds = 1 / 60f;
+                        definition.Results[0].Amount = 1;
+                        definition.BaseProductionTimeInSeconds = 0.0001f;
                     }
                 }
 
