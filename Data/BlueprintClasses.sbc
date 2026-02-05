@@ -7,11 +7,62 @@
    <BlueprintClassEntries>
 	
 
-      <Entry Class="EliteEquipment" BlueprintSubtypeId="IssuedIngotShipmentBP" />
-      <Entry Class="EliteEquipment" BlueprintSubtypeId="TechIngotShipmentBP" />
-      <Entry Class="EliteEquipment" BlueprintSubtypeId="AdvancedIngotShipmentBP" />
-      <Entry Class="EliteEquipment" BlueprintSubtypeId="IngotShipmentBP" />
+       <Entry Class="Components" BlueprintSubtypeId="SalvagedPlatingBP" />
+
+      <Entry Class="ShipmentComponents" BlueprintSubtypeId="IssuedIngotShipmentBP" />
+      <Entry Class="ShipmentComponents" BlueprintSubtypeId="TechIngotShipmentBP" />
+      <Entry Class="ShipmentComponents" BlueprintSubtypeId="AdvancedIngotShipmentBP" />
+      <Entry Class="ShipmentComponents" BlueprintSubtypeId="IngotShipmentBP" />
+
+      <Entry Class="Industrial_Modules" BlueprintSubtypeId="IndustrialModuleBP" />
+      <Entry Class="Industrial_Modules" BlueprintSubtypeId="ExperimentalModuleBP" />
+      <Entry Class="Industrial_Modules" BlueprintSubtypeId="CombatModuleBP" />
+
+      <Entry Class="Experimental_Modules" BlueprintSubtypeId="StealthModuleBP" />
 
       
    </BlueprintClassEntries>
+
+ <BlueprintClasses>
+        <Class>
+            <Id>
+                <TypeId>BlueprintClassDefinition</TypeId>
+                <SubtypeId>Industrial_Modules</SubtypeId>
+            </Id>
+            <DisplayName>Reprocessed Modules</DisplayName>
+            <Description>Create advanced modules out of salvage.</Description>
+            <Icon>Textures\GUI\Icons\buttons\Ingots.dds</Icon>
+            <HighlightIcon>Textures\GUI\Icons\buttons\Ingots.dds</HighlightIcon>
+            <FocusIcon>Textures\GUI\Icons\buttons\IngotsFocus.dds</FocusIcon>
+            <InputConstraintIcon>Textures\GUI\Icons\filter_ore.dds</InputConstraintIcon>
+        </Class>
+        <Class>
+            <Id>
+                <TypeId>BlueprintClassDefinition</TypeId>
+                <SubtypeId>ShipmentComponents</SubtypeId>
+            </Id>
+            <DisplayName>Shipment Components</DisplayName>
+            <Description>Shipment Components</Description>
+            <Icon>Textures\GUI\Icons\buttons\Ingots.dds</Icon>
+            <HighlightIcon>Textures\GUI\Icons\buttons\Ingots.dds</HighlightIcon>
+            <FocusIcon>Textures\GUI\Icons\buttons\IngotsFocus.dds</FocusIcon>
+            <InputConstraintIcon>Textures\GUI\Icons\filter_ore.dds</InputConstraintIcon>
+        </Class>
+        <Class>
+            <Id>
+                <TypeId>BlueprintClassDefinition</TypeId>
+                <SubtypeId>Experimental_Modules</SubtypeId>
+            </Id>
+            <DisplayName>Experimental Modules</DisplayName>
+            <Description>Create Experimental Modules for use in advanced production.</Description>
+            <Icon>Textures\GUI\Icons\buttons\large_block.dds</Icon>
+            <HighlightIcon>Textures\GUI\Icons\buttons\large_block.dds</HighlightIcon>
+            <FocusIcon>Textures\GUI\Icons\buttons\large_block_focus.dds</FocusIcon>
+            <InputConstraintIcon>Textures\GUI\Icons\filter_ore.dds</InputConstraintIcon>
+            <OutputConstraintIcon>Textures\GUI\Icons\filter_ingot.dds</OutputConstraintIcon>
+        </Class>
+
+    </BlueprintClasses>
+
+
 </Definitions>

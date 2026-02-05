@@ -1,13 +1,15 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <Components>
-        <!-- <Component>
+
+
+    <Component>
             <Id>
                 <TypeId>Component</TypeId>
-                <SubtypeId>GuidanceEnhancer</SubtypeId>
+                <SubtypeId>SalvagedPlating</SubtypeId>
             </Id>
-            <DisplayName>Sentient Guidance Enhancer</DisplayName>
-            <Icon>Textures\GUI\Icons\components\GuidanceEnhancer.dds</Icon>
+            <DisplayName>Salvaged Plating</DisplayName>
+            <Icon>Textures\GUI\Icons\Component\PrototechPanel_Component.dds</Icon>
             <Size>
                 <X>0.1</X>
                 <Y>0.1</Y>
@@ -15,7 +17,7 @@
             </Size>
             <Mass>12</Mass>
             <Volume>5</Volume>
-            <Model>Models\Components\GuidanceEnhancer.mwm</Model>
+            <Model>Models\Components\PrototechPanel_Component.mwm</Model>
             <PhysicalMaterial>Metal</PhysicalMaterial>
             <MaxIntegrity>25</MaxIntegrity>
             <DropProbability>0.45</DropProbability>
@@ -29,18 +31,16 @@
             <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
             <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
         </Component> 
-	
-
 
 
 
     <Component>
             <Id>
                 <TypeId>Component</TypeId>
-                <SubtypeId>MemoryCells</SubtypeId>
+                <SubtypeId>IndustrialModule</SubtypeId>
             </Id>
-            <DisplayName>Faded Memorycells</DisplayName>
-            <Icon>Textures\GUI\Icons\components\MemoryCells.dds</Icon>
+            <DisplayName>Industrial Module</DisplayName>
+            <Icon>Textures\GUI\Icons\Components\IndustrialModule.dds</Icon>
             <Size>
                 <X>0.1</X>
                 <Y>0.1</Y>
@@ -48,7 +48,7 @@
             </Size>
             <Mass>12</Mass>
             <Volume>5</Volume>
-            <Model>Models\Components\MemoryCells.mwm</Model>
+            <Model>Models\Cubes\IndustrialComponents\IndustrialModule.mwm</Model>
             <PhysicalMaterial>Metal</PhysicalMaterial>
             <MaxIntegrity>25</MaxIntegrity>
             <DropProbability>0.45</DropProbability>
@@ -64,13 +64,13 @@
         </Component> 
 
 
-    <Component>
+        <Component>
             <Id>
                 <TypeId>Component</TypeId>
-                <SubtypeId>NetworkLibrary</SubtypeId>
+                <SubtypeId>ExperimentalModule</SubtypeId>
             </Id>
-            <DisplayName>Neural Library</DisplayName>
-            <Icon>Textures\GUI\Icons\components\NetworkLibrary.dds</Icon>
+            <DisplayName>Experimental Module</DisplayName>
+            <Icon>Textures\GUI\Icons\Components\ExperimentalModule.dds</Icon>
             <Size>
                 <X>0.1</X>
                 <Y>0.1</Y>
@@ -78,7 +78,7 @@
             </Size>
             <Mass>12</Mass>
             <Volume>5</Volume>
-            <Model>Models\Components\NetworkLibrary.mwm</Model>
+            <Model>Models\Cubes\IndustrialComponents\ExperimentalModule.mwm</Model>
             <PhysicalMaterial>Metal</PhysicalMaterial>
             <MaxIntegrity>25</MaxIntegrity>
             <DropProbability>0.45</DropProbability>
@@ -94,15 +94,13 @@
         </Component> 
 
 
-
-
-    <Component>
+         <Component>
             <Id>
                 <TypeId>Component</TypeId>
-                <SubtypeId>SensorClusterComponent</SubtypeId>
+                <SubtypeId>CombatModule</SubtypeId>
             </Id>
-            <DisplayName>Gravimetric Sensors</DisplayName>
-            <Icon>Textures\GUI\Icons\components\SensorClusterComponent.dds</Icon>
+            <DisplayName>Combat Module</DisplayName>
+            <Icon>Textures\GUI\Icons\Components\CombatModule.dds</Icon>
             <Size>
                 <X>0.1</X>
                 <Y>0.1</Y>
@@ -110,7 +108,7 @@
             </Size>
             <Mass>12</Mass>
             <Volume>5</Volume>
-            <Model>Models\Components\SensorClusterComponent.mwm</Model>
+            <Model>Models\Cubes\IndustrialComponents\CombatModule.mwm</Model>
             <PhysicalMaterial>Metal</PhysicalMaterial>
             <MaxIntegrity>25</MaxIntegrity>
             <DropProbability>0.45</DropProbability>
@@ -128,73 +126,16 @@
 
 
 
-   <Component>
-            <Id>
-                <TypeId>Component</TypeId>
-                <SubtypeId>Soulbank</SubtypeId>
-            </Id>
-            <DisplayName>Digital Soulbank</DisplayName>
-            <Icon>Textures\GUI\Icons\components\Soulbank.dds</Icon>
-            <Size>
-                <X>0.1</X>
-                <Y>0.1</Y>
-                <Z>0.05</Z>
-            </Size>
-            <Mass>12</Mass>
-            <Volume>5</Volume>
-            <Model>Models\Components\Soulbank.mwm</Model>
-            <PhysicalMaterial>Metal</PhysicalMaterial>
-            <MaxIntegrity>25</MaxIntegrity>
-            <DropProbability>0.45</DropProbability>
-            <Health>25</Health>
-            <MinimumOfferAmount>10</MinimumOfferAmount>
-            <MaximumOfferAmount>500</MaximumOfferAmount>
-            <MinimumOrderAmount>10</MinimumOrderAmount>
-            <MaximumOrderAmount>100</MaximumOrderAmount>
-            <CanPlayerOrder>true</CanPlayerOrder>
-
-            <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
-            <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
-        </Component> 
 
 
-
-  <Component>
-            <Id>
-                <TypeId>Component</TypeId>
-                <SubtypeId>TargetingComputer</SubtypeId>
-            </Id>
-            <DisplayName>Blood-Fused Nanovault</DisplayName>
-            <Icon>Textures\GUI\Icons\components\TargetingComputerComponent.dds</Icon>
-            <Size>
-                <X>0.1</X>
-                <Y>0.1</Y>
-                <Z>0.05</Z>
-            </Size>
-            <Mass>12</Mass>
-            <Volume>5</Volume>
-            <Model>Models\Components\TargetingComputerComponent.mwm</Model>
-            <PhysicalMaterial>Metal</PhysicalMaterial>
-            <MaxIntegrity>25</MaxIntegrity>
-            <DropProbability>0.45</DropProbability>
-            <Health>25</Health>
-            <MinimumOfferAmount>10</MinimumOfferAmount>
-            <MaximumOfferAmount>500</MaximumOfferAmount>
-            <MinimumOrderAmount>10</MinimumOrderAmount>
-            <MaximumOrderAmount>100</MaximumOrderAmount>
-            <CanPlayerOrder>true</CanPlayerOrder>
-
-            <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
-            <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
-        </Component> 
 
  <Component>
             <Id>
                 <TypeId>Component</TypeId>
-                <SubtypeId>ThrusterUnit</SubtypeId>
+                <SubtypeId>StealthModule</SubtypeId>
             </Id>
-            <DisplayName>Magpulse Thrusters</DisplayName>
-            <Icon>Textures\GUI\Icons\components\ThrusterUnit.dds</Icon>
+            <DisplayName>Stealth Module</DisplayName>
+            <Icon>Textures\GUI\Icons\Components\StealthModule.dds</Icon>
             <Size>
                 <X>0.1</X>
                 <Y>0.1</Y>
@@ -202,7 +143,7 @@
             </Size>
             <Mass>12</Mass>
             <Volume>5</Volume>
-            <Model>Models\Components\ThrusterUnit.mwm</Model>
+            <Model>Models\Cubes\IndustrialComponents\StealthModule.mwm</Model>
             <PhysicalMaterial>Metal</PhysicalMaterial>
             <MaxIntegrity>25</MaxIntegrity>
             <DropProbability>0.45</DropProbability>
@@ -215,7 +156,25 @@
 
             <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
             <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
-        </Component>  -->
+        </Component>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -249,34 +208,6 @@
         </Component> 
 
 
- <!-- <Component>
-            <Id>
-                <TypeId>Component</TypeId>
-                <SubtypeId>FortificationSchematics</SubtypeId>
-            </Id>
-            <DisplayName>AEGIS Fortification Schematics</DisplayName>
-            <Icon>Textures\GUI\Icons\components\FortificationSchematics.dds</Icon>
-            <Size>
-                <X>0.1</X>
-                <Y>0.1</Y>
-                <Z>0.05</Z>
-            </Size>
-            <Mass>12</Mass>
-            <Volume>5</Volume>
-            <Model>Models\Components\FortificationSchematics.mwm</Model>
-            <PhysicalMaterial>Metal</PhysicalMaterial>
-            <MaxIntegrity>25</MaxIntegrity>
-            <DropProbability>0.45</DropProbability>
-            <Health>25</Health>
-            <MinimumOfferAmount>10</MinimumOfferAmount>
-            <MaximumOfferAmount>500</MaximumOfferAmount>
-            <MinimumOrderAmount>10</MinimumOrderAmount>
-            <MaximumOrderAmount>100</MaximumOrderAmount>
-            <CanPlayerOrder>true</CanPlayerOrder>
-
-            <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
-            <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
-        </Component>  -->
 
      <Component>
             <Id>

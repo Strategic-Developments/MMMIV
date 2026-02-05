@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
+			<Id>
+				<TypeId>Assembler</TypeId>
+				<SubtypeId>mss_industrialreprocessor</SubtypeId>
+			</Id>
+			<DisplayName>Industrial Reprocessor</DisplayName>
+			<Description>Designed to convert salvage and scrap into workable Modules, this is a must for any self-respecting industrialist.</Description>
+			<Icon>Textures\GUI\Icons\Cubes\ChemicalRefinery.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="2" z="3"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\IndustrialReprocessor\ChemicalRefinery.mwm</Model>
+			  <Components>
+                <Component Subtype="SteelPlate" Count="800"/>
+
+                <Component Subtype="Construction" Count="120" />
+                <Component Subtype="LargeTube" Count="80" />
+                <Component Subtype="MetalGrid" Count="300" />
+                <Component Subtype="Computer" Count="400" />
+                <Component Subtype="SalvagedPlating" Count="15" />
+                <Component Subtype="SteelPlate" Count="800" />
+            </Components>
+            <CriticalComponent Subtype="SalvagedPlating" Index="0" />
+			<MountPoints>
+				<MountPoint Side="Front" StartX="0.00" StartY="0.13" EndX="1.00" EndY="1.87"/>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.09" EndX="1.00" EndY="1.91"/>
+				<MountPoint Side="Left" StartX="0.06" StartY="0.10" EndX="2.94" EndY="1.90"/>
+				<MountPoint Side="Right" StartX="0.05" StartY="0.08" EndX="2.95" EndY="1.92"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.14" EndX="1.00" EndY="2.86"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.07" EndX="1.00" EndY="2.93"/>
+			</MountPoints>
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\IndustrialReprocessor\ChemicalRefinery_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\IndustrialReprocessor\ChemicalRefinery_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>mss_industrialreprocessor</BlockPairName>
+			<MirroringY>Z</MirroringY>
+			<MirroringZ>Y</MirroringZ>
+ 			<BuildTimeSeconds>80</BuildTimeSeconds>
+            <ResourceSinkGroup>Factory</ResourceSinkGroup>
+            <InventoryMaxVolume>48</InventoryMaxVolume>
+            <InventorySize>
+                <X>1</X>
+                <Y>1</Y>
+                <Z>1</Z>
+            </InventorySize>
+            <StandbyPowerConsumption>0.01</StandbyPowerConsumption>
+            <OperationalPowerConsumption>0.8</OperationalPowerConsumption>
+            <BlueprintClasses>
+                <Class>Industrial_Modules</Class>
+            </BlueprintClasses>
+            <IgnoredBlueprintClassesIcons>
+                <IgnoredClassIcon>BuildPlanner</IgnoredClassIcon>
+            </IgnoredBlueprintClassesIcons>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleHeavyMech</DamagedSound>
+            <PrimarySound>BlockAssembler</PrimarySound>
+            <ActionSound>BlockAssemblerProcess</ActionSound>
+            <DestroyEffect>Explosion_Missile</DestroyEffect>
+            <DestroySound>WepSmallMissileExpl</DestroySound>
+            <PCU>40</PCU>
+            <IsAirTight>true</IsAirTight>
+            <TieredUpdateTimes>
+                <unsignedInt>60</unsignedInt>
+                <unsignedInt>120</unsignedInt>
+                <unsignedInt>240</unsignedInt>
+            </TieredUpdateTimes>
+
+
+
+
+		</Definition>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</CubeBlocks>
+</Definitions>

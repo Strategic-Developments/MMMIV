@@ -27,12 +27,13 @@
 				<Component Subtype="Motor" Count="20"/>
 				<Component Subtype="Display" Count="20"/>
 				<Component Subtype="Computer" Count="100"/>
+				<Component Subtype="CombatModule" Count="5"/>
 				<!-- FUNCTIONAL LINE /\ UP NONFUNCTIONAL -->
 				<Component Subtype="MetalGrid" Count="200"/>
 				<Component Subtype="Construction" Count="250"/>
 				<Component Subtype="SteelPlate" Count="215"/>
 			</Components>
-			<CriticalComponent Subtype="Computer" Index="0"/>
+			<CriticalComponent Subtype="CombatModule" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="5.00" EndY="5.00"/>
 			</MountPoints>

@@ -3,10 +3,10 @@
   <Prefabs>
     <Prefab xsi:type="MyObjectBuilder_PrefabDefinition">
       <Id Type="MyObjectBuilder_PrefabDefinition" Subtype="PantheonCruiser" />
-       <DisplayName>TestDestroyer</DisplayName>
+       <DisplayName>Pantheon-Class Cruiser</DisplayName>
 	  <Description>Test</Description>
-      <Icon>Textures\GUI\Prefabs\B-60BulkFreighter.dds</Icon>
-      <TooltipImage>Textures\GUI\Prefabs\B-60BulkFreighter.png</TooltipImage>
+      <Icon>Textures\GUI\Prefabs\Pantheon.dds</Icon>
+      <TooltipImage>Textures\GUI\Prefabs\Pantheon.png</TooltipImage>
       <CubeGrids>
         <CubeGrid>
           <SubtypeName />

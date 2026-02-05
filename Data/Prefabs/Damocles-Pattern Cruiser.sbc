@@ -3,10 +3,10 @@
   <Prefabs>
     <Prefab xsi:type="MyObjectBuilder_PrefabDefinition">
       <Id Type="MyObjectBuilder_PrefabDefinition" Subtype="DamoclesCruiser" />
-       <DisplayName>TestDestroyer</DisplayName>
+       <DisplayName>Damocles-Class Cruiser</DisplayName>
 	  <Description>Test</Description>
-      <Icon>Textures\GUI\Prefabs\B-60BulkFreighter.dds</Icon>
-      <TooltipImage>Textures\GUI\Prefabs\B-60BulkFreighter.png</TooltipImage>
+      <Icon>Textures\GUI\Prefabs\Damocles.dds</Icon>
+      <TooltipImage>Textures\GUI\Prefabs\Damocles.png</TooltipImage>
       <CubeGrids>
         <CubeGrid>
           <SubtypeName />

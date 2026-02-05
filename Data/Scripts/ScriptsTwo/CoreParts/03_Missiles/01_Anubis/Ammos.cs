@@ -226,7 +226,7 @@ namespace Scripts
                     NoVisuals = false,
                     NoSound = false,
                     ParticleScale = 1,
-                    CustomParticle = "Explosion_Missile", // Particle SubtypeID, from your Particle SBC
+                    CustomParticle = "Meridian_MissileImpact", // Particle SubtypeID, from your Particle SBC
                                                           // If you need to set a custom offset, specify it in the "Hit" particle
                     CustomSound = "soundName", // SubtypeID from your Audio SBC, not a filename
                     Shape = Diamond, // Round or Diamond shape.  Diamond is more performance friendly.
@@ -623,7 +623,7 @@ namespace Scripts
                     NoVisuals = false,
                     NoSound = false,
                     ParticleScale = 1,
-                    CustomParticle = "mss_explosion_large", // Particle SubtypeID, from your Particle SBC
+                    CustomParticle = "Meridian_MissileImpact", // Particle SubtypeID, from your Particle SBC
                                                           // If you need to set a custom offset, specify it in the "Hit" particle
                     CustomSound = "WepSmallMissileExpl", // SubtypeID from your Audio SBC, not a filename
                     Shape = Round, // Round or Diamond shape.  Diamond is more performance friendly.
