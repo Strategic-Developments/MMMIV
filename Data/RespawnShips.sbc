@@ -64,14 +64,14 @@
       <DisplayName>Salvager's Skiff</DisplayName>
       <Icon>Textures\GUI\Icons\RespawnShips\Salvager.png</Icon>
       <CooldownSeconds>0</CooldownSeconds>
-      <Prefab>SalvagerSpawn</Prefab>
+      <Prefab>NewSpawnSalvageShip</Prefab>
 	  
 	  <PlanetTypes>
 		<PlanetType>RealGasGiant</PlanetType>
 	  </PlanetTypes>
       
       <MinimalAirDensity>0.1</MinimalAirDensity>
-      <PlanetDeployAltitude>210000</PlanetDeployAltitude>
+      <PlanetDeployAltitude>350000</PlanetDeployAltitude>
       <UseForPlanetsWithAtmosphere>true</UseForPlanetsWithAtmosphere>
 	  <UseForPlanetsWithoutAtmosphere>true</UseForPlanetsWithoutAtmosphere>
 

@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
+			<Id>
+				<TypeId>Assembler</TypeId>
+				<SubtypeId>mss_orereprocessor</SubtypeId>
+			</Id>
+			<DisplayName>Bulk Ore Reprocessor</DisplayName>
+			<Description>Crushes huge amounts of ore down into manageable Shipments for sale. </Description>
+			<Icon>Textures\GUI\Icons\SOFL_HUGE_REFINERY.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="5" y="9" z="5"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\BulkOreReprocessor\SOFL_HUGE_REFINERY.mwm</Model>
+			<Components>
+			
+                <Component Subtype="PrototechFrame" Count="1">
+                    <DeconstructId>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>PrototechScrap</SubtypeId>
+                    </DeconstructId>
+                </Component>
+			
+				<Component Subtype="SteelPlate" Count="6000" />
+				<Component Subtype="Construction" Count="3000" />
+				<Component Subtype="LargeTube" Count="1000" />
+				<Component Subtype="Motor" Count="1000" />
+				<Component Subtype="Superconductor" Count="500"/>
+				<Component Subtype="MetalGrid" Count="1200" />
+				<Component Subtype="Computer" Count="500" />
+				<Component Subtype="PrototechMachinery" Count="20">
+                    <DeconstructId>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>PrototechScrap</SubtypeId>
+                    </DeconstructId>
+                </Component>
+                <Component Subtype="PrototechCoolingUnit" Count="2">
+                    <DeconstructId>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>PrototechScrap</SubtypeId>
+                    </DeconstructId>
+                </Component>
+				<Component Subtype="IndustrialModule" Count="60" />
+				<Component Subtype="SteelPlate" Count="1500" />
+			</Components>
+			<CriticalComponent Subtype="IndustrialModule" Index="0" />
+			<BlockPairName>mss_orereprocessor</BlockPairName>
+			<EdgeType>Light</EdgeType>
+			<BuildTimeSeconds>80</BuildTimeSeconds>
+            <ResourceSinkGroup>Factory</ResourceSinkGroup>
+            <InventoryMaxVolume>48</InventoryMaxVolume>
+            <InventorySize>
+                <X>1</X>
+                <Y>1</Y>
+                <Z>1</Z>
+            </InventorySize>
+            <StandbyPowerConsumption>0.01</StandbyPowerConsumption>
+            <OperationalPowerConsumption>0.8</OperationalPowerConsumption>
+            <BlueprintClasses>
+                <Class>ShipmentComponents</Class>
+            </BlueprintClasses>
+            <IgnoredBlueprintClassesIcons>
+                <IgnoredClassIcon>BuildPlanner</IgnoredClassIcon>
+            </IgnoredBlueprintClassesIcons>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleHeavyMech</DamagedSound>
+            <PrimarySound>BlockAssembler</PrimarySound>
+            <ActionSound>BlockAssemblerProcess</ActionSound>
+            <DestroyEffect>Explosion_Missile</DestroyEffect>
+            <DestroySound>WepSmallMissileExpl</DestroySound>
+            <PCU>40</PCU>
+            <IsAirTight>true</IsAirTight>
+            <TieredUpdateTimes>
+                <unsignedInt>60</unsignedInt>
+                <unsignedInt>120</unsignedInt>
+                <unsignedInt>240</unsignedInt>
+            </TieredUpdateTimes>
+
+
+
+
+		</Definition>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</CubeBlocks>
+			
+			
+
+
+
+</Definitions>

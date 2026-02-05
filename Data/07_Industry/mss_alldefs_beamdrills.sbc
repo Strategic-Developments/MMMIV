@@ -8,7 +8,7 @@
 			</Id>
 			<DisplayName>Large Beam Drill</DisplayName>
 			<Icon>Textures\GUI\Icons\Erebus\LargeBeamDrill.dds</Icon>
-			<Description>Drill</Description>
+			<Description>Superheavy beam drill designed for mass exploitation of valuable asteroid resources.</Description>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="3" y="3" z="8"/>
@@ -23,9 +23,10 @@
 				<Component Subtype="Motor" Count="75"/>
 				<Component Subtype="Superconductor" Count="250"/>
 				<Component Subtype="Computer" Count="50"/>
+				<Component Subtype="IndustrialModule" Count="10"/>
 				<Component Subtype="SteelPlate" Count="250"/>
 			</Components>
-			<CriticalComponent Subtype="Computer" Index="0"/>
+			<CriticalComponent Subtype="IndustrialModule" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="3.00" EndY="3.00"/>
 				<MountPoint Side="Left" StartX="5.00" StartY="1.00" EndX="8.00" EndY="2.00"/>
@@ -68,7 +69,7 @@
 			</Id>
 			<DisplayName>Small Beam Drill</DisplayName>
 			<Icon>Textures\GUI\Icons\Erebus\SmallBeamDrill.dds</Icon>
-			<Description>bzzzzzzzzzzzzzzzzzzt kchnwnhabnhsjbffjdsjfbnsdhjfnkchwwww</Description>
+			<Description>Heavy beam drill designed for resource extraction.</Description>
 			<CubeSize>Small</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="5" y="5" z="12"/>
@@ -83,9 +84,10 @@
 				<Component Subtype="Motor" Count="5"/>
 				<Component Subtype="Superconductor" Count="50"/>
 				<Component Subtype="Computer" Count="5"/>
+				<Component Subtype="IndustrialModule" Count="5"/>
 				<Component Subtype="SteelPlate" Count="25"/>
 			</Components>
-			<CriticalComponent Subtype="Computer" Index="0"/>
+			<CriticalComponent Subtype="IndustrialModule" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="5.00" EndY="5.00"/>
 				<MountPoint Side="Left" StartX="7.00" StartY="0.00" EndX="12.00" EndY="5.00"/>
