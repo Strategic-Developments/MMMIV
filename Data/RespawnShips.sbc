@@ -64,7 +64,7 @@
       <DisplayName>Salvager's Skiff</DisplayName>
       <Icon>Textures\GUI\Icons\RespawnShips\Salvager.png</Icon>
       <CooldownSeconds>0</CooldownSeconds>
-      <Prefab>NewSpawnSalvageShip</Prefab>
+      <Prefab>NewSalvageSkiff</Prefab>
 	  
 	  <PlanetTypes>
 		<PlanetType>RealGasGiant</PlanetType>
