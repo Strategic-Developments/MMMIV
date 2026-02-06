@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <CubeBlocks>
+        <Definition xsi:type="MyObjectBuilder_JumpDriveDefinition">
+            <Id>
+                <TypeId>JumpDrive</TypeId>
+                <SubtypeId>LargePrototechJumpDrive</SubtypeId>
+            </Id>
+            <DisplayName>Hardened Jump Drive</DisplayName>
+            <Icon>Textures\GUI\Icons\Cubes\Prototech_JumpDrive.dds</Icon>
+            <Description>This jump drive is hardened against electronic attack, permitting greater resilience and utility in combat settings.</Description>
+            <CubeSize>Large</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="3" y="3" z="3"/>
+            <Center x="1" y="0" z="1"/>
+            <ModelOffset x="0" y="0" z="0"/>
+            <Model>Models\Cubes\Large\Prototech_JumpDrive.mwm</Model>
+            <Components>
+                <Component Subtype="PrototechFrame" Count="1">
+                    <DeconstructId>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>PrototechScrap</SubtypeId>
+                    </DeconstructId>
+                </Component>
+                <Component Subtype="GravityGenerator" Count="30"/>
+                <Component Subtype="PrototechCapacitor" Count="30">
+                    <DeconstructId>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>PrototechScrap</SubtypeId>
+                    </DeconstructId>
+                </Component>
+                <Component Subtype="PrototechCircuitry" Count="20">
+                    <DeconstructId>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>PrototechScrap</SubtypeId>
+                    </DeconstructId>
+                </Component>
+                <Component Subtype="Superconductor" Count="1400"/>
+                <Component Subtype="PostlightModule" Count="20"/>
+                <Component Subtype="Computer" Count="300"/>
+                <Component Subtype="Construction" Count="180"/>
+                <Component Subtype="PrototechPanel" Count="200"/>
+            </Components>
+            <CriticalComponent Subtype="Computer" Index="0"/>
+            <MountPoints>
+                <MountPoint Side="Back" StartX="0" StartY="0" EndX="0.5" EndY="1"/>
+                <MountPoint Side="Back" StartX="0.5" StartY="0" EndX="2.5" EndY="0.5"/>
+                <MountPoint Side="Back" StartX="2.5" StartY="0" EndX="3" EndY="1"/>
+                <MountPoint Side="Back" StartX="1.2" StartY="1.2" EndX="1.8" EndY="1.8"/>
+                <MountPoint Side="Left" StartX="0" StartY="0" EndX="3" EndY="1"/>
+                <MountPoint Side="Front" StartX="0" StartY="0" EndX="0.5" EndY="1"/>
+                <MountPoint Side="Front" StartX="0.5" StartY="0" EndX="2.5" EndY="0.5"/>
+                <MountPoint Side="Front" StartX="2.5" StartY="0" EndX="3" EndY="1"/>
+                <MountPoint Side="Front" StartX="1.2" StartY="1.2" EndX="1.8" EndY="1.8"/>
+                <MountPoint Side="Right" StartX="0" StartY="0" EndX="3" EndY="1"/>
+                <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="3" Default="true"/>
+            </MountPoints>
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Prototech_JumpDrive_Construction_1.mwm"/>
+                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Prototech_JumpDrive_Construction_2.mwm"/>
+                <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\Prototech_JumpDrive_Construction_3.mwm"/>
+            </BuildProgressModels>
+            <BlockPairName>PrototechJumpDrive</BlockPairName>
+            <MirroringY>X</MirroringY>
+            <MirroringX>Y</MirroringX>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>120</BuildTimeSeconds>
+            <DisassembleRatio>5</DisassembleRatio>
+            <DamageEffectName>Damage_Electrical_Prototech_JumpDrive_L</DamageEffectName>
+            <DamagedSound>ParticleElectrical</DamagedSound>
+            <EmissiveColorPreset>JumpDrive</EmissiveColorPreset>
+            <ResourceSinkGroup>Charging</ResourceSinkGroup>
+            <RequiredPowerInput>64</RequiredPowerInput>
+            <PowerNeededForJump>5</PowerNeededForJump>
+            <PowerEfficiency>0.9</PowerEfficiency>
+            <MaxJumpDistance>6000000</MaxJumpDistance>
+            <MaxJumpMass>2500000</MaxJumpMass>
+            <EmissiveColorPreset>Extended</EmissiveColorPreset>
+            <DestroyEffect>Explosion_Warhead_30</DestroyEffect>
+            <DestroySound>WepLrgWarheadExpl</DestroySound>
+            <ShipJumpDriveChargingSound>ShipPrototechJumpDriveCharging</ShipJumpDriveChargingSound>
+            <ShipJumpDriveJumpInSound>ShipPrototechJumpDriveJumpIn</ShipJumpDriveJumpInSound>
+            <ShipJumpDriveJumpOutSound>ShipJumpDriveJumpOut</ShipJumpDriveJumpOutSound>
+            <JumpParticleEffect>Warp_Prototech</JumpParticleEffect>
+            <TargetingGroups>
+                <string>Propulsion</string>
+            </TargetingGroups>
+            <PCU>80</PCU>
+        </Definition>
+    </CubeBlocks>
+</Definitions>
