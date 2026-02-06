@@ -2,19 +2,18 @@
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<BlockVariantGroups>
 		<BlockVariantGroup>
-			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="PrototechGroup" />
+			<Id Type="MyObjectBuilder_BlockVariantGroup" Subtype="PrototechGroup"/>
 			<Icon>Textures\GUI\Icons\Cubes\Prototech_Gyroscope_large.dds</Icon>
 			<DisplayName>DisplayName_Block_PrototechGyroscope</DisplayName>
 			<Description>Description_Prototech_Gyroscope</Description>
 			<Blocks>
-				<Block Type="MyObjectBuilder_Assembler" Subtype="LargePrototechAssembler" />
-				<Block Type="MyObjectBuilder_Gyro" Subtype="LargeBlockPrototechGyro" />
-				<Block Type="MyObjectBuilder_BatteryBlock" Subtype="LargeBlockPrototechBattery" />
-				<Block Type="MyObjectBuilder_Drill" Subtype="LargeBlockPrototechDrill" />
-				<Block Type="MyObjectBuilder_HydrogenEngine" Subtype="LargePrototechReactor" />
-
-				<Block Type="MyObjectBuilder_Gyro" Subtype="SmallBlockPrototechGyro" />
-				<Block Type="MyObjectBuilder_BatteryBlock" Subtype="SmallBlockPrototechBattery" />
+				<Block Type="MyObjectBuilder_Assembler" Subtype="LargePrototechAssembler"/>
+				<Block Type="MyObjectBuilder_Gyro" Subtype="LargeBlockPrototechGyro"/>
+				<Block Type="MyObjectBuilder_BatteryBlock" Subtype="LargeBlockPrototechBattery"/>
+				<Block Type="MyObjectBuilder_Drill" Subtype="LargeBlockPrototechDrill"/>
+				<Block Type="MyObjectBuilder_HydrogenEngine" Subtype="LargePrototechReactor"/>
+				<Block Type="MyObjectBuilder_Gyro" Subtype="SmallBlockPrototechGyro"/>
+				<Block Type="MyObjectBuilder_BatteryBlock" Subtype="SmallBlockPrototechBattery"/>
 			</Blocks>
 		</BlockVariantGroup>
 	</BlockVariantGroups>
