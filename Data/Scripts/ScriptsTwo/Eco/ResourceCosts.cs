@@ -31,7 +31,7 @@ namespace Meridian
                 ["Ingot/Silicon"] = 2,
                 ["Ingot/Cobalt"] = 8,
                 ["Ingot/Magnesium"] = 100,
-                ["Ingot/Silver"] = 180,
+                ["Ingot/Silver"] = 100,
                 ["Ingot/Gold"] = 150,
                 /*["Ingot/Platinum"] = 450,*/
                 ["Ingot/Uranium"] = 300,
@@ -96,6 +96,11 @@ namespace Meridian
                         definition.BaseProductionTimeInSeconds = 99999;
                         definition.Enabled = false;
                         definition.Public = false;
+                        continue;
+                    case "StarterOreShipment":
+                    case "AdvancedOreShipment":
+                    case "RestrictedOreShipment":
+                    case "IssuedIngotShipment":
                         continue;
                     default:
                         break;
@@ -170,7 +175,20 @@ namespace Meridian
                         Amount = bpCost,
                         Id = MyDefinitionId.Parse("PhysicalObject/SpaceCredit")
                     });
-                    definition.BaseProductionTimeInSeconds = 1 / 60f;
+                    switch (definition.Id.SubtypeName)
+                    {
+                        case "SalvagedPlating":
+                        case "IndustrialModule":
+                        case "PostlightModule":
+                        case "ExperimentalModule":
+                        case "CombatModule":
+                        case "StealthModule":
+                        case "CoordsNetwork":
+                            break;
+                        default:
+                            definition.BaseProductionTimeInSeconds = 1 / 60f;
+                            break;
+                    }
                 }
 
                 definition.Prerequisites = items.ToArray();

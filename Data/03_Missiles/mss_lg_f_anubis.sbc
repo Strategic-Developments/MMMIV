@@ -80,8 +80,8 @@
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>2500</Mass>
-			<Volume>1530</Volume>
+			<Mass>1200</Mass>
+			<Volume>840</Volume>
 			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
 			<Capacity>1</Capacity>
@@ -103,7 +103,7 @@
 			</Id>
 			<DisplayName>Anubis Missile</DisplayName>
 			<Prerequisites>
-				<Item Amount="12500" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+				<Item Amount="6250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_f_anubis_ammomagazine"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>

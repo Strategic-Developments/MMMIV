@@ -132,7 +132,7 @@ namespace Scripts
                     HomeAzimuth = 0, // Default resting rotation angle
                     HomeElevation = 0, // Default resting elevation
                     FixedInventorySize = true, // If true, the inventory size will be forced to the exact value specified above regardless of world inventory multipliers
-                    InventorySize = 340 * 24.05f / 1000f, // Inventory capacity in kL.
+                    InventorySize = 310 * 24.05f / 1000f, // Inventory capacity in kL.
                     IdlePower = 60, // Constant base power draw in MW.
                     FixedOffset = false, // Deprecated.
                     Offset = Vector(x: 0, y: 0, z: 0), // Offsets the aiming/firing line of the weapon, in metres.
