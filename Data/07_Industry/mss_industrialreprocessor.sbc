@@ -83,15 +83,15 @@
             <ModelOffset x="0" y="0" z="0"/>
             <Model>Models\Cubes\Large\Refinery.mwm</Model>
             <Components>
-                <Component Subtype="SteelPlate" Count="1100"/>
-                <Component Subtype="Construction" Count="40"/>
-                <Component Subtype="LargeTube" Count="20"/>
-                <Component Subtype="Motor" Count="16"/>
+                <Component Subtype="SteelPlate" Count="1100" />
+                <Component Subtype="Construction" Count="40" />
+                <Component Subtype="LargeTube" Count="20" />
+                <Component Subtype="Motor" Count="16" />
                 <Component Subtype="PrototechCapacitor" Count="30"/>
-                <Component Subtype="MetalGrid" Count="20"/>
+                <Component Subtype="MetalGrid" Count="20" />
                 <Component Subtype="PrototechCircuitry" Count="20"/>
-                <Component Subtype="Computer" Count="20"/>
-                <Component Subtype="SteelPlate" Count="100"/>
+                <Component Subtype="Computer" Count="20" />
+                <Component Subtype="SteelPlate" Count="100" />
             </Components>
             <CriticalComponent Subtype="Computer" Index="0"/>
             <Center x="1" y="0" z="1"/>
