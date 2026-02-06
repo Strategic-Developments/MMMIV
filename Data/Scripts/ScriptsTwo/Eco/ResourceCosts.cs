@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using VRage;
 using VRage.Game;
 using VRage.ObjectBuilders;
+using VRage.Utils;
 
 namespace Meridian
 {
@@ -120,11 +121,14 @@ namespace Meridian
                     }
                 }
 
+                if (definition.Results.Length > 1)
+                    continue;
+
                 var bpCost = MyFixedPoint.Zero;
                 foreach (var item in definition.Prerequisites)
                 {
                     MyFixedPoint itemCost = 0;
-                    if (!BaseItemCosts.TryGetValue(item.Id, out bpCost))
+                    if (!BaseItemCosts.TryGetValue(item.Id, out itemCost))
                     {
                         if (item.Id == MyDefinitionId.Parse("Ingot/Platinum"))
                         {
@@ -172,8 +176,19 @@ namespace Meridian
                 definition.Prerequisites = items.ToArray();
                 items.Clear();
 
+                bpCost = 0;
+                foreach (var def in definition.Prerequisites)
+                {
+                    // here because all the ammo stuff takes SC too... guh
+                    if (def.Id == MyDefinitionId.Parse("PhysicalObject/SpaceCredit"))
+                    {
+                        bpCost += def.Amount;
+                    }
+                }
+
                 if (definition?.Results != null && definition.Results.Length > 0)
                 {
+                    
                     MyFixedPoint other;
                     if (AllItemCosts.TryGetValue(definition.Results[0].Id, out other))
                     {
