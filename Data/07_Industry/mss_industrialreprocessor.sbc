@@ -96,9 +96,9 @@
                 <Component Subtype="Construction" Count="40" />
                 <Component Subtype="LargeTube" Count="20" />
                 <Component Subtype="Motor" Count="16" />
-                <Component Subtype="PrototechCapacitor" Count="30">
+                <Component Subtype="PrototechCapacitor" Count="30"/>
                 <Component Subtype="MetalGrid" Count="20" />
-                <Component Subtype="PrototechCircuitry" Count="20">
+                <Component Subtype="PrototechCircuitry" Count="20"/>
                 <Component Subtype="Computer" Count="20" />
                 <Component Subtype="SteelPlate" Count="100" />
             </Components>
@@ -172,30 +172,20 @@
             <ModelOffset x="0" y="0" z="0" />
             <Model>Models\Cubes\Large\Prototech_JumpDrive.mwm</Model>
             <Components>
-                <Component Subtype="PrototechFrame" Count="1">
-                    <DeconstructId>
-                        <TypeId>Ingot</TypeId>
-                        <SubtypeId>PrototechScrap</SubtypeId>
-                    </DeconstructId>
-                </Component>
+
+                <Component Subtype="PrototechFrame" Count="1"/>
+
                 <Component Subtype="GravityGenerator" Count="30" />
-                <Component Subtype="PrototechCapacitor" Count="30">
-                    <DeconstructId>
-                        <TypeId>Ingot</TypeId>
-                        <SubtypeId>PrototechScrap</SubtypeId>
-                    </DeconstructId>
-                </Component>
-                <Component Subtype="PrototechCircuitry" Count="20">
-                    <DeconstructId>
-                        <TypeId>Ingot</TypeId>
-                        <SubtypeId>PrototechScrap</SubtypeId>
-                    </DeconstructId>
-                </Component>
+                <Component Subtype="PrototechCapacitor" Count="30"/>
+
+                <Component Subtype="PrototechCircuitry" Count="20"/>
+
                 <Component Subtype="Superconductor" Count="1400" />
                 <Component Subtype="PostlightModule" Count="20" />
                 <Component Subtype="Computer" Count="300" />
                 <Component Subtype="Construction" Count="180" />
                 <Component Subtype="PrototechPanel" Count="200" />
+
             </Components>
             <CriticalComponent Subtype="Computer" Index="0" />
             <MountPoints>
@@ -263,26 +253,11 @@
             <ModelOffset x="0" y="0" z="0" />
             <Model>Models\Cubes\Large\Prototech_Refinery.mwm</Model>
             <Components>
-                <Component Subtype="PrototechFrame" Count="1">
-                    <DeconstructId>
-                        <TypeId>Ingot</TypeId>
-                        <SubtypeId>PrototechScrap</SubtypeId>
-                    </DeconstructId>
-                </Component>
+                <Component Subtype="PrototechFrame" Count="1"/>
                 <Component Subtype="PrototechPanel" Count="375" />
                 <Component Subtype="Construction" Count="40" />
-                <Component Subtype="PrototechMachinery" Count="10">
-                    <DeconstructId>
-                        <TypeId>Ingot</TypeId>
-                        <SubtypeId>PrototechScrap</SubtypeId>
-                    </DeconstructId>
-                </Component>
-                <Component Subtype="PrototechCoolingUnit" Count="5">
-                    <DeconstructId>
-                        <TypeId>Ingot</TypeId>
-                        <SubtypeId>PrototechScrap</SubtypeId>
-                    </DeconstructId>
-                </Component>
+                <Component Subtype="PrototechMachinery" Count="10"/>
+                <Component Subtype="PrototechCoolingUnit" Count="5"/>
                 <Component Subtype="LargeTube" Count="20" />
                 <Component Subtype="MetalGrid" Count="20" />
                 <Component Subtype="IndustrialModule" Count="10" />

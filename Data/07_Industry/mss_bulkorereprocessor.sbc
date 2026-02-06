@@ -30,18 +30,9 @@
 				<Component Subtype="Superconductor" Count="500"/>
 				<Component Subtype="MetalGrid" Count="1200" />
 				<Component Subtype="Computer" Count="500" />
-				<Component Subtype="PrototechMachinery" Count="20">
-                    <DeconstructId>
-                        <TypeId>Ingot</TypeId>
-                        <SubtypeId>PrototechScrap</SubtypeId>
-                    </DeconstructId>
-                </Component>
-                <Component Subtype="PrototechCoolingUnit" Count="2">
-                    <DeconstructId>
-                        <TypeId>Ingot</TypeId>
-                        <SubtypeId>PrototechScrap</SubtypeId>
-                    </DeconstructId>
-                </Component>
+				<Component Subtype="PrototechMachinery" Count="20"/>
+                <Component Subtype="PrototechCoolingUnit" Count="2"/>
+ 
 				<Component Subtype="IndustrialModule" Count="60" />
 				<Component Subtype="SteelPlate" Count="1500" />
 			</Components>
