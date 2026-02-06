@@ -432,5 +432,58 @@
             </TieredUpdateTimes>
             <AllowSelfPulling>false</AllowSelfPulling>
         </Definition>
+
+
+
+
+         <Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
+            <Id>
+                <TypeId>RadioAntenna</TypeId>
+                <SubtypeId>LargeBlockCompactRadioAntenna</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_Block_CompactAntenna</DisplayName>
+            <Icon>Textures\GUI\Icons\Cubes\CompactAntenna.dds</Icon>
+            <Description>Description_RadioAntenna</Description>
+            <CubeSize>Large</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="1" y="3" z="1" />
+            <ModelOffset x="0" y="0" z="0" />
+            <Model>Models\Cubes\Large\CompactAntenna.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="30" />
+                <Component Subtype="LargeTube" Count="20" />
+                <Component Subtype="SmallTube" Count="30" />
+                <Component Subtype="Construction" Count="20" />
+                <Component Subtype="Computer" Count="8" />
+                <Component Subtype="RadioCommunication" Count="40" />
+                <Component Subtype="SteelPlate" Count="10" />
+            </Components>
+            <CriticalComponent Subtype="RadioCommunication" Index="0" />
+            <MountPoints>
+                <MountPoint Side="Bottom" ExclusionMask="1" PropertiesMask="2" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" Default="true" />
+            </MountPoints>
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\CompactAntennaConstruction_1.mwm" />
+                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\CompactAntennaConstruction_2.mwm" />
+                <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\CompactAntennaConstruction_3.mwm" />
+            </BuildProgressModels>
+            <BlockPairName>CompactAntenna</BlockPairName>
+            <EdgeType>Light</EdgeType>
+            <ResourceSinkGroup>Utility</ResourceSinkGroup>
+            <BuildTimeSeconds>30</BuildTimeSeconds>
+            <MirroringY>X</MirroringY>
+            <MirroringX>Y</MirroringX>
+            <MaxBroadcastRadius>5000000</MaxBroadcastRadius>
+            <DamageEffectName>Damage_Electrical_Damaged_Antenna</DamageEffectName>
+            <DamagedSound>ParticleElectrical</DamagedSound>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <EmissiveColorPreset>Default</EmissiveColorPreset>
+            <PCU>100</PCU>
+            <IsAirTight>false</IsAirTight>
+        </Definition>
+
+
+
     </CubeBlocks>
 </Definitions>
