@@ -23,7 +23,6 @@ namespace Meridian.Economy
     {
         private const int PayoutIntervalTicks = 1 * 60;
         private const int PayoutIntervalCombatEndTicks = 30 * 60;
-        private const long PlayerKillBounty = 50000;
         private const float PAYOUT_RATIO = 0.75f;
 
         private bool _registered;
@@ -84,99 +83,67 @@ namespace Meridian.Economy
 
         public static bool IsNPCFaction(IMyFaction faction) => faction.IsEveryoneNpc();
 
-private void OnDestroyed(object target, MyDamageInformation info)
-{
-    // Defensive null check to avoid NREs when RaiseDestroyed is invoked with a null target
-    if (target == null)
-        return;
-
-    // Skip common non-combat damage types
-    if (info.Type == Damage_Deformation || info.Type == Damage_Grinding)
-        return;
-
-    // Character killed
-    var ch = target as IMyCharacter;
-    if (ch != null)
-    {
-        HandleCharacterDeath(ch, info);
-        return;
-    }
-
-    // Block destroyed
-    var slim = target as IMySlimBlock;
-    if (slim == null || slim.CubeGrid == null)
-        return;
-
-    long defenderId = GetPrimaryOwnerIdentity(slim.CubeGrid);
-    if (defenderId == 0)
-        return;
-
-    long attackerId;
-    if (!TryResolveAttackerIdentity(info.AttackerId, out attackerId) || attackerId == 0)
-        return;
-
-    // Faction subsystem must be available
-    var factions = MyAPIGateway.Session?.Factions;
-    if (factions == null)
-        return;
-
-    var atkFac = factions.TryGetPlayerFaction(attackerId);
-    var vicFac = factions.TryGetPlayerFaction(defenderId);
-
-    // Defensive null check: players may not be in a faction in Space Engineers
-    if (atkFac == null || vicFac == null)
-        return;
-
-    // Defensive check for AreFactionsEnemies call
-    if (!factions.AreFactionsEnemies(atkFac.FactionId, vicFac.FactionId))
-        return;
-
-    // Defensive checks for block definition and price lookup chain
-    var blockDef = slim.BlockDefinition;
-    var costs = PriceChanger.Instance?.Costs;
-    var allCosts = costs?.AllBlockCosts;
-    if (blockDef == null || allCosts == null)
-        return;
-
-    MyFixedPoint price;
-    if (allCosts.TryGetValue(blockDef.Id, out price))
-    {
-        price += GetHydrogenBonusByLiters(slim);
-
-        if (price > 0)
-            QueuePayout(attackerId, (long)(price * PAYOUT_RATIO));
-    }
-}
-
-        private void HandleCharacterDeath(IMyCharacter ch, MyDamageInformation info)
+        private void OnDestroyed(object target, MyDamageInformation info)
         {
-            if (MyAPIGateway.Session == null)
+            // Defensive null check to avoid NREs when RaiseDestroyed is invoked with a null target
+            if (target == null)
                 return;
 
-            long victimId = 0;
-            var victimPlayer = MyAPIGateway.Players != null ? MyAPIGateway.Players.GetPlayerControllingEntity(ch) : null;
-            if (victimPlayer != null)
-                victimId = victimPlayer.IdentityId;
-            if (victimId == 0)
+            // Skip common non-combat damage types
+            if (info.Type == Damage_Deformation || info.Type == Damage_Grinding)
                 return;
 
-            long killerId;
-            if (!TryResolveAttackerIdentity(info.AttackerId, out killerId) || killerId == 0)
+            // Character killed
+            var ch = target as IMyCharacter;
+            if (ch != null)
+            {
+                return;
+            }
+
+            // Block destroyed
+            var slim = target as IMySlimBlock;
+            if (slim == null || slim.CubeGrid == null)
                 return;
 
-            if (killerId == victimId)
+            long defenderId = GetPrimaryOwnerIdentity(slim.CubeGrid);
+            if (defenderId == 0)
                 return;
 
-            if (MyAPIGateway.Session?.Factions == null)
+            long attackerId;
+            if (!TryResolveAttackerIdentity(info.AttackerId, out attackerId) || attackerId == 0)
                 return;
 
-            var atkFac = MyAPIGateway.Session.Factions.TryGetPlayerFaction(killerId);
-            var vicFac = MyAPIGateway.Session.Factions.TryGetPlayerFaction(victimId);
-            if (!MyAPIGateway.Session.Factions.AreFactionsEnemies(atkFac.FactionId, vicFac.FactionId))
+            // Faction subsystem must be available
+            var factions = MyAPIGateway.Session?.Factions;
+            if (factions == null)
                 return;
 
-            if (PlayerKillBounty > 0)
-                QueuePayout(killerId, PlayerKillBounty);
+            var atkFac = factions.TryGetPlayerFaction(attackerId);
+            var vicFac = factions.TryGetPlayerFaction(defenderId);
+
+            // Defensive null check: players may not be in a faction in Space Engineers
+            if (atkFac == null || vicFac == null)
+                return;
+
+            // Defensive check for AreFactionsEnemies call
+            if (!factions.AreFactionsEnemies(atkFac.FactionId, vicFac.FactionId))
+                return;
+
+            // Defensive checks for block definition and price lookup chain
+            var blockDef = slim.BlockDefinition;
+            var costs = PriceChanger.Instance?.Costs;
+            var allCosts = costs?.AllBlockCosts;
+            if (blockDef == null || allCosts == null)
+                return;
+
+            MyFixedPoint price;
+            if (allCosts.TryGetValue(blockDef.Id, out price))
+            {
+                price += GetHydrogenBonusByLiters(slim);
+
+                if (price > 0)
+                    QueuePayout(attackerId, (long)(price * PAYOUT_RATIO));
+            }
         }
 
         private void QueuePayout(long identityId, long amount)
