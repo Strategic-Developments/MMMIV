@@ -105,7 +105,7 @@
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_f_jackal_ammomagazine"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
-			<Icon>Textures\GUI\Icons\Cubes\MissileTube.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\JackalLauncher.dds</Icon>
 		</Blueprint>
 	</Blueprints>
 	<BlueprintClassEntries>

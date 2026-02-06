@@ -101,13 +101,13 @@
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>mss_lg_f_nepthys_ammomagazine</SubtypeId>
 			</Id>
-			<DisplayName>Anubis Missile</DisplayName>
+			<DisplayName>Nepthys Torpedo</DisplayName>
 			<Prerequisites>
 				<Item Amount="12500" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_f_nepthys_ammomagazine"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
-			<Icon>Textures\GUI\Icons\Cubes\MissileTube.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\NepthysTorpedoLauncher.dds</Icon>
 		</Blueprint>
 	</Blueprints>
 	<BlueprintClassEntries>
