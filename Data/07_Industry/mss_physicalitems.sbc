@@ -252,7 +252,7 @@
 				<TypeId>Ingot</TypeId>
 				<SubtypeId>Iron</SubtypeId>
 			</Id>
-			<DisplayName>Go away</DisplayName>
+			<DisplayName>Iron Ingot</DisplayName>
 			<Icon>Textures\GUI\Icons\ingot\iron_ingot.dds</Icon>
 			<Size>
 				<X>0.05</X>
@@ -278,7 +278,7 @@
 				<TypeId>Ingot</TypeId>
 				<SubtypeId>Nickel</SubtypeId>
 			</Id>
-			<DisplayName>Go away</DisplayName>
+			<DisplayName>Nickel Ingot</DisplayName>
 			<Icon>Textures\GUI\Icons\ingot\nickel_ingot.dds</Icon>
 			<Size>
 				<X>0.048</X>
@@ -304,7 +304,7 @@
 				<TypeId>Ingot</TypeId>
 				<SubtypeId>Cobalt</SubtypeId>
 			</Id>
-			<DisplayName>Go away</DisplayName>
+			<DisplayName>Cobalt Ingot</DisplayName>
 			<Icon>Textures\GUI\Icons\ingot\cobalt_ingot.dds</Icon>
 			<Size>
 				<X>0.048</X>
@@ -330,7 +330,7 @@
 				<TypeId>Ingot</TypeId>
 				<SubtypeId>Magnesium</SubtypeId>
 			</Id>
-			<DisplayName>Go away</DisplayName>
+			<DisplayName>Magnesium Ingot</DisplayName>
 			<Icon>Textures\GUI\Icons\ingot\magnesium_ingot.dds</Icon>
 			<Size>
 				<X>0.083</X>
@@ -356,7 +356,7 @@
 				<TypeId>Ingot</TypeId>
 				<SubtypeId>Silicon</SubtypeId>
 			</Id>
-			<DisplayName>Go away</DisplayName>
+			<DisplayName>Silicon Ingot</DisplayName>
 			<Icon>Textures\GUI\Icons\ingot\silicon_ingot.dds</Icon>
 			<Size>
 				<X>0.075</X>
@@ -382,7 +382,7 @@
 				<TypeId>Ingot</TypeId>
 				<SubtypeId>Silver</SubtypeId>
 			</Id>
-			<DisplayName>Go away</DisplayName>
+			<DisplayName>Silver Ingot</DisplayName>
 			<Icon>Textures\GUI\Icons\ingot\silver_ingot.dds</Icon>
 			<Size>
 				<X>0.046</X>
@@ -408,7 +408,7 @@
 				<TypeId>Ingot</TypeId>
 				<SubtypeId>Gold</SubtypeId>
 			</Id>
-			<DisplayName>Go away</DisplayName>
+			<DisplayName>Gold Ingot</DisplayName>
 			<Icon>Textures\GUI\Icons\ingot\gold_ingot.dds</Icon>
 			<Size>
 				<X>0.037</X>

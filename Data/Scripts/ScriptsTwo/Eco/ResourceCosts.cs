@@ -118,11 +118,6 @@ namespace Meridian
                     {
                         definition.BaseProductionTimeInSeconds = 1 / 60f;
                     }
-                    else
-                    {
-                        definition.Results[0].Amount = 1;
-                        definition.BaseProductionTimeInSeconds = 0.0001f;
-                    }
                 }
 
                 var bpCost = MyFixedPoint.Zero;
