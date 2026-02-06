@@ -1,46 +1,45 @@
 <?xml version="1.0" ?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<CubeBlocks>
-		<Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
-			<Id>
-				<TypeId>Assembler</TypeId>
-				<SubtypeId>mss_industrialreprocessor</SubtypeId>
-			</Id>
-			<DisplayName>Industrial Reprocessor</DisplayName>
-			<Description>Designed to convert salvage and scrap into workable Modules, this is a must for any self-respecting industrialist.</Description>
-			<Icon>Textures\GUI\Icons\Cubes\ChemicalRefinery.dds</Icon>
-			<CubeSize>Large</CubeSize>
-			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="1" y="2" z="3"/>
-			<ModelOffset x="0" y="0" z="0"/>
-			<Model>Models\Cubes\IndustrialReprocessor\ChemicalRefinery.mwm</Model>
-			  <Components>
+    <CubeBlocks>
+        <Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
+            <Id>
+                <TypeId>Assembler</TypeId>
+                <SubtypeId>mss_industrialreprocessor</SubtypeId>
+            </Id>
+            <DisplayName>Industrial Reprocessor</DisplayName>
+            <Description>Designed to convert salvage and scrap into workable Modules, this is a must for any self-respecting industrialist.</Description>
+            <Icon>Textures\GUI\Icons\Cubes\ChemicalRefinery.dds</Icon>
+            <CubeSize>Large</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="1" y="2" z="3"/>
+            <ModelOffset x="0" y="0" z="0"/>
+            <Model>Models\Cubes\IndustrialReprocessor\ChemicalRefinery.mwm</Model>
+            <Components>
                 <Component Subtype="SteelPlate" Count="800"/>
-
-                <Component Subtype="Construction" Count="120" />
-                <Component Subtype="LargeTube" Count="80" />
-                <Component Subtype="MetalGrid" Count="300" />
-                <Component Subtype="Computer" Count="400" />
-                <Component Subtype="SalvagedPlating" Count="15" />
-                <Component Subtype="SteelPlate" Count="800" />
+                <Component Subtype="Construction" Count="120"/>
+                <Component Subtype="LargeTube" Count="80"/>
+                <Component Subtype="MetalGrid" Count="300"/>
+                <Component Subtype="Computer" Count="400"/>
+                <Component Subtype="SalvagedPlating" Count="15"/>
+                <Component Subtype="SteelPlate" Count="800"/>
             </Components>
-            <CriticalComponent Subtype="SalvagedPlating" Index="0" />
-			<MountPoints>
-				<MountPoint Side="Front" StartX="0.00" StartY="0.13" EndX="1.00" EndY="1.87"/>
-				<MountPoint Side="Back" StartX="0.00" StartY="0.09" EndX="1.00" EndY="1.91"/>
-				<MountPoint Side="Left" StartX="0.06" StartY="0.10" EndX="2.94" EndY="1.90"/>
-				<MountPoint Side="Right" StartX="0.05" StartY="0.08" EndX="2.95" EndY="1.92"/>
-				<MountPoint Side="Top" StartX="0.00" StartY="0.14" EndX="1.00" EndY="2.86"/>
-				<MountPoint Side="Bottom" StartX="0.00" StartY="0.07" EndX="1.00" EndY="2.93"/>
-			</MountPoints>
-			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\IndustrialReprocessor\ChemicalRefinery_BS1.mwm"/>
-				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\IndustrialReprocessor\ChemicalRefinery_BS2.mwm"/>
-			</BuildProgressModels>
-			<BlockPairName>mss_industrialreprocessor</BlockPairName>
-			<MirroringY>Z</MirroringY>
-			<MirroringZ>Y</MirroringZ>
- 			<BuildTimeSeconds>80</BuildTimeSeconds>
+            <CriticalComponent Subtype="SalvagedPlating" Index="0"/>
+            <MountPoints>
+                <MountPoint Side="Front" StartX="0.00" StartY="0.13" EndX="1.00" EndY="1.87"/>
+                <MountPoint Side="Back" StartX="0.00" StartY="0.09" EndX="1.00" EndY="1.91"/>
+                <MountPoint Side="Left" StartX="0.06" StartY="0.10" EndX="2.94" EndY="1.90"/>
+                <MountPoint Side="Right" StartX="0.05" StartY="0.08" EndX="2.95" EndY="1.92"/>
+                <MountPoint Side="Top" StartX="0.00" StartY="0.14" EndX="1.00" EndY="2.86"/>
+                <MountPoint Side="Bottom" StartX="0.00" StartY="0.07" EndX="1.00" EndY="2.93"/>
+            </MountPoints>
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.50" File="Models\Cubes\IndustrialReprocessor\ChemicalRefinery_BS1.mwm"/>
+                <Model BuildPercentUpperBound="1.00" File="Models\Cubes\IndustrialReprocessor\ChemicalRefinery_BS2.mwm"/>
+            </BuildProgressModels>
+            <BlockPairName>mss_industrialreprocessor</BlockPairName>
+            <MirroringY>Z</MirroringY>
+            <MirroringZ>Y</MirroringZ>
+            <BuildTimeSeconds>80</BuildTimeSeconds>
             <ResourceSinkGroup>Factory</ResourceSinkGroup>
             <InventoryMaxVolume>48</InventoryMaxVolume>
             <InventorySize>
@@ -69,16 +68,8 @@
                 <unsignedInt>120</unsignedInt>
                 <unsignedInt>240</unsignedInt>
             </TieredUpdateTimes>
-
-
-
-
-		</Definition>
-
-
-
-
- <Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+        </Definition>
+        <Definition xsi:type="MyObjectBuilder_RefineryDefinition">
             <Id>
                 <TypeId>Refinery</TypeId>
                 <SubtypeId>LargeRefinery</SubtypeId>
@@ -88,41 +79,35 @@
             <Description>This facility contains the necessary provisions to process, refine, and enrich uranium for usage aboard starship-grade reactors.</Description>
             <CubeSize>Large</CubeSize>
             <BlockTopology>TriangleMesh</BlockTopology>
-            <Size x="2" y="4" z="2" />
-            <ModelOffset x="0" y="0" z="0" />
+            <Size x="2" y="4" z="2"/>
+            <ModelOffset x="0" y="0" z="0"/>
             <Model>Models\Cubes\Large\Refinery.mwm</Model>
             <Components>
-                <Component Subtype="SteelPlate" Count="1100" />
-                <Component Subtype="Construction" Count="40" />
-                <Component Subtype="LargeTube" Count="20" />
-                <Component Subtype="Motor" Count="16" />
-<<<<<<< HEAD
+                <Component Subtype="SteelPlate" Count="1100"/>
+                <Component Subtype="Construction" Count="40"/>
+                <Component Subtype="LargeTube" Count="20"/>
+                <Component Subtype="Motor" Count="16"/>
                 <Component Subtype="PrototechCapacitor" Count="30"/>
-                <Component Subtype="MetalGrid" Count="20" />
+                <Component Subtype="MetalGrid" Count="20"/>
                 <Component Subtype="PrototechCircuitry" Count="20"/>
-=======
-                <Component Subtype="PrototechCapacitor" Count="30">
-                <Component Subtype="MetalGrid" Count="20" />
-                <Component Subtype="PrototechCircuitry" Count="20">
->>>>>>> parent of 128ed3f (format new xml)
-                <Component Subtype="Computer" Count="20" />
-                <Component Subtype="SteelPlate" Count="100" />
+                <Component Subtype="Computer" Count="20"/>
+                <Component Subtype="SteelPlate" Count="100"/>
             </Components>
-            <CriticalComponent Subtype="Computer" Index="0" />
-            <Center x="1" y="0" z="1" />
+            <CriticalComponent Subtype="Computer" Index="0"/>
+            <Center x="1" y="0" z="1"/>
             <MountPoints>
-                <MountPoint Side="Back" StartX="0" StartY="0" EndX="2" EndY="4" />
-                <MountPoint Side="Bottom" StartX="0" StartY="1" EndX="2" EndY="2" Default="true" />
-                <MountPoint Side="Top" StartX="0" StartY="0" EndX="2" EndY="1" />
-                <MountPoint Side="Left" StartX="1" StartY="0" EndX="2" EndY="4" />
-                <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="4" />
+                <MountPoint Side="Back" StartX="0" StartY="0" EndX="2" EndY="4"/>
+                <MountPoint Side="Bottom" StartX="0" StartY="1" EndX="2" EndY="2" Default="true"/>
+                <MountPoint Side="Top" StartX="0" StartY="0" EndX="2" EndY="1"/>
+                <MountPoint Side="Left" StartX="1" StartY="0" EndX="2" EndY="4"/>
+                <MountPoint Side="Right" StartX="0" StartY="0" EndX="1" EndY="4"/>
             </MountPoints>
             <BuildProgressModels>
-                <Model BuildPercentUpperBound="0.16" File="Models\Cubes\Large\RefineryConstruction_1.mwm" />
-                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\RefineryConstruction_2.mwm" />
-                <Model BuildPercentUpperBound="0.50" File="Models\Cubes\Large\RefineryConstruction_3.mwm" />
-                <Model BuildPercentUpperBound="0.83" File="Models\Cubes\Large\RefineryConstruction_4.mwm" />
-                <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\RefineryConstruction_5.mwm" />
+                <Model BuildPercentUpperBound="0.16" File="Models\Cubes\Large\RefineryConstruction_1.mwm"/>
+                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\RefineryConstruction_2.mwm"/>
+                <Model BuildPercentUpperBound="0.50" File="Models\Cubes\Large\RefineryConstruction_3.mwm"/>
+                <Model BuildPercentUpperBound="0.83" File="Models\Cubes\Large\RefineryConstruction_4.mwm"/>
+                <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\RefineryConstruction_5.mwm"/>
             </BuildProgressModels>
             <BlockPairName>Refinery</BlockPairName>
             <EdgeType>Light</EdgeType>
@@ -134,10 +119,8 @@
                 <Y>2.5</Y>
                 <Z>2.5</Z>
             </InventorySize>
-
             <InventoryFillFactorMin>0.3</InventoryFillFactorMin>
             <InventoryFillFactorMax>0.6</InventoryFillFactorMax>
-
             <StandbyPowerConsumption>0.001</StandbyPowerConsumption>
             <OperationalPowerConsumption>0.56</OperationalPowerConsumption>
             <BlueprintClasses>
@@ -147,7 +130,7 @@
             <MaterialEfficiency>4.0</MaterialEfficiency>
             <OreAmountPerPullRequest>2000</OreAmountPerPullRequest>
             <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
-            <Center x="1" y="0" z="0" />
+            <Center x="1" y="0" z="0"/>
             <DamagedSound>ParticleHeavyMech</DamagedSound>
             <PrimarySound>BlockRafinery</PrimarySound>
             <ActionSound>BlockRafineryProcess</ActionSound>
@@ -162,8 +145,7 @@
             </TieredUpdateTimes>
             <AllowSelfPulling>false</AllowSelfPulling>
         </Definition>
-
-         <Definition xsi:type="MyObjectBuilder_JumpDriveDefinition">
+        <Definition xsi:type="MyObjectBuilder_JumpDriveDefinition">
             <Id>
                 <TypeId>JumpDrive</TypeId>
                 <SubtypeId>LargePrototechJumpDrive</SubtypeId>
@@ -173,9 +155,9 @@
             <Description>This jump drive is hardened against electronic attack, permitting greater resilience and utility in combat settings.</Description>
             <CubeSize>Large</CubeSize>
             <BlockTopology>TriangleMesh</BlockTopology>
-            <Size x="3" y="3" z="3" />
-            <Center x="1" y="0" z="1" />
-            <ModelOffset x="0" y="0" z="0" />
+            <Size x="3" y="3" z="3"/>
+            <Center x="1" y="0" z="1"/>
+            <ModelOffset x="0" y="0" z="0"/>
             <Model>Models\Cubes\Large\Prototech_JumpDrive.mwm</Model>
             <Components>
                 <Component Subtype="PrototechFrame" Count="1">
@@ -184,7 +166,7 @@
                         <SubtypeId>PrototechScrap</SubtypeId>
                     </DeconstructId>
                 </Component>
-                <Component Subtype="GravityGenerator" Count="30" />
+                <Component Subtype="GravityGenerator" Count="30"/>
                 <Component Subtype="PrototechCapacitor" Count="30">
                     <DeconstructId>
                         <TypeId>Ingot</TypeId>
@@ -197,30 +179,30 @@
                         <SubtypeId>PrototechScrap</SubtypeId>
                     </DeconstructId>
                 </Component>
-                <Component Subtype="Superconductor" Count="1400" />
-                <Component Subtype="PostlightModule" Count="20" />
-                <Component Subtype="Computer" Count="300" />
-                <Component Subtype="Construction" Count="180" />
-                <Component Subtype="PrototechPanel" Count="200" />
+                <Component Subtype="Superconductor" Count="1400"/>
+                <Component Subtype="PostlightModule" Count="20"/>
+                <Component Subtype="Computer" Count="300"/>
+                <Component Subtype="Construction" Count="180"/>
+                <Component Subtype="PrototechPanel" Count="200"/>
             </Components>
-            <CriticalComponent Subtype="Computer" Index="0" />
+            <CriticalComponent Subtype="Computer" Index="0"/>
             <MountPoints>
-                <MountPoint Side="Back" StartX="0" StartY="0" EndX="0.5" EndY="1" />
-                <MountPoint Side="Back" StartX="0.5" StartY="0" EndX="2.5" EndY="0.5" />
-                <MountPoint Side="Back" StartX="2.5" StartY="0" EndX="3" EndY="1" />
-                <MountPoint Side="Back" StartX="1.2" StartY="1.2" EndX="1.8" EndY="1.8" />
-                <MountPoint Side="Left" StartX="0" StartY="0" EndX="3" EndY="1" />
-                <MountPoint Side="Front" StartX="0" StartY="0" EndX="0.5" EndY="1" />
-                <MountPoint Side="Front" StartX="0.5" StartY="0" EndX="2.5" EndY="0.5" />
-                <MountPoint Side="Front" StartX="2.5" StartY="0" EndX="3" EndY="1" />
-                <MountPoint Side="Front" StartX="1.2" StartY="1.2" EndX="1.8" EndY="1.8" />
-                <MountPoint Side="Right" StartX="0" StartY="0" EndX="3" EndY="1" />
-                <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="3" Default="true" />
+                <MountPoint Side="Back" StartX="0" StartY="0" EndX="0.5" EndY="1"/>
+                <MountPoint Side="Back" StartX="0.5" StartY="0" EndX="2.5" EndY="0.5"/>
+                <MountPoint Side="Back" StartX="2.5" StartY="0" EndX="3" EndY="1"/>
+                <MountPoint Side="Back" StartX="1.2" StartY="1.2" EndX="1.8" EndY="1.8"/>
+                <MountPoint Side="Left" StartX="0" StartY="0" EndX="3" EndY="1"/>
+                <MountPoint Side="Front" StartX="0" StartY="0" EndX="0.5" EndY="1"/>
+                <MountPoint Side="Front" StartX="0.5" StartY="0" EndX="2.5" EndY="0.5"/>
+                <MountPoint Side="Front" StartX="2.5" StartY="0" EndX="3" EndY="1"/>
+                <MountPoint Side="Front" StartX="1.2" StartY="1.2" EndX="1.8" EndY="1.8"/>
+                <MountPoint Side="Right" StartX="0" StartY="0" EndX="3" EndY="1"/>
+                <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="3" EndY="3" Default="true"/>
             </MountPoints>
             <BuildProgressModels>
-                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Prototech_JumpDrive_Construction_1.mwm" />
-                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Prototech_JumpDrive_Construction_2.mwm" />
-                <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\Prototech_JumpDrive_Construction_3.mwm" />
+                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Prototech_JumpDrive_Construction_1.mwm"/>
+                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Prototech_JumpDrive_Construction_2.mwm"/>
+                <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\Prototech_JumpDrive_Construction_3.mwm"/>
             </BuildProgressModels>
             <BlockPairName>PrototechJumpDrive</BlockPairName>
             <MirroringY>X</MirroringY>
@@ -231,31 +213,25 @@
             <DamageEffectName>Damage_Electrical_Prototech_JumpDrive_L</DamageEffectName>
             <DamagedSound>ParticleElectrical</DamagedSound>
             <EmissiveColorPreset>JumpDrive</EmissiveColorPreset>
-
             <ResourceSinkGroup>Charging</ResourceSinkGroup>
             <RequiredPowerInput>64</RequiredPowerInput>
             <PowerNeededForJump>5</PowerNeededForJump>
             <PowerEfficiency>0.9</PowerEfficiency>
-
             <MaxJumpDistance>6000000</MaxJumpDistance>
             <MaxJumpMass>2500000</MaxJumpMass>
             <EmissiveColorPreset>Extended</EmissiveColorPreset>
             <DestroyEffect>Explosion_Warhead_30</DestroyEffect>
             <DestroySound>WepLrgWarheadExpl</DestroySound>
-
             <ShipJumpDriveChargingSound>ShipPrototechJumpDriveCharging</ShipJumpDriveChargingSound>
             <ShipJumpDriveJumpInSound>ShipPrototechJumpDriveJumpIn</ShipJumpDriveJumpInSound>
             <ShipJumpDriveJumpOutSound>ShipJumpDriveJumpOut</ShipJumpDriveJumpOutSound>
             <JumpParticleEffect>Warp_Prototech</JumpParticleEffect>
-            
             <TargetingGroups>
                 <string>Propulsion</string>
             </TargetingGroups>
             <PCU>80</PCU>
         </Definition>
-
-
- <Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+        <Definition xsi:type="MyObjectBuilder_RefineryDefinition">
             <Id>
                 <TypeId>Refinery</TypeId>
                 <SubtypeId>LargePrototechRefinery</SubtypeId>
@@ -265,8 +241,8 @@
             <Description>Need something to refine ores? This facility contains all necessary faculties to handle the processing and refinement of nearly every ore.</Description>
             <CubeSize>Large</CubeSize>
             <BlockTopology>TriangleMesh</BlockTopology>
-            <Size x="2" y="2" z="4" />
-            <ModelOffset x="0" y="0" z="0" />
+            <Size x="2" y="2" z="4"/>
+            <ModelOffset x="0" y="0" z="0"/>
             <Model>Models\Cubes\Large\Prototech_Refinery.mwm</Model>
             <Components>
                 <Component Subtype="PrototechFrame" Count="1">
@@ -275,8 +251,8 @@
                         <SubtypeId>PrototechScrap</SubtypeId>
                     </DeconstructId>
                 </Component>
-                <Component Subtype="PrototechPanel" Count="375" />
-                <Component Subtype="Construction" Count="40" />
+                <Component Subtype="PrototechPanel" Count="375"/>
+                <Component Subtype="Construction" Count="40"/>
                 <Component Subtype="PrototechMachinery" Count="10">
                     <DeconstructId>
                         <TypeId>Ingot</TypeId>
@@ -289,38 +265,38 @@
                         <SubtypeId>PrototechScrap</SubtypeId>
                     </DeconstructId>
                 </Component>
-                <Component Subtype="LargeTube" Count="20" />
-                <Component Subtype="MetalGrid" Count="20" />
-                <Component Subtype="IndustrialModule" Count="10" />
-                <Component Subtype="Computer" Count="20" />
-                <Component Subtype="PrototechPanel" Count="300" />
+                <Component Subtype="LargeTube" Count="20"/>
+                <Component Subtype="MetalGrid" Count="20"/>
+                <Component Subtype="IndustrialModule" Count="10"/>
+                <Component Subtype="Computer" Count="20"/>
+                <Component Subtype="PrototechPanel" Count="300"/>
             </Components>
-            <CriticalComponent Subtype="Computer" Index="0" />
-            <Center x="1" y="0" z="1" />
+            <CriticalComponent Subtype="Computer" Index="0"/>
+            <Center x="1" y="0" z="1"/>
             <MountPoints>
-                <MountPoint Side="Back" StartX="0" StartY="0.1" EndX="0.1" EndY="1" />
-                <MountPoint Side="Back" StartX="0.1" StartY="0" EndX="1" EndY="0.1" />
-                <MountPoint Side="Back" StartX="1" StartY="0" EndX="2" EndY="1" />
-                <MountPoint Side="Back" StartX="1.9" StartY="1" EndX="2" EndY="1.9" />
-                <MountPoint Side="Back" StartX="1" StartY="1.9" EndX="1.9" EndY="2" />
-                <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="2" />
-                <MountPoint Side="Front" StartX="1" StartY="0" EndX="2" EndY="1.5" />
-                <MountPoint Side="Front" StartX="1" StartY="1.5" EndX="1.5" EndY="2" />
-                <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1.8" EndY="2" />
-                <MountPoint Side="Bottom" StartX="0.5" StartY="2" EndX="1.8" EndY="4" />
-                <MountPoint Side="Top" StartX="1" StartY="0" EndX="1.6" EndY="2" />
-                <MountPoint Side="Top" StartX="1.9" StartY="2" EndX="2" EndY="3.85" />
-                <MountPoint Side="Top" StartX="0.5" StartY="3.85" EndX="2" EndY="4" />
-                <MountPoint Side="Left" StartX="0" StartY="0" EndX="0.15" EndY="1.5" />
-                <MountPoint Side="Left" StartX="0.15" StartY="0" EndX="2" EndY="0.1" />
-                <MountPoint Side="Left" StartX="2" StartY="0.4" EndX="4" EndY="1" />
-                <MountPoint Side="Right" StartX="0" StartY="0.2" EndX="2" EndY="1.5" />
-                <MountPoint Side="Right" StartX="2" StartY="0.2" EndX="4" EndY="2" />
+                <MountPoint Side="Back" StartX="0" StartY="0.1" EndX="0.1" EndY="1"/>
+                <MountPoint Side="Back" StartX="0.1" StartY="0" EndX="1" EndY="0.1"/>
+                <MountPoint Side="Back" StartX="1" StartY="0" EndX="2" EndY="1"/>
+                <MountPoint Side="Back" StartX="1.9" StartY="1" EndX="2" EndY="1.9"/>
+                <MountPoint Side="Back" StartX="1" StartY="1.9" EndX="1.9" EndY="2"/>
+                <MountPoint Side="Front" StartX="0" StartY="0" EndX="1" EndY="2"/>
+                <MountPoint Side="Front" StartX="1" StartY="0" EndX="2" EndY="1.5"/>
+                <MountPoint Side="Front" StartX="1" StartY="1.5" EndX="1.5" EndY="2"/>
+                <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1.8" EndY="2"/>
+                <MountPoint Side="Bottom" StartX="0.5" StartY="2" EndX="1.8" EndY="4"/>
+                <MountPoint Side="Top" StartX="1" StartY="0" EndX="1.6" EndY="2"/>
+                <MountPoint Side="Top" StartX="1.9" StartY="2" EndX="2" EndY="3.85"/>
+                <MountPoint Side="Top" StartX="0.5" StartY="3.85" EndX="2" EndY="4"/>
+                <MountPoint Side="Left" StartX="0" StartY="0" EndX="0.15" EndY="1.5"/>
+                <MountPoint Side="Left" StartX="0.15" StartY="0" EndX="2" EndY="0.1"/>
+                <MountPoint Side="Left" StartX="2" StartY="0.4" EndX="4" EndY="1"/>
+                <MountPoint Side="Right" StartX="0" StartY="0.2" EndX="2" EndY="1.5"/>
+                <MountPoint Side="Right" StartX="2" StartY="0.2" EndX="4" EndY="2"/>
             </MountPoints>
             <BuildProgressModels>
-                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Prototech_Refinery_Construction_1.mwm" />
-                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Prototech_Refinery_Construction_2.mwm" />
-                <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\Prototech_Refinery_Construction_3.mwm" />
+                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\Prototech_Refinery_Construction_1.mwm"/>
+                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\Prototech_Refinery_Construction_2.mwm"/>
+                <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\Prototech_Refinery_Construction_3.mwm"/>
             </BuildProgressModels>
             <BlockPairName>PrototechRefinery</BlockPairName>
             <EdgeType>Light</EdgeType>
@@ -333,10 +309,8 @@
                 <Y>2.5</Y>
                 <Z>2.5</Z>
             </InventorySize>
-
             <InventoryFillFactorMin>0.3</InventoryFillFactorMin>
             <InventoryFillFactorMax>0.6</InventoryFillFactorMax>
-
             <StandbyPowerConsumption>0.001</StandbyPowerConsumption>
             <OperationalPowerConsumption>1.12</OperationalPowerConsumption>
             <BlueprintClasses>
@@ -346,7 +320,7 @@
             <MaterialEfficiency>2.0</MaterialEfficiency>
             <IngotAmountPerPullRequest>2000</IngotAmountPerPullRequest>
             <DamageEffectName>Damage_Electrical_Prototech_Large</DamageEffectName>
-            <Center x="1" y="0" z="0" />
+            <Center x="1" y="0" z="0"/>
             <DamagedSound>ParticleElectrical</DamagedSound>
             <PrimarySound>BlockRafinery</PrimarySound>
             <ActionSound>BlockRafineryProcess</ActionSound>
@@ -364,10 +338,5 @@
             </TieredUpdateTimes>
             <AllowSelfPulling>false</AllowSelfPulling>
         </Definition>
-
-
-
-
-
-	</CubeBlocks>
+    </CubeBlocks>
 </Definitions>
