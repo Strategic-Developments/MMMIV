@@ -269,8 +269,8 @@
 
             <ResourceSinkGroup>Charging</ResourceSinkGroup>
             <RequiredPowerInput>20</RequiredPowerInput>
-            <PowerNeededForJump>1.5</PowerNeededForJump>
-            <PowerEfficiency>0.5</PowerEfficiency>
+            <PowerNeededForJump>1</PowerNeededForJump>
+            <PowerEfficiency>0.75</PowerEfficiency>
 
             <MaxJumpDistance>200000</MaxJumpDistance>
             <MaxJumpMass>250000</MaxJumpMass>
