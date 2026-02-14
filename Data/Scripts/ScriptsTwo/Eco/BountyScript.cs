@@ -24,6 +24,7 @@ namespace Meridian.Economy
         private const int PayoutIntervalTicks = 1 * 60;
         private const int PayoutIntervalCombatEndTicks = 30 * 60;
         private const float PAYOUT_RATIO = 0.75f;
+        private const int WAR_REPUTATION_THRESHOLD = 500;
 
         private bool _registered;
 
@@ -125,8 +126,11 @@ namespace Meridian.Economy
             if (atkFac == null || vicFac == null)
                 return;
 
-            // Defensive check for AreFactionsEnemies call
-            if (!factions.AreFactionsEnemies(atkFac.FactionId, vicFac.FactionId))
+            // Check if factions are at war (enemies OR reputation <= 500)
+            bool atWar = factions.AreFactionsEnemies(atkFac.FactionId, vicFac.FactionId) ||
+                         IsAtWarByReputation(factions, atkFac.FactionId, vicFac.FactionId);
+
+            if (!atWar)
                 return;
 
             // Defensive checks for block definition and price lookup chain
@@ -144,6 +148,12 @@ namespace Meridian.Economy
                 if (price > 0)
                     QueuePayout(attackerId, (long)(price * PAYOUT_RATIO));
             }
+        }
+
+        private static bool IsAtWarByReputation(IMyFactionCollection factions, long factionId1, long factionId2)
+        {
+            int reputation = factions.GetReputationBetweenFactions(factionId1, factionId2);
+            return reputation <= WAR_REPUTATION_THRESHOLD;
         }
 
         private void QueuePayout(long identityId, long amount)
