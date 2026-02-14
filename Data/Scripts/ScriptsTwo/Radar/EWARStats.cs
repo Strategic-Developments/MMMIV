@@ -420,6 +420,74 @@ namespace SRRadarStats
                     SensitivityMultiplier = 1, // Sensitivity multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
                     SensitivityAddon = 0, // Sensitivity addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
                 },
+
+                ["mss_lg_beamdrill"] = new UpgradeBlockStat()
+                {
+                    DefinitionPriority = 1,
+                    // these two are incompatible with eachother.
+                    ApplyOnlyWhenFiring = false, // WEAPON BLOCKS ONLY. Makes all of the addons/multipliers apply only when the weapon is firing.
+                    ApplyOnlyWhenOn = false, // FUNCTIONAL BLOCKS ONLY. Makes all of the addons/multipliers apply only if the block is functional.
+
+                    PositionalErrorMultiplier = 1, // Positional error multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    PositionalErrorAddon = 0, // Positional error addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+                    VelocityErrorMultiplier = 1, // Velocity error multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    VelocityErrorAddon = 0, // Velocity error addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+                    NoiseFilterMultiplier = 1, // Noise filter multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    NoiseFilterAddon = 0, // Noise filter addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+                    RCSMultiplier = 100f, // RCS multiplier for the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    RCSAddon = 0, //  RCS addon for the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+                    SensitivityMultiplier = 1, // Sensitivity multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    SensitivityAddon = 0, // Sensitivity addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+                },
+
+                ["LG_Simple_Laser_Multitool"] = new UpgradeBlockStat()
+                {
+                    DefinitionPriority = 1,
+                    // these two are incompatible with eachother.
+                    ApplyOnlyWhenFiring = false, // WEAPON BLOCKS ONLY. Makes all of the addons/multipliers apply only when the weapon is firing.
+                    ApplyOnlyWhenOn = false, // FUNCTIONAL BLOCKS ONLY. Makes all of the addons/multipliers apply only if the block is functional.
+
+                    PositionalErrorMultiplier = 1, // Positional error multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    PositionalErrorAddon = 0, // Positional error addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+                    VelocityErrorMultiplier = 1, // Velocity error multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    VelocityErrorAddon = 0, // Velocity error addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+                    NoiseFilterMultiplier = 1, // Noise filter multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    NoiseFilterAddon = 0, // Noise filter addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+                    RCSMultiplier = 10f, // RCS multiplier for the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    RCSAddon = 0, //  RCS addon for the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+                    SensitivityMultiplier = 1, // Sensitivity multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    SensitivityAddon = 0, // Sensitivity addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+                },
+                ["SG_Simple_Laser_Multitool"] = new UpgradeBlockStat()
+                {
+                    DefinitionPriority = 1,
+                    // these two are incompatible with eachother.
+                    ApplyOnlyWhenFiring = false, // WEAPON BLOCKS ONLY. Makes all of the addons/multipliers apply only when the weapon is firing.
+                    ApplyOnlyWhenOn = false, // FUNCTIONAL BLOCKS ONLY. Makes all of the addons/multipliers apply only if the block is functional.
+
+                    PositionalErrorMultiplier = 1, // Positional error multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    PositionalErrorAddon = 0, // Positional error addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+                    VelocityErrorMultiplier = 1, // Velocity error multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    VelocityErrorAddon = 0, // Velocity error addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+                    NoiseFilterMultiplier = 1, // Noise filter multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    NoiseFilterAddon = 0, // Noise filter addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+                    RCSMultiplier = 500f, // RCS multiplier for the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    RCSAddon = 0, //  RCS addon for the grid this is mounted on. Addons are calculated AFTER multipliers.
+
+                    SensitivityMultiplier = 1, // Sensitivity multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    SensitivityAddon = 0, // Sensitivity addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
+                },
             }
         };
 

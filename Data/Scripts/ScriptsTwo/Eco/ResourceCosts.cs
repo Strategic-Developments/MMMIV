@@ -55,8 +55,8 @@ namespace Meridian
 
             GasCosts = new Dictionary<string, double>()
             {
-                ["Oxygen"] = 0.0045,
-                ["Hydrogen"] = 0.00225,
+                ["Oxygen"] = 0.9,
+                ["Hydrogen"] = 0.45,
             };
 
             foreach (var item in baseItemCosts)
