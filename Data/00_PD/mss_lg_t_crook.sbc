@@ -133,7 +133,7 @@
 	</Blueprints>
 	<BlueprintClassEntries><!--BLUEPRINT CLASS ENTRY DEFINITION-->
 		<Entry Class="EliteConsumables" BlueprintSubtypeId="mss_lg_t_crook_ammomagazine"/>
-		<Entry Class="EliteConsumables" BlueprintSubtypeId="mss_lg_t_crook_ammomagazine"/>
+		<Entry Class="EliteConsumables" BlueprintSubtypeId="mss_lg_t_crook_ammomagazine_special"/>
 		<Entry Class="LargeBlocks" BlueprintSubtypeId="ConveyorSorter/mss_lg_t_crook_base"/>
 	</BlueprintClassEntries>
 </Definitions>

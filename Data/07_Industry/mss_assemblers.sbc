@@ -241,4 +241,30 @@
 			<AllowSelfPulling>true</AllowSelfPulling>
 		</Definition>
 	</CubeBlocks>
+	<Blueprints>
+		<!--BLUEPRINT DEFINITION-->
+		<Blueprint>
+			<!-- This blueprint exists to prevent missing blueprint errors -->
+			<Id>
+				<TypeId>BlueprintDefinition</TypeId>
+				<SubtypeId>PrototechFrame</SubtypeId>
+			</Id>
+			<DisplayName>DisplayName_Item_PrototechPanel</DisplayName>
+			<Icon>Textures\GUI\Icons\component\PrototechPanel_Component.dds</Icon>
+			<Prerequisites>
+				<Item Amount="120" TypeId="Ingot" SubtypeId="Iron" />
+				<Item Amount="40" TypeId="Ingot" SubtypeId="Silicon" />
+				<Item Amount="30" TypeId="Ingot" SubtypeId="Silver" />
+				<Item Amount="60" TypeId="Ingot" SubtypeId="Gold" />
+				<Item Amount="15" TypeId="Ingot" SubtypeId="PrototechScrap" />
+			</Prerequisites>
+			<Result Amount="1" TypeId="Component" SubtypeId="PrototechFrame" />
+			<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
+			<IsPrimary>true</IsPrimary>
+		</Blueprint>
+	</Blueprints>
+	<BlueprintClassEntries>
+		<!--BLUEPRINT CLASS ENTRY DEFINITION-->
+		<Entry Class="LargeBlocks" BlueprintSubtypeId="PrototechComponents"/>
+	</BlueprintClassEntries>
 </Definitions>
