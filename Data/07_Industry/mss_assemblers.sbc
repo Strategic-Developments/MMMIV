@@ -265,6 +265,6 @@
 	</Blueprints>
 	<BlueprintClassEntries>
 		<!--BLUEPRINT CLASS ENTRY DEFINITION-->
-		<Entry Class="LargeBlocks" BlueprintSubtypeId="PrototechComponents"/>
+		<Entry Class="PrototechComponents" BlueprintSubtypeId="PrototechFrame"/>
 	</BlueprintClassEntries>
 </Definitions>
