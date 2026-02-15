@@ -269,11 +269,11 @@
 
             <ResourceSinkGroup>Charging</ResourceSinkGroup>
             <RequiredPowerInput>20</RequiredPowerInput>
-            <PowerNeededForJump>1</PowerNeededForJump>
+            <PowerNeededForJump>0.5</PowerNeededForJump>
             <PowerEfficiency>0.75</PowerEfficiency>
 
-            <MaxJumpDistance>200000</MaxJumpDistance>
-            <MaxJumpMass>250000</MaxJumpMass>
+            <MaxJumpDistance>400000</MaxJumpDistance>
+            <MaxJumpMass>300000</MaxJumpMass>
             <EmissiveColorPreset>Extended</EmissiveColorPreset>
             <DestroyEffect>Explosion_Warhead_30</DestroyEffect>
             <DestroySound>WepLrgWarheadExpl</DestroySound>
