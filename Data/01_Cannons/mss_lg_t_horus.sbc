@@ -139,7 +139,7 @@
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>mss_lg_t_horus_ammomagazine_special</SubtypeId>
 			</Id>
-			<DisplayName>Horus Cannon Shell</DisplayName>
+			<DisplayName>Horus Flak Shell</DisplayName>
 			<Prerequisites>
 				<Item Amount="1500" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
 				<Item Amount="1" TypeId="Ingot" SubtypeId="Platinum"/>

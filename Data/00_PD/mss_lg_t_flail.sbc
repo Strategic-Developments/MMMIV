@@ -125,7 +125,7 @@
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>mss_lg_t_flail_ammomagazine_special</SubtypeId>
 			</Id>
-			<DisplayName>Flail Ammo Box</DisplayName>
+			<DisplayName>Flail DU Ammo Box</DisplayName>
 			<Prerequisites>
 				<Item Amount="6750" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
 				<Item Amount="16.875" TypeId="Ingot" SubtypeId="Platinum"/>
