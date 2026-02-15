@@ -155,6 +155,18 @@
 				<string>Drill/mss_sg_beamdrill</string>
 				<string>ConveyorSorter/LG_Simple_Laser_Multitool</string>
 				<string>ConveyorSorter/SG_Simple_Laser_Multitool</string>
+
+				<string>Refinery/LargeRefineryIndustrial</string>
+
+				<string>Refinery/LargeRefinery</string>
+				<string>Refinery/LargePrototechRefinery</string>
+				<string>Assembler/LargePrototechAssembler</string>
+				<string>Assembler/mss_industrialreprocessor</string>
+				<string>Assembler/mss_experimentalreprocessor</string>
+
+
+
+
 			</ItemIds>
 		</Category>
 		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">
