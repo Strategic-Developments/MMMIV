@@ -126,7 +126,7 @@
                 <Component Subtype="Construction" Count="400" />
                 <Component Subtype="LargeTube" Count="160" />
 				<Component Subtype="GravityGenerator" Count="800" />
-				<Component Subtype="Superconductor" Count="4000" />
+				<Component Subtype="PrototechMachinery" Count="100" />
                 <Component Subtype="Computer" Count="500" />
                 <Component Subtype="PowerCell" Count="80" />
                 <Component Subtype="SteelPlate" Count="1400" />
