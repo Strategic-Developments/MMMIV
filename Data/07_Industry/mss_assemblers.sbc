@@ -249,8 +249,8 @@
 				<TypeId>BlueprintDefinition</TypeId>
 				<SubtypeId>PrototechFrame</SubtypeId>
 			</Id>
-			<DisplayName>DisplayName_Item_PrototechPanel</DisplayName>
-			<Icon>Textures\GUI\Icons\component\PrototechPanel_Component.dds</Icon>
+			<DisplayName>DisplayName_Item_PrototechFrame</DisplayName>
+			<Icon>Textures\GUI\Icons\component\PrototechFrame.dds</Icon>
 			<Prerequisites>
 				<Item Amount="120" TypeId="Ingot" SubtypeId="Iron" />
 				<Item Amount="40" TypeId="Ingot" SubtypeId="Silicon" />

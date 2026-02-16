@@ -12,7 +12,7 @@
                 <SubtypeId>LG_Simple_Laser_Multitool</SubtypeId>
             </Id>
             <DisplayName>Simple Laser Multitool</DisplayName>
-            <Description>A multipurpose welder and grinder laser tool. Range of 300m.</Description>
+            <Description>A multipurpose welder and grinder laser tool. Range of 300m. Multiplies your RCS by 10 when on.</Description>
 			<Icon>Textures\GUI\Icons\Cubes\SimpleLaserMultitool.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -277,7 +277,7 @@
             </Id>
             <DisplayName>Simple Laser Multitool Turret</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\LG_SimpleLaserMultitool_Turret.dds</Icon>
-            <Description>A multipurpose welder and grinder laser turret. Range of 300m.</Description>
+            <Description>A multipurpose welder and grinder laser turret. Range of 300m.Multiplies your RCS by 25 when on.</Description>
 			<CubeSize>Large</CubeSize>
             <GuiVisible>false</GuiVisible>
             <BlockTopology>TriangleMesh</BlockTopology>
@@ -350,7 +350,7 @@
                 <Radius>2.5</Radius>
                 <Length>300</Length>
 				<HarvestRatio>1</HarvestRatio>
-                <ActivePower>5</ActivePower>
+                <ActivePower>50</ActivePower>
                 <DamageCharacters>true</DamageCharacters>
                 <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
                 <Event Trigger="Firing">
@@ -462,7 +462,7 @@
                 <Radius>2.5</Radius>
                 <Length>300</Length>
 				<HarvestRatio>1</HarvestRatio>
-                <ActivePower>5</ActivePower>
+                <ActivePower>50</ActivePower>
                 <DamageCharacters>true</DamageCharacters>
 				<AffectOwnGrid>false</AffectOwnGrid>
                 <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
@@ -553,7 +553,7 @@
                 <SubtypeId>SG_Simple_Laser_Multitool</SubtypeId>
             </Id>
             <DisplayName>Simple Laser Multitool</DisplayName>
-            <Description>A multipurpose welder and grinder laser tool. Range of 100m.</Description>
+            <Description>A multipurpose welder and grinder laser tool. Range of 100m. Multiplies your RCS by 100 when on.</Description>
             <CubeSize>Small</CubeSize>
             <GuiVisible>false</GuiVisible>
 			<Icon>Textures\GUI\Icons\Cubes\SG_SimpleLaserMultitool.dds</Icon>
