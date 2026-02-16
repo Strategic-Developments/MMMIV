@@ -10,7 +10,7 @@
 				<SubtypeId>mss_mk1_salvager</SubtypeId>
 			</Id>
 			<DisplayName>Laser Salvager MKI</DisplayName>
-			<Description>An advanced chemical laser tool designed to cut apart salvage into usable components. Mark I version.</Description>
+			<Description>An advanced chemical laser tool designed to cut apart salvage into usable components, with a 200 meter range. Mark I version. Multiplies your RCS by 25x. </Description>
 			<Icon>Textures\GUI\Icons\Cubes\MKOneTool.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -70,7 +70,7 @@
                 <Radius>2.5</Radius>
                 <Length>200</Length>
 				<HarvestRatio>1</HarvestRatio>
-                <ActivePower>100</ActivePower>
+                <ActivePower>150</ActivePower>
                 <DamageCharacters>true</DamageCharacters>
                 <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
                 <Action Type="Secondary" SizeRatio="2" SpeedRatio="0.5" HarvestRatio="0" />
@@ -114,7 +114,7 @@
 				<SubtypeId>mss_mk2_salvager</SubtypeId>
 			</Id>
 			<DisplayName>Laser Salvager MKII</DisplayName>
-			<Description>An even more advanced chemical laser tool designed to cut apart salvage into usable components. Mark II version.</Description>
+			<Description>An even more advanced chemical laser tool designed to cut apart salvage into usable components, with a 200 meter range. Mark II version. Multiplies your RCS by 50x. </Description>
 			<Icon>Textures\GUI\Icons\Cubes\MKTwoTool.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -175,7 +175,7 @@
                 <Radius>3</Radius>
                 <Length>200</Length>
 				<HarvestRatio>1</HarvestRatio>
-                <ActivePower>200</ActivePower>
+                <ActivePower>300</ActivePower>
                 <DamageCharacters>true</DamageCharacters>
                 <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
                 <Action Type="Secondary" SizeRatio="2" SpeedRatio="0.5" HarvestRatio="0" />
