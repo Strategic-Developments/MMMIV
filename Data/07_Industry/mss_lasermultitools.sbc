@@ -343,7 +343,7 @@
                 <Radius>2.5</Radius>
                 <Length>300</Length>
 				<HarvestRatio>1</HarvestRatio>
-                <ActivePower>5</ActivePower>
+                <ActivePower>50</ActivePower>
                 <DamageCharacters>true</DamageCharacters>
                 <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
                 <Event Trigger="Firing">
@@ -455,7 +455,7 @@
                 <Radius>2.5</Radius>
                 <Length>300</Length>
 				<HarvestRatio>1</HarvestRatio>
-                <ActivePower>5</ActivePower>
+                <ActivePower>50</ActivePower>
                 <DamageCharacters>true</DamageCharacters>
 				<AffectOwnGrid>false</AffectOwnGrid>
                 <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
