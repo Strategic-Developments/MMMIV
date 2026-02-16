@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <CubeBlocks>
+
+
+
+	<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>mss_mk1_salvager</SubtypeId>
+			</Id>
+			<DisplayName>Laser Salvager MKI</DisplayName>
+			<Description>An advanced chemical laser tool designed to cut apart salvage into usable components. Mark I version.</Description>
+			<Icon>Textures\GUI\Icons\Cubes\MKOneTool.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\LaserSalvagers\MKOneTool.mwm</Model>
+			 <Components>
+                <Component Subtype="SteelPlate" Count="1200" />
+                <Component Subtype="Construction" Count="400" />
+                <Component Subtype="LargeTube" Count="80" />
+				<Component Subtype="GravityGenerator" Count="400" />
+				<Component Subtype="Superconductor" Count="2000" />
+                <Component Subtype="Computer" Count="500" />
+                <Component Subtype="PowerCell" Count="80" />
+                <Component Subtype="SteelPlate" Count="1200" />
+            </Components>
+            <CriticalComponent Subtype="PowerCell" Index="0" />
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\LaserSalvagers\MKOneTool_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\LaserSalvagers\MKOneTool_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>mss_mk1_salvager</BlockPairName>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+			</MountPoints>
+			<MirroringZ>Y</MirroringZ>
+			<InventorySize>
+                <X>3</X>
+                <Y>3</Y>
+                <Z>2</Z>
+            </InventorySize>
+
+			<EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>40</BuildTimeSeconds>
+            <Center x="0" y="0" z="1" />
+            <DeformationRatio>0.2</DeformationRatio>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleHeavyMech</DamagedSound>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>190</PCU>
+         
+            <ToolValues Type="Grind">
+				<EffectShape>Cylinder</EffectShape>
+                <WorkOrder>Uniform</WorkOrder>
+                <WorkOrigin>Emitter</WorkOrigin>
+				<WorkRate>4</WorkRate>
+				<Speed>0.75</Speed>
+				<PickUpFloatings>true</PickUpFloatings>
+				<UpdateInterval>5</UpdateInterval>
+                <Emitter>detector_shiptool_2</Emitter>
+                <Offset x="0" y="0" z="-100" />
+                <Radius>2.5</Radius>
+                <Length>200</Length>
+				<HarvestRatio>1</HarvestRatio>
+                <ActivePower>100</ActivePower>
+                <DamageCharacters>true</DamageCharacters>
+                <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
+                <Action Type="Secondary" SizeRatio="2" SpeedRatio="0.5" HarvestRatio="0" />
+                <Event Trigger="Firing">
+					<Beam>
+						<Start>muzzle_tool_1</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles6</End>
+						<Material>WeaponLaser</Material>
+						<Width>0.2</Width>
+						<Color>
+							<X>4</X>
+							<Y>5</Y>
+							<Z>10</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					
+					
+					
+				</Event>
+				<Event Trigger="RayHit">
+					<ParticleEffect>
+						<Name>ShipGrinder</Name>
+						<Location>Hit</Location>
+					</ParticleEffect>
+                    <Sound>
+                        <Name>ToolLrgGrindIdle</Name>
+                    </Sound>
+				</Event>
+            </ToolValues>
+
+
+
+		</Definition>
+
+
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+			<Id>
+				<TypeId>ConveyorSorter</TypeId>
+				<SubtypeId>mss_mk2_salvager</SubtypeId>
+			</Id>
+			<DisplayName>Laser Salvager MKII</DisplayName>
+			<Description>An even more advanced chemical laser tool designed to cut apart salvage into usable components. Mark II version.</Description>
+			<Icon>Textures\GUI\Icons\Cubes\MKTwoTool.dds</Icon>
+			<CubeSize>Large</CubeSize>
+			<BlockTopology>TriangleMesh</BlockTopology>
+			<Size x="1" y="1" z="2"/>
+			<ModelOffset x="0" y="0" z="0"/>
+			<Model>Models\Cubes\LaserSalvagers\MKTwoTool.mwm</Model>
+			 <Components>
+                <Component Subtype="SteelPlate" Count="1400" />
+                <Component Subtype="Construction" Count="400" />
+                <Component Subtype="LargeTube" Count="160" />
+				<Component Subtype="GravityGenerator" Count="800" />
+				<Component Subtype="Superconductor" Count="4000" />
+                <Component Subtype="Computer" Count="500" />
+                <Component Subtype="PowerCell" Count="80" />
+                <Component Subtype="SteelPlate" Count="1400" />
+            </Components>
+            <CriticalComponent Subtype="PowerCell" Index="0" />
+			<BuildProgressModels>
+				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\LaserSalvagers\MKTwoTool_BS1.mwm"/>
+				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\LaserSalvagers\MKTwoTool_BS2.mwm"/>
+			</BuildProgressModels>
+			<BlockPairName>mss_mk2_salvager</BlockPairName>
+			<MountPoints>
+				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
+				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+				<MountPoint Side="Right" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
+				<MountPoint Side="Top" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
+			</MountPoints>
+			<MirroringZ>Y</MirroringZ>
+			  <InventorySize>
+                <X>2</X>
+                <Y>1</Y>
+                <Z>1</Z>
+            </InventorySize>
+
+			
+			<EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>40</BuildTimeSeconds>
+            <Center x="0" y="0" z="1" />
+            <DeformationRatio>0.2</DeformationRatio>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleHeavyMech</DamagedSound>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>190</PCU>
+         
+            <ToolValues Type="Grind">
+				<EffectShape>Cylinder</EffectShape>
+                <WorkOrder>Uniform</WorkOrder>
+                <WorkOrigin>Emitter</WorkOrigin>
+				<WorkRate>6</WorkRate>
+				<Speed>1.0</Speed>
+				<PickUpFloatings>true</PickUpFloatings>
+				<UpdateInterval>5</UpdateInterval>
+                <Emitter>detector_shiptool_4</Emitter>
+                <Offset x="0" y="0" z="-100" />
+                <Radius>3</Radius>
+                <Length>200</Length>
+				<HarvestRatio>1</HarvestRatio>
+                <ActivePower>200</ActivePower>
+                <DamageCharacters>true</DamageCharacters>
+                <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
+                <Action Type="Secondary" SizeRatio="2" SpeedRatio="0.5" HarvestRatio="0" />
+                <Event Trigger="Firing">
+					<Beam>
+						<Start>tool_1</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles7</End>
+						<Material>WeaponLaser</Material>
+						<Width>0.2</Width>
+						<Color>
+							<X>10</X>
+							<Y>4</Y>
+							<Z>4</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>tool_2</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles7</End>
+						<Material>WeaponLaser</Material>
+						<Width>0.2</Width>
+						<Color>
+							<X>10</X>
+							<Y>6</Y>
+							<Z>4</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>tool_3</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles7</End>
+						<Material>WeaponLaser</Material>
+						<Width>0.2</Width>
+						<Color>
+							<X>10</X>
+							<Y>6</Y>
+							<Z>4</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>tool_4</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles7</End>
+						<Material>WeaponLaser</Material>
+						<Width>0.2</Width>
+						<Color>
+							<X>10</X>
+							<Y>6</Y>
+							<Z>4</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					<Beam>
+						<Start>tool_5</Start>
+						<EndLocation>Hit</EndLocation>
+						<End>particles7</End>
+						<Material>WeaponLaser</Material>
+						<Width>0.2</Width>
+						<Color>
+							<X>10</X>
+							<Y>6</Y>
+							<Z>4</Z>
+							<W>1</W>
+						</Color>
+					</Beam>
+					
+				</Event>
+				<Event Trigger="RayHit">
+					<ParticleEffect>
+						<Name>ShipGrinder</Name>
+						<Location>Hit</Location>
+					</ParticleEffect>
+                    <Sound>
+                        <Name>ToolLrgGrindIdle</Name>
+                    </Sound>
+				</Event>
+            </ToolValues>
+
+
+
+		</Definition>
+
+
+    </CubeBlocks>
+</Definitions>

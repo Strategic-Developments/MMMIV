@@ -58,6 +58,8 @@
 				<string>Beacon/SmallBlockIFFBeacon</string>
 				
 				<!--Industry-->
+				<string>ConveyorSorter/mss_mk1_salvager</string>
+				<string>ConveyorSorter/mss_mk2_salvager</string>
 
 				<!--Decor Radar-->
 				<string>CubeBlock/SOFL_Radar_1</string>
@@ -148,25 +150,21 @@
 				<TypeId>GuiBlockCategoryDefinition</TypeId>
 				<SubtypeId/>
 			</Id>
-			<DisplayName>   Industrial Sustems</DisplayName>
+			<DisplayName>   Industrial Systems</DisplayName>
 			<Name>Section1_4_industry</Name>
 			<ItemIds>
 				<string>Drill/mss_lg_beamdrill</string>
 				<string>Drill/mss_sg_beamdrill</string>
 				<string>ConveyorSorter/LG_Simple_Laser_Multitool</string>
 				<string>ConveyorSorter/SG_Simple_Laser_Multitool</string>
-
+				<string>ConveyorSorter/mss_mk1_salvager</string>
+				<string>ConveyorSorter/mss_mk2_salvager</string>
 				<string>Refinery/LargeRefineryIndustrial</string>
-
 				<string>Refinery/LargeRefinery</string>
 				<string>Refinery/LargePrototechRefinery</string>
 				<string>Assembler/LargePrototechAssembler</string>
 				<string>Assembler/mss_industrialreprocessor</string>
 				<string>Assembler/mss_experimentalreprocessor</string>
-
-
-
-
 			</ItemIds>
 		</Category>
 		<Category xsi:type="MyObjectBuilder_GuiBlockCategoryDefinition">

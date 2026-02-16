@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" ?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <CubeBlocks>
+
+
+
+
+
         <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
            <Id>
                 <TypeId>ConveyorSorter</TypeId>
@@ -263,6 +268,8 @@
             </ToolValues>
             
         </Definition>
+
+
 		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
            <Id>
                 <TypeId>ConveyorSorter</TypeId>
@@ -335,7 +342,7 @@
                 <WorkOrder>Backward</WorkOrder>
                 <WorkOrigin>Emitter</WorkOrigin>
 				<WorkRate>1</WorkRate>
-				<Speed>2.5</Speed>
+				<Speed>2</Speed>
 				<UpdateInterval>15</UpdateInterval>
 				<AffectOwnGrid>true</AffectOwnGrid>
                 <Emitter>detector_shiptool_1</Emitter>

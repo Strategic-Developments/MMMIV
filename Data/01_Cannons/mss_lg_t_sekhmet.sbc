@@ -22,6 +22,7 @@
 				<Component Subtype="LargeTube" Count="200"/>
 				<Component Subtype="Motor" Count="200"/>
 				<Component Subtype="Display" Count="40"/>
+				<Component Subtype="Superconductor" Count="300"/>
 				<Component Subtype="Computer" Count="900"/>
 				<!-- FUNCTIONAL LINE /\ UP NONFUNCTIONAL -->
 				<Component Subtype="Girder" Count="640"/>

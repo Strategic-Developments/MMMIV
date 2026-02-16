@@ -21,6 +21,8 @@
       <Entry Class="Experimental_Modules" BlueprintSubtypeId="StealthModuleBP" />
       <Entry Class="Experimental_Modules" BlueprintSubtypeId="PostlightModuleBP" />
 
+      <Entry Class="Uranium_Reprocessing" BlueprintSubtypeId="UraniumOreToIngot" />
+
       
    </BlueprintClassEntries>
 
@@ -37,6 +39,21 @@
             <FocusIcon>Textures\GUI\Icons\buttons\IngotsFocus.dds</FocusIcon>
             <InputConstraintIcon>Textures\GUI\Icons\filter_ore.dds</InputConstraintIcon>
         </Class>
+
+         <Class>
+            <Id>
+                <TypeId>BlueprintClassDefinition</TypeId>
+                <SubtypeId>Uranium_Reprocessing</SubtypeId>
+            </Id>
+            <DisplayName>Uranium Reprocessing</DisplayName>
+            <Description>Refine uranium into fuel.</Description>
+            <Icon>Textures\GUI\Icons\buttons\Ingots.dds</Icon>
+            <HighlightIcon>Textures\GUI\Icons\buttons\Ingots.dds</HighlightIcon>
+            <FocusIcon>Textures\GUI\Icons\buttons\IngotsFocus.dds</FocusIcon>
+            <InputConstraintIcon>Textures\GUI\Icons\filter_ore.dds</InputConstraintIcon>
+        </Class>
+
+        
         <Class>
             <Id>
                 <TypeId>BlueprintClassDefinition</TypeId>

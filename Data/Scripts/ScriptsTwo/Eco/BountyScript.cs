@@ -23,7 +23,7 @@ namespace Meridian.Economy
     {
         private const int PayoutIntervalTicks = 1 * 60;
         private const int PayoutIntervalCombatEndTicks = 30 * 60;
-        private const float PAYOUT_RATIO = 0.85f;
+        private const float PAYOUT_RATIO = 1.025f;
         private const int WAR_REPUTATION_THRESHOLD = 500;
 
         private bool _registered;

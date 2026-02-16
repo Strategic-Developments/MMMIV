@@ -9,6 +9,7 @@
 			<DisplayName>Radar Jammer</DisplayName>
 			<Description>Large grid radar jammer, useful for concealing precise ship position and range. Max Jamming Range: 300km.</Description>
 			<RequiredPowerInput>50</RequiredPowerInput>
+			<Public>false</Public> 
 		</Definition>
 	</CubeBlocks>
 </Definitions>
