@@ -666,22 +666,13 @@ namespace Meridian.Economy
                         break;
                     }
 
-                    // Binary search for the max amount that fits [0..remaining]
-                    int lo = 0, hi = remaining;
-                    while (lo < hi)
-                    {
-                        int mid = (lo + hi + 1) >> 1; // upper mid to prevent infinite loop
-                        MyFixedPoint test = (MyFixedPoint)mid;
-                        if (inv.CanItemsBeAdded(test, defId))
-                            lo = mid;
-                        else
-                            hi = mid - 1;
-                    }
+                    var volume = ((MyPhysicalItemDefinition)MyDefinitionManager.Static.GetDefinition(defId)).Volume * 1000;
+                    int maxItems = (int)Math.Floor((double)(inv.MaxVolume - inv.CurrentVolume) * 1000 / volume);
 
-                    if (lo > 0)
+                    if (inv.CanItemsBeAdded(maxItems, defId))
                     {
-                        inv.AddItems((MyFixedPoint)lo, phys);
-                        remaining -= lo;
+                        inv.AddItems((MyFixedPoint)maxItems, phys);
+                        remaining -= maxItems;
                     }
                 }
             }
