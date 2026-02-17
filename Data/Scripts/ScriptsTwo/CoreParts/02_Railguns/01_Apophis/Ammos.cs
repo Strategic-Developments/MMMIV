@@ -124,8 +124,8 @@ namespace Scripts
                     "",
                 },
                 Mode = Fragment, // Select when to activate this pattern, options:
-                // Weapon - Pattern will be applied to the weapon firing.Useful for mixed belts like tracer - solid - solid, or for having virtual beams akin to real-virtual (x14)
-                // Fragment - Pattern will be applied when the weapon fragments.Can be used for fragment RNG, drones having different weapons, or for having the weapon split off into multiple different fragments
+                // Weapon - Pattern will be applied to the weapon firing. Useful for mixed belts like tracer - solid - solid, or for having virtual beams akin to real-virtual (x14)
+                // Fragment - Pattern will be applied when the weapon fragments. Can be used for fragment RNG, drones having different weapons, or for having the weapon split off into multiple different fragments
                 // Both - Pattern will be applied to both weapon and fragment
                 // Never - Turns off this feature
 

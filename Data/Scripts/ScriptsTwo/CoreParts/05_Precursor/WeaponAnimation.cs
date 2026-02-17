@@ -10,14 +10,9 @@ namespace Scripts
     {
         private AnimationDef EntroAnimation => new AnimationDef
         {
-
             //abandon all hope ye who enter here, this file is a fucking mess
             AnimationSets = new[]
             {
-				
-
-               
-
                 new PartAnimationSetDef()
                 {
                     SubpartId = Names("array"), //Remember to remove subpart_ from these names!
@@ -53,18 +48,7 @@ namespace Scripts
                             },
                     }
                 },
-                
-               
-
-
-
-
-
-
-
-
             }
-
         };
     }
 }

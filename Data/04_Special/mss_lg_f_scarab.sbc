@@ -106,7 +106,7 @@
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_f_scarab_ammomagazine"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
-			<Icon>Textures\GUI\Icons\Cubes\MissileTube.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\CountermeasureLauncher.dds</Icon>
 		</Blueprint>
 	</Blueprints>
 	<BlueprintClassEntries>

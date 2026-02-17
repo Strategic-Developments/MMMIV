@@ -82,9 +82,9 @@ namespace Scripts
             HardPoint = new HardPointDef
             {
                 PartName = "Entropic Disintegrator", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
-                DeviateShotAngle = 0f, // Projectile inaccuracy in degrees.
+                DeviateShotAngle = 0.05f, // Projectile inaccuracy in degrees.
                 AimingTolerance = 1f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
-                AimLeadingPrediction = Off, // Level of turret aim prediction; Off (aim straight at target), Basic (doesn't account for target acceleration), Accurate, Advanced (these last two are identical)
+                AimLeadingPrediction = Basic, // Level of turret aim prediction; Off (aim straight at target), Basic (doesn't account for target acceleration), Accurate, Advanced (these last two are identical)
                 DelayCeaseFire = 0, // Measured in game ticks (6 = 100ms, 60 = 1 second, etc..). Length of time the weapon continues firing after trigger is released - while a target is available.
                 AddToleranceToTracking = false, // Allows turret to track to the edge of the AimingTolerance cone instead of dead centre.
                 CanShootSubmerged = false, // Whether the weapon itself will be usable if submerged when using WaterMod.
@@ -128,7 +128,7 @@ namespace Scripts
                     HomeElevation = 15, // Default resting elevation
                     InventorySize = 1f, // Inventory capacity in kL.
                     FixedInventorySize = true, // If true, the inventory size will be forced to the exact value specified above regardless of world inventory multipliers
-                    IdlePower = 30, // Constant base power draw in MW.
+                    IdlePower = 300, // Constant base power draw in MW.
                     FixedOffset = false, // Deprecated.
                     Offset = Vector(x: 0, y: 0, z: 0), // Offsets the aiming/firing line of the weapon, in metres.
                     Type = BlockWeapon, // What type of weapon this is; BlockWeapon, HandWeapon, Phantom 
@@ -161,13 +161,13 @@ namespace Scripts
                 },
                 Loading = new LoadingDef
                 {
-                    RateOfFire = 3600, // Set this to 3600 for beam weapons. This is how fast your gun fires per minute.
+                    RateOfFire = 1800, // Set this to 3600 for beam weapons. This is how fast your gun fires per minute.
                     BarrelsPerShot = 1, // How many muzzles will fire a projectile per fire event.
                     TrajectilesPerBarrel = 1, // Number of projectiles per muzzle per fire event.
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
-                    ReloadTime = 30, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    ReloadTime = 10 * 60, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 1, // Number of physical magazines to consume on reload.
-                    DelayUntilFire = 0, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    DelayUntilFire = 2 * 60, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = (int)(1500000f / (3600f / 60f)), // Heat generated per shot (BarrelsPerShot * HeatPerShot is the total heat per firing event).
                     MaxHeat = 300000000, // Max heat before weapon enters cooldown (70% of max heat).
                     Cooldown = 0f, // Percentage of max heat to be under to start firing again after overheat; accepts 0 - 0.95
@@ -187,7 +187,7 @@ namespace Scripts
                     ShotsInBurst = 0, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
                     DelayAfterBurst = 0, // How long to spend "reloading" after each burst. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     FireFull = true, // Whether the weapon should fire the full magazine (or the full burst instead if ShotsInBurst > 0), even if the target is lost or the player stops firing prematurely.
-                    GiveUpAfter = true, // Whether the weapon should drop its current target and reacquire a new target after finishing its magazine or burst.
+                    GiveUpAfter = false, // Whether the weapon should drop its current target and reacquire a new target after finishing its magazine or burst.
                     BarrelSpinRate = 0, // 0 disables and uses RateOfFire.  If slower than ROF, will increase time to spin up and start shooting.
                     DeterministicSpin = false, // Spin barrel position will always be relative to initial / starting positions (spin will not be as smooth).
                     SpinFree = true, // Spin barrel while not firing.
@@ -202,7 +202,7 @@ namespace Scripts
                 },
                 Audio = new HardPointAudioDef
                 {
-                    PreFiringSound = "", // Audio for warmup effect.
+                    PreFiringSound = "MERD_RailgunCharge", // Audio for warmup effect.
                     FiringSound = "", // Audio for firing.
                     FiringSoundPerShot = true, // Whether to replay the sound for each shot, or just loop over the entire track while firing.
                     ReloadSound = "", // Sound SubtypeID, for when your Weapon is in a reloading state
@@ -246,7 +246,10 @@ namespace Scripts
                 },
             },
             Ammos = new[] {
-               Tetryon,Mystic,Occult, 
+               mss_lg_t_entropic_ammo,
+               mss_lg_t_entropic_ammo_big,
+               mss_lg_t_entropic_ammo_big_expl,
+               mss_lg_t_entropic_ammo_blank
             },
             Animations = EntroAnimation,
             //Upgrades = UpgradeModules,
