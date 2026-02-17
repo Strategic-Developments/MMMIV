@@ -146,9 +146,9 @@
 			</MountPoints>
 			<MirroringZ>Y</MirroringZ>
 			  <InventorySize>
-                <X>5</X>
-                <Y>5</Y>
-                <Z>5</Z>
+                <X>15</X>
+                <Y>15</Y>
+                <Z>15</Z>
             </InventorySize>
 
 			
