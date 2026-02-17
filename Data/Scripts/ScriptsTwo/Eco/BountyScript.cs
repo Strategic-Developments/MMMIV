@@ -11,10 +11,12 @@ using VRage;
 using VRage.Game;
 using VRage.Game.Components;
 using VRage.Game.Entity;
-using VRage.Game.ModAPI;
-using VRage.ModAPI;
+using VRage.Game.ModAPI; // Mod API (IMyCubeGrid, IMySlimBlock, IMyInventory, etc.)
+using VRage.ModAPI;      // IMyEntity
 using VRage.Utils;
 using VRageMath;
+using VRage.Game.ModAPI.Ingame.Utilities; // MyIni, MyIniParseResult
+using VRage.ObjectBuilders;
 
 namespace Meridian.Economy
 {
@@ -26,23 +28,60 @@ namespace Meridian.Economy
         private const float PAYOUT_RATIO = 1.025f;
         private const int WAR_REPUTATION_THRESHOLD = 500;
 
+        // Config
+        private const string IniSection = "WarBountyPayouts";
+        private const string DefaultRewardFactionTag = "SIGIL";
+        private string RewardFactionTag = DefaultRewardFactionTag;
+
+        private struct RewardItem
+        {
+            public MyDefinitionId Id;
+            public int Amount;
+            public RewardItem(MyDefinitionId id, int amount)
+            {
+                Id = id;
+                Amount = amount;
+            }
+        }
+
+        private static readonly Dictionary<string, Type> TypeMap = new Dictionary<string, Type>(StringComparer.OrdinalIgnoreCase)
+        {
+            { "Component", typeof(MyObjectBuilder_Component) },
+            { "Ingot", typeof(MyObjectBuilder_Ingot) },
+        };
+
+        private readonly List<RewardItem> _rewardItems = new List<RewardItem>();
+
         private bool _registered;
 
         private static readonly MyStringHash Damage_Deformation = MyStringHash.GetOrCompute("Deformation");
         private static readonly MyStringHash Damage_Grinding = MyStringHash.GetOrCompute("Grinding");
 
+        // Currency aggregation
         private readonly Dictionary<long, long> _pending = new Dictionary<long, long>();
-        private readonly Dictionary<long, long> _pendingLastHit = new Dictionary<long, long>();
-        private static readonly Dictionary<string, int> _tmpMissing = new Dictionary<string, int>();
+
+        // Shared "last hit" tracking for both currency and loot
+        private readonly Dictionary<long, int> _pendingLastHit = new Dictionary<long, int>();
+
+        // Loot aggregation: identityId -> (definitionId -> total amount)
+        private readonly Dictionary<long, Dictionary<MyDefinitionId, int>> _pendingLoot = new Dictionary<long, Dictionary<MyDefinitionId, int>>(64);
 
         // Player cache to reduce repeated scans
-        private readonly Dictionary<long, IMyPlayer> _playerCache = new Dictionary<long, IMyPlayer>();
+        private readonly Dictionary<long, IMyPlayer> _playerCache = new Dictionary<long, IMyPlayer>(64);
+
+        // Grid cache per identity (validated on use)
+        private readonly Dictionary<long, IMyCubeGrid> _gridCache = new Dictionary<long, IMyCubeGrid>(64);
+
+        // Reusable buffers to avoid per-call allocations
+        private static readonly List<IMySlimBlock> _blockBuffer = new List<IMySlimBlock>(256);
         private readonly List<IMyPlayer> _playerQueryBuffer = new List<IMyPlayer>(8);
-        private readonly List<long> _longDumpList = new List<long>();
+        private readonly List<long> _toClearList = new List<long>(64);
+
         public override void BeforeStart()
         {
             if (MyAPIGateway.Multiplayer != null && MyAPIGateway.Multiplayer.IsServer)
             {
+                LoadConfiguration();
                 TryRegisterDamageHooks();
             }
         }
@@ -50,10 +89,17 @@ namespace Meridian.Economy
         protected override void UnloadData()
         {
             _pending.Clear();
-            _tmpMissing.Clear();
+            _pendingLoot.Clear();
+            _pendingLastHit.Clear();
 
             _playerCache.Clear();
+            _gridCache.Clear();
+
+            _toClearList.Clear();
+            _blockBuffer.Clear();
+
             _registered = false;
+            _rewardItems.Clear();
         }
 
         public override void UpdateAfterSimulation()
@@ -64,10 +110,13 @@ namespace Meridian.Economy
             if (!_registered)
                 TryRegisterDamageHooks();
 
+            var session = MyAPIGateway.Session;
+            if (session == null)
+                return;
 
-            if (MyAPIGateway.Session.GameplayFrameCounter % PayoutIntervalTicks == 0)
+            if (session.GameplayFrameCounter % PayoutIntervalTicks == 0)
             {
-                PayAggregatedBounties();
+                PayAggregatedRewards(); // pay currency + loot together after combat lull
             }
         }
 
@@ -97,9 +146,7 @@ namespace Meridian.Economy
             // Character killed
             var ch = target as IMyCharacter;
             if (ch != null)
-            {
                 return;
-            }
 
             // Block destroyed
             var slim = target as IMySlimBlock;
@@ -135,7 +182,8 @@ namespace Meridian.Economy
 
             // Defensive checks for block definition and price lookup chain
             var blockDef = slim.BlockDefinition;
-            var costs = PriceChanger.Instance?.Costs;
+            var priceChanger = PriceChanger.Instance;
+            var costs = priceChanger?.Costs;
             var allCosts = costs?.AllBlockCosts;
             if (blockDef == null || allCosts == null)
                 return;
@@ -143,11 +191,14 @@ namespace Meridian.Economy
             MyFixedPoint price;
             if (allCosts.TryGetValue(blockDef.Id, out price))
             {
-                price += GetHydrogenBonusByLiters(slim);
+                price += GetHydrogenBonusByLiters(slim, priceChanger);
 
                 if (price > 0)
-                    QueuePayout(attackerId, (long)(price * PAYOUT_RATIO));
+                    QueueCurrencyPayout(attackerId, (long)(price * PAYOUT_RATIO));
             }
+
+            // Accumulate loot if the destroyed block's owner faction tag matches RewardFactionTag
+            AwardLootIfApplicable(attackerId, atkFac, vicFac);
         }
 
         private static bool IsAtWarByReputation(IMyFactionCollection factions, long factionId1, long factionId2)
@@ -156,13 +207,11 @@ namespace Meridian.Economy
             return reputation <= WAR_REPUTATION_THRESHOLD;
         }
 
-        private void QueuePayout(long identityId, long amount)
+        private void EnsureAggregationStart(long identityId)
         {
-            long existing;
-            if (_pending.TryGetValue(identityId, out existing))
-                _pending[identityId] = existing + amount;
-            else
-                _pending[identityId] = amount;
+            var session = MyAPIGateway.Session;
+            if (session == null)
+                return;
 
             if (!_pendingLastHit.ContainsKey(identityId))
             {
@@ -174,71 +223,160 @@ namespace Meridian.Economy
                     "Blue"
                 );
             }
-
-            _pendingLastHit[identityId] = MyAPIGateway.Session.GameplayFrameCounter;
+            _pendingLastHit[identityId] = session.GameplayFrameCounter;
         }
 
-        private void PayAggregatedBounties()
+        private void QueueCurrencyPayout(long identityId, long amount)
         {
-            if (_pending.Count == 0)
+            long existing;
+            if (_pending.TryGetValue(identityId, out existing))
+                _pending[identityId] = existing + amount;
+            else
+                _pending[identityId] = amount;
+
+            EnsureAggregationStart(identityId);
+        }
+
+        private void PayAggregatedRewards()
+        {
+            if (_pendingLastHit.Count == 0)
                 return;
 
+            var session = MyAPIGateway.Session;
+            if (session == null)
+                return;
 
-            for (int i = 0; i < _pending.Count; i++)
+            int now = session.GameplayFrameCounter;
+
+            _toClearList.Clear();
+
+            // Iterate only over identities with tracked combat activity
+            foreach (var kv in _pendingLastHit)
             {
-                var kv = _pending.ElementAt(i);
-
                 long identityId = kv.Key;
-                long amount = kv.Value;
+                int lastHit = kv.Value;
 
-                if (amount <= 0)
-                {
-                    _longDumpList.Add(identityId);
-                    continue;
-                }
+                if (now - lastHit <= PayoutIntervalCombatEndTicks)
+                    continue; // still in combat window
 
-                long lasthit;
-                if (!_pendingLastHit.TryGetValue(identityId, out lasthit))
-                {
-                    continue;
-                }
-                if (MyAPIGateway.Session.GameplayFrameCounter - lasthit <= PayoutIntervalCombatEndTicks)
-                {
-                    continue;
-                }
-
+                // Try to resolve player (online only for currency payout)
                 IMyPlayer player;
                 if (!_playerCache.TryGetValue(identityId, out player) || player == null)
                 {
                     _playerQueryBuffer.Clear();
-                    MyAPIGateway.Players.GetPlayers(_playerQueryBuffer, p => p != null && p.IdentityId == identityId);
-                    if (_playerQueryBuffer.Count == 0)
+                    MyAPIGateway.Players?.GetPlayers(_playerQueryBuffer, p => p != null && p.IdentityId == identityId);
+                    if (_playerQueryBuffer.Count > 0)
                     {
-                        continue; // Player not online; keep pending
+                        player = _playerQueryBuffer[0];
+                        _playerCache[identityId] = player;
                     }
-                    player = _playerQueryBuffer[0];
-                    _playerCache[identityId] = player;
                 }
 
-                player.RequestChangeBalance(amount);
+                // 1) Pay currency if any and if player is online
+                long currency = 0;
+                _pending.TryGetValue(identityId, out currency);
+                if (currency > 0 && player != null)
+                {
+                    player.RequestChangeBalance(currency);
+                    MyVisualScriptLogicProvider.SendChatMessageColored(
+                        $"Combat completed, you've received {currency:n0} SC in aggregated bounties.",
+                        new Color(0, 122, 255),
+                        "Conflict Commissariat",
+                        identityId,
+                        "Blue"
+                    );
+                    _pending[identityId] = 0;
+                }
 
-                MyVisualScriptLogicProvider.SendChatMessageColored(
-                    $"Combat completed, you've received {amount:n0} SC in aggregated bounties.",
-                    new Color(0, 122, 255),
-                    "Conflict Commissariat",
-                    identityId,
-                    "Blue"
-                );
-                _longDumpList.Add(identityId);
-                _pending[identityId] = 0;
+                // 2) Pay loot in lump sum (to current/cached grid inventories)
+                Dictionary<MyDefinitionId, int> loot;
+                if (_pendingLoot.TryGetValue(identityId, out loot) && loot != null && loot.Count > 0)
+                {
+                    IMyCubeGrid grid = GetCurrentOrCachedGridForPlayer(identityId);
+                    if (grid != null)
+                    {
+                        int totalAdded = 0;
+                        var payoutSummary = new List<string>(loot.Count);
+                        var remainingMap = new Dictionary<MyDefinitionId, int>(loot.Count);
+
+                        foreach (var item in loot)
+                        {
+                            var id = item.Key;
+                            var amt = item.Value;
+
+                            // Only Components and Ingots are allowed
+                            if (!IsAllowedLootType(id))
+                            {
+                                remainingMap[id] = amt; // keep ignored items pending
+                                continue;
+                            }
+
+                            int remaining = AddItemToGridInventories(grid, id, amt);
+                            int added = amt - remaining;
+                            totalAdded += added;
+
+                            if (added > 0)
+                                payoutSummary.Add($"{id.SubtypeName} x{added}");
+
+                            if (remaining > 0)
+                                remainingMap[id] = remaining;
+                        }
+
+                        // Update pending loot with remaining (if any)
+                        if (remainingMap.Count > 0)
+                            _pendingLoot[identityId] = remainingMap;
+                        else
+                            _pendingLoot.Remove(identityId);
+
+                        if (totalAdded > 0)
+                        {
+                            MyVisualScriptLogicProvider.SendChatMessageColored(
+                                $"You recovered the following loot: {string.Join(", ", payoutSummary)}",
+                                new Color(255, 215, 0),
+                                "Conflict Commissariat",
+                                identityId,
+                                "Yellow"
+                            );
+                        }
+                        else
+                        {
+                            // No items could be added (no cargo space or invalid types)
+                            MyVisualScriptLogicProvider.SendChatMessageColored(
+                                $"War loot payout could not be delivered. Ensure your current grid has cargo space.",
+                                new Color(255, 100, 0),
+                                "Conflict Commissariat",
+                                identityId,
+                                "Orange"
+                            );
+                        }
+                    }
+                    else
+                    {
+                        // Player has no current grid; keep loot pending
+                        // Consider adding a timeout or alternate delivery if desired
+                    }
+                }
+
+                // Clear timing if both currency and loot are fully settled or empty
+                long curAfter;
+                _pending.TryGetValue(identityId, out curAfter);
+                bool hasLoot = _pendingLoot.ContainsKey(identityId);
+
+                if ((curAfter <= 0) && !hasLoot)
+                {
+                    _toClearList.Add(identityId);
+                }
             }
 
-            foreach (var l in _longDumpList)
+            // Cleanup cleared identities
+            for (int i = 0; i < _toClearList.Count; i++)
             {
-                _pendingLastHit.Remove(l);
-                _pending.Remove(l);
+                long id = _toClearList[i];
+                _pending.Remove(id);
+                _pendingLastHit.Remove(id);
+                _gridCache.Remove(id);
             }
-            _longDumpList.Clear();
+            _toClearList.Clear();
         }
 
         private static string GetPlayerName(long identityId)
@@ -250,20 +388,23 @@ namespace Meridian.Economy
             return (list.Count > 0 && list[0] != null) ? (list[0].DisplayName ?? "Unknown") : "Unknown";
         }
 
-        private static MyFixedPoint GetHydrogenBonusByLiters(IMySlimBlock slim)
+        private static MyFixedPoint GetHydrogenBonusByLiters(IMySlimBlock slim, PriceChanger priceChanger)
         {
             var tank = slim.FatBlock as IMyGasTank;
-            if (tank == null)
+            if (tank == null || priceChanger == null || priceChanger.Costs == null || priceChanger.Costs.GasCosts == null)
                 return 0;
 
             double liters = tank.Capacity * tank.FilledRatio;
             if (liters <= 0)
                 return 0;
 
-            MyGasTankDefinition def = tank.SlimBlock.BlockDefinition as MyGasTankDefinition;
+            var def = tank.SlimBlock.BlockDefinition as MyGasTankDefinition;
+            // Fix: MyDefinitionId.TypeId is not nullable; do not compare to null
+            if (def == null || string.IsNullOrEmpty(def.StoredGasId.SubtypeName))
+                return 0;
 
             double pricePerLiter;
-            if (PriceChanger.Instance.Costs.GasCosts.TryGetValue(def.StoredGasId.SubtypeName, out pricePerLiter))
+            if (priceChanger.Costs.GasCosts.TryGetValue(def.StoredGasId.SubtypeName, out pricePerLiter))
             {
                 return (MyFixedPoint)(liters * pricePerLiter);
             }
@@ -311,6 +452,241 @@ namespace Meridian.Economy
             }
 
             return false;
+        }
+
+        // ---------------------
+        // Configuration loading
+        // ---------------------
+        private void LoadConfiguration()
+        {
+            RewardFactionTag = DefaultRewardFactionTag;
+            _rewardItems.Clear();
+
+            try
+            {
+                var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage("WarBountyPayouts.ini", typeof(WarBountyPayouts));
+                if (reader != null)
+                {
+                    var content = reader.ReadToEnd();
+                    reader.Close();
+
+                    var ini = new MyIni();
+                    MyIniParseResult result;
+                    if (ini.TryParse(content, out result))
+                    {
+                        RewardFactionTag = ini.Get(IniSection, "RewardFactionTag").ToString(RewardFactionTag);
+                        string items = ini.Get(IniSection, "RewardItems").ToString("");
+                        if (!string.IsNullOrWhiteSpace(items))
+                            ParseRewardItems(items);
+                    }
+                }
+            }
+            catch
+            {
+                // Swallow; will use defaults
+            }
+
+            // Defaults if none provided
+            if (_rewardItems.Count == 0)
+            {
+                // Only Components/Ingots allowed
+                _rewardItems.Add(new RewardItem(new MyDefinitionId(typeof(MyObjectBuilder_Component), "PrototechCapacitor"), 1));
+                _rewardItems.Add(new RewardItem(new MyDefinitionId(typeof(MyObjectBuilder_Ingot), "Platinum"), 1));
+            }
+
+            // Filter any invalid types defensively
+            for (int i = _rewardItems.Count - 1; i >= 0; i--)
+            {
+                if (!IsAllowedLootType(_rewardItems[i].Id))
+                    _rewardItems.RemoveAt(i);
+            }
+        }
+
+        private void ParseRewardItems(string itemsSpec)
+        {
+            var entries = itemsSpec.Split(new[] { ',', ';', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var raw in entries)
+            {
+                var entry = raw.Trim();
+                var parts = entry.Split(':');
+                if (parts.Length != 2)
+                    continue;
+
+                int amount;
+                if (!int.TryParse(parts[1], out amount) || amount <= 0)
+                    continue;
+
+                var typeSubtype = parts[0].Split('/');
+                if (typeSubtype.Length != 2)
+                    continue;
+
+                var typeName = typeSubtype[0].Trim();
+                var subtype = typeSubtype[1].Trim();
+
+                Type t;
+                if (!TypeMap.TryGetValue(typeName, out t))
+                    continue;
+
+                var id = new MyDefinitionId(t, subtype);
+                if (IsAllowedLootType(id))
+                    _rewardItems.Add(new RewardItem(id, amount));
+            }
+        }
+
+        private static bool IsAllowedLootType(MyDefinitionId id)
+        {
+            return id.TypeId == typeof(MyObjectBuilder_Component) || id.TypeId == typeof(MyObjectBuilder_Ingot);
+        }
+
+        // ---------------------
+        // Loot awarding (aggregation)
+        // ---------------------
+        private void AwardLootIfApplicable(long attackerIdentityId, IMyFaction attackerFaction, IMyFaction victimFaction)
+        {
+            if (victimFaction == null)
+                return;
+
+            // Match victim's faction tag against configured tag
+            if (!string.Equals(victimFaction.Tag, RewardFactionTag, StringComparison.OrdinalIgnoreCase))
+                return;
+
+            // Aggregate loot for attacker
+            Dictionary<MyDefinitionId, int> bag;
+            if (!_pendingLoot.TryGetValue(attackerIdentityId, out bag))
+            {
+                bag = new Dictionary<MyDefinitionId, int>(MyDefinitionId.Comparer);
+                _pendingLoot[attackerIdentityId] = bag;
+            }
+
+            for (int i = 0; i < _rewardItems.Count; i++)
+            {
+                var ri = _rewardItems[i];
+                if (!IsAllowedLootType(ri.Id))
+                    continue;
+
+                int existing;
+                if (bag.TryGetValue(ri.Id, out existing))
+                    bag[ri.Id] = existing + ri.Amount;
+                else
+                    bag[ri.Id] = ri.Amount;
+            }
+
+            // Mark/start aggregation window
+            EnsureAggregationStart(attackerIdentityId);
+        }
+
+        private IMyCubeGrid GetCurrentOrCachedGridForPlayer(long identityId)
+        {
+            IMyCubeGrid cached;
+            if (_gridCache.TryGetValue(identityId, out cached) && cached != null && !cached.MarkedForClose)
+                return cached;
+
+            IMyPlayer p;
+            if (!_playerCache.TryGetValue(identityId, out p) || p == null)
+            {
+                _playerQueryBuffer.Clear();
+                MyAPIGateway.Players?.GetPlayers(_playerQueryBuffer, pl => pl != null && pl.IdentityId == identityId);
+                if (_playerQueryBuffer.Count > 0)
+                {
+                    p = _playerQueryBuffer[0];
+                    _playerCache[identityId] = p;
+                }
+            }
+            if (p == null)
+                return null;
+
+            var controlled = p.Controller?.ControlledEntity?.Entity;
+            var top = controlled?.GetTopMostParent();
+
+            var asGrid = top as IMyCubeGrid;
+            if (asGrid != null && !asGrid.MarkedForClose)
+            {
+                _gridCache[identityId] = asGrid;
+                return asGrid;
+            }
+
+            var asBlock = top as IMyCubeBlock;
+            if (asBlock != null && asBlock.CubeGrid != null && !asBlock.CubeGrid.MarkedForClose)
+            {
+                _gridCache[identityId] = asBlock.CubeGrid;
+                return asBlock.CubeGrid;
+            }
+
+            return null;
+        }
+
+        private static MyObjectBuilder_PhysicalObject CreatePhysicalObject(MyDefinitionId defId)
+        {
+            // Create properly initialized physical objects via serializer so inventories accept them
+            if (defId.TypeId == typeof(MyObjectBuilder_Component) ||
+                defId.TypeId == typeof(MyObjectBuilder_Ingot))
+            {
+                var baseObj = MyObjectBuilderSerializer.CreateNewObject(defId.TypeId, defId.SubtypeName);
+                return baseObj as MyObjectBuilder_PhysicalObject;
+            }
+
+            // Not allowed; prevent accidental ammo/tool spawns
+            return null;
+        }
+
+        private int AddItemToGridInventories(IMyCubeGrid grid, MyDefinitionId defId, int amount)
+        {
+            if (!IsAllowedLootType(defId) || grid == null)
+                return amount;
+
+            int remaining = amount;
+
+            _blockBuffer.Clear();
+            grid.GetBlocks(_blockBuffer, b => b != null && b.FatBlock != null && b.FatBlock.HasInventory);
+
+            // Simple heuristic: iterate all inventories; binary search for fit
+            for (int bi = 0; bi < _blockBuffer.Count && remaining > 0; bi++)
+            {
+                var block = _blockBuffer[bi].FatBlock as IMyCubeBlock;
+                if (block == null || !block.HasInventory)
+                    continue;
+
+                int invCount = block.InventoryCount;
+                for (int i = 0; i < invCount && remaining > 0; i++)
+                {
+                    IMyInventory inv = block.GetInventory(i);
+                    if (inv == null)
+                        continue;
+
+                    var phys = CreatePhysicalObject(defId);
+                    if (phys == null)
+                        continue;
+
+                    // Try full add first
+                    MyFixedPoint full = (MyFixedPoint)remaining;
+                    if (inv.CanItemsBeAdded(full, defId))
+                    {
+                        inv.AddItems(full, phys);
+                        remaining = 0;
+                        break;
+                    }
+
+                    // Binary search for the max amount that fits [0..remaining]
+                    int lo = 0, hi = remaining;
+                    while (lo < hi)
+                    {
+                        int mid = (lo + hi + 1) >> 1; // upper mid to prevent infinite loop
+                        MyFixedPoint test = (MyFixedPoint)mid;
+                        if (inv.CanItemsBeAdded(test, defId))
+                            lo = mid;
+                        else
+                            hi = mid - 1;
+                    }
+
+                    if (lo > 0)
+                    {
+                        inv.AddItems((MyFixedPoint)lo, phys);
+                        remaining -= lo;
+                    }
+                }
+            }
+
+            return remaining;
         }
     }
 }
