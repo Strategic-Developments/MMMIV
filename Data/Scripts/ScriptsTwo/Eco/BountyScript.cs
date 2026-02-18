@@ -490,7 +490,7 @@ namespace Meridian.Economy
             if (_rewardItems.Count == 0)
             {
                 // Only Components/Ingots allowed
-                _rewardItems.Add(new RewardItem(new MyDefinitionId(typeof(MyObjectBuilder_Component), "PrototechCapacitor"), 1));
+                _rewardItems.Add(new RewardItem(new MyDefinitionId(typeof(MyObjectBuilder_Ingot), "PrototechScrap"), 2));
                 _rewardItems.Add(new RewardItem(new MyDefinitionId(typeof(MyObjectBuilder_Ingot), "Platinum"), 1));
             }
 
