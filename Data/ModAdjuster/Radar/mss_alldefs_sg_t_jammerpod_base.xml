@@ -7,7 +7,7 @@
 				<SubtypeId>sr_sg_t_jammerpod_base</SubtypeId>
 			</Id>
 			<DisplayName>Shoo</DisplayName>
-			<Description>Shoo</Description>
+			<Description>Shoo, this block LITERALLY does nothing dingus</Description>
 			<Public>false</Public>
 		</Definition>
 	</CubeBlocks>
