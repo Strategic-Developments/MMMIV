@@ -848,7 +848,7 @@ namespace Scripts
             TerminalName = "DU", // Optional terminal name for this ammo type, used when picking ammo/cycling consumables.  Safe to have duplicates across different ammo defs.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 1f, // Modified in MasterConfig here, actually just the power requirement needed to fire at 1.0 ROF scalar
-            BaseDamage = 300f, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 500f, // Direct damage; one steel plate is worth 100.
             BaseDamageCutoff = 0,   // Maximum amount of pen damage to apply per block hit.  Deducts from BaseDamage and uses DamageScales modifiers
                                     // Optional penetration mechanic to apply damage to blocks beyond the first hit, without requiring the block to be destroyed.  
                                     // Overwrites normal damage behavior of requiring a block to be destroyed before damage can continue.  0 disables. 
@@ -1251,7 +1251,7 @@ namespace Scripts
             TerminalName = "TRA", // Optional terminal name for this ammo type, used when picking ammo/cycling consumables.  Safe to have duplicates across different ammo defs.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 1f, // Modified in MasterConfig here, actually just the power requirement needed to fire at 1.0 ROF scalar
-            BaseDamage = 300f, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 500f, // Direct damage; one steel plate is worth 100.
             BaseDamageCutoff = 0,   // Maximum amount of pen damage to apply per block hit.  Deducts from BaseDamage and uses DamageScales modifiers
                                     // Optional penetration mechanic to apply damage to blocks beyond the first hit, without requiring the block to be destroyed.  
                                     // Overwrites normal damage behavior of requiring a block to be destroyed before damage can continue.  0 disables. 

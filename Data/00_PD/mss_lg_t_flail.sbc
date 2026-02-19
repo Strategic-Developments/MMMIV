@@ -69,11 +69,11 @@
 				<Y>0.2</Y>
 				<Z>0.2</Z>
 			</Size>
-			<Mass>159.6</Mass>
-			<Volume>60</Volume>
+			<Mass>957.6</Mass>
+			<Volume>310</Volume>
 			<Model>Models\Cubes\Ammos\CustosAmmoSTG1.mwm</Model>
 			<PhysicalMaterial>Ammo</PhysicalMaterial>
-			<Capacity>60</Capacity>
+			<Capacity>360</Capacity>
 			<AmmoDefinitionId Subtype="mss_blankammo"/>
 			<MinimumOfferAmount>100</MinimumOfferAmount>
 			<MaximumOfferAmount>1000</MaximumOfferAmount>

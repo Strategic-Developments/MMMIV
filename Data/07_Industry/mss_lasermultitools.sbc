@@ -71,7 +71,7 @@
 				<Speed>2.5</Speed>
 				<PickUpFloatings>true</PickUpFloatings>
 				<UpdateInterval>15</UpdateInterval>
-				<AffectOwnGrid>true</AffectOwnGrid>
+				<AffectOwnGrid>false</AffectOwnGrid>
                 <Emitter>detector_shiptool_1</Emitter>
                 <Offset x="0" y="0" z="-150" />
                 <Radius>2.5</Radius>
@@ -344,7 +344,7 @@
 				<WorkRate>1</WorkRate>
 				<Speed>2</Speed>
 				<UpdateInterval>15</UpdateInterval>
-				<AffectOwnGrid>true</AffectOwnGrid>
+				<AffectOwnGrid>false</AffectOwnGrid>
                 <Emitter>detector_shiptool_1</Emitter>
                 <Offset x="0" y="0" z="0" />
                 <Radius>2.5</Radius>

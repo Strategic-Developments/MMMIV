@@ -67,7 +67,7 @@ namespace Meridian.Economy
         private readonly Dictionary<long, Dictionary<MyDefinitionId, int>> _pendingLoot = new Dictionary<long, Dictionary<MyDefinitionId, int>>(64);
 
         // Player cache to reduce repeated scans
-        private readonly Dictionary<long, IMyPlayer> _playerCache = new Dictionary<long, IMyPlayer>(64);
+        private readonly Dictionary<long, IMyPlayer> _playerCache = new Dictionary<long, IMyPlayer>(32);
 
         // Grid cache per identity (validated on use)
         private readonly Dictionary<long, IMyCubeGrid> _gridCache = new Dictionary<long, IMyCubeGrid>(64);
@@ -182,8 +182,7 @@ namespace Meridian.Economy
 
             // Defensive checks for block definition and price lookup chain
             var blockDef = slim.BlockDefinition;
-            var priceChanger = PriceChanger.Instance;
-            var costs = priceChanger?.Costs;
+            var costs = PriceChanger.Instance.Costs;
             var allCosts = costs?.AllBlockCosts;
             if (blockDef == null || allCosts == null)
                 return;
@@ -191,7 +190,7 @@ namespace Meridian.Economy
             MyFixedPoint price;
             if (allCosts.TryGetValue(blockDef.Id, out price))
             {
-                price += GetHydrogenBonusByLiters(slim, priceChanger);
+                price += GetHydrogenBonusByLiters(slim);
 
                 if (price > 0)
                     QueueCurrencyPayout(attackerId, (long)(price * PAYOUT_RATIO));
@@ -378,20 +377,10 @@ namespace Meridian.Economy
             }
             _toClearList.Clear();
         }
-
-        private static string GetPlayerName(long identityId)
-        {
-            if (identityId == 0 || MyAPIGateway.Players == null)
-                return "Unknown";
-            var list = new List<IMyPlayer>();
-            MyAPIGateway.Players.GetPlayers(list, p => p != null && p.IdentityId == identityId);
-            return (list.Count > 0 && list[0] != null) ? (list[0].DisplayName ?? "Unknown") : "Unknown";
-        }
-
-        private static MyFixedPoint GetHydrogenBonusByLiters(IMySlimBlock slim, PriceChanger priceChanger)
+        private static MyFixedPoint GetHydrogenBonusByLiters(IMySlimBlock slim)
         {
             var tank = slim.FatBlock as IMyGasTank;
-            if (tank == null || priceChanger == null || priceChanger.Costs == null || priceChanger.Costs.GasCosts == null)
+            if (tank == null || PriceChanger.Instance == null || PriceChanger.Instance.Costs == null || PriceChanger.Instance.Costs.GasCosts == null)
                 return 0;
 
             double liters = tank.Capacity * tank.FilledRatio;
@@ -404,7 +393,7 @@ namespace Meridian.Economy
                 return 0;
 
             double pricePerLiter;
-            if (priceChanger.Costs.GasCosts.TryGetValue(def.StoredGasId.SubtypeName, out pricePerLiter))
+            if (PriceChanger.Instance.Costs.GasCosts.TryGetValue(def.StoredGasId.SubtypeName, out pricePerLiter))
             {
                 return (MyFixedPoint)(liters * pricePerLiter);
             }
