@@ -203,7 +203,7 @@ namespace Scripts
                 Audio = new HardPointAudioDef
                 {
                     PreFiringSound = "MERD_RailgunCharge", // Audio for warmup effect.
-                    FiringSound = "MERD_RailgunShot", // Audio for firing.
+                    FiringSound = "heavyrailgunsfx", // Audio for firing.
                     FiringSoundPerShot = true, // Whether to replay the sound for each shot, or just loop over the entire track while firing.
                     ReloadSound = "shell_in_med_01", // Sound SubtypeID, for when your Weapon is in a reloading state
                     NoAmmoSound = "", // Sound for if the user attempts to fire the gun without ammo
