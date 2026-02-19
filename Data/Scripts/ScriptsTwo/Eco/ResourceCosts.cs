@@ -34,7 +34,7 @@ namespace Meridian
                 ["Ingot/Silver"] = 100,
                 ["Ingot/Gold"] = 150,
                 /*["Ingot/Platinum"] = 450,*/
-                ["Ingot/Uranium"] = 300,
+                ["Ingot/Uranium"] = 1000,
 
                 ["Ore/Ice"] = 0.5,
                 ["Ore/Scrap"] = 1,
@@ -122,7 +122,7 @@ namespace Meridian
 
                     if (definition.Id.SubtypeName.Contains("Uranium"))
                     {
-                        definition.BaseProductionTimeInSeconds = 1 / 60f;
+                        definition.BaseProductionTimeInSeconds = 1 / 15f;
                     }
                 }
 

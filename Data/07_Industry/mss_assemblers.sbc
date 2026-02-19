@@ -127,7 +127,7 @@
 				<Z>1</Z>
 			</InventorySize>
 			<StandbyPowerConsumption>0.001</StandbyPowerConsumption>
-			<OperationalPowerConsumption>0.28</OperationalPowerConsumption>
+			<OperationalPowerConsumption>5</OperationalPowerConsumption>
 			<BlueprintClasses>
 				<Class>SimpleComponents</Class>
 				<Class>SimpleEquipment</Class>

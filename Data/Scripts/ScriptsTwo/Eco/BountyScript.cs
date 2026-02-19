@@ -17,6 +17,7 @@ using VRage.Utils;
 using VRageMath;
 using VRage.Game.ModAPI.Ingame.Utilities; // MyIni, MyIniParseResult
 using VRage.ObjectBuilders;
+using Meridian.Utilities;
 
 namespace Meridian.Economy
 {
@@ -25,30 +26,10 @@ namespace Meridian.Economy
     {
         private const int PayoutIntervalTicks = 1 * 60;
         private const int PayoutIntervalCombatEndTicks = 30 * 60;
-        private const float PAYOUT_RATIO = 1.025f;
         private const int WAR_REPUTATION_THRESHOLD = 500;
 
-        // Config
-        private const string IniSection = "WarBountyPayouts";
-        private const string DefaultRewardFactionTag = "SIGIL";
-        private string RewardFactionTag = DefaultRewardFactionTag;
-
-        private struct RewardItem
-        {
-            public MyDefinitionId Id;
-            public int Amount;
-            public RewardItem(MyDefinitionId id, int amount)
-            {
-                Id = id;
-                Amount = amount;
-            }
-        }
-
-        private static readonly Dictionary<string, Type> TypeMap = new Dictionary<string, Type>(StringComparer.OrdinalIgnoreCase)
-        {
-            { "Component", typeof(MyObjectBuilder_Component) },
-            { "Ingot", typeof(MyObjectBuilder_Ingot) },
-        };
+        public UserConfig UserConfig;
+        const string ConfigFileName = "WarBountyPayout.cfg";
 
         private readonly List<RewardItem> _rewardItems = new List<RewardItem>();
 
@@ -73,15 +54,67 @@ namespace Meridian.Economy
         private readonly Dictionary<long, IMyCubeGrid> _gridCache = new Dictionary<long, IMyCubeGrid>(64);
 
         // Reusable buffers to avoid per-call allocations
-        private static readonly List<IMySlimBlock> _blockBuffer = new List<IMySlimBlock>(256);
+        private readonly List<IMySlimBlock> _blockBuffer = new List<IMySlimBlock>(256);
         private readonly List<IMyPlayer> _playerQueryBuffer = new List<IMyPlayer>(8);
         private readonly List<long> _toClearList = new List<long>(64);
 
+        public override void LoadData()
+        {
+            if (MyAPIGateway.Multiplayer.IsServer)
+            {
+                string s = FileManager.GetTextFileWorldStorage(ConfigFileName);
+                UserConfig cfg = null;
+                bool needsSave = true;
+                if (s != null && s != "")
+                {
+                    try
+                    {
+                        cfg = MyAPIGateway.Utilities.SerializeFromXML<UserConfig>(s);
+                        needsSave = false;
+                    }
+                    catch (Exception e)
+                    {
+                        MyLog.Default.WriteLine($"War bounty payout config problem, resetting to defaults: {e}");
+                        cfg = null;
+                    }
+                }
+                else
+                {
+                    MyLog.Default.WriteLine("s is null or empty");
+                }
+
+                if (cfg == null)
+                {
+                    cfg = new UserConfig(1f, "SIGIL", new List<RewardItemSerializable>()
+                    {
+                        new RewardItemSerializable("Ingot/PrototechScrap", 2),
+                        new RewardItemSerializable("Ingot/Platinum", 1)
+                    });
+                    MyLog.Default.WriteLine("Resetting war bounty payout config.");
+                }
+
+                UserConfig = cfg;
+
+                if (needsSave)
+                {
+                    Save();
+                }
+                
+                foreach (var item in cfg.RewardItems)
+                {
+                    _rewardItems.Add(new RewardItem(item));
+                }
+            }
+            
+        }
+        public void Save()
+        {
+            FileManager.SaveXMLFileWorldStorage(UserConfig, ConfigFileName);
+        }
         public override void BeforeStart()
         {
-            if (MyAPIGateway.Multiplayer != null && MyAPIGateway.Multiplayer.IsServer)
+            if (MyAPIGateway.Multiplayer.IsServer)
             {
-                LoadConfiguration();
                 TryRegisterDamageHooks();
             }
         }
@@ -193,7 +226,7 @@ namespace Meridian.Economy
                 price += GetHydrogenBonusByLiters(slim);
 
                 if (price > 0)
-                    QueueCurrencyPayout(attackerId, (long)(price * PAYOUT_RATIO));
+                    QueueCurrencyPayout(attackerId, (long)(price * UserConfig.BountyPayoutMultiplier));
             }
 
             // Accumulate loot if the destroyed block's owner faction tag matches RewardFactionTag
@@ -302,13 +335,6 @@ namespace Meridian.Economy
                         {
                             var id = item.Key;
                             var amt = item.Value;
-
-                            // Only Components and Ingots are allowed
-                            if (!IsAllowedLootType(id))
-                            {
-                                remainingMap[id] = amt; // keep ignored items pending
-                                continue;
-                            }
 
                             int remaining = AddItemToGridInventories(grid, id, amt);
                             int added = amt - remaining;
@@ -444,90 +470,6 @@ namespace Meridian.Economy
         }
 
         // ---------------------
-        // Configuration loading
-        // ---------------------
-        private void LoadConfiguration()
-        {
-            RewardFactionTag = DefaultRewardFactionTag;
-            _rewardItems.Clear();
-
-            try
-            {
-                var reader = MyAPIGateway.Utilities.ReadFileInWorldStorage("WarBountyPayouts.ini", typeof(WarBountyPayouts));
-                if (reader != null)
-                {
-                    var content = reader.ReadToEnd();
-                    reader.Close();
-
-                    var ini = new MyIni();
-                    MyIniParseResult result;
-                    if (ini.TryParse(content, out result))
-                    {
-                        RewardFactionTag = ini.Get(IniSection, "RewardFactionTag").ToString(RewardFactionTag);
-                        string items = ini.Get(IniSection, "RewardItems").ToString("");
-                        if (!string.IsNullOrWhiteSpace(items))
-                            ParseRewardItems(items);
-                    }
-                }
-            }
-            catch
-            {
-                // Swallow; will use defaults
-            }
-
-            // Defaults if none provided
-            if (_rewardItems.Count == 0)
-            {
-                // Only Components/Ingots allowed
-                _rewardItems.Add(new RewardItem(new MyDefinitionId(typeof(MyObjectBuilder_Ingot), "PrototechScrap"), 2));
-                _rewardItems.Add(new RewardItem(new MyDefinitionId(typeof(MyObjectBuilder_Ingot), "Platinum"), 1));
-            }
-
-            // Filter any invalid types defensively
-            for (int i = _rewardItems.Count - 1; i >= 0; i--)
-            {
-                if (!IsAllowedLootType(_rewardItems[i].Id))
-                    _rewardItems.RemoveAt(i);
-            }
-        }
-
-        private void ParseRewardItems(string itemsSpec)
-        {
-            var entries = itemsSpec.Split(new[] { ',', ';', '\n' }, StringSplitOptions.RemoveEmptyEntries);
-            foreach (var raw in entries)
-            {
-                var entry = raw.Trim();
-                var parts = entry.Split(':');
-                if (parts.Length != 2)
-                    continue;
-
-                int amount;
-                if (!int.TryParse(parts[1], out amount) || amount <= 0)
-                    continue;
-
-                var typeSubtype = parts[0].Split('/');
-                if (typeSubtype.Length != 2)
-                    continue;
-
-                var typeName = typeSubtype[0].Trim();
-                var subtype = typeSubtype[1].Trim();
-
-                Type t;
-                if (!TypeMap.TryGetValue(typeName, out t))
-                    continue;
-
-                var id = new MyDefinitionId(t, subtype);
-                if (IsAllowedLootType(id))
-                    _rewardItems.Add(new RewardItem(id, amount));
-            }
-        }
-
-        private static bool IsAllowedLootType(MyDefinitionId id)
-        {
-            return id.TypeId == typeof(MyObjectBuilder_Component) || id.TypeId == typeof(MyObjectBuilder_Ingot);
-        }
-
-        // ---------------------
         // Loot awarding (aggregation)
         // ---------------------
         private void AwardLootIfApplicable(long attackerIdentityId, IMyFaction attackerFaction, IMyFaction victimFaction)
@@ -536,7 +478,7 @@ namespace Meridian.Economy
                 return;
 
             // Match victim's faction tag against configured tag
-            if (!string.Equals(victimFaction.Tag, RewardFactionTag, StringComparison.OrdinalIgnoreCase))
+            if (!string.Equals(victimFaction.Tag, UserConfig.NPCFactionStr, StringComparison.OrdinalIgnoreCase))
                 return;
 
             // Aggregate loot for attacker
@@ -550,8 +492,6 @@ namespace Meridian.Economy
             for (int i = 0; i < _rewardItems.Count; i++)
             {
                 var ri = _rewardItems[i];
-                if (!IsAllowedLootType(ri.Id))
-                    continue;
 
                 int existing;
                 if (bag.TryGetValue(ri.Id, out existing))
@@ -620,7 +560,7 @@ namespace Meridian.Economy
 
         private int AddItemToGridInventories(IMyCubeGrid grid, MyDefinitionId defId, int amount)
         {
-            if (!IsAllowedLootType(defId) || grid == null)
+            if (grid == null)
                 return amount;
 
             int remaining = amount;
