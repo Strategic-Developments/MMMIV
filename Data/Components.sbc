@@ -1,9 +1,7 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <Components>
-
-
-    <Component>
+        <Component>
             <Id>
                 <TypeId>Component</TypeId>
                 <SubtypeId>SalvagedPlating</SubtypeId>
@@ -27,14 +25,10 @@
             <MinimumOrderAmount>10</MinimumOrderAmount>
             <MaximumOrderAmount>100</MaximumOrderAmount>
             <CanPlayerOrder>true</CanPlayerOrder>
-
             <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
             <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
-        </Component> 
-
-
-
-    <Component>
+        </Component>
+        <Component>
             <Id>
                 <TypeId>Component</TypeId>
                 <SubtypeId>IndustrialModule</SubtypeId>
@@ -58,11 +52,9 @@
             <MinimumOrderAmount>10</MinimumOrderAmount>
             <MaximumOrderAmount>100</MaximumOrderAmount>
             <CanPlayerOrder>true</CanPlayerOrder>
-
             <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
             <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
-        </Component> 
-
+        </Component>
         <Component>
             <Id>
                 <TypeId>Component</TypeId>
@@ -87,12 +79,9 @@
             <MinimumOrderAmount>10</MinimumOrderAmount>
             <MaximumOrderAmount>100</MaximumOrderAmount>
             <CanPlayerOrder>true</CanPlayerOrder>
-
             <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
             <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
-        </Component> 
-
-
+        </Component>
         <Component>
             <Id>
                 <TypeId>Component</TypeId>
@@ -117,13 +106,10 @@
             <MinimumOrderAmount>10</MinimumOrderAmount>
             <MaximumOrderAmount>100</MaximumOrderAmount>
             <CanPlayerOrder>true</CanPlayerOrder>
-
             <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
             <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
-        </Component> 
-
-
-         <Component>
+        </Component>
+        <Component>
             <Id>
                 <TypeId>Component</TypeId>
                 <SubtypeId>CombatModule</SubtypeId>
@@ -147,18 +133,10 @@
             <MinimumOrderAmount>10</MinimumOrderAmount>
             <MaximumOrderAmount>100</MaximumOrderAmount>
             <CanPlayerOrder>true</CanPlayerOrder>
-
             <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
             <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
-        </Component> 
-
-
-
-
-
-
-
- <Component>
+        </Component>
+        <Component>
             <Id>
                 <TypeId>Component</TypeId>
                 <SubtypeId>StealthModule</SubtypeId>
@@ -182,32 +160,10 @@
             <MinimumOrderAmount>10</MinimumOrderAmount>
             <MaximumOrderAmount>100</MaximumOrderAmount>
             <CanPlayerOrder>true</CanPlayerOrder>
-
             <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
             <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
         </Component>
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- <Component>
+        <Component>
             <Id>
                 <TypeId>Component</TypeId>
                 <SubtypeId>CoordsNetwork</SubtypeId>
@@ -231,14 +187,10 @@
             <MinimumOrderAmount>10</MinimumOrderAmount>
             <MaximumOrderAmount>100</MaximumOrderAmount>
             <CanPlayerOrder>true</CanPlayerOrder>
-
             <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
             <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
-        </Component> 
-
-
-
-     <Component>
+        </Component>
+        <Component>
             <Id>
                 <TypeId>Component</TypeId>
                 <SubtypeId>StarterOreShipment</SubtypeId>
@@ -262,13 +214,10 @@
             <MinimumOrderAmount>10</MinimumOrderAmount>
             <MaximumOrderAmount>100</MaximumOrderAmount>
             <CanPlayerOrder>true</CanPlayerOrder>
-
             <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
             <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
-        </Component> 
-
-
-    <Component>
+        </Component>
+        <Component>
             <Id>
                 <TypeId>Component</TypeId>
                 <SubtypeId>AdvancedOreShipment</SubtypeId>
@@ -292,19 +241,10 @@
             <MinimumOrderAmount>10</MinimumOrderAmount>
             <MaximumOrderAmount>100</MaximumOrderAmount>
             <CanPlayerOrder>true</CanPlayerOrder>
-
             <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
             <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
-        </Component> 
-
-
-
-
-
-
-
-
-    <Component>
+        </Component>
+        <Component>
             <Id>
                 <TypeId>Component</TypeId>
                 <SubtypeId>RestrictedOreShipment</SubtypeId>
@@ -328,16 +268,10 @@
             <MinimumOrderAmount>10</MinimumOrderAmount>
             <MaximumOrderAmount>100</MaximumOrderAmount>
             <CanPlayerOrder>true</CanPlayerOrder>
-
             <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
             <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
-        </Component> 
-
-
-
-
-
-    <Component>
+        </Component>
+        <Component>
             <Id>
                 <TypeId>Component</TypeId>
                 <SubtypeId>IssuedIngotShipment</SubtypeId>
@@ -361,16 +295,8 @@
             <MinimumOrderAmount>10</MinimumOrderAmount>
             <MaximumOrderAmount>100</MaximumOrderAmount>
             <CanPlayerOrder>true</CanPlayerOrder>
-
             <MinimumAcquisitionAmount>10</MinimumAcquisitionAmount>
             <MaximumAcquisitionAmount>200</MaximumAcquisitionAmount>
-        </Component> 
-
-
-
-
-
-
-
+        </Component>
     </Components>
 </Definitions>

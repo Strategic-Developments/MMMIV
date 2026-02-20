@@ -1,10 +1,7 @@
 ﻿<?xml version="1.0" ?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <CubeBlocks>
-
-
-
-	<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
 			<Id>
 				<TypeId>ConveyorSorter</TypeId>
 				<SubtypeId>mss_mk1_salvager</SubtypeId>
@@ -17,17 +14,17 @@
 			<Size x="1" y="1" z="2"/>
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\LaserSalvagers\MKOneTool.mwm</Model>
-			 <Components>
-                <Component Subtype="SteelPlate" Count="1200" />
-                <Component Subtype="Construction" Count="400" />
-                <Component Subtype="LargeTube" Count="80" />
-				<Component Subtype="GravityGenerator" Count="400" />
-				<Component Subtype="Superconductor" Count="2000" />
-                <Component Subtype="Computer" Count="500" />
-                <Component Subtype="PowerCell" Count="80" />
-                <Component Subtype="SteelPlate" Count="1200" />
-            </Components>
-            <CriticalComponent Subtype="PowerCell" Index="0" />
+			<Components>
+				<Component Subtype="SteelPlate" Count="1200"/>
+				<Component Subtype="Construction" Count="400"/>
+				<Component Subtype="LargeTube" Count="80"/>
+				<Component Subtype="GravityGenerator" Count="400"/>
+				<Component Subtype="Superconductor" Count="2000"/>
+				<Component Subtype="Computer" Count="500"/>
+				<Component Subtype="PowerCell" Count="80"/>
+				<Component Subtype="SteelPlate" Count="1200"/>
+			</Components>
+			<CriticalComponent Subtype="PowerCell" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\LaserSalvagers\MKOneTool_BS1.mwm"/>
 				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\LaserSalvagers\MKOneTool_BS2.mwm"/>
@@ -42,39 +39,37 @@
 			</MountPoints>
 			<MirroringZ>Y</MirroringZ>
 			<InventorySize>
-                <X>5</X>
-                <Y>5</Y>
-                <Z>2</Z>
-            </InventorySize>
-
+				<X>5</X>
+				<Y>5</Y>
+				<Z>2</Z>
+			</InventorySize>
 			<EdgeType>Light</EdgeType>
-            <BuildTimeSeconds>40</BuildTimeSeconds>
-            <Center x="0" y="0" z="1" />
-            <DeformationRatio>0.2</DeformationRatio>
-            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
-            <DamagedSound>ParticleHeavyMech</DamagedSound>
-            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
-            <DestroySound>WepSmallWarheadExpl</DestroySound>
-            <PCU>190</PCU>
-         
-            <ToolValues Type="Grind">
+			<BuildTimeSeconds>40</BuildTimeSeconds>
+			<Center x="0" y="0" z="1"/>
+			<DeformationRatio>0.2</DeformationRatio>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>190</PCU>
+			<ToolValues Type="Grind">
 				<EffectShape>Cylinder</EffectShape>
-                <WorkOrder>Uniform</WorkOrder>
-                <WorkOrigin>Emitter</WorkOrigin>
+				<WorkOrder>Uniform</WorkOrder>
+				<WorkOrigin>Emitter</WorkOrigin>
 				<WorkRate>4</WorkRate>
 				<Speed>0.75</Speed>
 				<PickUpFloatings>true</PickUpFloatings>
 				<UpdateInterval>5</UpdateInterval>
-                <Emitter>detector_shiptool_2</Emitter>
-                <Offset x="0" y="0" z="-100" />
-                <Radius>2.5</Radius>
-                <Length>200</Length>
+				<Emitter>detector_shiptool_2</Emitter>
+				<Offset x="0" y="0" z="-100"/>
+				<Radius>2.5</Radius>
+				<Length>200</Length>
 				<HarvestRatio>1</HarvestRatio>
-                <ActivePower>150</ActivePower>
-                <DamageCharacters>true</DamageCharacters>
-                <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
-                <Action Type="Secondary" SizeRatio="2" SpeedRatio="0.5" HarvestRatio="0" />
-                <Event Trigger="Firing">
+				<ActivePower>150</ActivePower>
+				<DamageCharacters>true</DamageCharacters>
+				<Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1"/>
+				<Action Type="Secondary" SizeRatio="2" SpeedRatio="0.5" HarvestRatio="0"/>
+				<Event Trigger="Firing">
 					<Beam>
 						<Start>muzzle_tool_1</Start>
 						<EndLocation>Hit</EndLocation>
@@ -88,26 +83,18 @@
 							<W>1</W>
 						</Color>
 					</Beam>
-					
-					
-					
 				</Event>
 				<Event Trigger="RayHit">
 					<ParticleEffect>
 						<Name>ShipGrinder</Name>
 						<Location>Hit</Location>
 					</ParticleEffect>
-                    <Sound>
-                        <Name>ToolLrgGrindIdle</Name>
-                    </Sound>
+					<Sound>
+						<Name>ToolLrgGrindIdle</Name>
+					</Sound>
 				</Event>
-            </ToolValues>
-
-
-
+			</ToolValues>
 		</Definition>
-
-
 		<Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
 			<Id>
 				<TypeId>ConveyorSorter</TypeId>
@@ -121,17 +108,17 @@
 			<Size x="1" y="1" z="2"/>
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\LaserSalvagers\MKTwoTool.mwm</Model>
-			 <Components>
-                <Component Subtype="SteelPlate" Count="1400" />
-                <Component Subtype="Construction" Count="400" />
-                <Component Subtype="LargeTube" Count="160" />
-				<Component Subtype="GravityGenerator" Count="800" />
-				<Component Subtype="PrototechMachinery" Count="100" />
-                <Component Subtype="Computer" Count="500" />
-                <Component Subtype="PowerCell" Count="80" />
-                <Component Subtype="SteelPlate" Count="1400" />
-            </Components>
-            <CriticalComponent Subtype="PowerCell" Index="0" />
+			<Components>
+				<Component Subtype="SteelPlate" Count="1400"/>
+				<Component Subtype="Construction" Count="400"/>
+				<Component Subtype="LargeTube" Count="160"/>
+				<Component Subtype="GravityGenerator" Count="800"/>
+				<Component Subtype="PrototechMachinery" Count="100"/>
+				<Component Subtype="Computer" Count="500"/>
+				<Component Subtype="PowerCell" Count="80"/>
+				<Component Subtype="SteelPlate" Count="1400"/>
+			</Components>
+			<CriticalComponent Subtype="PowerCell" Index="0"/>
 			<BuildProgressModels>
 				<Model BuildPercentUpperBound="0.50" File="Models\Cubes\LaserSalvagers\MKTwoTool_BS1.mwm"/>
 				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\LaserSalvagers\MKTwoTool_BS2.mwm"/>
@@ -145,41 +132,38 @@
 				<MountPoint Side="Bottom" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
 			</MountPoints>
 			<MirroringZ>Y</MirroringZ>
-			  <InventorySize>
-                <X>15</X>
-                <Y>15</Y>
-                <Z>15</Z>
-            </InventorySize>
-
-			
+			<InventorySize>
+				<X>15</X>
+				<Y>15</Y>
+				<Z>15</Z>
+			</InventorySize>
 			<EdgeType>Light</EdgeType>
-            <BuildTimeSeconds>40</BuildTimeSeconds>
-            <Center x="0" y="0" z="1" />
-            <DeformationRatio>0.2</DeformationRatio>
-            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
-            <DamagedSound>ParticleHeavyMech</DamagedSound>
-            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
-            <DestroySound>WepSmallWarheadExpl</DestroySound>
-            <PCU>190</PCU>
-         
-            <ToolValues Type="Grind">
+			<BuildTimeSeconds>40</BuildTimeSeconds>
+			<Center x="0" y="0" z="1"/>
+			<DeformationRatio>0.2</DeformationRatio>
+			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+			<DamagedSound>ParticleHeavyMech</DamagedSound>
+			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+			<DestroySound>WepSmallWarheadExpl</DestroySound>
+			<PCU>190</PCU>
+			<ToolValues Type="Grind">
 				<EffectShape>Cylinder</EffectShape>
-                <WorkOrder>Uniform</WorkOrder>
-                <WorkOrigin>Emitter</WorkOrigin>
+				<WorkOrder>Uniform</WorkOrder>
+				<WorkOrigin>Emitter</WorkOrigin>
 				<WorkRate>6</WorkRate>
 				<Speed>1.0</Speed>
 				<PickUpFloatings>true</PickUpFloatings>
 				<UpdateInterval>5</UpdateInterval>
-                <Emitter>detector_shiptool_4</Emitter>
-                <Offset x="0" y="0" z="-100" />
-                <Radius>3</Radius>
-                <Length>200</Length>
+				<Emitter>detector_shiptool_4</Emitter>
+				<Offset x="0" y="0" z="-100"/>
+				<Radius>3</Radius>
+				<Length>200</Length>
 				<HarvestRatio>1</HarvestRatio>
-                <ActivePower>300</ActivePower>
-                <DamageCharacters>true</DamageCharacters>
-                <Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1" />
-                <Action Type="Secondary" SizeRatio="2" SpeedRatio="0.5" HarvestRatio="0" />
-                <Event Trigger="Firing">
+				<ActivePower>300</ActivePower>
+				<DamageCharacters>true</DamageCharacters>
+				<Action Type="Primary" SizeRatio="1" SpeedRatio="1" HarvestRatio="1"/>
+				<Action Type="Secondary" SizeRatio="2" SpeedRatio="0.5" HarvestRatio="0"/>
+				<Event Trigger="Firing">
 					<Beam>
 						<Start>tool_1</Start>
 						<EndLocation>Hit</EndLocation>
@@ -245,23 +229,17 @@
 							<W>1</W>
 						</Color>
 					</Beam>
-					
 				</Event>
 				<Event Trigger="RayHit">
 					<ParticleEffect>
 						<Name>ShipGrinder</Name>
 						<Location>Hit</Location>
 					</ParticleEffect>
-                    <Sound>
-                        <Name>ToolLrgGrindIdle</Name>
-                    </Sound>
+					<Sound>
+						<Name>ToolLrgGrindIdle</Name>
+					</Sound>
 				</Event>
-            </ToolValues>
-
-
-
+			</ToolValues>
 		</Definition>
-
-
-    </CubeBlocks>
+	</CubeBlocks>
 </Definitions>
