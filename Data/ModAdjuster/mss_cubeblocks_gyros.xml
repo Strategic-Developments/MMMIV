@@ -1,0 +1,109 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CubeBlocks>
+		<Definition xsi:type="MyObjectBuilder_GyroDefinition">
+			<Id>
+				<TypeId>Gyro</TypeId>
+				<SubtypeId>LargeBlockGyro</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="500" />
+				<Component Subtype="Construction" Count="40" />
+				<Component Subtype="LargeTube" Count="4" />
+				<Component Subtype="MetalGrid" Count="50" />
+				<Component Subtype="Motor" Count="4" />
+				<Component Subtype="Computer" Count="5" />
+				<Component Subtype="SteelPlate" Count="100" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<GeneralDamageMultiplier>6.3105</GeneralDamageMultiplier>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_GyroDefinition">
+			<Id>
+				<TypeId>Gyro</TypeId>
+				<SubtypeId>SmallBlockGyro</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="15" />
+				<Component Subtype="Construction" Count="5" />
+				<Component Subtype="LargeTube" Count="1" />
+				<Component Subtype="Motor" Count="2" />
+				<Component Subtype="Computer" Count="3" />
+				<Component Subtype="SteelPlate" Count="10" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+			<Id>
+				<TypeId>UpgradeModule</TypeId>
+				<SubtypeId>AQD_LG_GyroBooster</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="1000" />
+				<Component Subtype="Construction" Count="80" />
+				<Component Subtype="LargeTube" Count="8" />
+				<Component Subtype="MetalGrid" Count="100" />
+				<Component Subtype="Motor" Count="8" />
+				<Component Subtype="Computer" Count="10" />
+				<Component Subtype="SteelPlate" Count="200" />
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+			<GeneralDamageMultiplier>6.3105</GeneralDamageMultiplier>
+		</Definition>
+
+		<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+			<Id>
+				<TypeId>UpgradeModule</TypeId>
+				<SubtypeId>AQD_SG_GyroBooster</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="100" />
+				<Component Subtype="Construction" Count="20" />
+				<Component Subtype="LargeTube" Count="2" />
+				<Component Subtype="MetalGrid" Count="20" />
+				<Component Subtype="Motor" Count="2" />
+				<Component Subtype="Computer" Count="10" />
+				<Component Subtype="SteelPlate" Count="50" />
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+			<GeneralDamageMultiplier>6.3105</GeneralDamageMultiplier>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_UpgradeModuleDefinition">
+			<Id>
+				<TypeId>UpgradeModule</TypeId>
+				<SubtypeId>AQD_LG_GyroUpgrade</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="2000" />
+				<Component Subtype="Construction" Count="160" />
+				<Component Subtype="LargeTube" Count="16" />
+				<Component Subtype="MetalGrid" Count="200" />
+				<Component Subtype="Motor" Count="16" />
+				<Component Subtype="Computer" Count="20" />
+				<Component Subtype="SteelPlate" Count="400" />
+			</Components>
+			<CriticalComponent Subtype="Motor" Index="0" />
+			<GeneralDamageMultiplier>2.80466666667</GeneralDamageMultiplier>
+		</Definition>
+		<Definition xsi:type="MyObjectBuilder_GyroDefinition">
+			<Id>
+				<TypeId>Gyro</TypeId>
+				<SubtypeId>AQD_LG_LargeGyro</SubtypeId>
+			</Id>
+			<Components>
+				<Component Subtype="SteelPlate" Count="1000" />
+				<Component Subtype="Construction" Count="1080" />
+				<Component Subtype="LargeTube" Count="108" />
+				<Component Subtype="MetalGrid" Count="1350" />
+				<Component Subtype="Motor" Count="108" />
+				<Component Subtype="Computer" Count="135" />
+				<Component Subtype="SteelPlate" Count="2700" />
+			</Components>
+			<CriticalComponent Subtype="Computer" Index="0" />
+			<GeneralDamageMultiplier>5.04261111111</GeneralDamageMultiplier> 
+		</Definition>
+
+	</CubeBlocks>
+</Definitions>
