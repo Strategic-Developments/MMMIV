@@ -1,27 +1,20 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-
-  <Blueprints> 
-
-	
-<Blueprint>
+  <Blueprints>
+    <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
         <SubtypeId>SalvagedPlatingBP</SubtypeId>
       </Id>
       <DisplayName>Salvaged Plating</DisplayName>
       <Icon>Textures\GUI\Icons\Component\PrototechPanel_Component.dds</Icon>
-	  
       <Prerequisites>
-        <Item Amount="1000" TypeId="PhysicalObject" SubtypeId="SpaceCredit" />
-        <Item Amount="10" TypeId="Ingot" SubtypeId="PrototechScrap" />
+        <Item Amount="1000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+        <Item Amount="10" TypeId="Ingot" SubtypeId="PrototechScrap"/>
       </Prerequisites>
-      <Result Amount="1" TypeId="Component" SubtypeId="SalvagedPlating" />
+      <Result Amount="1" TypeId="Component" SubtypeId="SalvagedPlating"/>
       <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
-	  
     </Blueprint>
-
-
     <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
@@ -29,34 +22,27 @@
       </Id>
       <DisplayName>Postlight Module</DisplayName>
       <Icon>Textures\GUI\Icons\Components\IndustrialModule.dds</Icon>
-	  
       <Prerequisites>
-        <Item Amount="10000" TypeId="PhysicalObject" SubtypeId="SpaceCredit" />
-        <Item Amount="100" TypeId="Ingot" SubtypeId="PrototechScrap" />
+        <Item Amount="10000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+        <Item Amount="100" TypeId="Ingot" SubtypeId="PrototechScrap"/>
       </Prerequisites>
-      <Result Amount="1" TypeId="Component" SubtypeId="PostlightModule" />
+      <Result Amount="1" TypeId="Component" SubtypeId="PostlightModule"/>
       <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
-	  
     </Blueprint>
-
-
-<Blueprint>
+    <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
         <SubtypeId>IndustrialModuleBP</SubtypeId>
       </Id>
       <DisplayName>Industrial Module</DisplayName>
       <Icon>Textures\GUI\Icons\Components\IndustrialModule.dds</Icon>
-	  
       <Prerequisites>
-        <Item Amount="10000" TypeId="PhysicalObject" SubtypeId="SpaceCredit" />
-        <Item Amount="25" TypeId="Ingot" SubtypeId="PrototechScrap" />
+        <Item Amount="10000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+        <Item Amount="25" TypeId="Ingot" SubtypeId="PrototechScrap"/>
       </Prerequisites>
-      <Result Amount="1" TypeId="Component" SubtypeId="IndustrialModule" />
+      <Result Amount="1" TypeId="Component" SubtypeId="IndustrialModule"/>
       <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
-	  
     </Blueprint>
-
     <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
@@ -64,17 +50,13 @@
       </Id>
       <DisplayName>Experimental Module</DisplayName>
       <Icon>Textures\GUI\Icons\Components\ExperimentalModule.dds</Icon>
-	  
       <Prerequisites>
-        <Item Amount="15000" TypeId="PhysicalObject" SubtypeId="SpaceCredit" />
-        <Item Amount="50" TypeId="Ingot" SubtypeId="PrototechScrap" />
+        <Item Amount="15000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+        <Item Amount="50" TypeId="Ingot" SubtypeId="PrototechScrap"/>
       </Prerequisites>
-      <Result Amount="1" TypeId="Component" SubtypeId="ExperimentalModule" />
+      <Result Amount="1" TypeId="Component" SubtypeId="ExperimentalModule"/>
       <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
-	  
     </Blueprint>
-
-
     <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
@@ -82,16 +64,13 @@
       </Id>
       <DisplayName>Combat Module</DisplayName>
       <Icon>Textures\GUI\Icons\Components\CombatModule.dds</Icon>
-	  
       <Prerequisites>
-        <Item Amount="10000" TypeId="PhysicalObject" SubtypeId="SpaceCredit" />
-        <Item Amount="15" TypeId="Ingot" SubtypeId="PrototechScrap" />
+        <Item Amount="10000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+        <Item Amount="15" TypeId="Ingot" SubtypeId="PrototechScrap"/>
       </Prerequisites>
-      <Result Amount="1" TypeId="Component" SubtypeId="CombatModule" />
+      <Result Amount="1" TypeId="Component" SubtypeId="CombatModule"/>
       <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
-	  
     </Blueprint>
-
     <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
@@ -99,44 +78,29 @@
       </Id>
       <DisplayName>Stealth Module</DisplayName>
       <Icon>Textures\GUI\Icons\Components\StealthModule.dds</Icon>
-	  
       <Prerequisites>
-        <Item Amount="50000" TypeId="PhysicalObject" SubtypeId="SpaceCredit" />
-        <Item Amount="150" TypeId="Ingot" SubtypeId="PrototechScrap" />
+        <Item Amount="50000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+        <Item Amount="150" TypeId="Ingot" SubtypeId="PrototechScrap"/>
       </Prerequisites>
-      <Result Amount="1" TypeId="Component" SubtypeId="StealthModule" />
+      <Result Amount="1" TypeId="Component" SubtypeId="StealthModule"/>
       <BaseProductionTimeInSeconds>180</BaseProductionTimeInSeconds>
-	  
     </Blueprint>
-
-
-
-
-
-    
-<Blueprint>
+    <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
         <SubtypeId>CoordsNetworkBP</SubtypeId>
       </Id>
       <DisplayName>Ancient Coordinates Database</DisplayName>
       <Icon>Textures\GUI\Icons\Components\CoordsNetwork.dds</Icon>
-	  
       <Prerequisites>
-        <Item Amount="10" TypeId="Ingot" SubtypeId="Iron" />
-        <Item Amount="1" TypeId="Ingot" SubtypeId="Cobalt" />
-        <Item Amount="1" TypeId="Ingot" SubtypeId="Silver" />
-        <Item Amount="0.5" TypeId="Ingot" SubtypeId="Gold" />
+        <Item Amount="10" TypeId="Ingot" SubtypeId="Iron"/>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Cobalt"/>
+        <Item Amount="1" TypeId="Ingot" SubtypeId="Silver"/>
+        <Item Amount="0.5" TypeId="Ingot" SubtypeId="Gold"/>
       </Prerequisites>
-      <Result Amount="1" TypeId="Component" SubtypeId="CoordsNetwork" />
+      <Result Amount="1" TypeId="Component" SubtypeId="CoordsNetwork"/>
       <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
-	  
     </Blueprint>
-
-
-
-
-
     <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
@@ -144,18 +108,14 @@
       </Id>
       <DisplayName>Basic Ingot Shipment</DisplayName>
       <Icon>Textures\GUI\Icons\Components\Pallet.dds</Icon>
-	  
       <Prerequisites>
-        <Item Amount="50000" TypeId="Ingot" SubtypeId="Iron" />
-        <Item Amount="1000" TypeId="Ingot" SubtypeId="Silicon" />
-        <Item Amount="2000" TypeId="Ingot" SubtypeId="Nickel" />
+        <Item Amount="50000" TypeId="Ingot" SubtypeId="Iron"/>
+        <Item Amount="1000" TypeId="Ingot" SubtypeId="Silicon"/>
+        <Item Amount="2000" TypeId="Ingot" SubtypeId="Nickel"/>
       </Prerequisites>
-      <Result Amount="1" TypeId="Component" SubtypeId="StarterOreShipment" />
+      <Result Amount="1" TypeId="Component" SubtypeId="StarterOreShipment"/>
       <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
-	  
     </Blueprint>
-
-
     <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
@@ -163,19 +123,15 @@
       </Id>
       <DisplayName>Advanced Ingot Shipment</DisplayName>
       <Icon>Textures\GUI\Icons\Components\Pallet.dds</Icon>
-	  
       <Prerequisites>
-        <Item Amount="50000" TypeId="Ingot" SubtypeId="Iron" />
-        <Item Amount="500" TypeId="Ingot" SubtypeId="Silicon" />
-        <Item Amount="750" TypeId="Ingot" SubtypeId="Nickel" />
-        <Item Amount="350" TypeId="Ingot" SubtypeId="Cobalt" />
+        <Item Amount="50000" TypeId="Ingot" SubtypeId="Iron"/>
+        <Item Amount="500" TypeId="Ingot" SubtypeId="Silicon"/>
+        <Item Amount="750" TypeId="Ingot" SubtypeId="Nickel"/>
+        <Item Amount="350" TypeId="Ingot" SubtypeId="Cobalt"/>
       </Prerequisites>
-      <Result Amount="1" TypeId="Component" SubtypeId="AdvancedOreShipment" />
+      <Result Amount="1" TypeId="Component" SubtypeId="AdvancedOreShipment"/>
       <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
-	  
     </Blueprint>
-
-
     <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
@@ -183,19 +139,15 @@
       </Id>
       <DisplayName>Restricted Ingot Shipment</DisplayName>
       <Icon>Textures\GUI\Icons\Components\Pallet.dds</Icon>
-	  
       <Prerequisites>
-        <Item Amount="10000" TypeId="Ingot" SubtypeId="Iron" />
-        <Item Amount="2000" TypeId="Ingot" SubtypeId="Gold" />
-        <Item Amount="1000" TypeId="Ingot" SubtypeId="Platinum" />
-        <Item Amount="2000" TypeId="Ingot" SubtypeId="Silver" />
+        <Item Amount="10000" TypeId="Ingot" SubtypeId="Iron"/>
+        <Item Amount="2000" TypeId="Ingot" SubtypeId="Gold"/>
+        <Item Amount="1000" TypeId="Ingot" SubtypeId="Platinum"/>
+        <Item Amount="2000" TypeId="Ingot" SubtypeId="Silver"/>
       </Prerequisites>
-      <Result Amount="1" TypeId="Component" SubtypeId="RestrictedOreShipment" />
+      <Result Amount="1" TypeId="Component" SubtypeId="RestrictedOreShipment"/>
       <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
-	  
     </Blueprint>
-
-
     <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
@@ -203,23 +155,32 @@
       </Id>
       <DisplayName>Fleet-Issue Ingot Shipment</DisplayName>
       <Icon>Textures\GUI\Icons\Components\Pallet.dds</Icon>
-	  
       <Prerequisites>
-        <Item Amount="100000" TypeId="Ingot" SubtypeId="Iron" />
-        <Item Amount="2000" TypeId="Ingot" SubtypeId="Uranium" />
-        <Item Amount="2000" TypeId="Ingot" SubtypeId="Platinum" />
-        <Item Amount="2000" TypeId="Ingot" SubtypeId="Silver" />
+        <Item Amount="100000" TypeId="Ingot" SubtypeId="Iron"/>
+        <Item Amount="2000" TypeId="Ingot" SubtypeId="Uranium"/>
+        <Item Amount="2000" TypeId="Ingot" SubtypeId="Platinum"/>
+        <Item Amount="2000" TypeId="Ingot" SubtypeId="Silver"/>
       </Prerequisites>
-      <Result Amount="1" TypeId="Component" SubtypeId="IssuedIngotShipment" />
+      <Result Amount="1" TypeId="Component" SubtypeId="IssuedIngotShipment"/>
       <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
-	  
+    </Blueprint><!--BLUEPRINT DEFINITION-->
+    <Blueprint><!-- This blueprint exists to prevent missing blueprint errors -->
+      <Id>
+        <TypeId>BlueprintDefinition</TypeId>
+        <SubtypeId>PrototechFrame</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Item_PrototechFrame</DisplayName>
+      <Icon>Textures\GUI\Icons\component\PrototechFrame.dds</Icon>
+      <Prerequisites>
+        <Item Amount="12128" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+        <Item Amount="15" TypeId="Ingot" SubtypeId="PrototechScrap"/>
+      </Prerequisites>
+      <Result Amount="1" TypeId="Component" SubtypeId="PrototechFrame"/>
+      <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
+      <IsPrimary>true</IsPrimary>
     </Blueprint>
-
-
-
-
-
-
-    
   </Blueprints>
+  <BlueprintClassEntries><!--BLUEPRINT CLASS ENTRY DEFINITION-->
+    <Entry Class="PrototechComponents" BlueprintSubtypeId="PrototechFrame"/>
+  </BlueprintClassEntries>
 </Definitions>

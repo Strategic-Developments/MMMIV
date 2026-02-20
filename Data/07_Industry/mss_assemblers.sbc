@@ -322,27 +322,5 @@
 			<AllowSelfPulling>true</AllowSelfPulling>
 		</Definition>
 	</CubeBlocks>
-	<Blueprints>
-		<!--BLUEPRINT DEFINITION-->
-		<Blueprint>
-			<!-- This blueprint exists to prevent missing blueprint errors -->
-			<Id>
-				<TypeId>BlueprintDefinition</TypeId>
-				<SubtypeId>PrototechFrame</SubtypeId>
-			</Id>
-			<DisplayName>DisplayName_Item_PrototechFrame</DisplayName>
-			<Icon>Textures\GUI\Icons\component\PrototechFrame.dds</Icon>
-			<Prerequisites>
-				<Item Amount="12128" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
-				<Item Amount="15" TypeId="Ingot" SubtypeId="PrototechScrap" />
-			</Prerequisites>
-			<Result Amount="1" TypeId="Component" SubtypeId="PrototechFrame" />
-			<BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
-			<IsPrimary>true</IsPrimary>
-		</Blueprint>
-	</Blueprints>
-	<BlueprintClassEntries>
-		<!--BLUEPRINT CLASS ENTRY DEFINITION-->
-		<Entry Class="PrototechComponents" BlueprintSubtypeId="PrototechFrame"/>
-	</BlueprintClassEntries>
+	
 </Definitions>
