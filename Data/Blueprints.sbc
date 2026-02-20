@@ -111,21 +111,7 @@
 
 
 
-<Blueprint> 
-	<Id>
-		<TypeId>BlueprintDefinition</TypeId>
-		<SubtypeId>PrototechFrame</SubtypeId>
-	</Id>
-	<DisplayName>DisplayName_Item_PrototechPanel</DisplayName>
-	<Icon>Textures\GUI\Icons\component\PrototechPanel_Component.dds</Icon>
-	<Prerequisites>
-        <Item Amount="50000" TypeId="PhysicalObject" SubtypeId="SpaceCredit" />
-        <Item Amount="150" TypeId="Ingot" SubtypeId="PrototechScrap" />
-	</Prerequisites>
-	<Result Amount="1" TypeId="Component" SubtypeId="PrototechFrame" />
-	<BaseProductionTimeInSeconds>1</BaseProductionTimeInSeconds>
-	<IsPrimary>true</IsPrimary>
-        </Blueprint>
+
 
     
 <Blueprint>
