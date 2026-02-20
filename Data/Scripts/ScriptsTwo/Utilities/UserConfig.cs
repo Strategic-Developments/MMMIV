@@ -13,17 +13,19 @@ namespace Meridian.Utilities
     public class UserConfig
     {
         public float BountyPayoutMultiplier;
+        public float NPCPayoutMultiplier;
         public string NPCFactionStr;
-        public List<RewardItemSerializable> RewardItems;
+        public List<RewardItemSerializable> NPCRewardItems;
         public UserConfig()
         {
         }
 
-        public UserConfig(float bountyMult, string nPCFactionStr, List<RewardItemSerializable> rewardItems)
+        public UserConfig(float bountyMult, string nPCFactionStr, List<RewardItemSerializable> rewardItems, float nPCPayoutMultiplier)
         {
             BountyPayoutMultiplier = bountyMult;
             NPCFactionStr = nPCFactionStr;
-            RewardItems = rewardItems;
+            NPCPayoutMultiplier = nPCPayoutMultiplier;
+            NPCRewardItems = rewardItems;
         }
     }
     [Serializable]

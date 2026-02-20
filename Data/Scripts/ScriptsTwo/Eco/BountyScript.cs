@@ -89,7 +89,7 @@ namespace Meridian.Economy
                     {
                         new RewardItemSerializable("Ingot/PrototechScrap", 2),
                         new RewardItemSerializable("Ingot/Platinum", 1)
-                    });
+                    }, 2f);
                     MyLog.Default.WriteLine("Resetting war bounty payout config.");
                 }
 
@@ -100,7 +100,7 @@ namespace Meridian.Economy
                     Save();
                 }
                 
-                foreach (var item in cfg.RewardItems)
+                foreach (var item in cfg.NPCRewardItems)
                 {
                     _rewardItems.Add(new RewardItem(item));
                 }
@@ -220,17 +220,22 @@ namespace Meridian.Economy
             if (blockDef == null || allCosts == null)
                 return;
 
+            bool NPCFac = string.Equals(vicFac.Tag, UserConfig.NPCFactionStr, StringComparison.OrdinalIgnoreCase);
+
             MyFixedPoint price;
             if (allCosts.TryGetValue(blockDef.Id, out price))
             {
                 price += GetHydrogenBonusByLiters(slim);
 
+                
+
                 if (price > 0)
-                    QueueCurrencyPayout(attackerId, (long)(price * UserConfig.BountyPayoutMultiplier));
+                    QueueCurrencyPayout(attackerId, (long)(price * UserConfig.BountyPayoutMultiplier * (NPCFac ? UserConfig.NPCPayoutMultiplier : 1f)));
             }
 
             // Accumulate loot if the destroyed block's owner faction tag matches RewardFactionTag
-            AwardLootIfApplicable(attackerId, atkFac, vicFac);
+            if (NPCFac)
+                AwardLootIfApplicable(attackerId, atkFac, vicFac);
         }
 
         private static bool IsAtWarByReputation(IMyFactionCollection factions, long factionId1, long factionId2)
@@ -474,9 +479,6 @@ namespace Meridian.Economy
         // ---------------------
         private void AwardLootIfApplicable(long attackerIdentityId, IMyFaction attackerFaction, IMyFaction victimFaction)
         {
-            if (victimFaction == null)
-                return;
-
             // Match victim's faction tag against configured tag
             if (!string.Equals(victimFaction.Tag, UserConfig.NPCFactionStr, StringComparison.OrdinalIgnoreCase))
                 return;
