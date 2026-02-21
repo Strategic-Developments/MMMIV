@@ -70,9 +70,9 @@
             <DamagedSound>ParticleElectrical</DamagedSound>
             <EmissiveColorPreset>JumpDrive</EmissiveColorPreset>
             <ResourceSinkGroup>Charging</ResourceSinkGroup>
-            <RequiredPowerInput>50</RequiredPowerInput>
+            <RequiredPowerInput>100</RequiredPowerInput>
             <PowerNeededForJump>3</PowerNeededForJump>
-            <PowerEfficiency>0.9</PowerEfficiency>
+            <PowerEfficiency>0.95</PowerEfficiency>
             <MaxJumpDistance>2000000</MaxJumpDistance>
             <MaxJumpMass>2500000</MaxJumpMass>
             <EmissiveColorPreset>Extended</EmissiveColorPreset>
