@@ -70,11 +70,11 @@
             <DamagedSound>ParticleElectrical</DamagedSound>
             <EmissiveColorPreset>JumpDrive</EmissiveColorPreset>
             <ResourceSinkGroup>Charging</ResourceSinkGroup>
-            <RequiredPowerInput>100</RequiredPowerInput>
+            <RequiredPowerInput>125</RequiredPowerInput>
             <PowerNeededForJump>3</PowerNeededForJump>
             <PowerEfficiency>0.95</PowerEfficiency>
             <MaxJumpDistance>2000000</MaxJumpDistance>
-            <MaxJumpMass>5000000</MaxJumpMass>
+            <MaxJumpMass>5500000</MaxJumpMass>
             <EmissiveColorPreset>Extended</EmissiveColorPreset>
             <DestroyEffect>Explosion_Warhead_30</DestroyEffect>
             <DestroySound>WepLrgWarheadExpl</DestroySound>
@@ -135,11 +135,11 @@
             <EmissiveColorPreset>JumpDrive</EmissiveColorPreset>
 
             <ResourceSinkGroup>Charging</ResourceSinkGroup>
-            <RequiredPowerInput>50</RequiredPowerInput>
+            <RequiredPowerInput>75</RequiredPowerInput>
             <PowerNeededForJump>3</PowerNeededForJump>
             <PowerEfficiency>0.9</PowerEfficiency>
             <MaxJumpDistance>2000000</MaxJumpDistance>
-            <MaxJumpMass>2500000</MaxJumpMass>
+            <MaxJumpMass>4000000</MaxJumpMass>
             <EmissiveColorPreset>Extended</EmissiveColorPreset>
             <DestroyEffect>Explosion_Warhead_30</DestroyEffect>
             <DestroySound>WepLrgWarheadExpl</DestroySound>
@@ -206,11 +206,11 @@
 			<EmissiveColorPreset>JumpDrive</EmissiveColorPreset>
 
 			<ResourceSinkGroup>Charging</ResourceSinkGroup>
-			<RequiredPowerInput>50</RequiredPowerInput>
+            <RequiredPowerInput>75</RequiredPowerInput>
             <PowerNeededForJump>3</PowerNeededForJump>
             <PowerEfficiency>0.9</PowerEfficiency>
             <MaxJumpDistance>2000000</MaxJumpDistance>
-            <MaxJumpMass>2500000</MaxJumpMass>
+            <MaxJumpMass>4000000</MaxJumpMass>
 			<EmissiveColorPreset>Extended</EmissiveColorPreset>
 			<DestroyEffect>Explosion_Warhead_30</DestroyEffect>
 			<DestroySound>WepLrgWarheadExpl</DestroySound>

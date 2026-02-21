@@ -29,7 +29,6 @@
                 <Component Subtype="Display" Count="15"/>
                 <Component Subtype="PrototechPanel" Count="100"/>
             </Components>
-			<Public>false</Public>
         </Definition>
     </CubeBlocks>
 </Definitions>
