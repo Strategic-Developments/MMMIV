@@ -56,7 +56,7 @@ namespace SRRadarStats
                     Mod_Watermod_LOSCheck_EntersWater = false, // Set to true to have the radar only detect targets if the LOS check starts abovewater and ends underwater.
                     Mod_Watermod_LOSCheck_ExitsWater = false, // Set to true to have the radar only detect targets if the LOS check starts underwater and ends abovewater.
                 
-                    PowerRequirementOverride = 75f,
+                    PowerRequirementOverride = 80f,
                 },
                 ["Nerd_Radar_Basic"] = new RadarStat()
                 {
