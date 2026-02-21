@@ -25,23 +25,23 @@ namespace SRRadarStats
                     //  - those modifying stats can just have the definitions in their place w/o copying any models, sbc files, or sounds to the modified mod.
                     DefinitionPriority = 1,
 
-                    MaxRadiatedPower = 0, // radiated power of the radar, in kilowatts
-                    Gain = 0, // gain of the radar, in decibels. Must be above 0
-                    Sensitivity = 0, // sensitivity of the radar, in decibels
-                    MaxSearchRange = 1, // maximum range radar will return targets, regardless of other settings, in meters
+                    MaxRadiatedPower = 75000, // radiated power of the radar, in kilowatts
+                    Gain = 394, // gain of the radar, in decibels. Must be above 0
+                    Sensitivity = -40, // sensitivity of the radar, in decibels
+                    MaxSearchRange = 500000, // maximum range radar will return targets, regardless of other settings, in meters
 
-                    ApertureSize = 40, // aperture size of the radar, in meters^2
+                    ApertureSize = 100, // aperture size of the radar, in meters^2
                     NoiseFilter = 0, // noise filter of the radar, in decibels
                     SignalToNoiseRatio = 1, // ratio of return signal to noise required for the radar to detect targets
 
-                    PositionError = 70, // maximum error of position in any given direction the radar returns in meters
-                    VelocityError = 5, // maximum error in the velocity vector in any given direction the radar returns (velocity indicator coming soonTM)
+                    PositionError = 75, // maximum error of position in any given direction the radar returns in meters
+                    VelocityError = 0, // maximum error in the velocity vector in any given direction the radar returns (velocity indicator coming soonTM)
 
                     CanTargetLock = true, // determines whether or not the radar can lock. Locked targets have no velocity and position error, and will have the radar detected icon turn red from yellow.
                                           // When a guided missile from Vanilla+ fired from a grid with a radar locking another grid lacks a target, Neb. Radar will provide it with the radar's target lock, assuming a valid block exists on the target exists. Should multiple targets be locked by one grid, the missile will choose the closest one.
                     LOSCheckIncludesParentGrid = false,
                     // determines whether the radar's LOS check will include the grid it is on. Useful for radar paneling and such. Subgrids attached to the main grid count as the main grid in this case.
-                    StealthMultiplier = 1, // if the target is cloaked via the Stealth Drive mod (https://steamcommunity.com/sharedfiles/filedetails/?id=2805859069), then the target's RCS is multiplied by this when the radar scans.
+                    StealthMultiplier = 0.2f, // if the target is cloaked via the Stealth Drive mod (https://steamcommunity.com/sharedfiles/filedetails/?id=2805859069), then the target's RCS is multiplied by this when the radar scans.
 
                     CanDetectAllJumps = true, // Determines if the radar can detect and show any jumps caused by any track visible to the radar.
                     CanDetectLockedJumps = false, // Determines if the radar can detect and show any jumps caused by the tracked locked by the radar.
@@ -56,7 +56,7 @@ namespace SRRadarStats
                     Mod_Watermod_LOSCheck_EntersWater = false, // Set to true to have the radar only detect targets if the LOS check starts abovewater and ends underwater.
                     Mod_Watermod_LOSCheck_ExitsWater = false, // Set to true to have the radar only detect targets if the LOS check starts underwater and ends abovewater.
                 
-                    PowerRequirementOverride = 50f,
+                    PowerRequirementOverride = 75f,
                 },
                 ["Nerd_Radar_Basic"] = new RadarStat()
                 {
