@@ -2003,7 +2003,7 @@ namespace Scripts
                         },
                     },
                 },
-                Lines = FX_CANNON_SMALL,
+                Lines = FX_CANNON_SMALL_RED,
             },
             AmmoAudio = new AmmoAudioDef
             {
