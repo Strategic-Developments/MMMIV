@@ -6,8 +6,29 @@
                 <TypeId>TextPanel</TypeId>
                 <SubtypeId>Nerd_Radar</SubtypeId>
             </Id>
-			<DisplayName>Shoo</DisplayName>
-			<Description>Shoo</Description>
+			<DisplayName>Military Radar Station</DisplayName>
+			<Description>Ranges TBD</Description>
+			<Components>
+				<Component Subtype="PrototechFrame" Count="1">
+                    <DeconstructId>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>PrototechScrap</SubtypeId>
+                    </DeconstructId>
+                </Component>
+                <Component Subtype="SteelPlate" Count="150"/>
+                <Component Subtype="Construction" Count="10"/>
+				<Component Subtype="PrototechCircuitry" Count="20">
+                    <DeconstructId>
+                        <TypeId>Ingot</TypeId>
+                        <SubtypeId>PrototechScrap</SubtypeId>
+                    </DeconstructId>
+                </Component>
+                <Component Subtype="Computer" Count="50"/>
+				<Component Subtype="ExperimentalModule" Count="15" />
+                <Component Subtype="RadioCommunication" Count="150"/>
+                <Component Subtype="Display" Count="15"/>
+                <Component Subtype="PrototechPanel" Count="100"/>
+            </Components>
 			<Public>false</Public>
         </Definition>
     </CubeBlocks>
