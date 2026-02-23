@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<BlockPositions>
+		<BlockPosition>
+			<Name>LG_ARYLNX_Epstein_Drive</Name>
+			<Position>
+				<X>0</X>
+				<Y>551</Y>
+			</Position>
+		</BlockPosition>
+		<BlockPosition>
+			<Name>rcsThruster1</Name>
+			<Position>
+				<X>1</X>
+				<Y>551</Y>
+			</Position>
+		</BlockPosition>
+		<BlockPosition>
+			<Name>mss_lg_thrust_concord_1x1</Name>
+			<Position>
+				<X>2</X>
+				<Y>551</Y>
+			</Position>
+		</BlockPosition>
+		<BlockPosition>
+			<Name>LG_ARYX_YACHT_DRIVE</Name>
+			<Position>
+				<X>3</X>
+				<Y>551</Y>
+			</Position>
+		</BlockPosition>
+	</BlockPositions>
+</Definitions>

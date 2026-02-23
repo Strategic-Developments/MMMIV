@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<Definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<BlockPositions>
+		<BlockPosition>
+			<Name>AQD_AirlockConnector_Flat</Name>
+			<Position>
+				<X>0</X>
+				<Y>1000</Y>
+			</Position>
+		</BlockPosition>
+		<BlockPosition>
+			<Name>XL_1x</Name>
+			<Position>
+				<X>1</X>
+				<Y>1000</Y>
+			</Position>
+		</BlockPosition>
+		<BlockPosition>
+			<Name>XL_Block</Name>
+			<Position>
+				<X>2</X>
+				<Y>1000</Y>
+			</Position>
+		</BlockPosition>
+		<BlockPosition>
+			<Name>XL_HalfBlock</Name>
+			<Position>
+				<X>3</X>
+				<Y>1000</Y>
+			</Position>
+		</BlockPosition>
+		<BlockPosition>
+			<Name>XL_PassageCorner</Name>
+			<Position>
+				<X>4</X>
+				<Y>1000</Y>
+			</Position>
+		</BlockPosition>
+	</BlockPositions>
+</Definitions>

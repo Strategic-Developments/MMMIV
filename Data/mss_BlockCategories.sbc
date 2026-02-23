@@ -51,6 +51,7 @@
 				<string>Thrust/mss_lg_thrust_concord_3x3</string>
 
 				<!--Radar -->
+				<string>TextPanel/Nerd_Radar</string>
 				<string>TextPanel/Nerd_Radar_Basic</string>
 				<string>TextPanel/Nerd_Radar_SG</string>
 				<string>ConveyorSorter/Nerd_JammingBlock</string>
@@ -138,6 +139,7 @@
 			<DisplayName>   Radar Systems</DisplayName>
 			<Name>Section1_3_nebradar</Name>
 			<ItemIds>
+				<string>TextPanel/Nerd_Radar</string>
 				<string>TextPanel/Nerd_Radar_Basic</string>
 				<string>TextPanel/Nerd_Radar_SG</string>
 				<string>ConveyorSorter/Nerd_JammingBlock</string>
