@@ -536,6 +536,13 @@
 				<Component Subtype="MetalGrid" Count="500"/>
 				<Component Subtype="LargeTube" Count="200"/>
 				<Component Subtype="Superconductor" Count="350"/>
+				<Component Subtype="StealthModule" Count="2" />
+				<Component Subtype="PrototechCircuitry" Count="20">
+					<DeconstructId>
+						<TypeId>Ingot</TypeId>
+						<SubtypeId>PrototechScrap</SubtypeId>
+					</DeconstructId>
+				</Component>
 				<Component Subtype="AryxLynxon_FusionComponent" Count="72"/>
 				<Component Subtype="PowerCell" Count="180"/>
 				<Component Subtype="Thrust" Count="450"/>
