@@ -579,12 +579,12 @@ namespace Scripts
                 {
                     Ammo = new ParticleDef
                     {
-                        Name = "", //ShipWelderArc
+                        Name = "KWS2_PlasmaTrailOrange", //ShipWelderArc
                         Offset = Vector(x: 0, y: 0, z: 0),
                         DisableCameraCulling = false,// If true will not cull when not in view of camera, be careful with this and only use if you know you need it
                         Extras = new ParticleOptionDef
                         {
-                            Scale = 1,
+                            Scale = 2,
                         },
                     },
                     Eject = new ParticleDef
@@ -647,7 +647,7 @@ namespace Scripts
                         },
                     },
                 },
-                Lines = FX_RAILGUN_LARGE,
+                Lines = FX_RAILGUN_LARGE_2,
             },
             AmmoAudio = new AmmoAudioDef
             {

@@ -15,6 +15,7 @@
                 <Component Subtype="MetalGrid" Count="40" />
                 <Component Subtype="SmallTube" Count="100" />
                 <Component Subtype="Superconductor" Count="2000" />
+                <Component Subtype="GravityGenerator" Count="1600" />
                 <Component Subtype="Detector" Count="50" />
                 <Component Subtype="StealthModule" Count="10" />
                 <Component Subtype="Computer" Count="500" />
@@ -36,6 +37,7 @@
                 <Component Subtype="MetalGrid" Count="20" />
                 <Component Subtype="SmallTube" Count="50" />
                 <Component Subtype="Superconductor" Count="1000" />
+                <Component Subtype="GravityGenerator" Count="800" />
                 <Component Subtype="Detector" Count="25" />
                 <Component Subtype="StealthModule" Count="10" />
                 <Component Subtype="Computer" Count="250" />
@@ -56,6 +58,7 @@
                 <Component Subtype="Construction" Count="40" />
                 <Component Subtype="SmallTube" Count="80" />
                 <Component Subtype="Superconductor" Count="60" />
+                <Component Subtype="GravityGenerator" Count="400" />
                 <Component Subtype="StealthModule" Count="2" />
                 <Component Subtype="Motor" Count="20" />
                 <Component Subtype="SteelPlate" Count="40" />
@@ -75,6 +78,7 @@
                 <Component Subtype="Construction" Count="20" />
                 <Component Subtype="SmallTube" Count="40" />
                 <Component Subtype="Superconductor" Count="30" />
+                <Component Subtype="GravityGenerator" Count="400" />
                 <Component Subtype="StealthModule" Count="1" />
                 <Component Subtype="Motor" Count="10" />
                 <Component Subtype="SteelPlate" Count="20" />
