@@ -9,7 +9,7 @@
 			<DisplayName>Entropic Disintegrator</DisplayName>
 			<Description>Entropic Disintegrators draw on the tremendous power of singularity-based energy systems to convert exotic matter into a particle stream directed with locally generated entropic force.</Description>
 			<Icon>Textures\GUI\Icons\Cubes\EntropicDisintegrator.dds</Icon>
-			<Public>true</Public>
+			<Public>false</Public>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
 			<Size x="3" y="3" z="3"/>
