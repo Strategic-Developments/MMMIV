@@ -46,7 +46,7 @@ namespace Scripts
             TerminalName = "AP", // Optional terminal name for this ammo type, used when picking ammo/cycling consumables.  Safe to have duplicates across different ammo defs.
             HybridRound = true, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 120, // Modified in MasterConfig here, actually just the power requirement needed to fire at 1.0 ROF scalar  If patterning ammos, only the main ammo (first fired) will count toward energy.
-            BaseDamage = 17000 * 8, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 17000 * 14, // Direct damage; one steel plate is worth 100.
             BaseDamageCutoff = 0,  // Maximum amount of pen damage to apply per block hit.  Deducts from BaseDamage and uses DamageScales modifiers
                                    // Optional penetration mechanic to apply damage to blocks beyond the first hit, without requiring the block to be destroyed.  
                                    // Overwrites normal damage behavior of requiring a block to be destroyed before damage can continue.  0 disables. 
@@ -871,7 +871,7 @@ namespace Scripts
                 {
                     Enable = true,
                     Radius = 5f, // Radius of AOE effect, in meters.
-                    Damage = 24000f,
+                    Damage = 100000f,
                     Depth = 3f, // Max depth of AOE effect, in meters. 0=disabled, and AOE effect will reach to a depth of the radius value
                     MaxAbsorb = 0f, // Soft cutoff for damage (total, against shields or grids), except for pooled falloff.  If pooled falloff, limits max damage per block.
                     Falloff = Curve, // Options:
