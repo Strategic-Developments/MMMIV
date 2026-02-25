@@ -13,6 +13,7 @@
 				<IsExplosive>true</IsExplosive>
 				<BackkickForce>0</BackkickForce>
 				<PhysicalMaterial>Missile</PhysicalMaterial>
+				<ExplosiveDamageMultiplier>0</ExplosiveDamageMultiplier>
 			</BasicProperties>
 			<MissileProperties>
 				<MissileMass>1</MissileMass>
