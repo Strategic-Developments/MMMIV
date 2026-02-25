@@ -167,7 +167,7 @@ namespace Scripts
                     SkipBarrels = 0, // Number of muzzles to skip after each fire event.
                     ReloadTime = 10 * 60, // Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     MagsToLoad = 1, // Number of physical magazines to consume on reload.
-                    DelayUntilFire = 2 * 60, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
+                    DelayUntilFire = 0, // How long the weapon waits before shooting after being told to fire. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
                     HeatPerShot = (int)(1500000f / (3600f / 60f)), // Heat generated per shot (BarrelsPerShot * HeatPerShot is the total heat per firing event).
                     MaxHeat = 300000000, // Max heat before weapon enters cooldown (70% of max heat).
                     Cooldown = 0f, // Percentage of max heat to be under to start firing again after overheat; accepts 0 - 0.95
@@ -186,7 +186,7 @@ namespace Scripts
                     ProhibitCoolingWhenOff = true, // If true, prevents blocks that are turned off from cooling down over time
                     ShotsInBurst = 0, // Use this if you don't want the weapon to fire an entire physical magazine in one go. Should not be more than your magazine capacity.
                     DelayAfterBurst = 0, // How long to spend "reloading" after each burst. Measured in game ticks (6 = 100ms, 60 = 1 seconds, etc..).
-                    FireFull = true, // Whether the weapon should fire the full magazine (or the full burst instead if ShotsInBurst > 0), even if the target is lost or the player stops firing prematurely.
+                    FireFull = false, // Whether the weapon should fire the full magazine (or the full burst instead if ShotsInBurst > 0), even if the target is lost or the player stops firing prematurely.
                     GiveUpAfter = false, // Whether the weapon should drop its current target and reacquire a new target after finishing its magazine or burst.
                     BarrelSpinRate = 0, // 0 disables and uses RateOfFire.  If slower than ROF, will increase time to spin up and start shooting.
                     DeterministicSpin = false, // Spin barrel position will always be relative to initial / starting positions (spin will not be as smooth).
@@ -247,9 +247,16 @@ namespace Scripts
             },
             Ammos = new[] {
                mss_lg_t_entropic_ammo,
+               mss_lg_t_entropic_ammo_pd,
                mss_lg_t_entropic_ammo_big,
-               mss_lg_t_entropic_ammo_big_expl,
-               mss_lg_t_entropic_ammo_blank
+               EntropicMissileShrapnel(1, Vector(0,0,0), Vector2(90, 0)),
+               EntropicMissileShrapnel(2, Vector(0,0,0), Vector2(-90, 0)),
+               EntropicMissileShrapnel(3, Vector(0,0,0), Vector2(0, 90)),
+               EntropicMissileShrapnel(4, Vector(0,0,0), Vector2(0, -90)),
+               EntropicMissileShrapnel(5, Vector(0,0,0), Vector2(45, 45)),
+               EntropicMissileShrapnel(6, Vector(0,0,0), Vector2(-45, 45)),
+               EntropicMissileShrapnel(7, Vector(0,0,0), Vector2(-45, -45)),
+               EntropicMissileShrapnel(8, Vector(0,0,0), Vector2(45, -45)),
             },
             Animations = EntroAnimation,
             //Upgrades = UpgradeModules,

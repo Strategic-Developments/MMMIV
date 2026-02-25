@@ -435,7 +435,7 @@ namespace Scripts
             TerminalName = "JDDT", // Optional terminal name for this ammo type, used when picking ammo/cycling consumables.  Safe to have duplicates across different ammo defs.
             HybridRound = true, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 50, // Modified in MasterConfig here, actually just the power requirement needed to fire at 1.0 ROF scalar  If patterning ammos, only the main ammo (first fired) will count toward energy.
-            BaseDamage = 1, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 0, // Direct damage; one steel plate is worth 100.
             BaseDamageCutoff = 0,  // Maximum amount of pen damage to apply per block hit.  Deducts from BaseDamage and uses DamageScales modifiers
                                    // Optional penetration mechanic to apply damage to blocks beyond the first hit, without requiring the block to be destroyed.
                                    // Overwrites normal damage behavior of requiring a block to be destroyed before damage can continue.  0 disables. 
