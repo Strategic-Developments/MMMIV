@@ -77,6 +77,8 @@ namespace Meridian
                     continue;
                 }
 
+                
+
                 switch (definition.Id.SubtypeName)
                 {
                     case "Position0080_NATO_25x184mmMagazine":
@@ -239,6 +241,14 @@ namespace Meridian
                         }
                     }
                     AllBlockCosts.Add(def.Id, totalCost);
+
+                    if (def.Id.TypeId.ToString().Replace(MyObjectBuilderType.LEGACY_TYPE_PREFIX, "") == "Wheel")
+                    {
+                        foreach (var component in def.Components)
+                            component.Count *= 2;
+
+                        def.GeneralDamageMultiplier = 15.68f;
+                    }
 
                     switch (def.Id.ToString().Replace(MyObjectBuilderType.LEGACY_TYPE_PREFIX, ""))
                     {

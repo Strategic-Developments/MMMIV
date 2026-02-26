@@ -15,19 +15,17 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Sensors\SET-2 Panels\Flat\SOFL_SET2_Flat.mwm</Model>
 			<Components>
-  				<Component Subtype="SteelPlate" Count="15"/>
-  				<Component Subtype="Construction" Count="35"/>
-  				<Component Subtype="SmallTube" Count="15"/>
-  				<Component Subtype="LargeTube" Count="10"/>
-  				<Component Subtype="Girder" Count="10"/>
-  				<Component Subtype="PowerCell" Count="15"/>
-  				<Component Subtype="MetalGrid" Count="80"/>
-  				<Component Subtype="Detector" Count="125"/>
-  				<Component Subtype="RadioCommunication" Count="125"/>
-  				
-  				<Component Subtype="SteelPlate" Count="100"/>
+				<Component Subtype="SteelPlate" Count="4"/>
+				<Component Subtype="Construction" Count="10"/>
+				<Component Subtype="SmallTube" Count="7"/>
+				<Component Subtype="LargeTube" Count="10"/>
+				<Component Subtype="Motor" Count="2"/>
+				<Component Subtype="MetalGrid" Count="25"/>
+				<Component Subtype="Detector" Count="20"/>
+				<Component Subtype="RadioCommunication" Count="60"/>
+				<Component Subtype="SteelPlate" Count="5"/>
 			</Components>
-			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<CriticalComponent Subtype="RadioCommunication" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
 				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
@@ -91,19 +89,17 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Sensors\SET-2 Panels\1x1\SOFL_SET2_1x1.mwm</Model>
 			<Components>
-  				<Component Subtype="SteelPlate" Count="15"/>
-  				<Component Subtype="Construction" Count="35"/>
-  				<Component Subtype="SmallTube" Count="15"/>
-  				<Component Subtype="LargeTube" Count="10"/>
-  				<Component Subtype="Girder" Count="10"/>
-  				<Component Subtype="PowerCell" Count="15"/>
-  				<Component Subtype="MetalGrid" Count="80"/>
-  				<Component Subtype="Detector" Count="125"/>
-  				<Component Subtype="RadioCommunication" Count="125"/>
-  				 
-  				<Component Subtype="SteelPlate" Count="100"/>
+				<Component Subtype="SteelPlate" Count="4"/>
+				<Component Subtype="Construction" Count="10"/>
+				<Component Subtype="SmallTube" Count="7"/>
+				<Component Subtype="LargeTube" Count="10"/>
+				<Component Subtype="Motor" Count="2"/>
+				<Component Subtype="MetalGrid" Count="25"/>
+				<Component Subtype="Detector" Count="20"/>
+				<Component Subtype="RadioCommunication" Count="60"/>
+				<Component Subtype="SteelPlate" Count="5"/>
 			</Components>
-			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<CriticalComponent Subtype="RadioCommunication" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
 				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
@@ -133,19 +129,17 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Sensors\SET-2 Panels\1x1 corner\SOFL_SET2_1x1_Corner.mwm</Model>
 			<Components>
-  				<Component Subtype="SteelPlate" Count="15"/>
-  				<Component Subtype="Construction" Count="35"/>
-  				<Component Subtype="SmallTube" Count="15"/>
-  				<Component Subtype="LargeTube" Count="10"/>
-  				<Component Subtype="Girder" Count="10"/>
-  				<Component Subtype="PowerCell" Count="15"/>
-  				<Component Subtype="MetalGrid" Count="80"/>
-  				<Component Subtype="Detector" Count="125"/>
-  				<Component Subtype="RadioCommunication" Count="125"/>
-  				 
-  				<Component Subtype="SteelPlate" Count="100"/>
+				<Component Subtype="SteelPlate" Count="4"/>
+				<Component Subtype="Construction" Count="10"/>
+				<Component Subtype="SmallTube" Count="7"/>
+				<Component Subtype="LargeTube" Count="10"/>
+				<Component Subtype="Motor" Count="2"/>
+				<Component Subtype="MetalGrid" Count="25"/>
+				<Component Subtype="Detector" Count="20"/>
+				<Component Subtype="RadioCommunication" Count="60"/>
+				<Component Subtype="SteelPlate" Count="5"/>
 			</Components>
-			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<CriticalComponent Subtype="RadioCommunication" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
 				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
@@ -177,19 +171,17 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Sensors\SET-2 Panels\1X1 corner offset\SOFL_SET2_1x1_Corner_Offset.mwm</Model>
 			<Components>
-  				<Component Subtype="SteelPlate" Count="15"/>
-  				<Component Subtype="Construction" Count="35"/>
-  				<Component Subtype="SmallTube" Count="15"/>
-  				<Component Subtype="LargeTube" Count="10"/>
-  				<Component Subtype="Girder" Count="10"/>
-  				<Component Subtype="PowerCell" Count="15"/>
-  				<Component Subtype="MetalGrid" Count="80"/>
-  				<Component Subtype="Detector" Count="125"/>
-  				<Component Subtype="RadioCommunication" Count="125"/>
-  				 
-  				<Component Subtype="SteelPlate" Count="100"/>
+				<Component Subtype="SteelPlate" Count="4"/>
+				<Component Subtype="Construction" Count="10"/>
+				<Component Subtype="SmallTube" Count="7"/>
+				<Component Subtype="LargeTube" Count="10"/>
+				<Component Subtype="Motor" Count="2"/>
+				<Component Subtype="MetalGrid" Count="25"/>
+				<Component Subtype="Detector" Count="20"/>
+				<Component Subtype="RadioCommunication" Count="60"/>
+				<Component Subtype="SteelPlate" Count="5"/>
 			</Components>
-			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<CriticalComponent Subtype="RadioCommunication" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="1.00"/>
 				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
@@ -222,19 +214,17 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Sensors\SET-2 Panels\1x1 offset\SOFL_SET2_1x1_Offset.mwm</Model>
 			<Components>
-  				<Component Subtype="SteelPlate" Count="15"/>
-  				<Component Subtype="Construction" Count="35"/>
-  				<Component Subtype="SmallTube" Count="15"/>
-  				<Component Subtype="LargeTube" Count="10"/>
-  				<Component Subtype="Girder" Count="10"/>
-  				<Component Subtype="PowerCell" Count="15"/>
-  				<Component Subtype="MetalGrid" Count="80"/>
-  				<Component Subtype="Detector" Count="125"/>
-  				<Component Subtype="RadioCommunication" Count="125"/>
-  				 
-  				<Component Subtype="SteelPlate" Count="100"/>
+				<Component Subtype="SteelPlate" Count="4"/>
+				<Component Subtype="Construction" Count="10"/>
+				<Component Subtype="SmallTube" Count="7"/>
+				<Component Subtype="LargeTube" Count="10"/>
+				<Component Subtype="Motor" Count="2"/>
+				<Component Subtype="MetalGrid" Count="25"/>
+				<Component Subtype="Detector" Count="20"/>
+				<Component Subtype="RadioCommunication" Count="60"/>
+				<Component Subtype="SteelPlate" Count="5"/>
 			</Components>
-			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<CriticalComponent Subtype="RadioCommunication" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
 				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
@@ -264,19 +254,17 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Sensors\SET-2 Panels\1x2\SOFL_SET2_1x2.mwm</Model>
 			<Components>
-  				<Component Subtype="SteelPlate" Count="15"/>
-  				<Component Subtype="Construction" Count="35"/>
-  				<Component Subtype="SmallTube" Count="15"/>
-  				<Component Subtype="LargeTube" Count="10"/>
-  				<Component Subtype="Girder" Count="10"/>
-  				<Component Subtype="PowerCell" Count="15"/>
-  				<Component Subtype="MetalGrid" Count="80"/>
-  				<Component Subtype="Detector" Count="125"/>
-  				<Component Subtype="RadioCommunication" Count="125"/>
-  				 
-  				<Component Subtype="SteelPlate" Count="100"/>
+				<Component Subtype="SteelPlate" Count="4"/>
+				<Component Subtype="Construction" Count="10"/>
+				<Component Subtype="SmallTube" Count="7"/>
+				<Component Subtype="LargeTube" Count="10"/>
+				<Component Subtype="Motor" Count="2"/>
+				<Component Subtype="MetalGrid" Count="25"/>
+				<Component Subtype="Detector" Count="20"/>
+				<Component Subtype="RadioCommunication" Count="60"/>
+				<Component Subtype="SteelPlate" Count="5"/>
 			</Components>
-			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<CriticalComponent Subtype="RadioCommunication" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
 				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
@@ -306,19 +294,17 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Sensors\SET-2 Panels\1x2 offset\SOFL_SET2_1x2_Offset.mwm</Model>
 			<Components>
-  				<Component Subtype="SteelPlate" Count="15"/>
-  				<Component Subtype="Construction" Count="35"/>
-  				<Component Subtype="SmallTube" Count="15"/>
-  				<Component Subtype="LargeTube" Count="10"/>
-  				<Component Subtype="Girder" Count="10"/>
-  				<Component Subtype="PowerCell" Count="15"/>
-  				<Component Subtype="MetalGrid" Count="80"/>
-  				<Component Subtype="Detector" Count="125"/>
-  				<Component Subtype="RadioCommunication" Count="125"/>
-  				 
-  				<Component Subtype="SteelPlate" Count="100"/>
+				<Component Subtype="SteelPlate" Count="4"/>
+				<Component Subtype="Construction" Count="10"/>
+				<Component Subtype="SmallTube" Count="7"/>
+				<Component Subtype="LargeTube" Count="10"/>
+				<Component Subtype="Motor" Count="2"/>
+				<Component Subtype="MetalGrid" Count="25"/>
+				<Component Subtype="Detector" Count="20"/>
+				<Component Subtype="RadioCommunication" Count="60"/>
+				<Component Subtype="SteelPlate" Count="5"/>
 			</Components>
-			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<CriticalComponent Subtype="RadioCommunication" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="1.00" EndY="2.00"/>
 				<MountPoint Side="Left" StartX="0.00" StartY="0.00" EndX="2.00" EndY="2.00"/>
@@ -348,19 +334,17 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Sensors\SET-2 Panels\Flat Half\SOFL_SET2_Flat_Half.mwm</Model>
 			<Components>
-  				<Component Subtype="SteelPlate" Count="15"/>
-  				<Component Subtype="Construction" Count="35"/>
-  				<Component Subtype="SmallTube" Count="15"/>
-  				<Component Subtype="LargeTube" Count="10"/>
-  				<Component Subtype="Girder" Count="10"/>
-  				<Component Subtype="PowerCell" Count="15"/>
-  				<Component Subtype="MetalGrid" Count="80"/>
-  				<Component Subtype="Detector" Count="125"/>
-  				<Component Subtype="RadioCommunication" Count="125"/>
-  				 
-  				<Component Subtype="SteelPlate" Count="100"/>
+				<Component Subtype="SteelPlate" Count="4"/>
+				<Component Subtype="Construction" Count="10"/>
+				<Component Subtype="SmallTube" Count="7"/>
+				<Component Subtype="LargeTube" Count="10"/>
+				<Component Subtype="Motor" Count="2"/>
+				<Component Subtype="MetalGrid" Count="25"/>
+				<Component Subtype="Detector" Count="20"/>
+				<Component Subtype="RadioCommunication" Count="60"/>
+				<Component Subtype="SteelPlate" Count="5"/>
 			</Components>
-			<CriticalComponent Subtype="MetalGrid" Index="0"/>
+			<CriticalComponent Subtype="RadioCommunication" Index="0"/>
 			<MountPoints>
 				<MountPoint Side="Front" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>
 				<MountPoint Side="Back" StartX="0.00" StartY="0.00" EndX="2.00" EndY="1.00"/>

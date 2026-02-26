@@ -67,17 +67,17 @@ namespace Scripts
         const float INV_FILL_AMOUNT = 0.95f;
         const float INV_LOW_AMOUNT = 0.6f;
 
-        const float VERYCLOSE_RANGE = 2500;
-        const float CLOSE_RANGE = 5000;
-        const float MEDIUM_RANGE = 10000;
+        const float VERYCLOSE_RANGE = 3000;
+        const float CLOSE_RANGE = 7500;
+        const float MEDIUM_RANGE = 12500;
         const float LONG_RANGE = 20000;
 
         const float ROTATE_CONSTANT = (float)(Math.PI / (180d * 60d));
         const float PD_ROTATE_SPEED = 1800f * ROTATE_CONSTANT;
-        const float FAST_ROTATE_SPEED = 120f * ROTATE_CONSTANT;
-        const float MEDIUM_ROTATE_SPEED = 60f * ROTATE_CONSTANT;
-        const float SLOW_ROTATE_SPEED = 30f * ROTATE_CONSTANT;
-        const float VERYSLOW_ROTATE_SPEED = 15f * ROTATE_CONSTANT;
+        const float FAST_ROTATE_SPEED = 240f * ROTATE_CONSTANT;
+        const float MEDIUM_ROTATE_SPEED = 120f * ROTATE_CONSTANT;
+        const float SLOW_ROTATE_SPEED = 60f * ROTATE_CONSTANT;
+        const float VERYSLOW_ROTATE_SPEED = 40f * ROTATE_CONSTANT;
 
         public readonly TargetingDef.BlockTypes[] SUBSYSTEMS_TARGETING = new[]
         {

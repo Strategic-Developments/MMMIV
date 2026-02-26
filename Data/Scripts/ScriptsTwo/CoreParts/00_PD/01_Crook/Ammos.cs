@@ -737,7 +737,7 @@ namespace Scripts
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
             {
                 AmmoRound = "mss_lg_t_crook_ammo_shrapnel", // AmmoRound field of the ammo to spawn.
-                Fragments = 120, // Number of projectiles to spawn.
+                Fragments = 60, // Number of projectiles to spawn.
                 Degrees = 360, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = false, // Spawn projectiles backward instead of forward.
                 DropVelocity = true, // fragments will not inherit velocity from parent.
@@ -1020,7 +1020,7 @@ namespace Scripts
             TerminalName = "Shrapnel", // Optional terminal name for this ammo type, used when picking ammo/cycling consumables.  Safe to have duplicates across different ammo defs.
             HybridRound = false, // Use both a physical ammo magazine and energy per shot.
             EnergyCost = 1f, // Modified in MasterConfig here, actually just the power requirement needed to fire at 1.0 ROF scalar
-            BaseDamage = 500f, // Direct damage; one steel plate is worth 100.
+            BaseDamage = 2000f, // Direct damage; one steel plate is worth 100.
             BaseDamageCutoff = 0,   // Maximum amount of pen damage to apply per block hit.  Deducts from BaseDamage and uses DamageScales modifiers
                                     // Optional penetration mechanic to apply damage to blocks beyond the first hit, without requiring the block to be destroyed.  
                                     // Overwrites normal damage behavior of requiring a block to be destroyed before damage can continue.  0 disables. 
@@ -1319,7 +1319,7 @@ namespace Scripts
             AmmoGraphics = new GraphicDef
             {
                 ModelName = "", // Model Path goes here.  "\\Models\\Ammo\\Starcore_Arrow_Missile_Large"
-                VisualProbability = 0.25f, // %
+                VisualProbability = 0.2f, // %
                 ShieldHitDraw = false,
                 Lines = new LineDef
                 {
