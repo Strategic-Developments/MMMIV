@@ -247,6 +247,7 @@ namespace Scripts
             },
             Ammos = new[] {
                 mss_lg_t_amunra_ammo,
+                mss_lg_t_amunra_ammo_shrapnel,
                 mss_lg_t_amunra_ammo_special,
                 mss_lg_t_amunra_ammo_special_shrapnel
             },
