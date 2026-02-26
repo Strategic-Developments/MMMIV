@@ -65,7 +65,7 @@ namespace Scripts
                 UniqueTargetPerWeapon = false, // only applies to multi-weapon blocks 
                 MaxTrackingTime = 0, // After this time has been reached the weapon will stop tracking existing target and scan for a new one
                 ShootBlanks = false, // Do not generate projectiles when shooting
-                FocusOnly = true, // This weapon can only track focus targets.
+                FocusOnly = false, // This weapon can only track focus targets.
                 EvictUniqueTargets = false, // if this is set it will evict any weapons set to UniqueTargetPerWeapon unless they to have this set
                 Communications = new CommunicationDef
                 {
@@ -153,15 +153,15 @@ namespace Scripts
                     RotateBarrelAxis = 0, // For spinning barrels, which axis to spin the barrel around; 0 = none.
                     EnergyPriority = 0, // Deprecated.
                     MuzzleCheck = false, // Whether the weapon should check LOS from each individual muzzle in addition to the scope.
-                    AllowScopeOutsideObb = false, // If true, the actual scope position will be used regardless if it is outside the bounds of the weapon block.  If false (default) the ray origin will be adjusted to be inside the bounds.
+                    AllowScopeOutsideObb = true, // If true, the actual scope position will be used regardless if it is outside the bounds of the weapon block.  If false (default) the ray origin will be adjusted to be inside the bounds.
                     DisableLosCheck = true, // Do not perform LOS checks at all... not advised for self tracking weapons
-                    NoVoxelLosCheck = false, // If set to true this ignores voxels for LOS checking.. which means weapons will fire at targets behind voxels.  However, this can save cpu in some situations, use with caution. 
+                    NoVoxelLosCheck = true, // If set to true this ignores voxels for LOS checking.. which means weapons will fire at targets behind voxels.  However, this can save cpu in some situations, use with caution. 
                     Debug = DEBUG_MODE, // Force enables debug mode - will output damage stats to WC log.
                     RestrictionRadius = 0, // Prevents other blocks of this type from being placed within this distance of the centre of the block.
                     CheckInflatedBox = false, // If true, the above distance check is performed from the edge of the block instead of the centre.
                     CheckForAnyWeapon = false, // If true, the check will fail if ANY weapon is present, not just weapons of the same subtype.
                     ProhibitLGTargeting = false, // If true, prohibits block from targeting Large Grids (best used in server-specific weapon packs)
-                    ProhibitSGTargeting = true, // If true, prohibits block from targeting Small Grids (best used in server-specific weapon packs)
+                    ProhibitSGTargeting = false, // If true, prohibits block from targeting Small Grids (best used in server-specific weapon packs)
                     ProhibitSubsystemChanges = false,
                 },
                 Loading = new LoadingDef
