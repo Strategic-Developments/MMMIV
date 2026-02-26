@@ -122,7 +122,7 @@ namespace Meridian
 
                     if (definition.Id.SubtypeName.Contains("Uranium"))
                     {
-                        definition.BaseProductionTimeInSeconds = 1 / 15f;
+                        definition.BaseProductionTimeInSeconds = 1 / 10f;
                     }
                 }
 
@@ -186,7 +186,7 @@ namespace Meridian
                         case "CoordsNetwork":
                             break;
                         default:
-                            definition.BaseProductionTimeInSeconds = 1 / 60f;
+                            definition.BaseProductionTimeInSeconds = 1 / 15f;
                             break;
                     }
                 }
