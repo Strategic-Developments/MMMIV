@@ -79,6 +79,8 @@ namespace Scripts
         const float SLOW_ROTATE_SPEED = 60f * ROTATE_CONSTANT;
         const float VERYSLOW_ROTATE_SPEED = 40f * ROTATE_CONSTANT;
 
+        const float FLECHETTE_DEVIATION = 0.35f;
+
         public readonly TargetingDef.BlockTypes[] SUBSYSTEMS_TARGETING = new[]
         {
             Jumping, Thrust, TargetingDef.BlockTypes.Offense, Power, Utility, Any,
@@ -214,16 +216,16 @@ namespace Scripts
             TrailLength: 25
             );
 
-        internal LineDef FX_RAILGUN_LARGE => GenericTracer(
-            ShellColor: Color(0.7f, 0.8f, 1f, 0.015f) * 50f,
-            ShellLength: 125f,
-            ShellWidth: 1.5f,
-            TrailColor: Color(0.5f, 0.6f, 1f, 0.02f) * 30f, //Color(0.4f, 0.5f, 1f, 0.01f) * 15f,
-            TrailWidth: 1.2f,
-            TrailLength: 30
+        internal LineDef FX_RAILGUN_MEDIUM_ORANGE => GenericTracer(
+            ShellColor: Color(0.7f, 0.8f, 1f, 0.015f) * 40f,
+            ShellLength: 75f,
+            ShellWidth: 1.2f,
+            TrailColor: Color(1f, 0.6f, 0.4f, 0.02f) * 26f, //Color(0.4f, 0.5f, 1f, 0.01f) * 15f,
+            TrailWidth: 1.0f,
+            TrailLength: 25
             );
 
-        internal LineDef FX_RAILGUN_LARGE_2 => GenericTracer(
+        internal LineDef FX_RAILGUN_LARGE => GenericTracer(
             ShellColor: Color(0.7f, 0.8f, 1f, 0.015f) * 50f,
             ShellLength: 125f,
             ShellWidth: 1.5f,

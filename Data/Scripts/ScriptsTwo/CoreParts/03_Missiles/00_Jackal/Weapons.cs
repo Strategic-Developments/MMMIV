@@ -61,7 +61,7 @@ namespace Scripts
                 CycleTargets = 0, // Number of targets to check per acquire attempt before giving up for the remainder of the tick and re-rolling any RNG; 0 = unlimited
                 TopBlocks = 15, // Number of potential block targets to randomize, then go in list order; 0 = no randomization, goes in order of internal lists for block subtypes found
                 CycleBlocks = 0, // Number of blocks to check per acquire attempt before giving up for the remainder of the tick and re-rolling any RNG; 0 = unlimited
-                StopTrackingSpeed = 0, // Do not track threats traveling faster than this speed; 0 = unlimited.
+                StopTrackingSpeed = RAILGUN_VELOCITY * 0.85f, // Do not track threats traveling faster than this speed; 0 = unlimited.
                 UniqueTargetPerWeapon = false, // only applies to multi-weapon blocks 
                 MaxTrackingTime = 0, // After this time has been reached the weapon will stop tracking existing target and scan for a new one
                 ShootBlanks = false, // Do not generate projectiles when shooting
