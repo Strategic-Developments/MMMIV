@@ -7,7 +7,7 @@
 				<SubtypeId>mss_mk1_salvager</SubtypeId>
 			</Id>
 			<DisplayName>Laser Salvager MKI</DisplayName>
-			<Description>An advanced chemical laser tool designed to cut apart salvage into usable components, with a 200 meter range. Mark I version. Multiplies your RCS by 25x. Requires 150MW.</Description>
+			<Description>An advanced chemical laser tool designed to cut apart salvage into usable components, with a 200 meter range. Mark I version. Multiplies your RCS by 10x. Requires 150MW.</Description>
 			<Icon>Textures\GUI\Icons\Cubes\MKOneTool.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -101,7 +101,7 @@
 				<SubtypeId>mss_mk2_salvager</SubtypeId>
 			</Id>
 			<DisplayName>Laser Salvager MKII</DisplayName>
-			<Description>An even more advanced chemical laser tool designed to cut apart salvage into usable components, with a 200 meter range. Mark II version. Multiplies your RCS by 50x. Requires 300MW. </Description>
+			<Description>An even more advanced chemical laser tool designed to cut apart salvage into usable components, with a 200 meter range. Mark II version. Multiplies your RCS by 15x. Requires 300MW. </Description>
 			<Icon>Textures\GUI\Icons\Cubes\MKTwoTool.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>

@@ -1,18 +1,13 @@
 ﻿<?xml version="1.0" ?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <CubeBlocks>
-
-
-
-
-
         <Definition xsi:type="MyObjectBuilder_ConveyorSorterDefinition">
            <Id>
                 <TypeId>ConveyorSorter</TypeId>
                 <SubtypeId>LG_Simple_Laser_Multitool</SubtypeId>
             </Id>
             <DisplayName>Simple Laser Multitool</DisplayName>
-            <Description>A multipurpose welder and grinder laser tool. Range of 300m. Multiplies your RCS by 10 when on.</Description>
+            <Description>A multipurpose welder and grinder laser tool. Range of 300m. Multiplies your RCS by 5 when on.</Description>
 			<Icon>Textures\GUI\Icons\Cubes\SimpleLaserMultitool.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -277,7 +272,7 @@
             </Id>
             <DisplayName>Simple Laser Multitool Turret</DisplayName>
 			<Icon>Textures\GUI\Icons\Cubes\LG_SimpleLaserMultitool_Turret.dds</Icon>
-            <Description>A multipurpose welder and grinder laser turret. Range of 300m.Multiplies your RCS by 25 when on.</Description>
+            <Description>A multipurpose welder and grinder laser turret. Range of 300m.Multiplies your RCS by 10 when on.</Description>
 			<CubeSize>Large</CubeSize>
             <GuiVisible>false</GuiVisible>
             <BlockTopology>TriangleMesh</BlockTopology>
@@ -553,7 +548,7 @@
                 <SubtypeId>SG_Simple_Laser_Multitool</SubtypeId>
             </Id>
             <DisplayName>Simple Laser Multitool</DisplayName>
-            <Description>A multipurpose welder and grinder laser tool. Range of 100m. Multiplies your RCS by 100 when on.</Description>
+            <Description>A multipurpose welder and grinder laser tool. Range of 100m. Multiplies your RCS by 500 when on.</Description>
             <CubeSize>Small</CubeSize>
             <GuiVisible>false</GuiVisible>
 			<Icon>Textures\GUI\Icons\Cubes\SG_SimpleLaserMultitool.dds</Icon>
