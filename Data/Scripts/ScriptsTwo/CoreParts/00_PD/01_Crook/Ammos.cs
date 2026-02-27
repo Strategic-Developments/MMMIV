@@ -1911,7 +1911,7 @@ namespace Scripts
             },
             AmmoGraphics = new GraphicDef
             {
-                ModelName = "\\Models\\items\\CustosAmmoSTG2.mwm", // Model Path goes here.  "\\Models\\Ammo\\Starcore_Arrow_Missile_Large"
+                ModelName = "", // Model Path goes here.  "\\Models\\Ammo\\Starcore_Arrow_Missile_Large"
                 VisualProbability = 1f, // 0-1 % chance of AV appearing (controls all audio AND visual)
                 ShieldHitDraw = false,
                 Decals = new DecalDef
