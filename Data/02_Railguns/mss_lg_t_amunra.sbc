@@ -152,7 +152,7 @@
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_amunra_ammomagazine_special"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
-			<Icon>Textures\GUI\Icons\Cubes\AmunRa.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\IIAmunRa.dds</Icon>
 		</Blueprint>
 	</Blueprints>
 	<BlueprintClassEntries>

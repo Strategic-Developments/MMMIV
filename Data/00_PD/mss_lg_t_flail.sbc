@@ -132,7 +132,7 @@
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_flail_ammomagazine_special"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
-			<Icon>Textures\GUI\Icons\Cubes\FlailBase.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\IIFlail.dds</Icon>
 		</Blueprint>
 	</Blueprints>
 	<BlueprintClassEntries><!--BLUEPRINT CLASS ENTRY DEFINITION-->

@@ -151,7 +151,7 @@
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_apophis_ammomagazine_special"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
-			<Icon>Textures\GUI\Icons\Cubes\CustosBase.png</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\Flechette_Apophis.dds</Icon>
 		</Blueprint>
 	</Blueprints>
 	<BlueprintClassEntries>

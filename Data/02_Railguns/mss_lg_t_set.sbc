@@ -145,7 +145,7 @@
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_set_ammomagazine_special"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
-			<Icon>Textures\GUI\Icons\Cubes\SetTurretBase.dds</Icon>
+			<Icon>Textures\GUI\Icons\Cubes\IISet.dds</Icon>
 		</Blueprint>
 	</Blueprints>
 	<BlueprintClassEntries>
