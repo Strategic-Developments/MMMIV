@@ -28,7 +28,7 @@ namespace SRRadarStats
                     MaxRadiatedPower = 75000, // radiated power of the radar, in kilowatts
                     Gain = 394, // gain of the radar, in decibels. Must be above 0
                     Sensitivity = -40, // sensitivity of the radar, in decibels
-                    MaxSearchRange = 500000, // maximum range radar will return targets, regardless of other settings, in meters
+                    MaxSearchRange = 750000, // maximum range radar will return targets, regardless of other settings, in meters
 
                     ApertureSize = 100, // aperture size of the radar, in meters^2
                     NoiseFilter = 0, // noise filter of the radar, in decibels
@@ -41,7 +41,7 @@ namespace SRRadarStats
                                           // When a guided missile from Vanilla+ fired from a grid with a radar locking another grid lacks a target, Neb. Radar will provide it with the radar's target lock, assuming a valid block exists on the target exists. Should multiple targets be locked by one grid, the missile will choose the closest one.
                     LOSCheckIncludesParentGrid = false,
                     // determines whether the radar's LOS check will include the grid it is on. Useful for radar paneling and such. Subgrids attached to the main grid count as the main grid in this case.
-                    StealthMultiplier = 0.2f, // if the target is cloaked via the Stealth Drive mod (https://steamcommunity.com/sharedfiles/filedetails/?id=2805859069), then the target's RCS is multiplied by this when the radar scans.
+                    StealthMultiplier = 0.05f, // if the target is cloaked via the Stealth Drive mod (https://steamcommunity.com/sharedfiles/filedetails/?id=2805859069), then the target's RCS is multiplied by this when the radar scans.
 
                     CanDetectAllJumps = true, // Determines if the radar can detect and show any jumps caused by any track visible to the radar.
                     CanDetectLockedJumps = false, // Determines if the radar can detect and show any jumps caused by the tracked locked by the radar.
@@ -70,7 +70,7 @@ namespace SRRadarStats
                     MaxRadiatedPower = 50000, // radiated power of the radar, in kilowatts
                     Gain = 175, // gain of the radar, in decibels. Must be above 0
                     Sensitivity = -39, // sensitivity of the radar, in decibels
-                    MaxSearchRange = 400000, // maximum range radar will return targets, regardless of other settings, in meters
+                    MaxSearchRange = 600000, // maximum range radar will return targets, regardless of other settings, in meters
 
                     ApertureSize = 100, // aperture size of the radar, in meters^2
                     NoiseFilter = 0, // noise filter of the radar, in decibels
@@ -83,7 +83,7 @@ namespace SRRadarStats
                                           // When a guided missile from Vanilla+ fired from a grid with a radar locking another grid lacks a target, Neb. Radar will provide it with the radar's target lock, assuming a valid block exists on the target exists. Should multiple targets be locked by one grid, the missile will choose the closest one.
                     LOSCheckIncludesParentGrid = false,
                     // determines whether the radar's LOS check will include the grid it is on. Useful for radar paneling and such. Subgrids attached to the main grid count as the main grid in this case.
-                    StealthMultiplier = 0.1f, // if the target is cloaked via the Stealth Drive mod (https://steamcommunity.com/sharedfiles/filedetails/?id=2805859069), then the target's RCS is multiplied by this when the radar scans.
+                    StealthMultiplier = 0.05f, // if the target is cloaked via the Stealth Drive mod (https://steamcommunity.com/sharedfiles/filedetails/?id=2805859069), then the target's RCS is multiplied by this when the radar scans.
 
                     CanDetectAllJumps = true, // Determines if the radar can detect and show any jumps caused by any track visible to the radar.
                     CanDetectLockedJumps = false, // Determines if the radar can detect and show any jumps caused by the tracked locked by the radar.

@@ -8,7 +8,7 @@
 			</Id>
 			<DisplayName>Radar Station</DisplayName>
 			<Description>
-				Radar which detects grids based off of blockcount and current power use. Max Range: 400km
+				Radar which detects grids based off of blockcount and current power use. Max Range: 600km
 
 0 MW, 1x Mult Detection Ranges:
 1000 blocks: 83km
