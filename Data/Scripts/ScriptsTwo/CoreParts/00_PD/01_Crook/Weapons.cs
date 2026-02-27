@@ -27,7 +27,7 @@ namespace Scripts
                         MuzzlePartId = "elev", // The subpart where your muzzle empties are located. This is often the elevation subpart. Subpart_Boomsticks must be written as Boomsticks.
                         AzimuthPartId = "azim", // Your Rotating Subpart, the bit that moves sideways.
                         ElevationPartId = "elev",// Your Elevating Subpart, that bit that moves up.
-                        DurabilityMod = S1_DAMAGE_MULTIPLIER, // GeneralDamageMultiplier, 0.25f = 25% damage taken.
+                        DurabilityMod = S3_DAMAGE_MULTIPLIER, // GeneralDamageMultiplier, 0.25f = 25% damage taken.
                         IconName = "" // Overlay for block inventory slots, like reactors, refineries, etc.  Looks in mod root folder\Textures\GUI\Icons\
                     },
 
@@ -82,7 +82,7 @@ namespace Scripts
             },
             HardPoint = new HardPointDef
             {
-                PartName = "Flail-Pattern PDC", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
+                PartName = "Crook-Pattern Flak Turret", // Name of the weapon in terminal, should be unique for each weapon definition that shares a SubtypeId (i.e. multiweapons).
                 DeviateShotAngle = 0f, // Projectile inaccuracy in degrees.
                 AimingTolerance = 1f, // How many degrees off target a turret can fire at. 0 - 180 firing angle.
                 AimLeadingPrediction = Accurate, // Level of turret aim prediction; Off (aim straight at target), Basic (doesn't account for target acceleration), Accurate, Advanced (these last two are identical)

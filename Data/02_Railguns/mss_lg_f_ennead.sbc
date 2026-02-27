@@ -26,7 +26,7 @@
 				<Component Subtype="Motor" Count="100"/>
 				<Component Subtype="Display" Count="10"/>
 				<Component Subtype="Computer" Count="400"/>
-				<Component Subtype="CombatModule" Count="10"/>
+				<Component Subtype="CombatModule" Count="5"/>
 				<!-- FUNCTIONAL LINE /\ UP NONFUNCTIONAL -->
 				<Component Subtype="Girder" Count="320"/>
 				<Component Subtype="MetalGrid" Count="440"/>

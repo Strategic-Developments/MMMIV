@@ -401,7 +401,10 @@ namespace Scripts
                     MyCubeBlockDefinition keendef;
                     if (modBlocks.TryGetValue(wep.SubtypeId, out keendef))
                     {
-                        MyLog.Default.WriteLineAndConsole($"{wep.SubtypeId}: {weapon.HardPoint.PartName}");
+                        float integ = keendef.MaxIntegrity / wep.DurabilityMod;
+                        float fnInteg = integ - integ * keendef.CriticalIntegrityRatio;
+
+                        MyLog.Default.WriteLineAndConsole($"{wep.SubtypeId}: {weapon.HardPoint.PartName} / {integ} / {fnInteg}");
 
                         if (keendef is MyLargeTurretBaseDefinition)
                         {
@@ -424,7 +427,9 @@ namespace Scripts
                         var loading = hardpoint.Loading;
                         var targeting = weapon.Targeting;
                         stringBuilder.Append($"\n\nBASIC WEAPON STATS FOR '{hardpoint.PartName}':");
-
+                        stringBuilder.Append(
+                                $"\n{GetTabs(1)}Effective Integ: {integ}; {fnInteg} Functional"
+                            );
                         if (hardpoint.Ui.RateOfFire)
                             stringBuilder.Append(
                                 $"\n{GetTabs(1)}ROF: {loading.RateOfFire * hardpoint.Ui.RateOfFireMin}-{loading.RateOfFire}RPM"

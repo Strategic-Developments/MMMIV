@@ -49,11 +49,11 @@ namespace Scripts
         const bool DEBUG_MODE = false;
         const float C = 299792458;
 
-        public const float S1_DAMAGE_MULTIPLIER = 1;
-        public const float S2_DAMAGE_MULTIPLIER = 1;
-        public const float S3_DAMAGE_MULTIPLIER = 1;
-        public const float S5_DAMAGE_MULTIPLIER = 1;
-        public const float S7_DAMAGE_MULTIPLIER = 1;
+        public const float S1_DAMAGE_MULTIPLIER = 0.6666667f;
+        public const float S2_DAMAGE_MULTIPLIER = 0.5f;
+        public const float S3_DAMAGE_MULTIPLIER = 0.4f;
+        public const float S5_DAMAGE_MULTIPLIER = 0.2f;
+        public const float S7_DAMAGE_MULTIPLIER = 0.25f;
 
         const float PD_SLOW_VELOCITY = 2500;
         const float PD_VELOCITY = 5000;

@@ -53,7 +53,7 @@ namespace Scripts
                 Compile
                 (
                     ToEnumerable(
-                        CreateFromWeapons(Weapons, NonArmor, 4f, 1f)
+                        CreateFromWeapons(Weapons, NonArmor, 2f, 1f)
                     )
                     //CreateThrusterDefinitions()
                 ).ToArray()

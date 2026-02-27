@@ -16,18 +16,17 @@
 			<Model>Models\Cubes\Bastet\BastetBase.mwm</Model>
 			<Components>
 				<Component Subtype="SteelPlate" Count="100"/>
-				<Component Subtype="Construction" Count="150"/>
-				<Component Subtype="MetalGrid" Count="100"/>
-				<Component Subtype="SmallTube" Count="130"/>
-				<Component Subtype="LargeTube" Count="100"/>
-				<Component Subtype="Motor" Count="100"/>
-				<Component Subtype="Display" Count="20"/>
-				<Component Subtype="Computer" Count="450"/>
+				<Component Subtype="Construction" Count="140"/>
+				<Component Subtype="MetalGrid" Count="60"/>
+				<Component Subtype="SmallTube" Count="120"/>
+				<Component Subtype="LargeTube" Count="140"/>
+				<Component Subtype="Motor" Count="88"/>
+				<Component Subtype="Display" Count="36"/>
+				<Component Subtype="Computer" Count="100"/>
 				<!-- FUNCTIONAL LINE /\ UP NONFUNCTIONAL -->
-				<Component Subtype="Girder" Count="320"/>
-				<Component Subtype="MetalGrid" Count="440"/>
-				<Component Subtype="Construction" Count="400"/>
-				<Component Subtype="SteelPlate" Count="400"/>
+				<Component Subtype="MetalGrid" Count="400"/>
+				<Component Subtype="Construction" Count="500"/>
+				<Component Subtype="SteelPlate" Count="430"/>
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>
