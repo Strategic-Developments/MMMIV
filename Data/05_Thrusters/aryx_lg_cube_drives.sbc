@@ -7,7 +7,7 @@
 				<SubtypeId>ARYLNX_Epstein_Drive</SubtypeId>
 			</Id>
 			<DisplayName>RT6-B &quot;MORRIGAN&quot; Epstein Drive</DisplayName>
-			<Description>Basic 3x3 drive with decent efficiency. +80% multiplicative RCS signature</Description>
+			<Description>Basic 3x3 drive with decent efficiency. 1.5x multiplicative RCS signature</Description>
 			<Icon>Textures\GUI\Icons\ARYLYN_MRG_Epstein_Drive.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -120,7 +120,7 @@
 				<SubtypeId>ARYLNX_MUNR_Epstein_Drive</SubtypeId>
 			</Id>
 			<DisplayName>S-100 &quot;MUNROE&quot; Light Epstein Drive</DisplayName>
-			<Description>Basic 3x3 drive with decent efficiency. +80% multiplicative RCS signature</Description>
+			<Description>Basic 3x3 drive with decent efficiency. 1.5x multiplicative RCS signature</Description>
 			<Icon>Textures\GUI\Icons\ARYLYN_MUNR_Epstein_Drive.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -199,7 +199,7 @@
 				<SubtypeId>ARYLNX_PNDR_Epstein_Drive</SubtypeId>
 			</Id>
 			<DisplayName>N22 &quot;PANDORA-II&quot; Epstein Drive</DisplayName>
-			<Description>Basic 3x3 drive with decent efficiency. +80% multiplicative RCS signature</Description>
+			<Description>Basic 3x3 drive with decent efficiency. 1.5x multiplicative RCS signature</Description>
 			<Icon>Textures\GUI\Icons\ARYLYN_PANDORA_DRIVE.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -279,7 +279,7 @@
 				<SubtypeId>ARYLNX_RAIDER_Epstein_Drive</SubtypeId>
 			</Id>
 			<DisplayName>LV-300 &quot;Raider&quot; Light Epstein Drive</DisplayName>
-			<Description>Basic 3x3 drive with decent efficiency. +80% multiplicative RCS signature</Description>
+			<Description>Basic 3x3 drive with decent efficiency. 1.5x multiplicative RCS signature</Description>
 			<Icon>Textures\GUI\Icons\ARYLYN_RAIDER_DRIVE.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -359,7 +359,7 @@
 				<SubtypeId>ARYLNX_ROCI_Epstein_Drive</SubtypeId>
 			</Id>
 			<DisplayName>RT8 &quot;TACHI&quot; Epstein Drive</DisplayName>
-			<Description>Powerful 5x5 drive with decent efficiency. +180% multiplicative RCS Signature</Description>
+			<Description>Powerful 5x5 drive with decent efficiency. 2x multiplicative RCS signature</Description>
 			<Icon>Textures\GUI\Icons\ARYLYN_Epstein_Drive.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -440,7 +440,7 @@
 				<SubtypeId>ARYLNX_DRUMMER_Epstein_Drive</SubtypeId>
 			</Id>
 			<DisplayName>LV613 &quot;CAMINA&quot; Epstein Drive</DisplayName>
-			<Description>Powerful 5x5 drive with decent efficiency. +180% multiplicative RCS Signature</Description>
+			<Description>Powerful 5x5 drive with decent efficiency. 2x multiplicative RCS signature</Description>
 			<Icon>Textures\GUI\Icons\ARYX_TYNAN_EPSTEIN_DRIVE.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -523,7 +523,7 @@
 				<SubtypeId>ARYLYNX_SILVERSMITH_DRIVE</SubtypeId>
 			</Id>
 			<DisplayName>AM-R5 &quot;SILVERSMITH&quot; Supercooled Epstein Drive</DisplayName>
-			<Description>Expensive 5x5 drive with decent efficiency designed for stealth. +100% multiplicative RCS Signature</Description>
+			<Description>Expensive 5x5 drive with decent efficiency designed for stealth. 1.65x multiplicative RCS Signature</Description>
 			<Icon>Textures\GUI\Icons\ARYLYN_SILVERSMITH_Drive.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -618,7 +618,7 @@
 				<SubtypeId>ARYLNX_SCIRCOCCO_Epstein_Drive</SubtypeId>
 			</Id>
 			<DisplayName>RTF-B &quot;SCIROCCO&quot; Epstein Drive</DisplayName>
-			<Description>Very Powerful 7x7 drive with good efficiency. +330% multiplicative RCS Signature</Description>
+			<Description>Very Powerful 7x7 drive with good efficiency. 3.3x multiplicative RCS Signature</Description>
 			<Icon>Textures\GUI\Icons\ARYLYN_SCIR_Epstein_Drive.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>
@@ -703,7 +703,7 @@
 				<SubtypeId>ARYLNX_Mega_Epstein_Drive</SubtypeId>
 			</Id>
 			<DisplayName>RT-10 &quot;KAMINARI&quot; Superheavy Epstein Drive</DisplayName>
-			<Description>Extremely powerful and expensive 11x11 drive with good efficiency. +600% multiplicative RCS Signature</Description>
+			<Description>Extremely powerful and expensive 11x11 drive with good efficiency. 4.5x multiplicative RCS Signature</Description>
 			<Icon>Textures\GUI\Icons\ARYLYN_DNG_Epstein_Drive.dds</Icon>
 			<CubeSize>Large</CubeSize>
 			<BlockTopology>TriangleMesh</BlockTopology>

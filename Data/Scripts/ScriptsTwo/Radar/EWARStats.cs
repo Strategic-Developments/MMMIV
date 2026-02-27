@@ -28,7 +28,7 @@ namespace SRRadarStats
                     MaxRadiatedPower = 75000, // radiated power of the radar, in kilowatts
                     Gain = 394, // gain of the radar, in decibels. Must be above 0
                     Sensitivity = -40, // sensitivity of the radar, in decibels
-                    MaxSearchRange = 750000, // maximum range radar will return targets, regardless of other settings, in meters
+                    MaxSearchRange = 1000000, // maximum range radar will return targets, regardless of other settings, in meters
 
                     ApertureSize = 100, // aperture size of the radar, in meters^2
                     NoiseFilter = 0, // noise filter of the radar, in decibels
@@ -70,7 +70,7 @@ namespace SRRadarStats
                     MaxRadiatedPower = 50000, // radiated power of the radar, in kilowatts
                     Gain = 175, // gain of the radar, in decibels. Must be above 0
                     Sensitivity = -39, // sensitivity of the radar, in decibels
-                    MaxSearchRange = 600000, // maximum range radar will return targets, regardless of other settings, in meters
+                    MaxSearchRange = 750000, // maximum range radar will return targets, regardless of other settings, in meters
 
                     ApertureSize = 100, // aperture size of the radar, in meters^2
                     NoiseFilter = 0, // noise filter of the radar, in decibels
@@ -368,7 +368,7 @@ namespace SRRadarStats
                     NoiseFilterMultiplier = 1, // Noise filter multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
                     NoiseFilterAddon = 0, // Noise filter addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
 
-                    RCSMultiplier = 2f, // RCS multiplier for the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    RCSMultiplier = 1.65f, // RCS multiplier for the grid this is mounted on. Multipliers are calculated BEFORE addons.
                     RCSAddon = 0, //  RCS addon for the grid this is mounted on. Addons are calculated AFTER multipliers.
 
                     SensitivityMultiplier = 1, // Sensitivity multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
@@ -391,7 +391,7 @@ namespace SRRadarStats
                     NoiseFilterMultiplier = 1, // Noise filter multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
                     NoiseFilterAddon = 0, // Noise filter addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
 
-                    RCSMultiplier = 4.3f, // RCS multiplier for the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    RCSMultiplier = 3.3f, // RCS multiplier for the grid this is mounted on. Multipliers are calculated BEFORE addons.
                     RCSAddon = 0, //  RCS addon for the grid this is mounted on. Addons are calculated AFTER multipliers.
 
                     SensitivityMultiplier = 1, // Sensitivity multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
@@ -414,7 +414,7 @@ namespace SRRadarStats
                     NoiseFilterMultiplier = 1, // Noise filter multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
                     NoiseFilterAddon = 0, // Noise filter addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
 
-                    RCSMultiplier = 7f, // RCS multiplier for the grid this is mounted on. Multipliers are calculated BEFORE addons.
+                    RCSMultiplier = 4.5f, // RCS multiplier for the grid this is mounted on. Multipliers are calculated BEFORE addons.
                     RCSAddon = 0, //  RCS addon for the grid this is mounted on. Addons are calculated AFTER multipliers.
 
                     SensitivityMultiplier = 1, // Sensitivity multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
@@ -573,7 +573,7 @@ namespace SRRadarStats
             NoiseFilterMultiplier = 1, // Noise filter multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
             NoiseFilterAddon = 0, // Noise filter addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
 
-            RCSMultiplier = 1.8f, // RCS multiplier for the grid this is mounted on. Multipliers are calculated BEFORE addons.
+            RCSMultiplier = 1.5f, // RCS multiplier for the grid this is mounted on. Multipliers are calculated BEFORE addons.
             RCSAddon = 0, //  RCS addon for the grid this is mounted on. Addons are calculated AFTER multipliers.
 
             SensitivityMultiplier = 1, // Sensitivity multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
@@ -596,7 +596,7 @@ namespace SRRadarStats
             NoiseFilterMultiplier = 1, // Noise filter multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
             NoiseFilterAddon = 0, // Noise filter addon for ALL radars on the grid this is mounted on. Addons are calculated AFTER multipliers.
 
-            RCSMultiplier = 2.8f, // RCS multiplier for the grid this is mounted on. Multipliers are calculated BEFORE addons.
+            RCSMultiplier = 2f, // RCS multiplier for the grid this is mounted on. Multipliers are calculated BEFORE addons.
             RCSAddon = 0, //  RCS addon for the grid this is mounted on. Addons are calculated AFTER multipliers.
 
             SensitivityMultiplier = 1, // Sensitivity multiplier for ALL radars on the grid this is mounted on. Multipliers are calculated BEFORE addons.
