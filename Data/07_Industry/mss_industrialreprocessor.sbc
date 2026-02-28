@@ -75,7 +75,7 @@
         <Definition xsi:type="MyObjectBuilder_RefineryDefinition">
             <Id>
                 <TypeId>Refinery</TypeId>
-                <SubtypeId>LargeRefineryIndustrial</SubtypeId>
+                <SubtypeId>LargeRefinery</SubtypeId>
             </Id>
             <DisplayName>Industrial Uranium Processor</DisplayName>
             <Icon>Textures\GUI\Icons\Cubes\AdvancedRefinery.dds</Icon>

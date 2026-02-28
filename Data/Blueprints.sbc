@@ -16,6 +16,22 @@
       <Result Amount="1" TypeId="Component" SubtypeId="SalvagedPlating"/>
       <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
     </Blueprint>
+
+    <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>UraniumOreToIngot</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_Item_UraniumIngot</DisplayName>
+            <Icon>Textures\GUI\Icons\ingot\uranium_ingot.dds</Icon>
+            <Prerequisites>
+                <Item Amount="1" TypeId="Ore" SubtypeId="Uranium" />
+            </Prerequisites>
+            <Result Amount="0.01" TypeId="Ingot" SubtypeId="Uranium" />
+            <BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+        </Blueprint>
+
+        
     <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
