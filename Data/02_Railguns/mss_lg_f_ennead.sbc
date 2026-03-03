@@ -15,9 +15,9 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Ennead\EnneadSuperheavy.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="240"/>
+				<Component Subtype="SteelPlate" Count="2400"/>
 				<Component Subtype="Construction" Count="440"/>
-				<Component Subtype="MetalGrid" Count="200"/>
+				<Component Subtype="MetalGrid" Count="900"/>
 				<Component Subtype="PowerCell" Count="280"/>
 				<Component Subtype="SmallTube" Count="200"/>
 				<Component Subtype="LargeTube" Count="200"/>
