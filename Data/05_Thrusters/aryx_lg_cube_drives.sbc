@@ -15,7 +15,7 @@
 			<ModelOffset x="0" y="0" z="-1.25"/>
 			<Model>Models\EpsteinDrive\LG_ARYLNX_Epstein_Drive.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="1"/>
+				<Component Subtype="SteelPlate" Count="300"/>
 				<Component Subtype="Construction" Count="150"/>
 				<Component Subtype="LargeTube" Count="180"/>
 				<Component Subtype="AryxLynxon_FusionComponent" Count="32"/>
@@ -128,7 +128,7 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\EpsteinDrive\LG_ARYLYN_MUNR_Epstein_Drive.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="1"/>
+				<Component Subtype="SteelPlate" Count="300"/>
 				<Component Subtype="Construction" Count="150"/>
 				<Component Subtype="LargeTube" Count="180"/>
 				<Component Subtype="AryxLynxon_FusionComponent" Count="32"/>
@@ -207,7 +207,7 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\EpsteinDrive\ARYLYN_PANDORA_DRIVE.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="1"/>
+				<Component Subtype="SteelPlate" Count="300"/>
 				<Component Subtype="Construction" Count="150"/>
 				<Component Subtype="LargeTube" Count="180"/>
 				<Component Subtype="AryxLynxon_FusionComponent" Count="32"/>
@@ -287,7 +287,7 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\EpsteinDrive\ARYLNX_Raider_Epstein_Drive.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="1"/>
+				<Component Subtype="SteelPlate" Count="300"/>
 				<Component Subtype="Construction" Count="150"/>
 				<Component Subtype="LargeTube" Count="180"/>
 				<Component Subtype="AryxLynxon_FusionComponent" Count="32"/>
@@ -367,7 +367,7 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\EpsteinDrive\LG_ARYLNX_TCH_Epstein_Drive.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="1"/>
+				<Component Subtype="SteelPlate" Count="1000"/>
 				<Component Subtype="Construction" Count="360"/>
 				<Component Subtype="MetalGrid" Count="420"/>
 				<Component Subtype="LargeTube" Count="180"/>
@@ -448,7 +448,7 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\EpsteinDrive\ARYX_TYNAN_EPSTEIN_DRIVE.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="1"/>
+				<Component Subtype="SteelPlate" Count="1000"/>
 				<Component Subtype="Construction" Count="360"/>
 				<Component Subtype="MetalGrid" Count="420"/>
 				<Component Subtype="LargeTube" Count="180"/>
@@ -531,7 +531,7 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\EpsteinDrive\ARYLNX_SILVERSMITH.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="1"/>
+				<Component Subtype="SteelPlate" Count="800"/>
 				<Component Subtype="Construction" Count="360"/>
 				<Component Subtype="MetalGrid" Count="500"/>
 				<Component Subtype="LargeTube" Count="200"/>
@@ -626,7 +626,7 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\EpsteinDrive\ARYX_HAMMURABI_DRIVE.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="1"/>
+				<Component Subtype="SteelPlate" Count="1700"/>
 				<Component Subtype="Construction" Count="360"/>
 				<Component Subtype="MetalGrid" Count="550"/>
 				<Component Subtype="LargeTube" Count="250"/>
@@ -711,7 +711,7 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\EpsteinDrive\LG_ARYLNX_Superheavy_Epstein_Drive.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="1"/>
+				<Component Subtype="SteelPlate" Count="3500"/>
 				<Component Subtype="Construction" Count="1000"/>
 				<Component Subtype="MetalGrid" Count="900"/>
 				<Component Subtype="LargeTube" Count="700"/>
