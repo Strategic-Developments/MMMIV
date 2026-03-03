@@ -13,7 +13,7 @@
 				<Y>0.85</Y>
 				<Z>0.35</Z>
 			</Size>
-			<Mass>35</Mass>
+			<Mass>250</Mass>
 			<Volume>25</Volume>
 			<Model>Models\EpsteinDrive\AryxFusionComponent.mwm</Model>
 			<PhysicalMaterial>Metal</PhysicalMaterial>
