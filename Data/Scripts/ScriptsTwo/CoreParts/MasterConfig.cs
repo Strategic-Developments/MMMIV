@@ -28,9 +28,21 @@ namespace Scripts
                 // Railguns
                 mss_lg_t_apophis,
                 mss_lg_t_amunra,
+                mss_lg_t_set,
+
+                // Special
+                mss_lg_t_thoth,
+                mss_lg_t_entropic,
+
+                // only vanilla "weapon" that will exist
+                LargeSearchlight,
+            };
+
+            var Weapons_WeakKinetics = new WeaponDefinition[]
+            {
+                // PD
                 mss_lg_f_tyet,
                 mss_lg_f_ennead,
-                mss_lg_t_set,
 
                 // Missiles
                 mss_lg_f_anubis,
@@ -39,21 +51,19 @@ namespace Scripts
 
                 // Special
                 mss_lg_f_scarab,
-                mss_lg_t_thoth,
-                mss_lg_t_entropic,
-
-                // only vanilla "weapon" that will exist
-                LargeSearchlight,
             };
+
+            
             PartDefinitions(
-                CompileWeapons(Weapons)
+                CompileWeapons(Weapons, Weapons_WeakKinetics)
                 );
 
             ArmorDefinitions(
                 Compile
                 (
                     ToEnumerable(
-                        CreateFromWeapons(Weapons, NonArmor, 2f, 1f)
+                        CreateFromWeapons(Weapons, NonArmor, 1f, 1f),
+                        CreateFromWeapons(Weapons_WeakKinetics, NonArmor, 1f, 0.5f)
                     )
                     //CreateThrusterDefinitions()
                 ).ToArray()

@@ -16,23 +16,23 @@
 			<Model>Models\Cubes\Amunra\GateKeeperBase.mwm</Model>
 			<CriticalComponent Subtype="CombatModule" Index="0"/>
 			<Components>
-				<Component Subtype="SteelPlate" Count="240"/>
-				<Component Subtype="Construction" Count="440"/>
-				<Component Subtype="MetalGrid" Count="200"/>
-				<Component Subtype="PowerCell" Count="280"/>
-				<Component Subtype="SmallTube" Count="200"/>
-				<Component Subtype="LargeTube" Count="200"/>
-				<Component Subtype="GravityGenerator" Count="40"/>
-				<Component Subtype="Superconductor" Count="2000"/>
-				<Component Subtype="Motor" Count="400"/>
-				<Component Subtype="Display" Count="40"/>
+				<Component Subtype="SteelPlate" Count="960"/>
+				<Component Subtype="Construction" Count="1760"/>
+				<Component Subtype="MetalGrid" Count="800"/>
+				<Component Subtype="PowerCell" Count="1120"/>
+				<Component Subtype="SmallTube" Count="800"/>
+				<Component Subtype="LargeTube" Count="800"/>
+				<Component Subtype="GravityGenerator" Count="160"/>
+				<Component Subtype="Superconductor" Count="8000"/>
+				<Component Subtype="Motor" Count="1600"/>
+				<Component Subtype="Display" Count="160"/>
 				<Component Subtype="CombatModule" Count="20"/>
-				<Component Subtype="Computer" Count="1600"/>
-				<!-- FUNCTIONAL LINE /\ UP NONFUNCTIONAL -->
-				<Component Subtype="Girder" Count="1280"/>
-				<Component Subtype="MetalGrid" Count="1760"/>
-				<Component Subtype="Construction" Count="1600"/>
-				<Component Subtype="SteelPlate" Count="1600"/>
+				<Component Subtype="Computer" Count="6400"/>
+				<!--FUNCTIONAL LINE /\ UP NONFUNCTIONAL -->
+				<Component Subtype="Girder" Count="5120"/>
+				<Component Subtype="MetalGrid" Count="7040"/>
+				<Component Subtype="Construction" Count="6400"/>
+				<Component Subtype="SteelPlate" Count="6400"/>
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<BlockPairName>mss_lg_t_amunra_base</BlockPairName>

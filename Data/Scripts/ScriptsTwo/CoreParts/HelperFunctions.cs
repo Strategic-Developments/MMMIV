@@ -401,6 +401,22 @@ namespace Scripts
                     MyCubeBlockDefinition keendef;
                     if (modBlocks.TryGetValue(wep.SubtypeId, out keendef))
                     {
+                        //StringBuilder sb = new StringBuilder();
+                        //sb.AppendLine($"\n\n{wep.SubtypeId}");
+                        //sb.AppendLine("<Components>");
+
+                        //foreach (var comp in keendef.Components)
+                        //{
+                        //    sb.AppendLine($"\t\t\t\t<Component Subtype=\"{comp.Definition.Id.SubtypeName}\" Count=\"{(int)Math.Ceiling(comp.Count / wep.DurabilityMod)}\"/>");
+                        //    if (comp.Definition.Id.SubtypeName == "Computer")
+                        //        sb.AppendLine($"\t\t\t\t<!--FUNCTIONAL LINE /\\ UP NONFUNCTIONAL -->");
+
+                        //}
+
+                        //sb.AppendLine("\t\t\t</Components>\n\n");
+
+                        //MyLog.Default.WriteLineAndConsole(sb.ToString());
+
                         float integ = keendef.MaxIntegrity / wep.DurabilityMod;
                         float fnInteg = integ - integ * keendef.CriticalIntegrityRatio;
 

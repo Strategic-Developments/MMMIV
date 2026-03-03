@@ -15,18 +15,18 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Bastet\BastetBase.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="100"/>
-				<Component Subtype="Construction" Count="140"/>
-				<Component Subtype="MetalGrid" Count="60"/>
-				<Component Subtype="SmallTube" Count="120"/>
-				<Component Subtype="LargeTube" Count="140"/>
-				<Component Subtype="Motor" Count="88"/>
-				<Component Subtype="Display" Count="36"/>
-				<Component Subtype="Computer" Count="100"/>
-				<!-- FUNCTIONAL LINE /\ UP NONFUNCTIONAL -->
-				<Component Subtype="MetalGrid" Count="400"/>
-				<Component Subtype="Construction" Count="500"/>
-				<Component Subtype="SteelPlate" Count="430"/>
+				<Component Subtype="SteelPlate" Count="500"/>
+				<Component Subtype="Construction" Count="700"/>
+				<Component Subtype="MetalGrid" Count="300"/>
+				<Component Subtype="SmallTube" Count="600"/>
+				<Component Subtype="LargeTube" Count="700"/>
+				<Component Subtype="Motor" Count="440"/>
+				<Component Subtype="Display" Count="180"/>
+				<Component Subtype="Computer" Count="500"/>
+				<!--FUNCTIONAL LINE /\ UP NONFUNCTIONAL -->
+				<Component Subtype="MetalGrid" Count="2000"/>
+				<Component Subtype="Construction" Count="2500"/>
+				<Component Subtype="SteelPlate" Count="2150"/>
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>

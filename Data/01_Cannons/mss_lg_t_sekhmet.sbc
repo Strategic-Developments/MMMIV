@@ -15,19 +15,19 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Sekhmet\TitanEVOPhase3Base.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="400"/>
-				<Component Subtype="Construction" Count="600"/>
-				<Component Subtype="MetalGrid" Count="400"/>
-				<Component Subtype="SmallTube" Count="520"/>
-				<Component Subtype="LargeTube" Count="400"/>
-				<Component Subtype="Motor" Count="400"/>
-				<Component Subtype="Display" Count="80"/>
-				<Component Subtype="Computer" Count="1800"/>
-				<!-- FUNCTIONAL LINE /\ UP NONFUNCTIONAL -->
-				<Component Subtype="Girder" Count="1280"/>
-				<Component Subtype="MetalGrid" Count="1760"/>
-				<Component Subtype="Construction" Count="1600"/>
 				<Component Subtype="SteelPlate" Count="1600"/>
+				<Component Subtype="Construction" Count="2400"/>
+				<Component Subtype="MetalGrid" Count="1600"/>
+				<Component Subtype="SmallTube" Count="2080"/>
+				<Component Subtype="LargeTube" Count="1600"/>
+				<Component Subtype="Motor" Count="1600"/>
+				<Component Subtype="Display" Count="320"/>
+				<Component Subtype="Computer" Count="7200"/>
+				<!--FUNCTIONAL LINE /\ UP NONFUNCTIONAL -->
+				<Component Subtype="Girder" Count="5120"/>
+				<Component Subtype="MetalGrid" Count="7040"/>
+				<Component Subtype="Construction" Count="6400"/>
+				<Component Subtype="SteelPlate" Count="6400"/>
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>

@@ -15,20 +15,20 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Jackal\JackalLauncher.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="20"/>
-				<Component Subtype="Construction" Count="40"/>
-				<Component Subtype="MetalGrid" Count="10"/>
-				<Component Subtype="SmallTube" Count="25"/>
-				<Component Subtype="LargeTube" Count="25"/>
-				<Component Subtype="Motor" Count="40"/>
-				<Component Subtype="Display" Count="3"/>
-				<Component Subtype="Computer" Count="10"/>
-				<!-- FUNCTIONAL LINE /\ UP NONFUNCTIONAL -->
-				<Component Subtype="Computer" Count="100"/>
-				<Component Subtype="Motor" Count="35"/>
-				<Component Subtype="MetalGrid" Count="100"/>
-				<Component Subtype="Construction" Count="150"/>
-				<Component Subtype="SteelPlate" Count="160"/>
+				<Component Subtype="SteelPlate" Count="40"/>
+				<Component Subtype="Construction" Count="80"/>
+				<Component Subtype="MetalGrid" Count="20"/>
+				<Component Subtype="SmallTube" Count="50"/>
+				<Component Subtype="LargeTube" Count="50"/>
+				<Component Subtype="Motor" Count="80"/>
+				<Component Subtype="Display" Count="6"/>
+				<Component Subtype="Computer" Count="20"/>
+				<!--FUNCTIONAL LINE /\ UP NONFUNCTIONAL -->
+				<Component Subtype="Computer" Count="200"/>
+				<Component Subtype="Motor" Count="70"/>
+				<Component Subtype="MetalGrid" Count="200"/>
+				<Component Subtype="Construction" Count="300"/>
+				<Component Subtype="SteelPlate" Count="320"/>
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>

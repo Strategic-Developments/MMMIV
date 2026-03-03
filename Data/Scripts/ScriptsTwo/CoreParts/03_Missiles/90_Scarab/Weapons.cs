@@ -27,7 +27,7 @@ namespace Scripts
                         MuzzlePartId = "None", // The subpart where your muzzle empties are located. This is often the elevation subpart. Subpart_Boomsticks must be written as Boomsticks.
                         AzimuthPartId = "None", // Your Rotating Subpart, the bit that moves sideways.
                         ElevationPartId = "None",// Your Elevating Subpart, that bit that moves up.
-                        DurabilityMod = S2_DAMAGE_MULTIPLIER, // GeneralDamageMultiplier, 0.25f = 25% damage taken.
+                        DurabilityMod = S1_DAMAGE_MULTIPLIER, // GeneralDamageMultiplier, 0.25f = 25% damage taken.
                         IconName = "" // Overlay for block inventory slots, like reactors, refineries, etc.  Looks in mod root folder\Textures\GUI\Icons\
                     },
                  },

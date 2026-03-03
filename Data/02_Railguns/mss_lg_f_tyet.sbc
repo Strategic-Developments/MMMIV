@@ -15,21 +15,21 @@
 			<ModelOffset x="0" y="0" z="0"/>
 			<Model>Models\Cubes\Tyet\TyetRailgun.mwm</Model>
 			<Components>
-				<Component Subtype="SteelPlate" Count="30"/>
-				<Component Subtype="Construction" Count="45"/>
-				<Component Subtype="MetalGrid" Count="25"/>
-				<Component Subtype="PowerCell" Count="75"/>
-				<Component Subtype="SmallTube" Count="30"/>
-				<Component Subtype="LargeTube" Count="45"/>
-				<Component Subtype="GravityGenerator" Count="2"/>
-				<Component Subtype="Superconductor" Count="200"/>
-				<Component Subtype="Motor" Count="20"/>
-				<Component Subtype="Display" Count="20"/>
-				<Component Subtype="Computer" Count="100"/>
-				<!-- FUNCTIONAL LINE /\ UP NONFUNCTIONAL -->
-				<Component Subtype="MetalGrid" Count="200"/>
-				<Component Subtype="Construction" Count="250"/>
-				<Component Subtype="SteelPlate" Count="215"/>
+				<Component Subtype="SteelPlate" Count="75"/>
+				<Component Subtype="Construction" Count="113"/>
+				<Component Subtype="MetalGrid" Count="63"/>
+				<Component Subtype="PowerCell" Count="188"/>
+				<Component Subtype="SmallTube" Count="75"/>
+				<Component Subtype="LargeTube" Count="113"/>
+				<Component Subtype="GravityGenerator" Count="5"/>
+				<Component Subtype="Superconductor" Count="500"/>
+				<Component Subtype="Motor" Count="50"/>
+				<Component Subtype="Display" Count="50"/>
+				<Component Subtype="Computer" Count="250"/>
+				<!--FUNCTIONAL LINE /\ UP NONFUNCTIONAL -->
+				<Component Subtype="MetalGrid" Count="500"/>
+				<Component Subtype="Construction" Count="625"/>
+				<Component Subtype="SteelPlate" Count="538"/>
 			</Components>
 			<CriticalComponent Subtype="Computer" Index="0"/>
 			<MountPoints>

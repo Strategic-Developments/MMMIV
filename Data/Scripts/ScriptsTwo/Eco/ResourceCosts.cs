@@ -241,13 +241,14 @@ namespace Meridian
                         }
                     }
                     AllBlockCosts.Add(def.Id, totalCost);
-
-                    if (def.Id.TypeId.ToString().Replace(MyObjectBuilderType.LEGACY_TYPE_PREFIX, "") == "Wheel")
+                    string typeId = def.Id.TypeId.ToString().Replace(MyObjectBuilderType.LEGACY_TYPE_PREFIX, "");
+                    var mult = def.MaxIntegrity / 2000f;
+                    if (typeId == "Wheel" || typeId == "MotorSuspension")
                     {
                         foreach (var component in def.Components)
                             component.Count *= 2;
-
-                        def.GeneralDamageMultiplier = 15.68f;
+                        def.GeneralDamageMultiplier = mult * 2;
+                        def.MaxIntegrity *= 2;
                     }
 
                     switch (def.Id.ToString().Replace(MyObjectBuilderType.LEGACY_TYPE_PREFIX, ""))
@@ -304,6 +305,8 @@ namespace Meridian
                             thrustDef.Enabled = false;
                             thrustDef.Public = false;
                             thrustDef.ForceMagnitude = 0.001f;
+
+                            def.GeneralDamageMultiplier = 999999;
                             break;
 
                         case "LargeGatlingTurret/(null)":
@@ -336,21 +339,27 @@ namespace Meridian
                         case "SmallMissileLauncher/SmallFlareLauncher":
                             def.Enabled = false;
                             def.Public = false;
+
+                            def.GeneralDamageMultiplier = 999999;
                             break;
 
                         case "TurretControlBlock/LargeTurretControlBlock":
                         case "TurretControlBlock/SmallTurretControlBlock":
                             def.Enabled = false;
                             def.Public = false;
+
+                            def.GeneralDamageMultiplier = 999999;
                             break;
                         case "JumpDrive/SmallPrototechJumpDrive":
                             ((MyJumpDriveDefinition)def).MaxJumpDistance = 1;
+                            def.GeneralDamageMultiplier = 999999;
                             def.Enabled = false;
                             def.Public = false;
                             break;
                         case "Refinery/SmallPrototechRefinery":
                         case "Refinery/Blast Furnace":
                             ((MyRefineryDefinition)def).RefineSpeed = 0.0001f;
+                            def.GeneralDamageMultiplier = 999999;
                             def.Enabled = false;
                             def.Public = false;
                             break;
@@ -359,12 +368,14 @@ namespace Meridian
                         case "ShipGrinder/LargeShipGrinder":
                         case "ShipGrinder/LargeShipGrinderReskin":
                             ((MyShipGrinderDefinition)def).SensorRadius = 0.0001f;
+                            def.GeneralDamageMultiplier = 999999;
                             def.Enabled = false;
                             def.Public = false;
                             break;
                         case "ShipWelder/LargeShipWelder":
                         case "ShipWelder/LargeShipWelderReskin":
                             ((MyShipWelderDefinition)def).SensorRadius = 0.0001f;
+                            def.GeneralDamageMultiplier = 999999;
                             def.Enabled = false;
                             def.Public = false;
                             break;
@@ -378,8 +389,69 @@ namespace Meridian
                             drillDef.CutOutRadius = 0.0001f;
                             drillDef.Speed = 0.0001f;
                             drillDef.DiscardingMultiplier = 0.0001f;
+                            def.GeneralDamageMultiplier = 999999;
                             def.Enabled = false;
                             def.Public = false;
+                            break;
+
+                        case "AirtightHangarDoor/(null)":
+                        case "AirtightHangarDoor/AirtightHangarDoorWarfare2A":
+                        case "AirtightHangarDoor/AirtightHangarDoorWarfare2B":
+                        case "AirtightHangarDoor/AirtightHangarDoorWarfare2C":
+                        case "Door/LargeBlockGate":
+                        case "Door/LargeBlockSmallGate":
+                        case "Door/LargeBlockEvenWideDoor":
+                        case "Door/SlidingHatchDoor":
+                        case "Door/SlidingHatchDoorHalf":
+                        case "Door/CorridorRoundDoor":
+                        case "Door/CorridorRoundDoorInv":
+                        case "InteriorLight/LabEquipment2":
+                        case "LCDPanelsBlock/LabEquipment3":
+                        case "CubeBlock/StorageShelf1":
+                        case "CubeBlock/StorageShelf2":
+                        case "CubeBlock/StorageShelf3":
+                        case "MedicalRoom/LargeMedicalRoom":
+                        case "MedicalRoom/LargeMedicalRoomReskin":
+                        case "OxygenFarm/LargeBlockOxygenFarm":
+                        case "OxygenFarm/LargeBlockOxygenFarmReskin":
+                        case "Assembler/FoodProcessor":
+                        case "FunctionalBlock/LargeBlockAlgaeFarm":
+                        case "FunctionalBlock/LargeBlockAlgaeFarmReskin":
+                        case "OxygenGenerator/IrrigationSystem":
+                        case "OreDetector/LargeOreDetector":
+                        case "OreDetector/LargeOreDetectorReskin":
+                        case "Beacon/LargeBlockBeacon":
+                        case "Beacon/LargeBlockBeaconReskin":
+                        case "Beacon/LargeBlockIFFBeacon":
+                        case "RadioAntenna/LargeBlockCompactRadioAntennaReskin":
+                        case "LaserAntenna/LargeBlockLaserAntenna":
+                        case "RadioAntenna/LargeBlockRadioAntenna":
+                        case "RadioAntenna/LargeBlockCompactRadioAntenna":
+                        case "RadioAntenna/LargeBlockRadioAntennaDish":
+                        case "TextPanel/LargeLCDPanel5x5":
+                        case "TextPanel/LargeLCDPanel5x3":
+                        case "TextPanel/LargeLCDPanel3x3":
+                        case "TextPanel/LargeLCDPanelWide":
+                        case "ShipConnector/AQD_LG_AirlockConnector_Large":
+                        case "StoreBlock/StoreBlock":
+                        case "StoreBlock/AtmBlock":
+                            def.GeneralDamageMultiplier = mult;
+                            break;
+
+                        case "FlightMovementBlock/LargeFlightMovement":
+                        case "DefensiveCombatBlock/LargeDefensiveCombat":
+                        case "OffensiveCombatBlock/LargeOffensiveCombat":
+                        case "BasicMissionBlock/LargeBasicMission":
+                        case "PathRecorderBlock/LargePathRecorderBlock":
+                        case "OffensiveCombatBlock/SmallOffensiveCombat":
+                        case "BasicMissionBlock/SmallBasicMission":
+                        case "PathRecorderBlock/SmallPathRecorderBlock":
+                        case "FlightMovementBlock/SmallFlightMovement":
+                        case "DefensiveCombatBlock/SmallDefensiveCombat":
+                        case "TargetDummyBlock/TargetDummy":
+                            def.Enabled = false;
+                            def.Public = false;
+                            def.GeneralDamageMultiplier = 999999;
                             break;
                         default:
                             break;
