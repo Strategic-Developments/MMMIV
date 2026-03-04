@@ -84,8 +84,8 @@ namespace Scripts
             },
             ObjectsHit = new ObjectsHitDef
             {
-                MaxObjectsHit = 2, // Limits the number of grids or projectiles that damage can be applied to, useful to limit overpenetration; 0 = unlimited.
-                CountBlocks = true, // Counts individual blocks, not just entities hit.  Note that every block touched by primary damage hits will count toward MaxObjectsHit
+                MaxObjectsHit = 0, // Limits the number of grids or projectiles that damage can be applied to, useful to limit overpenetration; 0 = unlimited.
+                CountBlocks = false, // Counts individual blocks, not just entities hit.  Note that every block touched by primary damage hits will count toward MaxObjectsHit
                 SkipBlocksForAOE = false, //If CountBlocks = true this will determine if AOE hits are counted against MaxObjectsHit.  Set true to skip counting for AOE
             },
             Fragment = new FragmentDef // Formerly known as Shrapnel. Spawns specified ammo fragments on projectile death (via hit or detonation).
@@ -721,7 +721,7 @@ namespace Scripts
             Shape = new ShapeDef // Defines the collision shape of the projectile, defaults to LineShape and uses the visual Line Length if set to 0.
             {
                 Shape = LineShape, // LineShape or SphereShape. Do not use SphereShape for fast moving projectiles if you care about precision.
-                Diameter = 1, // For SphereShape this is diameter.
+                Diameter = 15, // For SphereShape this is diameter.
                               // For LineShape it is total length (double this value when setting up MaximumDiameter for weapon targeting).
                               // Defaults to 1 if left zero or deleted.
             },
@@ -738,7 +738,7 @@ namespace Scripts
                 Degrees = FLECHETTE_DEVIATION, // Cone in which to randomize direction of spawned projectiles.
                 Reverse = false, // Spawn projectiles backward instead of forward.
                 DropVelocity = true, // fragments will not inherit velocity from parent.
-                Offset = -2 * RAILGUN_VELOCITY / 60f, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards), value is read from parent ammo type.
+                Offset = 0, // Offsets the fragment spawn by this amount, in meters (positive forward, negative for backwards), value is read from parent ammo type.
                 Radial = 0f, // Determines starting angle for Degrees of spread above.  IE, 0 degrees and 90 radial goes perpendicular to travel path
                 MaxChildren = 0, // number of maximum branches for fragments from the roots point of view, 0 is unlimited
                 IgnoreArming = true, // If true, ignore ArmOnHit or MinArmingTime in EndOfLife definitions
