@@ -10,8 +10,8 @@
       <Icon>Textures\GUI\Icons\Component\PrototechPanel_Component.dds</Icon>
       <Prerequisites>
         <Item Amount="70000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
-        <Item Amount="10" TypeId="Ingot" SubtypeId="PrototechScrap"/>
-        <Item Amount="5" TypeId="Ingot" SubtypeId="Platinum"/>
+        <Item Amount="100" TypeId="Ingot" SubtypeId="PrototechScrap"/>
+        <Item Amount="25" TypeId="Ingot" SubtypeId="Platinum"/>
       </Prerequisites>
       <Result Amount="1" TypeId="Component" SubtypeId="SalvagedPlating"/>
       <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
@@ -41,7 +41,7 @@
       <Icon>Textures\GUI\Icons\Components\IndustrialModule.dds</Icon>
       <Prerequisites>
         <Item Amount="250000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
-        <Item Amount="300" TypeId="Ingot" SubtypeId="PrototechScrap"/>
+        <Item Amount="500" TypeId="Ingot" SubtypeId="PrototechScrap"/>
         <Item Amount="300" TypeId="Ingot" SubtypeId="Platinum"/>
       </Prerequisites>
       <Result Amount="1" TypeId="Component" SubtypeId="PostlightModule"/>
@@ -56,8 +56,8 @@
       <Icon>Textures\GUI\Icons\Components\IndustrialModule.dds</Icon>
       <Prerequisites>
         <Item Amount="1000000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
-        <Item Amount="100" TypeId="Ingot" SubtypeId="PrototechScrap"/>
-        <Item Amount="250" TypeId="Ingot" SubtypeId="Platinum"/>
+        <Item Amount="750" TypeId="Ingot" SubtypeId="PrototechScrap"/>
+        <Item Amount="500" TypeId="Ingot" SubtypeId="Platinum"/>
       </Prerequisites>
       <Result Amount="1" TypeId="Component" SubtypeId="IndustrialModule"/>
       <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
@@ -71,8 +71,8 @@
       <Icon>Textures\GUI\Icons\Components\ExperimentalModule.dds</Icon>
       <Prerequisites>
         <Item Amount="150000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
-        <Item Amount="500" TypeId="Ingot" SubtypeId="PrototechScrap"/>
-        <Item Amount="350" TypeId="Ingot" SubtypeId="Platinum"/>
+        <Item Amount="1000" TypeId="Ingot" SubtypeId="PrototechScrap"/>
+        <Item Amount="1000" TypeId="Ingot" SubtypeId="Platinum"/>
       </Prerequisites>
       <Result Amount="1" TypeId="Component" SubtypeId="ExperimentalModule"/>
       <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
@@ -86,7 +86,7 @@
       <Icon>Textures\GUI\Icons\Components\CombatModule.dds</Icon>
       <Prerequisites>
         <Item Amount="100000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
-        <Item Amount="300" TypeId="Ingot" SubtypeId="PrototechScrap"/>
+        <Item Amount="450" TypeId="Ingot" SubtypeId="PrototechScrap"/>
         <Item Amount="450" TypeId="Ingot" SubtypeId="Platinum"/>
       </Prerequisites>
       <Result Amount="1" TypeId="Component" SubtypeId="CombatModule"/>
@@ -194,13 +194,112 @@
       <DisplayName>DisplayName_Item_PrototechFrame</DisplayName>
       <Icon>Textures\GUI\Icons\component\PrototechFrame.dds</Icon>
       <Prerequisites>
-        <Item Amount="12128" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
-        <Item Amount="15" TypeId="Ingot" SubtypeId="PrototechScrap"/>
+        <Item Amount="750000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+        <Item Amount="1500" TypeId="Ingot" SubtypeId="PrototechScrap"/>
       </Prerequisites>
       <Result Amount="1" TypeId="Component" SubtypeId="PrototechFrame"/>
       <BaseProductionTimeInSeconds>10</BaseProductionTimeInSeconds>
       <IsPrimary>true</IsPrimary>
     </Blueprint>
+
+
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>PrototechPanel</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_Item_PrototechPanel</DisplayName>
+            <Icon>Textures\GUI\Icons\component\PrototechPanel_Component.dds</Icon>
+            <Prerequisites>
+              <Item Amount="5000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+              <Item Amount="160" TypeId="Ingot" SubtypeId="PrototechScrap"/>
+            </Prerequisites>
+            <Result Amount="1" TypeId="Component" SubtypeId="PrototechPanel" />
+            <BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+            <IsPrimary>true</IsPrimary>
+        </Blueprint>
+
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>PrototechCapacitor</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_Item_PrototechCapacitor</DisplayName>
+            <Icon>Textures\GUI\Icons\component\PrototechCapacitor_Component.dds</Icon>
+            <Prerequisites>
+                <Item Amount="15000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+                <Item Amount="150" TypeId="Ingot" SubtypeId="PrototechScrap"/>
+            </Prerequisites>
+            <Result Amount="1" TypeId="Component" SubtypeId="PrototechCapacitor" />
+            <BaseProductionTimeInSeconds>16</BaseProductionTimeInSeconds>
+            <IsPrimary>true</IsPrimary>
+        </Blueprint>
+
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>PrototechPropulsionUnit</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_Item_PrototechPropulsionUnit</DisplayName>
+            <Icon>Textures\GUI\Icons\component\PrototechThrusterComponent.dds</Icon>
+            <Prerequisites>
+                <Item Amount="20000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+                <Item Amount="500" TypeId="Ingot" SubtypeId="PrototechScrap"/>
+            </Prerequisites>
+            <Result Amount="1" TypeId="Component" SubtypeId="PrototechPropulsionUnit" />
+            <BaseProductionTimeInSeconds>14</BaseProductionTimeInSeconds>
+            <IsPrimary>true</IsPrimary>
+        </Blueprint>
+
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>PrototechMachinery</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_Item_PrototechMachinery</DisplayName>
+            <Icon>Textures\GUI\Icons\component\PrototechMachinery_Icon.dds</Icon>
+            <Prerequisites>
+                <Item Amount="12000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+              <Item Amount="250" TypeId="Ingot" SubtypeId="PrototechScrap"/>
+            </Prerequisites>
+            <Result Amount="1" TypeId="Component" SubtypeId="PrototechMachinery" />
+            <BaseProductionTimeInSeconds>12</BaseProductionTimeInSeconds>
+            <IsPrimary>true</IsPrimary>
+        </Blueprint>
+
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>PrototechCircuitry</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_Item_PrototechCircuitry</DisplayName>
+            <Icon>Textures\GUI\Icons\component\prototech_circuitry_component.dds</Icon>
+            <Prerequisites>
+                <Item Amount="15000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+              <Item Amount="250" TypeId="Ingot" SubtypeId="PrototechScrap"/>
+            </Prerequisites>
+            <Result Amount="1" TypeId="Component" SubtypeId="PrototechCircuitry" />
+            <BaseProductionTimeInSeconds>11</BaseProductionTimeInSeconds>
+            <IsPrimary>true</IsPrimary>
+        </Blueprint>
+
+        <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>PrototechCoolingUnit</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_Item_PrototechCoolingUnit</DisplayName>
+            <Icon>Textures\GUI\Icons\component\PrototechCoolingUnit.dds</Icon>
+            <Prerequisites>
+                <Item Amount="50000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+              <Item Amount="200" TypeId="Ingot" SubtypeId="PrototechScrap"/>
+            </Prerequisites>
+            <Result Amount="1" TypeId="Component" SubtypeId="PrototechCoolingUnit" />
+            <BaseProductionTimeInSeconds>9</BaseProductionTimeInSeconds>
+            <IsPrimary>true</IsPrimary>
+        </Blueprint>
+
+
   </Blueprints>
   <BlueprintClassEntries><!--BLUEPRINT CLASS ENTRY DEFINITION-->
     <Entry Class="PrototechComponents" BlueprintSubtypeId="PrototechFrame"/>
