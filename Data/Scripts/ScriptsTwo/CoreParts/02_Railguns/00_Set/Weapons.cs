@@ -122,8 +122,8 @@ namespace Scripts
                     ElevateRate = SLOW_ROTATE_SPEED, // Max traversal speed of elevation subpart in radians per tick.
                     MinAzimuth = -180, // Az/Ele figures are in degrees
                     MaxAzimuth = 160,
-                    MinElevation = -9,
-                    MaxElevation = 50,
+                    MinElevation = -15,
+                    MaxElevation = 90,
                     HomeAzimuth = 0, // Default resting rotation angle
                     HomeElevation = 15, // Default resting elevation
                     InventorySize = 50 * 4.01f / 1000f, // Inventory capacity in kL.
