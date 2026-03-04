@@ -114,7 +114,7 @@
 			</Id>
 			<DisplayName>Flail Ammo Box</DisplayName>
 			<Prerequisites>
-				<Item Amount="1250" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+				<Item Amount="2500" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_flail_ammomagazine"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
@@ -127,8 +127,8 @@
 			</Id>
 			<DisplayName>Flail DU Ammo Box</DisplayName>
 			<Prerequisites>
-				<Item Amount="6750" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
-				<Item Amount="16.875" TypeId="Ingot" SubtypeId="Platinum"/>
+				<Item Amount="8000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+				<Item Amount="85" TypeId="Ingot" SubtypeId="Platinum"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_flail_ammomagazine_special"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>

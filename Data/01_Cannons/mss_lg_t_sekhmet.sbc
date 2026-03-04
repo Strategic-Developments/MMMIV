@@ -139,7 +139,7 @@
 			<DisplayName>Sekhmet Smart Cannon Shell</DisplayName>
 			<Prerequisites>
 				<Item Amount="1445" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
-				<Item Amount="1.806" TypeId="Ingot" SubtypeId="Platinum"/>
+				<Item Amount="10" TypeId="Ingot" SubtypeId="Platinum"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_sekhmet_ammomagazine_special"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>

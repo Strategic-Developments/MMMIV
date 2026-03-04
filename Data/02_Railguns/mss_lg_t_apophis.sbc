@@ -147,7 +147,7 @@
 			<DisplayName>Apophis Flechette Railgun Sabot</DisplayName>
 			<Prerequisites>
 				<Item Amount="3334" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
-				<Item Amount="5.834" TypeId="Ingot" SubtypeId="Platinum"/>
+				<Item Amount="30" TypeId="Ingot" SubtypeId="Platinum"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_apophis_ammomagazine_special"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>

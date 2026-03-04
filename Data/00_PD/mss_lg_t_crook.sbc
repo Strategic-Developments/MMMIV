@@ -110,7 +110,7 @@
 			</Id>
 			<DisplayName>Crook Flak Magazine</DisplayName>
 			<Prerequisites>
-				<Item Amount="1282" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+				<Item Amount="1800" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_crook_ammomagazine"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
@@ -123,8 +123,8 @@
 			</Id>
 			<DisplayName>Crook HE Magazine</DisplayName>
 			<Prerequisites>
-				<Item Amount="2563" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
-				<Item Amount="6.407" TypeId="Ingot" SubtypeId="Platinum"/>
+				<Item Amount="3000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+				<Item Amount="32" TypeId="Ingot" SubtypeId="Platinum"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_crook_ammomagazine_special"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>

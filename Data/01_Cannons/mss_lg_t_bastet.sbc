@@ -124,7 +124,7 @@
 			</Id>
 			<DisplayName>Bastet Cannon Shell</DisplayName>
 			<Prerequisites>
-				<Item Amount="542" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+				<Item Amount="750" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_bastet_ammomagazine"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
@@ -137,8 +137,8 @@
 			</Id>
 			<DisplayName>Bastet Smart Cannon Shell</DisplayName>
 			<Prerequisites>
-				<Item Amount="1084" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
-				<Item Amount="1.806" TypeId="Ingot" SubtypeId="Platinum"/>
+				<Item Amount="1500" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
+				<Item Amount="10" TypeId="Ingot" SubtypeId="Platinum"/>
 			</Prerequisites>
 			<Result Amount="1" TypeId="AmmoMagazine" SubtypeId="mss_lg_t_bastet_ammomagazine_special"/>
 			<BaseProductionTimeInSeconds>5</BaseProductionTimeInSeconds>
