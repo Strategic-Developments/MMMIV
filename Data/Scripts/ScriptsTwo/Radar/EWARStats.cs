@@ -26,9 +26,9 @@ namespace SRRadarStats
                     DefinitionPriority = 1,
 
                     MaxRadiatedPower = 75000, // radiated power of the radar, in kilowatts
-                    Gain = 394, // gain of the radar, in decibels. Must be above 0
+                    Gain = 100, // gain of the radar, in decibels. Must be above 0
                     Sensitivity = -40, // sensitivity of the radar, in decibels
-                    MaxSearchRange = 500000, // maximum range radar will return targets, regardless of other settings, in meters
+                    MaxSearchRange = 600000, // maximum range radar will return targets, regardless of other settings, in meters
 
                     ApertureSize = 100, // aperture size of the radar, in meters^2
                     NoiseFilter = 0, // noise filter of the radar, in decibels
@@ -68,7 +68,7 @@ namespace SRRadarStats
                     DefinitionPriority = 1,
 
                     MaxRadiatedPower = 50000, // radiated power of the radar, in kilowatts
-                    Gain = 175, // gain of the radar, in decibels. Must be above 0
+                    Gain = 60, // gain of the radar, in decibels. Must be above 0
                     Sensitivity = -39, // sensitivity of the radar, in decibels
                     MaxSearchRange = 400000, // maximum range radar will return targets, regardless of other settings, in meters
 
@@ -110,7 +110,7 @@ namespace SRRadarStats
                     DefinitionPriority = 1,
 
                     MaxRadiatedPower = 10000, // radiated power of the radar, in kilowatts
-                    Gain = 175, // gain of the radar, in decibels. Must be above 0
+                    Gain = 50, // gain of the radar, in decibels. Must be above 0
                     Sensitivity = -39, // sensitivity of the radar, in decibels
                     MaxSearchRange = 250000, // maximum range radar will return targets, regardless of other settings, in meters
 
