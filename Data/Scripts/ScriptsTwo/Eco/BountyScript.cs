@@ -48,6 +48,8 @@ namespace Meridian.Economy
         private readonly Dictionary<long, Dictionary<MyDefinitionId, int>> _pendingLoot = new Dictionary<long, Dictionary<MyDefinitionId, int>>(64);
 
         // Player cache to reduce repeated scans
+        // NOTE: Cleared at the top of every PayAggregatedRewards call so reconnected
+        // players are always re-resolved from the live player list (Fix 1).
         private readonly Dictionary<long, IMyPlayer> _playerCache = new Dictionary<long, IMyPlayer>(32);
 
         // Grid cache per identity (validated on use)
@@ -107,10 +109,12 @@ namespace Meridian.Economy
             }
             
         }
+
         public void Save()
         {
             FileManager.SaveXMLFileWorldStorage(UserConfig, ConfigFileName);
         }
+
         public override void BeforeStart()
         {
             if (MyAPIGateway.Multiplayer.IsServer)
@@ -227,8 +231,6 @@ namespace Meridian.Economy
             {
                 price += GetHydrogenBonusByLiters(slim);
 
-                
-
                 if (price > 0)
                     QueueCurrencyPayout(attackerId, (long)(price * UserConfig.BountyPayoutMultiplier * (NPCFac ? UserConfig.NPCPayoutMultiplier : 1f)));
             }
@@ -276,6 +278,11 @@ namespace Meridian.Economy
 
         private void PayAggregatedRewards()
         {
+            // FIX 1: Clear player cache on every payout pass so that reconnected players
+            // are always re-resolved from the live player list rather than returning a
+            // stale pre-crash IMyPlayer object whose Controller will be null/dead.
+            _playerCache.Clear();
+
             if (_pendingLastHit.Count == 0)
                 return;
 
@@ -382,8 +389,11 @@ namespace Meridian.Economy
                     }
                     else
                     {
-                        // Player has no current grid; keep loot pending
-                        // Consider adding a timeout or alternate delivery if desired
+                        // FIX 3: Player has no current grid (offline or still reconnecting).
+                        // Re-arm the combat timer so this identity stays in _pendingLastHit
+                        // and delivery is retried on the next payout pass once they come back.
+                        _pendingLastHit[identityId] = now - PayoutIntervalCombatEndTicks; // will retry next eligible tick
+                        continue; // skip the settlement check below; loot is still pending
                     }
                 }
 
@@ -408,6 +418,7 @@ namespace Meridian.Economy
             }
             _toClearList.Clear();
         }
+
         private static MyFixedPoint GetHydrogenBonusByLiters(IMySlimBlock slim)
         {
             var tank = slim.FatBlock as IMyGasTank;
@@ -508,9 +519,11 @@ namespace Meridian.Economy
 
         private IMyCubeGrid GetCurrentOrCachedGridForPlayer(long identityId)
         {
-            IMyCubeGrid cached;
-            if (_gridCache.TryGetValue(identityId, out cached) && cached != null && !cached.MarkedForClose)
-                return cached;
+            // FIX 2: Always evict the grid cache entry and re-resolve the controlling entity
+            // from the live player object. A pre-crash grid may pass the MarkedForClose check
+            // yet the reconnected player is no longer controlling it, causing AddItems to
+            // silently write to the wrong/abandoned grid.
+            _gridCache.Remove(identityId);
 
             IMyPlayer p;
             if (!_playerCache.TryGetValue(identityId, out p) || p == null)
@@ -523,8 +536,18 @@ namespace Meridian.Economy
                     _playerCache[identityId] = p;
                 }
             }
+
             if (p == null)
                 return null;
+
+            // FIX 4: Guard against a null Controller before walking the chain. A ghost/stale
+            // player object after a crash will have a null Controller; evict it so the next
+            // call re-queries the live player list rather than returning null indefinitely.
+            if (p.Controller == null)
+            {
+                _playerCache.Remove(identityId);
+                return null;
+            }
 
             var controlled = p.Controller?.ControlledEntity?.Entity;
             var top = controlled?.GetTopMostParent();
