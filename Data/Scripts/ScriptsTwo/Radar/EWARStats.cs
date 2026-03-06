@@ -238,9 +238,9 @@ namespace SRRadarStats
                     //  - those modifying stats can just have the definitions in their place w/o copying any models, sbc files, or sounds to the modified mod.
                     DefinitionPriority = 1,
 
-                    MaxRadiatedPower = 100, // max radiated power in kilowatts
-                    Gain = 30, // gain of the jammer in decibels
-                    MaxSearchRange = 300000, // maximum range of the jammer in meters, overriding ALL other stats
+                    MaxRadiatedPower = 60, // max radiated power in kilowatts
+                    Gain = 20, // gain of the jammer in decibels
+                    MaxSearchRange = 600000, // maximum range of the jammer in meters, overriding ALL other stats
 
                     AreaEffectRatio = 0.4f, // Area effect ratio of the jammer. Best explained in the interaction wiki above.
                                             // Essentually, when a radar is jammed, a cylinder of height =2*(the distance from the jammer) and radius of AreaEffectRatio*length centered on the jammer, with the top and bottom being on the line between the radar and jammer
