@@ -60,6 +60,10 @@ namespace Meridian.Economy
         private readonly List<IMyPlayer> _playerQueryBuffer = new List<IMyPlayer>(8);
         private readonly List<long> _toClearList = new List<long>(64);
 
+        // FIX: Snapshot buffer for iterating _pendingLastHit keys without modifying the
+        // dictionary mid-enumeration. Reused across payout passes to avoid allocations.
+        private readonly List<long> _pendingLastHitSnapshot = new List<long>(64);
+
         public override void LoadData()
         {
             if (MyAPIGateway.Multiplayer.IsServer)
@@ -134,6 +138,7 @@ namespace Meridian.Economy
 
             _toClearList.Clear();
             _blockBuffer.Clear();
+            _pendingLastHitSnapshot.Clear();
 
             _registered = false;
             _rewardItems.Clear();
@@ -294,11 +299,20 @@ namespace Meridian.Economy
 
             _toClearList.Clear();
 
-            // Iterate only over identities with tracked combat activity
-            foreach (var kv in _pendingLastHit)
+            // FIX 5: Snapshot _pendingLastHit keys before iterating to prevent
+            // InvalidOperationException when FIX 3 writes back into the dictionary
+            // (re-arming the combat timer) while enumeration is still in progress.
+            _pendingLastHitSnapshot.Clear();
+            foreach (var key in _pendingLastHit.Keys)
+                _pendingLastHitSnapshot.Add(key);
+
+            for (int si = 0; si < _pendingLastHitSnapshot.Count; si++)
             {
-                long identityId = kv.Key;
-                int lastHit = kv.Value;
+                long identityId = _pendingLastHitSnapshot[si];
+
+                int lastHit;
+                if (!_pendingLastHit.TryGetValue(identityId, out lastHit))
+                    continue;
 
                 if (now - lastHit <= PayoutIntervalCombatEndTicks)
                     continue; // still in combat window
@@ -392,6 +406,8 @@ namespace Meridian.Economy
                         // FIX 3: Player has no current grid (offline or still reconnecting).
                         // Re-arm the combat timer so this identity stays in _pendingLastHit
                         // and delivery is retried on the next payout pass once they come back.
+                        // NOTE: This write is now safe because we are iterating the snapshot,
+                        // not _pendingLastHit directly (FIX 5).
                         _pendingLastHit[identityId] = now - PayoutIntervalCombatEndTicks; // will retry next eligible tick
                         continue; // skip the settlement check below; loot is still pending
                     }

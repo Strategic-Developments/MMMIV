@@ -6,7 +6,7 @@
 				<TypeId>Assembler</TypeId>
 				<SubtypeId>mss_experimentalreprocessor</SubtypeId>
 			</Id>
-			<DisplayName>Experimental Reprocessor</DisplayName>
+			<DisplayName>Advanced Reprocessor</DisplayName>
 			<Description>A specialized reprocessing array designed to turn Modules into advanced systems.</Description>
 			<Icon>Textures\GUI\Icons\Cubes\NuclearAssembler.dds</Icon>
 			<CubeSize>Large</CubeSize>

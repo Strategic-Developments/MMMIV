@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Blueprints>
+
     <Blueprint>
       <Id>
         <TypeId>BlueprintDefinition</TypeId>
@@ -17,6 +18,7 @@
       <BaseProductionTimeInSeconds>30</BaseProductionTimeInSeconds>
     </Blueprint>
 
+
     <Blueprint>
             <Id>
                 <TypeId>BlueprintDefinition</TypeId>
@@ -26,9 +28,40 @@
             <Icon>Textures\GUI\Icons\ingot\uranium_ingot.dds</Icon>
             <Prerequisites>
                 <Item Amount="1" TypeId="Ore" SubtypeId="Uranium" />
+                <Item Amount="0.001" TypeId="Ore" SubtypeId="Catalyst" />
             </Prerequisites>
             <Result Amount="0.01" TypeId="Ingot" SubtypeId="Uranium" />
             <BaseProductionTimeInSeconds>4</BaseProductionTimeInSeconds>
+        </Blueprint>
+
+         <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>PlatinumOreToIngot</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_Item_PlatinumIngot</DisplayName>
+            <Icon>Textures\GUI\Icons\ingot\platinum_ingot.dds</Icon>
+            <Prerequisites>
+                <Item Amount="1" TypeId="Ore" SubtypeId="Platinum" />
+                <Item Amount="0.002" TypeId="Ore" SubtypeId="Catalyst" />
+            </Prerequisites>
+            <Result Amount="0.005" TypeId="Ingot" SubtypeId="Platinum" />
+            <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
+        </Blueprint>
+
+                <Blueprint>
+            <Id>
+                <TypeId>BlueprintDefinition</TypeId>
+                <SubtypeId>IceToOxygen</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_Item_Oxygen</DisplayName>
+            <Icon>Textures\GUI\Icons\ingot\gravel_ingot.dds</Icon>
+            <Prerequisites>
+                <Item Amount="1" TypeId="Ore" SubtypeId="Ice" />
+                <Item Amount="0.01" TypeId="Ore" SubtypeId="Catalyst" />
+            </Prerequisites>
+            <Result Amount="0.9" TypeId="Ingot" SubtypeId="Stone" />
+            <BaseProductionTimeInSeconds>0.1</BaseProductionTimeInSeconds>
         </Blueprint>
 
         
@@ -38,7 +71,7 @@
         <SubtypeId>PostlightModuleBP</SubtypeId>
       </Id>
       <DisplayName>Postlight Module</DisplayName>
-      <Icon>Textures\GUI\Icons\Components\IndustrialModule.dds</Icon>
+      <Icon>Textures\GUI\Icons\Components\PostlightModule.dds</Icon>
       <Prerequisites>
         <Item Amount="250000" TypeId="PhysicalObject" SubtypeId="SpaceCredit"/>
         <Item Amount="500" TypeId="Ingot" SubtypeId="PrototechScrap"/>

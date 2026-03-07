@@ -164,6 +164,7 @@
 				<string>Refinery/LargeRefineryIndustrial</string>
 				<string>Refinery/LargeRefinery</string>
 				<string>Refinery/LargePrototechRefinery</string>
+				<string>Assembler/mss_orereprocessor</string>
 				<string>Assembler/LargePrototechAssembler</string>
 				<string>Assembler/mss_industrialreprocessor</string>
 				<string>Assembler/mss_experimentalreprocessor</string>

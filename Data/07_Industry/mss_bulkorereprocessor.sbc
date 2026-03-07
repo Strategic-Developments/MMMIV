@@ -6,7 +6,7 @@
 				<TypeId>Assembler</TypeId>
 				<SubtypeId>mss_orereprocessor</SubtypeId>
 			</Id>
-			<DisplayName>Bulk Ore Reprocessor</DisplayName>
+			<DisplayName>Bulk Ore Packager</DisplayName>
 			<Description>Crushes huge amounts of ore down into manageable Shipments for sale. </Description>
 			<Icon>Textures\GUI\Icons\SOFL_HUGE_REFINERY.dds</Icon>
 			<CubeSize>Large</CubeSize>
