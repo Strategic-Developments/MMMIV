@@ -45,7 +45,7 @@
                 <Item Amount="1" TypeId="Ore" SubtypeId="Platinum" />
                 <Item Amount="0.002" TypeId="Ore" SubtypeId="Catalyst" />
             </Prerequisites>
-            <Result Amount="0.005" TypeId="Ingot" SubtypeId="Platinum" />
+            <Result Amount="0.05" TypeId="Ingot" SubtypeId="Platinum" />
             <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
         </Blueprint>
 
