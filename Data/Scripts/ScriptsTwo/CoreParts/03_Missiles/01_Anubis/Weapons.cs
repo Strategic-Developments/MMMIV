@@ -244,8 +244,6 @@ namespace Scripts
             },
             Ammos = new[] {
                 mss_lg_f_anubis_ammo,
-                mss_lg_f_anubis_ammo_stage2,
-
             },
             Animations = mss_lg_f_anubis_anim,
             //Upgrades = UpgradeModules,

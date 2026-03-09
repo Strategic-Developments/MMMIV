@@ -251,8 +251,6 @@ namespace Scripts
             },
             Ammos = new[] {
                 mss_lg_f_jackal_ammo,
-                mss_lg_f_jackal_ammo_stage2,
-
             },
              Animations = mss_lg_f_jackal_anim,
             //Upgrades = UpgradeModules,

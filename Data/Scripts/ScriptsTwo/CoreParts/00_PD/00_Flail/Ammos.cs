@@ -853,7 +853,7 @@ namespace Scripts
                                     // Optional penetration mechanic to apply damage to blocks beyond the first hit, without requiring the block to be destroyed.  
                                     // Overwrites normal damage behavior of requiring a block to be destroyed before damage can continue.  0 disables. 
                                     // To limit max # of blocks hit, set MaxObjectsHit to desired # and ensure CountBlocks = true in ObjectsHit, otherwise it will continue until BaseDamage depletes
-            Mass = 2f, // Disabled here. Too lazy to set this to 0 everywhere so MasterConfig does it
+            Mass = 0f, // Disabled here. Too lazy to set this to 0 everywhere so MasterConfig does it
             Health = 0, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 2.33f * PD_VELOCITY, // Recoil. This is applied to the Parent Grid.
             DecayPerShot = 0f, // Damage to the firing weapon itself. 
@@ -1256,7 +1256,7 @@ namespace Scripts
                                     // Optional penetration mechanic to apply damage to blocks beyond the first hit, without requiring the block to be destroyed.  
                                     // Overwrites normal damage behavior of requiring a block to be destroyed before damage can continue.  0 disables. 
                                     // To limit max # of blocks hit, set MaxObjectsHit to desired # and ensure CountBlocks = true in ObjectsHit, otherwise it will continue until BaseDamage depletes
-            Mass = 2f, // Disabled here. Too lazy to set this to 0 everywhere so MasterConfig does it
+            Mass = 0f, // Disabled here. Too lazy to set this to 0 everywhere so MasterConfig does it
             Health = 0, // How much damage the projectile can take from other projectiles (base of 1 per hit) before dying; 0 disables this and makes the projectile untargetable.
             BackKickForce = 2.33f * PD_VELOCITY, // Recoil. This is applied to the Parent Grid.
             DecayPerShot = 0f, // Damage to the firing weapon itself. 
