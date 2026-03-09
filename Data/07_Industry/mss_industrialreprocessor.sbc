@@ -1,27 +1,13 @@
 <?xml version="1.0" ?>
 <Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <CubeBlocks>
-
-
-
-
-
-
-
-
-
-
-
-
-
-     <Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+        <Definition xsi:type="MyObjectBuilder_RefineryDefinition">
             <Id>
                 <TypeId>Refinery</TypeId>
                 <SubtypeId>LargeRefinery</SubtypeId>
             </Id>
             <DisplayName>Makeshift Ore Refinery</DisplayName>
             <Icon>Textures\GUI\Icons\Cubes\refinery.dds</Icon>
-
             <Description>Requires Refining Catalysts. This facility contains the necessary provisions to process, refine, and enrich ores for use in industrial quantities.</Description>
             <CubeSize>Large</CubeSize>
             <BlockTopology>TriangleMesh</BlockTopology>
@@ -66,7 +52,7 @@
             <EdgeType>Light</EdgeType>
             <BuildTimeSeconds>90</BuildTimeSeconds>
             <ResourceSinkGroup>Factory</ResourceSinkGroup>
-            <InventoryMaxVolume>7.5</InventoryMaxVolume>
+            <InventoryMaxVolume>75</InventoryMaxVolume>
             <InventorySize>
                 <X>2.5</X>
                 <Y>2.5</Y>
@@ -98,19 +84,14 @@
             </TieredUpdateTimes>
             <AllowSelfPulling>false</AllowSelfPulling>
         </Definition>
-
-
-
-
-    <Definition xsi:type="MyObjectBuilder_RefineryDefinition">
+        <Definition xsi:type="MyObjectBuilder_RefineryDefinition">
             <Id>
                 <TypeId>Refinery</TypeId>
                 <SubtypeId>LargeRefineryIndustrial</SubtypeId>
             </Id>
-            <DisplayName>Standard Ore Refinery</DisplayName>
+            <DisplayName>Makeshift Ore Refinery</DisplayName>
             <Icon>Textures\GUI\Icons\Cubes\AdvancedRefinery.dds</Icon>
-
-            <Description>Requires Refining Catalysts. This facility contains the necessary provisions to process, refine, and enrich ores for usage in industrial-grade needs.</Description>
+            <Description>Requires Refining Catalysts. This facility contains the necessary provisions to process, refine, and enrich ores for use in industrial quantities.</Description>
             <CubeSize>Large</CubeSize>
             <BlockTopology>TriangleMesh</BlockTopology>
             <Size x="2" y="4" z="2"/>
@@ -124,8 +105,8 @@
                     </DeconstructId>
                 </Component>
                 <Component Subtype="SteelPlate" Count="1100"/>
-                <Component Subtype="IndustrialModule" Count="10"/>
                 <Component Subtype="Construction" Count="40"/>
+                <Component Subtype="IndustrialModule" Count="5"/>
                 <Component Subtype="LargeTube" Count="20"/>
                 <Component Subtype="Motor" Count="16"/>
                 <Component Subtype="PrototechCapacitor" Count="30"/>
@@ -171,7 +152,7 @@
             <EdgeType>Light</EdgeType>
             <BuildTimeSeconds>90</BuildTimeSeconds>
             <ResourceSinkGroup>Factory</ResourceSinkGroup>
-            <InventoryMaxVolume>15</InventoryMaxVolume>
+            <InventoryMaxVolume>75</InventoryMaxVolume>
             <InventorySize>
                 <X>2.5</X>
                 <Y>2.5</Y>
@@ -184,7 +165,7 @@
             <BlueprintClasses>
                 <Class>Ingots</Class>
             </BlueprintClasses>
-            <RefineSpeed>5</RefineSpeed>
+            <RefineSpeed>1</RefineSpeed>
             <MaterialEfficiency>1.0</MaterialEfficiency>
             <OreAmountPerPullRequest>2000</OreAmountPerPullRequest>
             <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
@@ -201,19 +182,14 @@
                 <unsignedInt>120</unsignedInt>
                 <unsignedInt>240</unsignedInt>
             </TieredUpdateTimes>
-            
             <AllowSelfPulling>false</AllowSelfPulling>
         </Definition>
-
-
-
-
         <Definition xsi:type="MyObjectBuilder_RefineryDefinition">
             <Id>
                 <TypeId>Refinery</TypeId>
                 <SubtypeId>LargePrototechRefinery</SubtypeId>
             </Id>
-            <DisplayName>Advanced Ore Refinery</DisplayName>
+            <DisplayName>Standard Ore Refinery</DisplayName>
             <Icon>Textures\GUI\Icons\Cubes\Prototech_Refinery.dds</Icon>
             <Description>Requires Refining Catalysts. This reprocessor contains all necessary faculties to handle the processing and refinement of nearly every ore.</Description>
             <CubeSize>Large</CubeSize>
@@ -280,7 +256,7 @@
             <BuildTimeSeconds>90</BuildTimeSeconds>
             <DisassembleRatio>5</DisassembleRatio>
             <ResourceSinkGroup>Factory</ResourceSinkGroup>
-            <InventoryMaxVolume>15</InventoryMaxVolume>
+            <InventoryMaxVolume>150</InventoryMaxVolume>
             <InventorySize>
                 <X>2.5</X>
                 <Y>2.5</Y>
@@ -315,31 +291,6 @@
             </TieredUpdateTimes>
             <AllowSelfPulling>false</AllowSelfPulling>
         </Definition>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
         <Definition xsi:type="MyObjectBuilder_AssemblerDefinition">
             <Id>
                 <TypeId>Assembler</TypeId>
@@ -408,17 +359,7 @@
                 <unsignedInt>240</unsignedInt>
             </TieredUpdateTimes>
         </Definition>
-
-        
-
-        
-       
-       
-
-
-
-
-         <Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
+        <Definition xsi:type="MyObjectBuilder_RadioAntennaDefinition">
             <Id>
                 <TypeId>RadioAntenna</TypeId>
                 <SubtypeId>LargeBlockCompactRadioAntenna</SubtypeId>
@@ -428,26 +369,26 @@
             <Description>Description_RadioAntenna</Description>
             <CubeSize>Large</CubeSize>
             <BlockTopology>TriangleMesh</BlockTopology>
-            <Size x="1" y="3" z="1" />
-            <ModelOffset x="0" y="0" z="0" />
+            <Size x="1" y="3" z="1"/>
+            <ModelOffset x="0" y="0" z="0"/>
             <Model>Models\Cubes\Large\CompactAntenna.mwm</Model>
             <Components>
-                <Component Subtype="SteelPlate" Count="30" />
-                <Component Subtype="LargeTube" Count="20" />
-                <Component Subtype="SmallTube" Count="30" />
-                <Component Subtype="Construction" Count="20" />
-                <Component Subtype="Computer" Count="8" />
-                <Component Subtype="RadioCommunication" Count="40" />
-                <Component Subtype="SteelPlate" Count="10" />
+                <Component Subtype="SteelPlate" Count="30"/>
+                <Component Subtype="LargeTube" Count="20"/>
+                <Component Subtype="SmallTube" Count="30"/>
+                <Component Subtype="Construction" Count="20"/>
+                <Component Subtype="Computer" Count="8"/>
+                <Component Subtype="RadioCommunication" Count="40"/>
+                <Component Subtype="SteelPlate" Count="10"/>
             </Components>
-            <CriticalComponent Subtype="RadioCommunication" Index="0" />
+            <CriticalComponent Subtype="RadioCommunication" Index="0"/>
             <MountPoints>
-                <MountPoint Side="Bottom" ExclusionMask="1" PropertiesMask="2" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" Default="true" />
+                <MountPoint Side="Bottom" ExclusionMask="1" PropertiesMask="2" StartX="0.1" StartY="0.1" EndX="0.9" EndY="0.9" Default="true"/>
             </MountPoints>
             <BuildProgressModels>
-                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\CompactAntennaConstruction_1.mwm" />
-                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\CompactAntennaConstruction_2.mwm" />
-                <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\CompactAntennaConstruction_3.mwm" />
+                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\CompactAntennaConstruction_1.mwm"/>
+                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\CompactAntennaConstruction_2.mwm"/>
+                <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\CompactAntennaConstruction_3.mwm"/>
             </BuildProgressModels>
             <BlockPairName>CompactAntenna</BlockPairName>
             <EdgeType>Light</EdgeType>
@@ -464,9 +405,7 @@
             <PCU>100</PCU>
             <IsAirTight>false</IsAirTight>
         </Definition>
-
-
-         <Definition xsi:type="MyObjectBuilder_StoreBlockDefinition">
+        <Definition xsi:type="MyObjectBuilder_StoreBlockDefinition">
             <Id>
                 <TypeId>StoreBlock</TypeId>
                 <SubtypeId>AtmBlock</SubtypeId>
@@ -476,28 +415,28 @@
             <Description>Description_AtmBlock</Description>
             <CubeSize>Large</CubeSize>
             <BlockTopology>TriangleMesh</BlockTopology>
-            <Size x="1" y="1" z="1" />
-            <ModelOffset x="0" y="0" z="0" />
+            <Size x="1" y="1" z="1"/>
+            <ModelOffset x="0" y="0" z="0"/>
             <Model>Models\Cubes\Large\ATM.mwm</Model>
             <Components>
-                <Component Subtype="SteelPlate" Count="10" />
-                <Component Subtype="Construction" Count="20" />
-                <Component Subtype="Motor" Count="2" />
-                <Component Subtype="PrototechPanel" Count="60" />
-                <Component Subtype="Computer" Count="10" />
-                <Component Subtype="Display" Count="4" />
-                <Component Subtype="SteelPlate" Count="10" />
+                <Component Subtype="SteelPlate" Count="10"/>
+                <Component Subtype="Construction" Count="20"/>
+                <Component Subtype="Motor" Count="2"/>
+                <Component Subtype="PrototechPanel" Count="60"/>
+                <Component Subtype="Computer" Count="10"/>
+                <Component Subtype="Display" Count="4"/>
+                <Component Subtype="SteelPlate" Count="10"/>
             </Components>
-            <CriticalComponent Subtype="PrototechPanel" Index="0" />
+            <CriticalComponent Subtype="PrototechPanel" Index="0"/>
             <BuildProgressModels>
-                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\ATMConstruction_1.mwm" />
-                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\ATMConstruction_2.mwm" />
-                <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\ATMConstruction_3.mwm" />
+                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\ATMConstruction_1.mwm"/>
+                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\ATMConstruction_2.mwm"/>
+                <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\ATMConstruction_3.mwm"/>
             </BuildProgressModels>
             <ScreenAreas>
-                <ScreenArea Name="ATM_Screen" DisplayName="DisplayName_Screen_Large" TextureResolution="512" ScreenWidth="16" ScreenHeight="10" />
-                <ScreenArea Name="ATM_Keyboard" DisplayName="DisplayName_Screen_Keyboard" TextureResolution="256" ScreenWidth="5" ScreenHeight="2" />
-                <ScreenArea Name="ATM_Numpad" DisplayName="DisplayName_Screen_Numpad" TextureResolution="128" ScreenWidth="4" ScreenHeight="5" />
+                <ScreenArea Name="ATM_Screen" DisplayName="DisplayName_Screen_Large" TextureResolution="512" ScreenWidth="16" ScreenHeight="10"/>
+                <ScreenArea Name="ATM_Keyboard" DisplayName="DisplayName_Screen_Keyboard" TextureResolution="256" ScreenWidth="5" ScreenHeight="2"/>
+                <ScreenArea Name="ATM_Numpad" DisplayName="DisplayName_Screen_Numpad" TextureResolution="128" ScreenWidth="4" ScreenHeight="5"/>
             </ScreenAreas>
             <BlockPairName>AtmBlock</BlockPairName>
             <EdgeType>Light</EdgeType>
@@ -505,7 +444,7 @@
             <ResourceSinkGroup>Conveyors</ResourceSinkGroup>
             <RequiredPowerInput>0.002</RequiredPowerInput>
             <MountPoints>
-                <MountPoint Side="Left" StartX="0.2" StartY="0.2" EndX="0.8" EndY="1" />
+                <MountPoint Side="Left" StartX="0.2" StartY="0.2" EndX="0.8" EndY="1"/>
             </MountPoints>
             <MirroringY>X</MirroringY>
             <MirroringX>Y</MirroringX>
@@ -517,68 +456,63 @@
             <PCU>10</PCU>
             <EmissiveColorPreset>Default</EmissiveColorPreset>
             <IsAirTight>false</IsAirTight>
-           
         </Definition>
-
-        
-		<Definition xsi:type="MyObjectBuilder_StoreBlockDefinition">
-			<Id>
-				<TypeId>StoreBlock</TypeId>
-				<SubtypeId>StoreBlock</SubtypeId>
-			</Id>
-			<DisplayName>DisplayName_Block_Store</DisplayName>
-			<Icon>Textures\GUI\Icons\Cubes\StoreBlock.dds</Icon>
-			<Description>Description_StoreBlock</Description>
-			<CubeSize>Large</CubeSize>
-			<BlockTopology>TriangleMesh</BlockTopology>
-			<Size x="1" y="1" z="1" />
-			<ModelOffset x="0" y="0" z="0" />
-			<Model>Models\Cubes\Large\StoreBlock.mwm</Model>
-			<Components>
-				<Component Subtype="SteelPlate" Count="10" />
-				<Component Subtype="Construction" Count="20" />
-				<Component Subtype="Motor" Count="2" />
-				<Component Subtype="PrototechPanel" Count="60" />
-				<Component Subtype="Computer" Count="10" />
-				<Component Subtype="Display" Count="4" />
-				<Component Subtype="SteelPlate" Count="10" />
-			</Components>
-			<CriticalComponent Subtype="Computer" Index="0" />
-			<BuildProgressModels>
-				<Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\StoreBlockConstruction_1.mwm" />
-				<Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\StoreBlockConstruction_2.mwm" />
-				<Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\StoreBlockConstruction_3.mwm" />
-			</BuildProgressModels>
-			<ScreenAreas>
-				<ScreenArea Name="StoreScreen_01" DisplayName="DisplayName_Screen_Large" TextureResolution="512" ScreenWidth="16" ScreenHeight="10" />
-				<ScreenArea Name="StoreScreen_02" DisplayName="DisplayName_Screen_Keyboard" TextureResolution="256" ScreenWidth="5" ScreenHeight="2" />
-			</ScreenAreas>
-			<BlockPairName>StoreBlock</BlockPairName>
-			<EdgeType>Light</EdgeType>
-			<BuildTimeSeconds>25</BuildTimeSeconds>
-			<ResourceSinkGroup>Conveyors</ResourceSinkGroup>
-			<RequiredPowerInput>0.002</RequiredPowerInput>
-			<InventorySize>
-				<X>2.5</X>
-				<Y>2.5</Y>
-				<Z>1</Z>
-			</InventorySize>
-			<MountPoints>
-				<MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1" />
-				<MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1" />
-				<MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="1" />
-			</MountPoints>
-			<MirroringY>X</MirroringY>
-			<MirroringX>Y</MirroringX>
-			<DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
-			<DamagedSound>ParticleHeavyMech</DamagedSound>
-			<ActionSound>BlockCollect</ActionSound>
-			<DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
-			<DestroySound>WepSmallWarheadExpl</DestroySound>
-			<PCU>10</PCU>
-			<EmissiveColorPreset>Default</EmissiveColorPreset>
-		</Definition>
-
-
+        <Definition xsi:type="MyObjectBuilder_StoreBlockDefinition">
+            <Id>
+                <TypeId>StoreBlock</TypeId>
+                <SubtypeId>StoreBlock</SubtypeId>
+            </Id>
+            <DisplayName>DisplayName_Block_Store</DisplayName>
+            <Icon>Textures\GUI\Icons\Cubes\StoreBlock.dds</Icon>
+            <Description>Description_StoreBlock</Description>
+            <CubeSize>Large</CubeSize>
+            <BlockTopology>TriangleMesh</BlockTopology>
+            <Size x="1" y="1" z="1"/>
+            <ModelOffset x="0" y="0" z="0"/>
+            <Model>Models\Cubes\Large\StoreBlock.mwm</Model>
+            <Components>
+                <Component Subtype="SteelPlate" Count="10"/>
+                <Component Subtype="Construction" Count="20"/>
+                <Component Subtype="Motor" Count="2"/>
+                <Component Subtype="PrototechPanel" Count="60"/>
+                <Component Subtype="Computer" Count="10"/>
+                <Component Subtype="Display" Count="4"/>
+                <Component Subtype="SteelPlate" Count="10"/>
+            </Components>
+            <CriticalComponent Subtype="Computer" Index="0"/>
+            <BuildProgressModels>
+                <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\StoreBlockConstruction_1.mwm"/>
+                <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\StoreBlockConstruction_2.mwm"/>
+                <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\StoreBlockConstruction_3.mwm"/>
+            </BuildProgressModels>
+            <ScreenAreas>
+                <ScreenArea Name="StoreScreen_01" DisplayName="DisplayName_Screen_Large" TextureResolution="512" ScreenWidth="16" ScreenHeight="10"/>
+                <ScreenArea Name="StoreScreen_02" DisplayName="DisplayName_Screen_Keyboard" TextureResolution="256" ScreenWidth="5" ScreenHeight="2"/>
+            </ScreenAreas>
+            <BlockPairName>StoreBlock</BlockPairName>
+            <EdgeType>Light</EdgeType>
+            <BuildTimeSeconds>25</BuildTimeSeconds>
+            <ResourceSinkGroup>Conveyors</ResourceSinkGroup>
+            <RequiredPowerInput>0.002</RequiredPowerInput>
+            <InventorySize>
+                <X>2.5</X>
+                <Y>2.5</Y>
+                <Z>1</Z>
+            </InventorySize>
+            <MountPoints>
+                <MountPoint Side="Bottom" StartX="0" StartY="0" EndX="1" EndY="1"/>
+                <MountPoint Side="Top" StartX="0" StartY="0" EndX="1" EndY="1"/>
+                <MountPoint Side="Left" StartX="0" StartY="0" EndX="1" EndY="1"/>
+            </MountPoints>
+            <MirroringY>X</MirroringY>
+            <MirroringX>Y</MirroringX>
+            <DamageEffectName>Damage_HeavyMech_Damaged</DamageEffectName>
+            <DamagedSound>ParticleHeavyMech</DamagedSound>
+            <ActionSound>BlockCollect</ActionSound>
+            <DestroyEffect>BlockDestroyedExplosion_Large</DestroyEffect>
+            <DestroySound>WepSmallWarheadExpl</DestroySound>
+            <PCU>10</PCU>
+            <EmissiveColorPreset>Default</EmissiveColorPreset>
+        </Definition>
     </CubeBlocks>
 </Definitions>
