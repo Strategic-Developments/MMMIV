@@ -44,8 +44,8 @@ namespace Scripts
             AmmoMagazine = "mss_lg_t_set_ammomagazine", // SubtypeId of physical ammo magazine. Use "Energy" for weapons without physical ammo.
             AmmoRound = "mss_lg_t_set_ammo", // Unique name used in server overrides and in the terminal (default).  Should be different for each ammoDef used by the same weapon.  Referred to for Shrapnel.
             TerminalName = "AP", // Optional terminal name for this ammo type, used when picking ammo/cycling consumables.  Safe to have duplicates across different ammo defs.
-            HybridRound = true, // Use both a physical ammo magazine and energy per shot.
-            EnergyCost = 40, // Modified in MasterConfig here, actually just the power requirement needed to fire at 1.0 ROF scalar  If patterning ammos, only the main ammo (first fired) will count toward energy.
+            HybridRound = false, // Use both a physical ammo magazine and energy per shot.
+            EnergyCost = 0, // Modified in MasterConfig here, actually just the power requirement needed to fire at 1.0 ROF scalar  If patterning ammos, only the main ammo (first fired) will count toward energy.
             BaseDamage = 5000, // Direct damage; one steel plate is worth 100.
             BaseDamageCutoff = 0,  // Maximum amount of pen damage to apply per block hit.  Deducts from BaseDamage and uses DamageScales modifiers
                                    // Optional penetration mechanic to apply damage to blocks beyond the first hit, without requiring the block to be destroyed.  
@@ -687,8 +687,8 @@ namespace Scripts
             AmmoMagazine = "mss_lg_t_set_ammomagazine_special", // SubtypeId of physical ammo magazine. Use "Energy" for weapons without physical ammo.
             AmmoRound = "mss_lg_t_set_ammo_special", // Unique name used in server overrides and in the terminal (default).  Should be different for each ammoDef used by the same weapon.  Referred to for Shrapnel.
             TerminalName = "Flechette", // Optional terminal name for this ammo type, used when picking ammo/cycling consumables.  Safe to have duplicates across different ammo defs.
-            HybridRound = true, // Use both a physical ammo magazine and energy per shot.
-            EnergyCost = 40, // Modified in MasterConfig here, actually just the power requirement needed to fire at 1.0 ROF scalar  If patterning ammos, only the main ammo (first fired) will count toward energy.
+            HybridRound = false, // Use both a physical ammo magazine and energy per shot.
+            EnergyCost = 0, // Modified in MasterConfig here, actually just the power requirement needed to fire at 1.0 ROF scalar  If patterning ammos, only the main ammo (first fired) will count toward energy.
             BaseDamage = 1, // Direct damage; one steel plate is worth 100.
             BaseDamageCutoff = 0,  // Maximum amount of pen damage to apply per block hit.  Deducts from BaseDamage and uses DamageScales modifiers
                                    // Optional penetration mechanic to apply damage to blocks beyond the first hit, without requiring the block to be destroyed.  
@@ -1330,8 +1330,8 @@ namespace Scripts
             AmmoMagazine = "Energy", // SubtypeId of physical ammo magazine. Use "Energy" for weapons without physical ammo.
             AmmoRound = "mss_lg_t_set_ammo_special_shrapnel", // Unique name used in server overrides and in the terminal (default).  Should be different for each ammoDef used by the same weapon.  Referred to for Shrapnel.
             TerminalName = "Flechette", // Optional terminal name for this ammo type, used when picking ammo/cycling consumables.  Safe to have duplicates across different ammo defs.
-            HybridRound = true, // Use both a physical ammo magazine and energy per shot.
-            EnergyCost = 40, // Modified in MasterConfig here, actually just the power requirement needed to fire at 1.0 ROF scalar  If patterning ammos, only the main ammo (first fired) will count toward energy.
+            HybridRound = false, // Use both a physical ammo magazine and energy per shot.
+            EnergyCost = 0, // Modified in MasterConfig here, actually just the power requirement needed to fire at 1.0 ROF scalar  If patterning ammos, only the main ammo (first fired) will count toward energy.
             BaseDamage = 5000 / 16f, // Direct damage; one steel plate is worth 100.
             BaseDamageCutoff = 0,  // Maximum amount of pen damage to apply per block hit.  Deducts from BaseDamage and uses DamageScales modifiers
                                    // Optional penetration mechanic to apply damage to blocks beyond the first hit, without requiring the block to be destroyed.  
