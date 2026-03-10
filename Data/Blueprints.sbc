@@ -164,9 +164,9 @@
       <DisplayName>Basic Ingot Shipment</DisplayName>
       <Icon>Textures\GUI\Icons\Components\Pallet.dds</Icon>
       <Prerequisites>
-        <Item Amount="50000" TypeId="Ingot" SubtypeId="Iron"/>
-        <Item Amount="1000" TypeId="Ingot" SubtypeId="Silicon"/>
-        <Item Amount="2000" TypeId="Ingot" SubtypeId="Nickel"/>
+        <Item Amount="1000" TypeId="Ingot" SubtypeId="Uranium"/>
+        <Item Amount="500" TypeId="Ingot" SubtypeId="Platinum"/>
+        
       </Prerequisites>
       <Result Amount="1" TypeId="Component" SubtypeId="StarterOreShipment"/>
       <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
@@ -179,10 +179,8 @@
       <DisplayName>Advanced Ingot Shipment</DisplayName>
       <Icon>Textures\GUI\Icons\Components\Pallet.dds</Icon>
       <Prerequisites>
-        <Item Amount="50000" TypeId="Ingot" SubtypeId="Iron"/>
-        <Item Amount="500" TypeId="Ingot" SubtypeId="Silicon"/>
-        <Item Amount="750" TypeId="Ingot" SubtypeId="Nickel"/>
-        <Item Amount="350" TypeId="Ingot" SubtypeId="Cobalt"/>
+        <Item Amount="5000" TypeId="Ingot" SubtypeId="Uranium"/>
+        <Item Amount="1500" TypeId="Ingot" SubtypeId="Platinum"/>
       </Prerequisites>
       <Result Amount="1" TypeId="Component" SubtypeId="AdvancedOreShipment"/>
       <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
@@ -192,13 +190,12 @@
         <TypeId>BlueprintDefinition</TypeId>
         <SubtypeId>TechIngotShipmentBP</SubtypeId>
       </Id>
-      <DisplayName>Restricted Ingot Shipment</DisplayName>
+      <DisplayName>Captain's Tech Shipment</DisplayName>
       <Icon>Textures\GUI\Icons\Components\Pallet.dds</Icon>
       <Prerequisites>
-        <Item Amount="10000" TypeId="Ingot" SubtypeId="Iron"/>
-        <Item Amount="2000" TypeId="Ingot" SubtypeId="Gold"/>
-        <Item Amount="1000" TypeId="Ingot" SubtypeId="Platinum"/>
-        <Item Amount="2000" TypeId="Ingot" SubtypeId="Silver"/>
+        <Item Amount="20000" TypeId="Ingot" SubtypeId="Uranium"/>
+        <Item Amount="2000" TypeId="Ingot" SubtypeId="Platinum"/>
+        <Item Amount="5000" TypeId="Ingot" SubtypeId="PrototechScrap"/>
       </Prerequisites>
       <Result Amount="1" TypeId="Component" SubtypeId="RestrictedOreShipment"/>
       <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
@@ -208,17 +205,19 @@
         <TypeId>BlueprintDefinition</TypeId>
         <SubtypeId>IssuedIngotShipmentBP</SubtypeId>
       </Id>
-      <DisplayName>Fleet-Issue Ingot Shipment</DisplayName>
+      <DisplayName>Admiral's Prototech Shipment</DisplayName>
       <Icon>Textures\GUI\Icons\Components\Pallet.dds</Icon>
       <Prerequisites>
-        <Item Amount="100000" TypeId="Ingot" SubtypeId="Iron"/>
-        <Item Amount="2000" TypeId="Ingot" SubtypeId="Uranium"/>
-        <Item Amount="2000" TypeId="Ingot" SubtypeId="Platinum"/>
-        <Item Amount="2000" TypeId="Ingot" SubtypeId="Silver"/>
+        <Item Amount="20000" TypeId="Ingot" SubtypeId="PrototechScrap"/>
+        <Item Amount="1000" TypeId="Ingot" SubtypeId="Uranium"/>
+        <Item Amount="500" TypeId="Ingot" SubtypeId="Platinum"/>
+
       </Prerequisites>
       <Result Amount="1" TypeId="Component" SubtypeId="IssuedIngotShipment"/>
       <BaseProductionTimeInSeconds>3</BaseProductionTimeInSeconds>
     </Blueprint><!--BLUEPRINT DEFINITION-->
+
+
     <Blueprint><!-- This blueprint exists to prevent missing blueprint errors -->
       <Id>
         <TypeId>BlueprintDefinition</TypeId>

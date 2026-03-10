@@ -11,11 +11,11 @@ using VRage;
 using VRage.Game;
 using VRage.Game.Components;
 using VRage.Game.Entity;
-using VRage.Game.ModAPI; // Mod API (IMyCubeGrid, IMySlimBlock, IMyInventory, etc.)
-using VRage.ModAPI;      // IMyEntity
+using VRage.Game.ModAPI; 
+using VRage.ModAPI;      
 using VRage.Utils;
 using VRageMath;
-using VRage.Game.ModAPI.Ingame.Utilities; // MyIni, MyIniParseResult
+using VRage.Game.ModAPI.Ingame.Utilities; 
 using VRage.ObjectBuilders;
 using Meridian.Utilities;
 
@@ -38,30 +38,27 @@ namespace Meridian.Economy
         private static readonly MyStringHash Damage_Deformation = MyStringHash.GetOrCompute("Deformation");
         private static readonly MyStringHash Damage_Grinding = MyStringHash.GetOrCompute("Grinding");
 
-        // Currency aggregation
+        
         private readonly Dictionary<long, long> _pending = new Dictionary<long, long>();
 
-        // Shared "last hit" tracking for both currency and loot
+        
         private readonly Dictionary<long, int> _pendingLastHit = new Dictionary<long, int>();
 
-        // Loot aggregation: identityId -> (definitionId -> total amount)
+        
         private readonly Dictionary<long, Dictionary<MyDefinitionId, int>> _pendingLoot = new Dictionary<long, Dictionary<MyDefinitionId, int>>(64);
 
-        // Player cache to reduce repeated scans
-        // NOTE: Cleared at the top of every PayAggregatedRewards call so reconnected
-        // players are always re-resolved from the live player list (Fix 1).
+        
         private readonly Dictionary<long, IMyPlayer> _playerCache = new Dictionary<long, IMyPlayer>(32);
 
-        // Grid cache per identity (validated on use)
+        
         private readonly Dictionary<long, IMyCubeGrid> _gridCache = new Dictionary<long, IMyCubeGrid>(64);
 
-        // Reusable buffers to avoid per-call allocations
+        
         private readonly List<IMySlimBlock> _blockBuffer = new List<IMySlimBlock>(256);
         private readonly List<IMyPlayer> _playerQueryBuffer = new List<IMyPlayer>(8);
         private readonly List<long> _toClearList = new List<long>(64);
 
-        // FIX: Snapshot buffer for iterating _pendingLastHit keys without modifying the
-        // dictionary mid-enumeration. Reused across payout passes to avoid allocations.
+        
         private readonly List<long> _pendingLastHitSnapshot = new List<long>(64);
 
         public override void LoadData()
@@ -158,7 +155,7 @@ namespace Meridian.Economy
 
             if (session.GameplayFrameCounter % PayoutIntervalTicks == 0)
             {
-                PayAggregatedRewards(); // pay currency + loot together after combat lull
+                PayAggregatedRewards(); 
             }
         }
 
@@ -176,74 +173,74 @@ namespace Meridian.Economy
         public static bool IsNPCFaction(IMyFaction faction) => faction.IsEveryoneNpc();
 
         private void OnDestroyed(object target, MyDamageInformation info)
-        {
-            // Defensive null check to avoid NREs when RaiseDestroyed is invoked with a null target
-            if (target == null)
-                return;
+{
+    if (target == null)
+        return;
 
-            // Skip common non-combat damage types
-            if (info.Type == Damage_Deformation || info.Type == Damage_Grinding)
-                return;
+    if (info.Type == Damage_Deformation || info.Type == Damage_Grinding)
+        return;
 
-            // Character killed
-            var ch = target as IMyCharacter;
-            if (ch != null)
-                return;
+    var ch = target as IMyCharacter;
+    if (ch != null)
+        return;
 
-            // Block destroyed
-            var slim = target as IMySlimBlock;
-            if (slim == null || slim.CubeGrid == null)
-                return;
+    var slim = target as IMySlimBlock;
+    if (slim == null || slim.CubeGrid == null)
+        return;
 
-            long defenderId = GetPrimaryOwnerIdentity(slim.CubeGrid);
-            if (defenderId == 0)
-                return;
+    long defenderId = GetPrimaryOwnerIdentity(slim.CubeGrid);
+    if (defenderId == 0)
+        return;
 
-            long attackerId;
-            if (!TryResolveAttackerIdentity(info.AttackerId, out attackerId) || attackerId == 0)
-                return;
+    long attackerId;
+    if (!TryResolveAttackerIdentity(info.AttackerId, out attackerId) || attackerId == 0)
+        return;
 
-            // Faction subsystem must be available
-            var factions = MyAPIGateway.Session?.Factions;
-            if (factions == null)
-                return;
+    // --- SELF-FARM GUARD ---
+    // Attacker cannot be the same player as the block owner
+    if (attackerId == defenderId)
+        return;
 
-            var atkFac = factions.TryGetPlayerFaction(attackerId);
-            var vicFac = factions.TryGetPlayerFaction(defenderId);
+    var factions = MyAPIGateway.Session?.Factions;
+    if (factions == null)
+        return;
 
-            // Defensive null check: players may not be in a faction in Space Engineers
-            if (atkFac == null || vicFac == null)
-                return;
+    var atkFac = factions.TryGetPlayerFaction(attackerId);
+    var vicFac = factions.TryGetPlayerFaction(defenderId);
 
-            // Check if factions are at war (enemies OR reputation <= 500)
-            bool atWar = factions.AreFactionsEnemies(atkFac.FactionId, vicFac.FactionId) ||
-                         IsAtWarByReputation(factions, atkFac.FactionId, vicFac.FactionId);
+    if (atkFac == null || vicFac == null)
+        return;
 
-            if (!atWar)
-                return;
+    
+    if (atkFac.FactionId == vicFac.FactionId)
+        return;
 
-            // Defensive checks for block definition and price lookup chain
-            var blockDef = slim.BlockDefinition;
-            var costs = PriceChanger.Instance.Costs;
-            var allCosts = costs?.AllBlockCosts;
-            if (blockDef == null || allCosts == null)
-                return;
+    bool atWar = factions.AreFactionsEnemies(atkFac.FactionId, vicFac.FactionId) ||
+                 IsAtWarByReputation(factions, atkFac.FactionId, vicFac.FactionId);
 
-            bool NPCFac = string.Equals(vicFac.Tag, UserConfig.NPCFactionStr, StringComparison.OrdinalIgnoreCase);
+    if (!atWar)
+        return;
 
-            MyFixedPoint price;
-            if (allCosts.TryGetValue(blockDef.Id, out price))
-            {
-                price += GetHydrogenBonusByLiters(slim);
+    var blockDef = slim.BlockDefinition;
+    var costs = PriceChanger.Instance.Costs;
+    var allCosts = costs?.AllBlockCosts;
+    if (blockDef == null || allCosts == null)
+        return;
 
-                if (price > 0)
-                    QueueCurrencyPayout(attackerId, (long)(price * UserConfig.BountyPayoutMultiplier * (NPCFac ? UserConfig.NPCPayoutMultiplier : 1f)));
-            }
+    bool NPCFac = string.Equals(vicFac.Tag, UserConfig.NPCFactionStr, StringComparison.OrdinalIgnoreCase);
 
-            // Accumulate loot if the destroyed block's owner faction tag matches RewardFactionTag
-            if (NPCFac)
-                AwardLootIfApplicable(attackerId, atkFac, vicFac);
-        }
+    MyFixedPoint price;
+    if (allCosts.TryGetValue(blockDef.Id, out price))
+    {
+        price += GetHydrogenBonusByLiters(slim);
+
+        if (price > 0)
+            QueueCurrencyPayout(attackerId, (long)(price * UserConfig.BountyPayoutMultiplier * (NPCFac ? UserConfig.NPCPayoutMultiplier : 1f)));
+    }
+
+    if (NPCFac)
+        AwardLootIfApplicable(attackerId, atkFac, vicFac);
+}
 
         private static bool IsAtWarByReputation(IMyFactionCollection factions, long factionId1, long factionId2)
         {
@@ -283,9 +280,7 @@ namespace Meridian.Economy
 
         private void PayAggregatedRewards()
         {
-            // FIX 1: Clear player cache on every payout pass so that reconnected players
-            // are always re-resolved from the live player list rather than returning a
-            // stale pre-crash IMyPlayer object whose Controller will be null/dead.
+            
             _playerCache.Clear();
 
             if (_pendingLastHit.Count == 0)
@@ -299,9 +294,7 @@ namespace Meridian.Economy
 
             _toClearList.Clear();
 
-            // FIX 5: Snapshot _pendingLastHit keys before iterating to prevent
-            // InvalidOperationException when FIX 3 writes back into the dictionary
-            // (re-arming the combat timer) while enumeration is still in progress.
+            
             _pendingLastHitSnapshot.Clear();
             foreach (var key in _pendingLastHit.Keys)
                 _pendingLastHitSnapshot.Add(key);
@@ -315,9 +308,9 @@ namespace Meridian.Economy
                     continue;
 
                 if (now - lastHit <= PayoutIntervalCombatEndTicks)
-                    continue; // still in combat window
+                    continue; 
 
-                // Try to resolve player (online only for currency payout)
+                
                 IMyPlayer player;
                 if (!_playerCache.TryGetValue(identityId, out player) || player == null)
                 {
@@ -330,7 +323,7 @@ namespace Meridian.Economy
                     }
                 }
 
-                // 1) Pay currency if any and if player is online
+               
                 long currency = 0;
                 _pending.TryGetValue(identityId, out currency);
                 if (currency > 0 && player != null)
@@ -346,7 +339,7 @@ namespace Meridian.Economy
                     _pending[identityId] = 0;
                 }
 
-                // 2) Pay loot in lump sum (to current/cached grid inventories)
+               
                 Dictionary<MyDefinitionId, int> loot;
                 if (_pendingLoot.TryGetValue(identityId, out loot) && loot != null && loot.Count > 0)
                 {
@@ -373,7 +366,7 @@ namespace Meridian.Economy
                                 remainingMap[id] = remaining;
                         }
 
-                        // Update pending loot with remaining (if any)
+                        
                         if (remainingMap.Count > 0)
                             _pendingLoot[identityId] = remainingMap;
                         else
@@ -391,7 +384,7 @@ namespace Meridian.Economy
                         }
                         else
                         {
-                            // No items could be added (no cargo space or invalid types)
+                            
                             MyVisualScriptLogicProvider.SendChatMessageColored(
                                 $"War loot payout could not be delivered. Ensure your current grid has cargo space.",
                                 new Color(255, 100, 0),
@@ -403,17 +396,13 @@ namespace Meridian.Economy
                     }
                     else
                     {
-                        // FIX 3: Player has no current grid (offline or still reconnecting).
-                        // Re-arm the combat timer so this identity stays in _pendingLastHit
-                        // and delivery is retried on the next payout pass once they come back.
-                        // NOTE: This write is now safe because we are iterating the snapshot,
-                        // not _pendingLastHit directly (FIX 5).
-                        _pendingLastHit[identityId] = now - PayoutIntervalCombatEndTicks; // will retry next eligible tick
-                        continue; // skip the settlement check below; loot is still pending
+                        
+                        _pendingLastHit[identityId] = now - PayoutIntervalCombatEndTicks; 
+                        continue; 
                     }
                 }
 
-                // Clear timing if both currency and loot are fully settled or empty
+                
                 long curAfter;
                 _pending.TryGetValue(identityId, out curAfter);
                 bool hasLoot = _pendingLoot.ContainsKey(identityId);
@@ -424,7 +413,7 @@ namespace Meridian.Economy
                 }
             }
 
-            // Cleanup cleared identities
+            
             for (int i = 0; i < _toClearList.Count; i++)
             {
                 long id = _toClearList[i];
@@ -446,7 +435,7 @@ namespace Meridian.Economy
                 return 0;
 
             var def = tank.SlimBlock.BlockDefinition as MyGasTankDefinition;
-            // Fix: MyDefinitionId.TypeId is not nullable; do not compare to null
+            
             if (def == null || string.IsNullOrEmpty(def.StoredGasId.SubtypeName))
                 return 0;
 
@@ -501,16 +490,14 @@ namespace Meridian.Economy
             return false;
         }
 
-        // ---------------------
-        // Loot awarding (aggregation)
-        // ---------------------
+
         private void AwardLootIfApplicable(long attackerIdentityId, IMyFaction attackerFaction, IMyFaction victimFaction)
         {
-            // Match victim's faction tag against configured tag
+            
             if (!string.Equals(victimFaction.Tag, UserConfig.NPCFactionStr, StringComparison.OrdinalIgnoreCase))
                 return;
 
-            // Aggregate loot for attacker
+            
             Dictionary<MyDefinitionId, int> bag;
             if (!_pendingLoot.TryGetValue(attackerIdentityId, out bag))
             {
@@ -529,16 +516,13 @@ namespace Meridian.Economy
                     bag[ri.Id] = ri.Amount;
             }
 
-            // Mark/start aggregation window
+            
             EnsureAggregationStart(attackerIdentityId);
         }
 
         private IMyCubeGrid GetCurrentOrCachedGridForPlayer(long identityId)
         {
-            // FIX 2: Always evict the grid cache entry and re-resolve the controlling entity
-            // from the live player object. A pre-crash grid may pass the MarkedForClose check
-            // yet the reconnected player is no longer controlling it, causing AddItems to
-            // silently write to the wrong/abandoned grid.
+            
             _gridCache.Remove(identityId);
 
             IMyPlayer p;
@@ -556,9 +540,7 @@ namespace Meridian.Economy
             if (p == null)
                 return null;
 
-            // FIX 4: Guard against a null Controller before walking the chain. A ghost/stale
-            // player object after a crash will have a null Controller; evict it so the next
-            // call re-queries the live player list rather than returning null indefinitely.
+           
             if (p.Controller == null)
             {
                 _playerCache.Remove(identityId);
